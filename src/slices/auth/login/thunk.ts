@@ -9,12 +9,16 @@ export const loginUser = createAsyncThunk
     LoginCredentials, 
     { rejectValue: string } 
   >(
-    'auth/loginUser', async (credentials, thunkAPI) => {
+    "auth/loginUser", async (credentials, thunkAPI) => {
       try {
           const response = await loginUserService(credentials.email, credentials.password);
+          if (!response || !response.token || !response.user) {
+            // Backend returned a non-user/token object, likely failed login
+            throw new Error(response?.message || "Invalid login response");
+          }
           localStorage.setItem("authToken", response.token);
           return response;
-      } catch (error: unknown) {
+      } catch (error: any) {
           // Safely extract error message
           let message = "Login failed";
           if (

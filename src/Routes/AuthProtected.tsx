@@ -5,12 +5,15 @@ import { Navigate } from "react-router-dom";
 interface AuthProtectedProps {
   children: ReactNode;
 }
-const isAuthenticated = useSelector((state:any) => !!state.auth.user);
 
 const AuthProtected: React.FC<AuthProtectedProps> = ({ children }) => {
+  const isAuthenticated = useSelector(
+    (state:any) => !!state.auth?.user
+  );
+  
   if (!isAuthenticated) {
-  return <Navigate to="/login" />;
-}
+    return <Navigate to="/login" />;
+  }
 
   return <React.Fragment>{children}</React.Fragment>;
 };

@@ -48,6 +48,9 @@ export const login = async (email: string, password: string): Promise<AuthRespon
         headers: { "Content-Type": "application/json" },
       }
     );
+    if (!res.data.token || !res.data.user) {
+      throw new Error(res.data.message || "Invalid login");
+    }
     return res.data;
   } catch (err: any) {
     throw err.response?.data || { message: "Login failed" };

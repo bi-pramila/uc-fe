@@ -6,7 +6,9 @@ import { useNavigate, Link } from "react-router-dom";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 
-import { loginUser, clearAuthState } from "slices/thunk"; 
+import { loginUser } from "slices/auth/login/thunk";
+import { clearAuthState } from "slices/auth/login/reducer"; 
+import type { AppDispatch, RootState } from "app/store";
 
 // Image
 import AuthIcon from "pages/AuthenticationInner/AuthIcon";
@@ -22,13 +24,15 @@ const Login = (props: any) => {
 
     document.title = "Login | Ucartz";
 
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
+   
+    const dispatch = useDispatch<AppDispatch>();
     const navigate = useNavigate();
 
 
     // Select login state from Redux store
     const { user, success, error, loading } = useSelector(
-        (state: any) => state.login 
+        (state: RootState) => state.Login 
     );
 
     // Navigate on successful login
@@ -41,13 +45,10 @@ const Login = (props: any) => {
 
     const formik = useFormik({
         enableReinitialize: true,
-        initialValues: {
-        email: "",
-        password: "",
-        },
+        initialValues: { email: "", password: "",},
         validationSchema: Yup.object({
-        email: Yup.string().email("Invalid email").required("Please Enter Your email"),
-        password: Yup.string().required("Please Enter Your Password"),
+            email: Yup.string().email("Invalid email").required("Please Enter Your email"),
+            password: Yup.string().required("Please Enter Your Password"),
         }),
         onSubmit: (values) => {
             dispatch(loginUser({ email: values.email, password: values.password }))
