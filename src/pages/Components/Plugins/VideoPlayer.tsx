@@ -1,29 +1,35 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import BreadCrumb from "Common/BreadCrumb";
-import Plyr, { APITypes } from "plyr-react";
-import "plyr-react/plyr.css";
 
-const videoId = "qYgogv4R8zg";
-const provider = "youtube";
+
+declare global {
+  interface Window {
+    Plyr: any; // Plyr will be exposed as a global on window by CDN script
+  }
+}
 
 const VideoPlayer = () => {
-    const ref = React.useRef<APITypes>(null);
 
-    const plyrVideo =
-        videoId && provider ? (
-            <Plyr
-                ref={ref}
-                source={{
-                    type: "video",
-                    sources: [
-                        {
-                            src: `https://www.youtube.com/embed/${videoId}`,
-                            provider: provider,
-                        },
-                    ],
-                }}
-            />
-        ) : null;
+    const videoRef = useRef(null);
+    const playerRef = useRef(null);
+    
+
+    // Use window.Plyr if you need the instance, fallback to null
+    useEffect(() => {
+        if (window.Plyr && videoRef.current && !playerRef.current) {
+        playerRef.current = new window.Plyr(videoRef.current, {
+            // options
+        });
+        }
+        return () => {
+        if (playerRef.current) {
+            playerRef.current.destroy();
+            playerRef.current = null;
+        }
+        };
+    }, []);
+
+  
 
     return (
         <div className="container-fluid group-data-[content=boxed]:max-w-boxed mx-auto">
@@ -34,7 +40,9 @@ const VideoPlayer = () => {
                     <div className="card">
                         <div className="card-body">
                             <h6 className="mb-4 text-gray-800 text-15 dark:text-white">Preview Video Player</h6>
-                            {plyrVideo}
+                            <video ref={videoRef} controls>
+                                <source src="https://cdn.plyr.io/static/blank.mp4" type="video/mp4" />
+                            </video>
                         </div>
                     </div>
                 </div>

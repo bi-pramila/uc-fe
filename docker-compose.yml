@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  frontend:
+    container_name: hosting-manager-frontend
+    image: uchm/fe:uat
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  caddy:
+    container_name: hosting-manager-caddy
+    image: caddy:2-alpine
+    depends_on:
+      - frontend
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./Caddydata:/data
+    restart: unless-stopped
+    
+
+ 
+

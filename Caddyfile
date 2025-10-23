@@ -1,0 +1,4 @@
+hm-uat.ucartz.com {
+  encode zstd gzip
+  reverse_proxy frontend:80
+}
