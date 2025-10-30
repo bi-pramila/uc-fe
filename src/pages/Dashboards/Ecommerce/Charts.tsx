@@ -119,7 +119,7 @@ const SalesRevenueOverviewChart = ({ chartId }: any) => {
                 dir="ltr"
                 options={options}
                 series={series}
-                data-chart-colors='["bg-custom-500", "bg-custom-400", "bg-custom-300"]'
+                data-chart-colors='["bg-fecustom-500", "bg-fecustom-400", "bg-fecustom-300"]'
                 id={chartId}
                 className="apex-charts"
                 type='bar'

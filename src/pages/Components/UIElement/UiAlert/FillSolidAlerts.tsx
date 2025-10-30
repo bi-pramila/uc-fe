@@ -9,8 +9,8 @@ const FillSolidAlerts = () => {
                     <h6 className="mb-4 text-15">Fill Solid Alerts</h6>
                     <div className="grid grid-cols-1 gap-5 xl:grid-cols-2">
                         <div className="flex flex-col gap-3">
-                            <Alert className="relative p-3 pr-12 text-sm border border-transparent rounded-md text-custom-50 bg-custom-500">
-                                <Alert.Close className="absolute top-0 bottom-0 right-0 p-3 transition text-custom-200 hover:text-custom-100" />
+                            <Alert className="relative p-3 pr-12 text-sm border border-transparent rounded-md text-fecustom-50 bg-fecustom-500">
+                                <Alert.Close className="absolute top-0 bottom-0 right-0 p-3 transition text-fecustom-200 hover:text-fecustom-100" />
                                 <Alert.Bold>Custom</Alert.Bold> alert! You should check in on some of those fields below.
                             </Alert>
                             <Alert className="relative p-3 pr-12 text-sm bg-green-500 border border-transparent rounded-md text-green-50">
@@ -39,7 +39,7 @@ const FillSolidAlerts = () => {
                                 <Alert.Close className="absolute top-0 bottom-0 right-0 p-3 text-purple-200 transition hover:text-purple-100" />
                                 <Alert.Bold>Warning</Alert.Bold> alert! You should check in on some of those fields below.
                             </Alert>
-                            <Alert className="relative p-3 pr-12 text-sm border border-transparent rounded-md text-slate-50 bg-slate-500 dark:bg-zink-500 dark:border-zink-500 dark:text-zink-100">
+                            <Alert className="relative p-3 pr-12 text-sm border border-transparent rounded-md text-slate-50 bg-slate-500 dark:bg-zinc-500 dark:border-zinc-500 dark:text-zinc-100">
                                 <Alert.Close className="absolute top-0 bottom-0 right-0 p-3 transition text-slate-200 hover:text-slate-100" />
                                 <Alert.Bold>Light</Alert.Bold> alert! You should check in on some of those fields below.
                             </Alert>

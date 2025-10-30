@@ -1,10 +1,10 @@
-const plugin = require('tailwindcss/plugin')
+const plugin = require('tailwindcss/plugin');
 
-module.exports = plugin(function ({ addComponents, theme }) {
+const simpleBarPlugin = plugin(function ({ addComponents, theme }) {
     addComponents({
-        '[data-simplebar]': {
-            '@apply relative flex-col flex-wrap ltr:content-start ltr:items-start rtl:content-end rtl:items-end': {},
-        },
+        // '[data-simplebar]': {
+        //     '@apply relative flex-col flex-wrap ltr:content-start ltr:items-start rtl:content-end rtl:items-end': {},
+        // },
         '.simplebar-wrapper': {
             '@apply overflow-hidden': {},
             width: 'inherit',
@@ -59,12 +59,12 @@ module.exports = plugin(function ({ addComponents, theme }) {
             '@apply absolute ltr:right-0 rtl:left-0 bottom-0 overflow-hidden pointer-events-none': {},
             zIndex: 1,
         },
-        '[data-simplebar].simplebar-dragging .simplebar-content': {
-            '@apply pointer-events-none select-none': {},
-        },
-        '[data-simplebar].simplebar-dragging .simplebar-track': {
-            pointerEvents: 'all'
-        },
+        // '[data-simplebar].simplebar-dragging .simplebar-content': {
+        //     '@apply pointer-events-none select-none': {},
+        // },
+        // '[data-simplebar].simplebar-dragging .simplebar-track': {
+        //     pointerEvents: 'all'
+        // },
         '.simplebar-scrollbar': {
             '@apply absolute ltr:right-px rtl:left-px w-1.5 before:absolute before:bg-slate-500 before:rounded-md before:left-0 before:right-0 before:opacity-0': {},
             minHeight: '10px',
@@ -93,9 +93,9 @@ module.exports = plugin(function ({ addComponents, theme }) {
             '@apply ltr:right-auto rtl:left-auto ltr:left-0 rtl:right-0 top-0.5 h-2 min-h-0 w-auto': {},
             minWidth: '10px',
         },
-        '[data-simplebar-direction="rtl"] .simplebar-track.simplebar-vertical': {
-            '@apply ltr:right-auto rtl:left-auto ltr:left-0 rtl:right-0': {},
-        },
+        // '[data-simplebar-direction="rtl"] .simplebar-track.simplebar-vertical': {
+        //     '@apply ltr:right-auto rtl:left-auto ltr:left-0 rtl:right-0': {},
+        // },
         '.hs-dummy-scrollbar-size': {
             direction: 'rtl',
             '@apply fixed opacity-0 invisible overflow-x-scroll overflow-y-auto': {},
@@ -109,35 +109,37 @@ module.exports = plugin(function ({ addComponents, theme }) {
         '.custom-scroll': {
             '@apply h-full': {},
         },
-        '[data-simplebar-track="custom"]': {
-            '.simplebar-scrollbar:before': {
-                '@apply bg-custom-500': {},
-            }
-        },
-        '[data-simplebar-track="green"]': {
-            '.simplebar-scrollbar:before': {
-                '@apply bg-green-500': {},
-            }
-        },
-        '[data-simplebar-track="yellow"]': {
-            '.simplebar-scrollbar:before': {
-                '@apply bg-yellow-500': {},
-            }
-        },
-        '[data-simplebar-track="orange"]': {
-            '.simplebar-scrollbar:before': {
-                '@apply bg-orange-500': {},
-            }
-        },
-        '[data-simplebar-track="sky"]': {
-            '.simplebar-scrollbar:before': {
-                '@apply bg-sky-500': {},
-            }
-        },
-        '[data-simplebar-track="red"]': {
-            '.simplebar-scrollbar:before': {
-                '@apply bg-red-500': {},
-            }
-        }
+        // '[data-simplebar-track="custom"]': {
+        //     '.simplebar-scrollbar:before': {
+        //         '@apply bg-fecustom-500': {},
+        //     }
+        // },
+        // '[data-simplebar-track="green"]': {
+        //     '.simplebar-scrollbar:before': {
+        //         '@apply bg-green-500': {},
+        //     }
+        // },
+        // '[data-simplebar-track="yellow"]': {
+        //     '.simplebar-scrollbar:before': {
+        //         '@apply bg-yellow-500': {},
+        //     }
+        // },
+        // '[data-simplebar-track="orange"]': {
+        //     '.simplebar-scrollbar:before': {
+        //         '@apply bg-orange-500': {},
+        //     }
+        // },
+        // '[data-simplebar-track="sky"]': {
+        //     '.simplebar-scrollbar:before': {
+        //         '@apply bg-sky-500': {},
+        //     }
+        // },
+        // '[data-simplebar-track="red"]': {
+        //     '.simplebar-scrollbar:before': {
+        //         '@apply bg-red-500': {},
+        //     }
+        // }
     })
-})
+});
+
+module.exports = simpleBarPlugin;

@@ -225,7 +225,7 @@ const Grouprow = ({ chartId }: any) => {
                 dir="ltr"
                 options={options}
                 series={series || []}
-                data-chart-colors='["bg-custom-500", "bg-yellow-500", "bg-green-500", "bg-sky-500", "bg-purple-500", "bg-red-500", "bg-slate-500", "bg-orange-500", "bg-green-200","bg-pink-500", "bg-custom-200", "bg-red-300"]'
+                data-chart-colors='["bg-fecustom-500", "bg-yellow-500", "bg-green-500", "bg-sky-500", "bg-purple-500", "bg-red-500", "bg-slate-500", "bg-orange-500", "bg-green-200","bg-pink-500", "bg-fecustom-200", "bg-red-300"]'
                 id={chartId}
                 className="apex-charts"
                 height={350}
@@ -326,7 +326,7 @@ const Dumbbell = ({ chartId }: any) => {
                 dir="ltr"
                 options={options}
                 series={series || []}
-                data-chart-colors='["bg-custom-500", "bg-green-500"]'
+                data-chart-colors='["bg-fecustom-500", "bg-green-500"]'
                 id={chartId}
                 className="apex-charts"
                 height={350}

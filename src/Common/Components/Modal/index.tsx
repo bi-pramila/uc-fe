@@ -27,7 +27,7 @@ const Modal = ({ show, onHide, children, className, placement, id, dialogClassNa
                     </Component>
                 </ModalContextProvider>
             </div>
-            <div onClick={onHide} className={`fixed inset-0 bg-slate-900/40 dark:bg-zink-800/70 z-[1049] backdrop-overlay ${!show ? "hidden" : ""}`} id="backDropDiv"></div>
+            <div onClick={onHide} className={`fixed inset-0 bg-slate-900/40 dark:bg-zinc-800/70 z-[1049] backdrop-overlay ${!show ? "hidden" : ""}`} id="backDropDiv"></div>
         </React.Fragment>
     );
 };

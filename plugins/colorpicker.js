@@ -1,6 +1,6 @@
-const plugin = require('tailwindcss/plugin')
+const plugin = require('tailwindcss/plugin');
 
-module.exports = plugin(function ({ addComponents, theme }) {
+const colorpickerPlugin = plugin(function ({ addComponents, theme }) {
     addComponents({
         '.pcr-app': {
             '@apply rounded-md shadow-md border border-slate-200': {},
@@ -33,7 +33,7 @@ module.exports = plugin(function ({ addComponents, theme }) {
                 },
                 '.pcr-interaction': {
                     '.pcr-type.active': {
-                        '@apply bg-custom-500': {},
+                        '@apply bg-fecustom-500': {},
                     },
                     '.pcr-result': {
                         '@apply bg-white text-slate-800 border border-slate-200 rounded-md': {},
@@ -60,4 +60,6 @@ module.exports = plugin(function ({ addComponents, theme }) {
             }
         }
     })
-})
+});
+
+module.exports = colorpickerPlugin;

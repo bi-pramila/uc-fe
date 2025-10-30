@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <React.Fragment>
             <section className="relative pb-28 xl:pb-36 pt-44 xl:pt-52" id="home">
-                <div className="absolute top-0 left-0 size-64 bg-custom-500 opacity-10 blur-3xl"></div>
+                <div className="absolute top-0 left-0 size-64 bg-fecustom-500 opacity-10 blur-3xl"></div>
                 <div className="absolute bottom-0 right-0 size-64 bg-purple-500/10 blur-3xl"></div>
                 <div className="container 2xl:max-w-[87.5rem] px-4 mx-auto">
                     <div className="grid items-center grid-cols-12 gap-5 2xl:grid-cols-12">
@@ -17,7 +17,7 @@ const Home = () => {
                             <h1 className="mb-4 !leading-normal lg:text-5xl 2xl:text-6xl dark:text-zinc-100" data-aos="fade-right" data-aos-delay="300">Exclusive Collections 2024</h1>
                             <p className="text-lg mb-7 text-slate-500 dark:text-zinc-400" data-aos="fade-right" data-aos-delay="600">In 2024, metallics will be taking over the sneaker world. I love this trend because there are so many different ways to wear it. You can wear sequined sneakers, white sneakers with metallic accents, or all-over silver.</p>
                             <div className="flex items-center gap-2" data-aos="fade-right" data-aos-delay="800">
-                                <button type="button" className="px-8 py-3 text-white border-0 text-15 btn bg-gradient-to-r from-custom-500 to-purple-500 hover:text-white hover:from-purple-500 hover:to-custom-500"
+                                <button type="button" className="px-8 py-3 text-white border-0 text-15 btn bg-gradient-to-r from-fecustom-500 to-purple-500 hover:text-white hover:from-purple-500 hover:to-fecustom-500"
                                 >Shop Now <ShoppingCart className="inline-block size-4 align-middle rtl:mr-1 ltr:ml-1" /></button>
                             </div>
                         </div>

@@ -105,10 +105,10 @@ const Layout = ({ children }: any) => {
 
   useEffect(() => {
     document.documentElement.classList.add("scroll-smooth", "group");
-    document.body.classList.add('text-base', 'bg-body-bg', 'text-body', 'font-public', 'dark:text-zink-100', 'dark:bg-zink-800', 'group-data-[skin=bordered]:bg-body-bordered', 'group-data-[skin=bordered]:dark:bg-zink-700');
+    document.body.classList.add('text-base', 'bg-body-bg', 'text-body', 'font-public', 'dark:text-zinc-100', 'dark:bg-zinc-800', 'group-data-[skin=bordered]:bg-body-bordered', 'group-data-[skin=bordered]:dark:bg-zinc-700');
     return () => {
       document.documentElement.classList.remove("scroll-smooth", "group");
-      document.body.classList.remove('text-base', 'bg-body-bg', 'text-body', 'font-public', 'dark:text-zink-100', 'dark:bg-zink-800', 'group-data-[skin=bordered]:bg-body-bordered', 'group-data-[skin=bordered]:dark:bg-zink-700');
+      document.body.classList.remove('text-base', 'bg-body-bg', 'text-body', 'font-public', 'dark:text-zinc-100', 'dark:bg-zinc-800', 'group-data-[skin=bordered]:bg-body-bordered', 'group-data-[skin=bordered]:dark:bg-zinc-700');
     };
   }, []);
 

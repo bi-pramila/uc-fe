@@ -1,15 +1,36 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import BreadCrumb from "Common/BreadCrumb";
-import { GoogleApiWrapper, Map } from "google-maps-react";
+import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import { connect } from "react-redux";
 
-interface IProvidedProps {
-    google: object;
-}
 
-const MapsGoogle: React.FC<IProvidedProps> = (props) => {
+const containerStyle = {
+  width: '100%',
+  height: '400px'
+};
 
-    const { google } = props;
+const center = {
+  lat: 28.6139, // Example: New Delhi
+  lng: 77.2090
+};
+
+const apiKey = import.meta.env.REACT_APP_GOOGLE_MAPS_API_KEY;
+
+
+const MapsGoogle: React.FC = () => {
+    const streetViewRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (window.google && streetViewRef.current) {
+        // Initialize Street View Panorama
+        const panorama = new window.google.maps.StreetViewPanorama(streetViewRef.current, {
+            position: center,
+            pov: { heading: 165, pitch: 0 },
+            zoom: 1
+        });
+        }
+    }, []);
+
 
     return (
         <React.Fragment>
@@ -17,47 +38,67 @@ const MapsGoogle: React.FC<IProvidedProps> = (props) => {
                 <BreadCrumb title="Google Maps" pageTitle="Maps" />
 
                 <div className="grid grid-cols-1 gap-x-5 xl:grid-cols-2">
+                    {/* Markers Example */}
                     <div className="card">
                         <div className="card-body">
                             <h6 className="mb-4 text-gray-800 text-15 dark:text-white">Markers</h6>
-                            <div id="gmaps-markers" className="gmaps" style={{ position: "relative" }}>
-                                <Map
-                                    google={google}
-                                    style={{ width: "100%", height: "100%" }}
-                                />
+                            <div className="gmaps" style={{ position: "relative" }}>
+                               <LoadScript googleMapsApiKey={apiKey}>
+                                    <GoogleMap
+                                        mapContainerStyle={containerStyle}
+                                        center={center}
+                                        zoom={10}
+                                    >
+                                        <Marker position={center} />
+                                    </GoogleMap>
+                                </LoadScript>
                             </div>
                         </div>
                     </div>
+                    {/* Overlays/Additional Map Features */}
                     <div className="card">
                         <div className="card-body">
                             <h6 className="mb-4 text-gray-800 text-15 dark:text-white">Overlays</h6>
-                            <div id="gmaps-markers" className="gmaps" style={{ position: "relative" }}>
-                                <Map
-                                    google={google}
-                                    style={{ width: "100%", height: "100%" }}
-                                />
+                            <div className="gmaps" style={{ position: "relative" }}>
+                                <LoadScript googleMapsApiKey={apiKey}>
+                                    <GoogleMap
+                                        mapContainerStyle={containerStyle}
+                                        center={center}
+                                        zoom={10}
+                                    >
+                                        {/* Add overlays here, e.g., shapes, markers, etc. */}
+                                    </GoogleMap>
+                                </LoadScript>
                             </div>
                         </div>
                     </div>
+                    {/* Street View Panorama */}
                     <div className="card">
                         <div className="card-body">
                             <h6 className="mb-4 text-gray-800 text-15 dark:text-white">Street View Panoramas</h6>
                             <div id="gmaps-markers" className="gmaps" style={{ position: "relative" }}>
-                                <Map
-                                    google={google}
-                                    style={{ width: "100%", height: "100%" }}
+                                <div
+                                    ref={streetViewRef}
+                                    style={{ width: '100%', height: '400px', position: "relative" }}
                                 />
                             </div>
                         </div>
                     </div>
+                    {/* Map Types Example */}
                     <div className="card">
                         <div className="card-body">
                             <h6 className="mb-4 text-gray-800 text-15 dark:text-white">Map Types</h6>
                             <div id="gmaps-markers" className="gmaps" style={{ position: "relative" }}>
-                                <Map
-                                    google={google}
-                                    style={{ width: "100%", height: "100%" }}
-                                />
+                                <LoadScript googleMapsApiKey={apiKey}>
+                                    <GoogleMap
+                                        mapContainerStyle={containerStyle}
+                                        center={center}
+                                        zoom={10}
+                                        mapTypeId="satellite" // 'roadmap', 'satellite', 'hybrid', 'terrain' possible
+                                    >
+                                        {/* Child components here */}
+                                    </GoogleMap>
+                                </LoadScript>
                             </div>
                         </div>
                     </div>
@@ -68,12 +109,5 @@ const MapsGoogle: React.FC<IProvidedProps> = (props) => {
     );
 }
 
-const ConnectedMapsGoogle = connect(
-    null,
-    {}
-)(GoogleApiWrapper({
-    apiKey: "AIzaSyAbvyBxmMbFhrzP9Z8moyYr6dCr-pzjhBE",
-    // v: "3",
-})(MapsGoogle));
+export default MapsGoogle;
 
-export default ConnectedMapsGoogle;

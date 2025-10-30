@@ -15,7 +15,7 @@ const UiCollapse = () => {
 
                             <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                                 <Collapse>
-                                    <Collapse.Trigger className="flex text-white collapsible-header group/item btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">
+                                    <Collapse.Trigger className="flex text-white collapsible-header group/item btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20">
                                         Collapsible Button
                                         <div className="ltr:ml-2 rtl:mr-2 shrink-0">
                                             <ChevronDown className="hidden size-4 group-[.show]/item:inline-block"></ChevronDown>
@@ -30,7 +30,7 @@ const UiCollapse = () => {
                                 </Collapse>
 
                                 <Collapse>
-                                    <Collapse.Trigger className="flex text-white collapsible-header group/item btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">
+                                    <Collapse.Trigger className="flex text-white collapsible-header group/item btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20">
                                         Collapsible Button
                                         <div className="ltr:ml-2 rtl:mr-2 shrink-0">
                                             <ChevronDown className="hidden size-4 group-[.show]/item:inline-block"></ChevronDown>
@@ -51,7 +51,7 @@ const UiCollapse = () => {
                         <div className="card-body">
                             <h6 className="mb-4 text-15">Link Collapse</h6>
                             <Collapse>
-                                <Collapse.Trigger as="a" href="#!" className="flex bg-white border-white collapsible-header group/item text-custom-500 btn hover:text-custom-700 focus:text-custom-700 active:text-custom-700 dark:bg-zink-700 dark:border-zink-700">
+                                <Collapse.Trigger as="a" href="#!" className="flex bg-white border-white collapsible-header group/item text-fecustom-500 btn hover:text-fecustom-700 focus:text-fecustom-700 active:text-fecustom-700 dark:bg-zinc-700 dark:border-zinc-700">
                                     Collapsible Link
                                 </Collapse.Trigger>
                                 <Collapse.Content className="mt-2 mb-0 collapsible-content card">

@@ -16,10 +16,10 @@ const BreadCrumb = ({ title, pageTitle }: BreadCrumbProps) => {
                     <h5 className="text-16">{title}</h5>
                 </div>
                 <ul className="flex items-center gap-2 text-sm font-normal shrink-0">
-                    <li className="relative before:content-['\ea54'] before:font-remix ltr:before:-right-1 rtl:before:-left-1  before:absolute before:text-[18px] before:-top-[3px] ltr:pr-4 rtl:pl-4 before:text-slate-400 dark:text-zink-200">
-                        <Link to="#" className="text-slate-400 dark:text-zink-200">{pageTitle}</Link>
+                    <li className="relative before:content-['\ea54'] before:font-remix ltr:before:-right-1 rtl:before:-left-1  before:absolute before:text-[18px] before:-top-[3px] ltr:pr-4 rtl:pl-4 before:text-slate-400 dark:text-zinc-200">
+                        <Link to="#" className="text-slate-400 dark:text-zinc-200">{pageTitle}</Link>
                     </li>
-                    <li className="text-slate-700 dark:text-zink-100">
+                    <li className="text-slate-700 dark:text-zinc-100">
                         {title}
                     </li>
                 </ul>

@@ -1,6 +1,7 @@
+@reference "tailwindcss";
 
 .rdl-filter, .rdl-control {
-    @apply bg-white dark:bg-zink-700 text-slate-800 dark:text-zink-50 border-slate-200 dark:border-zink-500 #{!important};
+    @apply bg-white dark:bg-zinc-700 text-slate-800 dark:text-zinc-50 border-slate-200 dark:border-zinc-500 ;
 }
 
 .react-dual-listbox * {
@@ -8,13 +9,13 @@
 }
 
 .rdl-btn {
-    @apply bg-white dark:bg-zink-700 text-slate-800 dark:text-zink-50 border-slate-200 dark:border-zink-500 #{!important};
+    @apply bg-white dark:bg-zinc-700 text-slate-800 dark:text-zinc-50 border-slate-200 dark:border-zinc-500 ;
     
     &:hover:not(:disabled) {
-        @apply border-slate-200 dark:border-zink-500 #{!important};
+        @apply border-slate-200 dark:border-zinc-500 ;
     }
 }
 
 :is(.twitter-picker, .sketch-picker, .chrome-picker, .compact-picker, .github-picker){
-    @apply bg-white dark:bg-zink-600 #{!important};
+    @apply bg-white dark:bg-zinc-600 ;
 }

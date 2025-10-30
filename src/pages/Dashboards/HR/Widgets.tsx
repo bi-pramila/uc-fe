@@ -16,7 +16,7 @@ const Widgets = () => {
                             </h5>
                         </div>
                         <div className="col-span-4 md:col-span-3">
-                            <TotalEmployeeChart chartId="totalEmployee" dataChartColor='["bg-custom-500"]' series={[10]} />
+                            <TotalEmployeeChart chartId="totalEmployee" dataChartColor='["bg-fecustom-500"]' series={[10]} />
                         </div>
                     </div>
                     <div className="flex items-center gap-3 mt-3">

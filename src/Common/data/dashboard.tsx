@@ -1,4 +1,4 @@
-import { Goal, MousePointerClick, MousePointerSquare, Rocket } from 'lucide-react';
+import { Goal, MousePointerClick, SquareMousePointer, Rocket } from 'lucide-react';
 import { ReactElement } from 'react';
 
 // Images
@@ -270,7 +270,7 @@ const widgetsData: WidgetData[] = [
         name: "SENT",
         description: "238 Emails",
         chartId: "sentEmail",
-        chartColor: '["bg-custom-500"]',
+        chartColor: '["bg-fecustom-500"]',
         decimals: 0,
         suffix: '',
         series: [{
@@ -299,7 +299,7 @@ const widgetsData: WidgetData[] = [
     },
     {
         id: 3,
-        icon: <MousePointerSquare className="inline-block size-4 ltr:mr-1 rtl:ml-1" />,
+        icon: <SquareMousePointer className="inline-block size-4 ltr:mr-1 rtl:ml-1" />,
         price: 3.79,
         name: "CLICKS RATE",
         description: "29 Clicks",
@@ -624,17 +624,17 @@ const activeFriendsData = [avatar2, avatar3, avatar4, avatar5, avatar6, avatar7,
 const storyData = [
     { id: 1, image: avatar1, username: "Your story", bgColor: "bg-pink-100 dark:bg-pink-500/20", isActive: true },
     { id: 2, image: avatar2, username: "@zaria_muller", bgColor: "bg-sky-100 dark:bg-sky-500/20", isActive: true },
-    { id: 3, image: avatar3, username: "@christina", bgColor: "bg-slate-100 dark:bg-zink-600", isActive: true },
+    { id: 3, image: avatar3, username: "@christina", bgColor: "bg-slate-100 dark:bg-zinc-600", isActive: true },
     { id: 4, image: avatar4, username: "@blaze_herzog", bgColor: "bg-yellow-100 dark:bg-yellow-500/20", isActive: true },
     { id: 5, image: avatar5, username: "@keon_rippin", bgColor: "bg-emerald-100 dark:bg-emerald-500/20", isActive: true },
     { id: 6, image: avatar6, username: "@niko_watsica", bgColor: "bg-purple-100 dark:bg-purple-500/20", isActive: true },
-    { id: 7, image: avatar7, username: "@genesis", bgColor: "bg-custom-100 dark:bg-custom-500/20", isActive: false },
+    { id: 7, image: avatar7, username: "@genesis", bgColor: "bg-fecustom-100 dark:bg-fecustom-500/20", isActive: false },
     { id: 8, image: avatar8, username: "@brayan_herman", bgColor: "bg-green-100 dark:bg-green-500/20", isActive: false },
     { id: 9, image: avatar9, username: "@logan", bgColor: "bg-purple-100 dark:bg-purple-500/20", isActive: false },
     { id: 10, image: avatar10, username: "@gerhold", bgColor: "bg-cyan-100 dark:bg-cyan-500/20", isActive: false },
     { id: 11, image: avatar2, username: "@fletcher", bgColor: "bg-sky-100 dark:bg-sky-500/20", isActive: false },
     { id: 12, image: avatar2, username: "@fletcher", bgColor: "bg-sky-100 dark:bg-sky-500/20", isActive: false },
-    { id: 13, image: avatar3, username: "@christina", bgColor: "bg-slate-100 dark:bg-zink-600", isActive: false },
+    { id: 13, image: avatar3, username: "@christina", bgColor: "bg-slate-100 dark:bg-zinc-600", isActive: false },
 ];
 
 const MessageData = [

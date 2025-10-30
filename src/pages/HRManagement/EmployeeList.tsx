@@ -172,7 +172,7 @@ const EmployeeList = () => {
             accessorKey: "employeeId",
             enableColumnFilter: false,
             cell: (cell: any) => (
-                <Link to="#!" className="transition-all duration-150 ease-linear text-custom-500 hover:text-custom-600">{cell.getValue()}</Link>
+                <Link to="#!" className="transition-all duration-150 ease-linear text-fecustom-500 hover:text-fecustom-600">{cell.getValue()}</Link>
             ),
         },
         {
@@ -224,13 +224,13 @@ const EmployeeList = () => {
             enableSorting: true,
             cell: (cell: any) => (
                 <div className="flex gap-3">
-                    <Link className="flex items-center justify-center size-8 transition-all duration-200 ease-linear rounded-md bg-slate-100 text-slate-500 hover:text-custom-500 hover:bg-custom-100 dark:bg-zink-600 dark:text-zink-200 dark:hover:bg-custom-500/20 dark:hover:text-custom-500" to="/pages-account"><Eye className="inline-block size-3" /> </Link>
-                    <Link to="#!" data-modal-target="addEmployeeModal" className="flex items-center justify-center size-8 transition-all duration-200 ease-linear rounded-md edit-item-btn bg-slate-100 text-slate-500 hover:text-custom-500 hover:bg-custom-100 dark:bg-zink-600 dark:text-zink-200 dark:hover:bg-custom-500/20 dark:hover:text-custom-500" onClick={() => {
+                    <Link className="flex items-center justify-center size-8 transition-all duration-200 ease-linear rounded-md bg-slate-100 text-slate-500 hover:text-fecustom-500 hover:bg-fecustom-100 dark:bg-zinc-600 dark:text-zinc-200 dark:hover:bg-fecustom-500/20 dark:hover:text-fecustom-500" to="/pages-account"><Eye className="inline-block size-3" /> </Link>
+                    <Link to="#!" data-modal-target="addEmployeeModal" className="flex items-center justify-center size-8 transition-all duration-200 ease-linear rounded-md edit-item-btn bg-slate-100 text-slate-500 hover:text-fecustom-500 hover:bg-fecustom-100 dark:bg-zinc-600 dark:text-zinc-200 dark:hover:bg-fecustom-500/20 dark:hover:text-fecustom-500" onClick={() => {
                         const data = cell.row.original;
                         handleUpdateDataClick(data);
                     }}>
                         <Pencil className="size-4" /></Link>
-                    <Link to="#!" className="flex items-center justify-center size-8 transition-all duration-200 ease-linear rounded-md remove-item-btn bg-slate-100 text-slate-500 hover:text-custom-500 hover:bg-custom-100 dark:bg-zink-600 dark:text-zink-200 dark:hover:bg-custom-500/20 dark:hover:text-custom-500" onClick={() => {
+                    <Link to="#!" className="flex items-center justify-center size-8 transition-all duration-200 ease-linear rounded-md remove-item-btn bg-slate-100 text-slate-500 hover:text-fecustom-500 hover:bg-fecustom-100 dark:bg-zinc-600 dark:text-zinc-200 dark:hover:bg-fecustom-500/20 dark:hover:text-fecustom-500" onClick={() => {
                         const data = cell.row.original;
                         onClickDelete(data);
                     }}><Trash2 className="size-4" /></Link>
@@ -250,7 +250,7 @@ const EmployeeList = () => {
                     <div className="flex items-center gap-3 mb-4">
                         <h6 className="text-15 grow">Employee (<b className="total-Employs">{data.length}</b>)</h6>
                         <div className="shrink-0">
-                            <Link to="#!" data-modal-target="addEmployeeModal" type="button" className="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20 add-employee" onClick={toggle}>
+                            <Link to="#!" data-modal-target="addEmployeeModal" type="button" className="text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20 add-employee" onClick={toggle}>
                                 <Plus className="inline-block size-4" /> <span className="align-middle">Add Employee</span>
                             </Link>
                         </div>
@@ -263,9 +263,9 @@ const EmployeeList = () => {
                             customPageSize={7}
                             divclassName="-mx-5 overflow-x-auto"
                             tableclassName="w-full whitespace-nowrap"
-                            theadclassName="ltr:text-left rtl:text-right bg-slate-100 dark:bg-zink-600"
-                            thclassName="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold border-b border-slate-200 dark:border-zink-500"
-                            tdclassName="px-3.5 py-2.5 first:pl-5 last:pr-5 border-y border-slate-200 dark:border-zink-500"
+                            theadclassName="ltr:text-left rtl:text-right bg-slate-100 dark:bg-zinc-600"
+                            thclassName="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold border-b border-slate-200 dark:border-zinc-500"
+                            tdclassName="px-3.5 py-2.5 first:pl-5 last:pr-5 border-y border-slate-200 dark:border-zinc-500"
                             PaginationClassName="flex flex-col items-center gap-4 px-4 mt-4 md:flex-row"
                         />
                         :
@@ -273,7 +273,7 @@ const EmployeeList = () => {
                             <div className="py-6 text-center">
                                 <Search className="size-6 mx-auto text-sky-500 fill-sky-100 dark:sky-500/20" />
                                 <h5 className="mt-2 mb-1">Sorry! No Result Found</h5>
-                                <p className="mb-0 text-slate-500 dark:text-zink-200">We've searched more than 299+ Employee We did not find any Employee for you search.</p>
+                                <p className="mb-0 text-slate-500 dark:text-zinc-200">We've searched more than 299+ Employee We did not find any Employee for you search.</p>
                             </div>
                         </div>)}
                 </div>
@@ -282,8 +282,8 @@ const EmployeeList = () => {
             {/* Employee Modal */}
             <Modal show={show} onHide={toggle} modal-center="true"
                 className="fixed flex flex-col transition-all duration-300 ease-in-out left-2/4 z-drawer -translate-x-2/4 -translate-y-2/4"
-                dialogClassName="w-screen md:w-[30rem] bg-white shadow rounded-md dark:bg-zink-600">
-                <Modal.Header className="flex items-center justify-between p-4 border-b dark:border-zink-500"
+                dialogClassName="w-screen md:w-[30rem] bg-white shadow rounded-md dark:bg-zinc-600">
+                <Modal.Header className="flex items-center justify-between p-4 border-b dark:border-zinc-500"
                     closeButtonClass="transition-all duration-200 ease-linear text-slate-400 hover:text-red-500">
                     <Modal.Title className="text-16">{!!isEdit ? "Edit Employee" : "Add Employee"}</Modal.Title>
                 </Modal.Header>
@@ -301,7 +301,7 @@ const EmployeeList = () => {
                         <div id="alert-error-msg" className="hidden px-4 py-3 text-sm text-red-500 border border-transparent rounded-md bg-red-50 dark:bg-red-500/20"></div>
                         <div className="grid grid-cols-1 gap-4 xl:grid-cols-12">
                             <div className="xl:col-span-12">
-                                <div className="relative size-24 mx-auto mb-4 rounded-full shadow-md bg-slate-100 profile-user dark:bg-zink-500">
+                                <div className="relative size-24 mx-auto mb-4 rounded-full shadow-md bg-slate-100 profile-user dark:bg-zinc-500">
                                     <img src={selectedImage || validation.values.img || dummyImg} alt="" className="object-cover w-full h-full rounded-full user-profile-image" />
                                     <div className="absolute bottom-0 flex items-center justify-center size-8 rounded-full ltr:right-0 rtl:left-0 profile-photo-edit">
                                         <input
@@ -311,8 +311,8 @@ const EmployeeList = () => {
                                             accept="image/*"
                                             className="hidden profile-img-file-input"
                                             onChange={handleImageChange} />
-                                        <label htmlFor="profile-img-file-input" className="flex items-center justify-center size-8 bg-white rounded-full shadow-lg cursor-pointer dark:bg-zink-600 profile-photo-edit">
-                                            <ImagePlus className="size-4 text-slate-500 fill-slate-200 dark:text-zink-200 dark:fill-zink-500" />
+                                        <label htmlFor="profile-img-file-input" className="flex items-center justify-center size-8 bg-white rounded-full shadow-lg cursor-pointer dark:bg-zinc-600 profile-photo-edit">
+                                            <ImagePlus className="size-4 text-slate-500 fill-slate-200 dark:text-zinc-200 dark:fill-zinc-500" />
                                         </label>
                                     </div>
                                 </div>
@@ -322,12 +322,12 @@ const EmployeeList = () => {
                             </div>
                             <div className="xl:col-span-12">
                                 <label htmlFor="employeeId" className="inline-block mb-2 text-base font-medium">Employee ID</label>
-                                <input type="text" id="employeeId" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200"
+                                <input type="text" id="employeeId" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200"
                                     value={validation.values.employeeId || "#TWE1001557"} disabled />
                             </div>
                             <div className="xl:col-span-12">
                                 <label htmlFor="employeeInput" className="inline-block mb-2 text-base font-medium">Name</label>
-                                <input type="text" id="employeeInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Employee name"
+                                <input type="text" id="employeeInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="Employee name"
                                     name="name"
                                     onChange={validation.handleChange}
                                     value={validation.values.name || ""}
@@ -338,7 +338,7 @@ const EmployeeList = () => {
                             </div>
                             <div className="xl:col-span-12">
                                 <label htmlFor="emailInput" className="inline-block mb-2 text-base font-medium">Email</label>
-                                <input type="text" id="emailInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="example@tailwick.com"
+                                <input type="text" id="emailInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="example@tailwick.com"
                                     name="email"
                                     onChange={validation.handleChange}
                                     value={validation.values.email || ""}
@@ -349,7 +349,7 @@ const EmployeeList = () => {
                             </div>
                             <div className="xl:col-span-6">
                                 <label htmlFor="phoneNumberInput" className="inline-block mb-2 text-base font-medium">Phone Number</label>
-                                <input type="text" id="phoneNumberInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter phone number"
+                                <input type="text" id="phoneNumberInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="Enter phone number"
                                     name="phone"
                                     onChange={validation.handleChange}
                                     value={validation.values.phone || ""}
@@ -360,7 +360,7 @@ const EmployeeList = () => {
                             </div>
                             <div className="xl:col-span-6">
                                 <label htmlFor="locationInput" className="inline-block mb-2 text-base font-medium">Location</label>
-                                <input type="text" id="locationInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter location"
+                                <input type="text" id="locationInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="Enter location"
                                     name="location"
                                     onChange={validation.handleChange}
                                     value={validation.values.location || ""}
@@ -373,7 +373,7 @@ const EmployeeList = () => {
                                 <label htmlFor="joiningDateInput" className="inline-block mb-2 text-base font-medium">Joining Date</label>
                                 <Flatpickr
                                     id="joiningDateInput"
-                                    className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200"
+                                    className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200"
                                     options={{
                                         dateFormat: "d M, Y"
                                     }}
@@ -388,7 +388,7 @@ const EmployeeList = () => {
                             </div>
                             <div className="xl:col-span-6">
                                 <label htmlFor="experienceInput" className="inline-block mb-2 text-base font-medium">Experience</label>
-                                <input type="number" id="experienceInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="0.0"
+                                <input type="number" id="experienceInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="0.0"
                                     name="experience"
                                     onChange={validation.handleChange}
                                     value={validation.values.experience || ""}
@@ -399,7 +399,7 @@ const EmployeeList = () => {
                             </div>
                             <div className="xl:col-span-12">
                                 <label htmlFor="designationSelect" className="inline-block mb-2 text-base font-medium">Designation</label>
-                                <select className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" data-choices data-choices-search-false id="typeSelect"
+                                <select className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" data-choices data-choices-search-false id="typeSelect"
                                     name="designation"
                                     onChange={validation.handleChange}
                                     value={validation.values.designation || ""}
@@ -420,8 +420,8 @@ const EmployeeList = () => {
                             </div>
                         </div>
                         <div className="flex justify-end gap-2 mt-4">
-                            <button type="reset" id="close-modal" data-modal-close="addEmployeeModal" className="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100 focus:text-red-500 focus:bg-red-100 active:text-red-500 active:bg-red-100 dark:bg-zink-600 dark:hover:bg-red-500/10 dark:focus:bg-red-500/10 dark:active:bg-red-500/10" onClick={toggle}>Cancel</button>
-                            <button type="submit" id="addNew" className="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">
+                            <button type="reset" id="close-modal" data-modal-close="addEmployeeModal" className="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100 focus:text-red-500 focus:bg-red-100 active:text-red-500 active:bg-red-100 dark:bg-zinc-600 dark:hover:bg-red-500/10 dark:focus:bg-red-500/10 dark:active:bg-red-500/10" onClick={toggle}>Cancel</button>
+                            <button type="submit" id="addNew" className="text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20">
                                 {!!isEdit ? "Update" : "Add Employee"}
                             </button>
                         </div>

@@ -351,7 +351,7 @@ const MainAttendance = () => {
                                 <h5 className="mb-1 text-16">
                                     <CountUp end={43} className="counter-value" />
                                 </h5>
-                                <p className="truncate text-slate-500 dark:text-zink-200">Total Employee</p>
+                                <p className="truncate text-slate-500 dark:text-zinc-200">Total Employee</p>
                             </div>
                         </div>
                     </div>
@@ -364,7 +364,7 @@ const MainAttendance = () => {
                                 <h5 className="mb-1 text-16">
                                     <CountUp end={6} className="counter-value" />
                                 </h5>
-                                <p className="truncate text-slate-500 dark:text-zink-200">Absent Employee (Today)</p>
+                                <p className="truncate text-slate-500 dark:text-zinc-200">Absent Employee (Today)</p>
                             </div>
                         </div>
                     </div>
@@ -377,7 +377,7 @@ const MainAttendance = () => {
                                 <h5 className="mb-1 text-16">
                                     <CountUp end={32} className="counter-value" />
                                 </h5>
-                                <p className="truncate text-slate-500 dark:text-zink-200">Present Employee (Today)</p>
+                                <p className="truncate text-slate-500 dark:text-zinc-200">Present Employee (Today)</p>
                             </div>
                         </div>
                     </div>
@@ -385,12 +385,12 @@ const MainAttendance = () => {
                 <div className="xl:col-span-3">
                     <div className="card">
                         <div className="flex items-center gap-4 card-body">
-                            <div className="flex items-center justify-center size-12 rounded-md text-custom-500 bg-custom-100 text-15 dark:bg-custom-500/20 shrink-0"><Briefcase /></div>
+                            <div className="flex items-center justify-center size-12 rounded-md text-fecustom-500 bg-fecustom-100 text-15 dark:bg-fecustom-500/20 shrink-0"><Briefcase /></div>
                             <div className="overflow-hidden grow">
                                 <h5 className="mb-1 text-16">
                                     <CountUp end={22} className="counter-value" />
                                 </h5>
-                                <p className="truncate text-slate-500 dark:text-zink-200">Working Days (Current Month)</p>
+                                <p className="truncate text-slate-500 dark:text-zinc-200">Working Days (Current Month)</p>
                             </div>
                         </div>
                     </div>
@@ -402,15 +402,15 @@ const MainAttendance = () => {
                     <div className="grid grid-cols-1 gap-5 mb-5 xl:grid-cols-12">
                         <div className="xl:col-span-3">
                             <div className="relative">
-                                <input type="text" className="ltr:pl-8 rtl:pr-8 search form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Search for ..." autoComplete="off" onChange={(e) => filterSearchData(e)} />
-                                <Search className="inline-block size-4 absolute ltr:left-2.5 rtl:right-2.5 top-2.5 text-slate-500 dark:text-zink-200 fill-slate-100 dark:fill-zink-600" />
+                                <input type="text" className="ltr:pl-8 rtl:pr-8 search form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="Search for ..." autoComplete="off" onChange={(e) => filterSearchData(e)} />
+                                <Search className="inline-block size-4 absolute ltr:left-2.5 rtl:right-2.5 top-2.5 text-slate-500 dark:text-zinc-200 fill-slate-100 dark:fill-zinc-600" />
                             </div>
                         </div>
                         <div className="xl:col-span-2 xl:col-start-11">
                             <div className="relative">
-                                <CalendarRange className="absolute size-4 ltr:left-3 rtl:right-3 top-3 text-slate-500 dark:text-zink-200" />
+                                <CalendarRange className="absolute size-4 ltr:left-3 rtl:right-3 top-3 text-slate-500 dark:text-zinc-200" />
                                 <Flatpickr
-                                    className="ltr:pl-10 rtl:pr-10 form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200"
+                                    className="ltr:pl-10 rtl:pr-10 form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200"
                                     options={{
                                         dateFormat: "d M, Y",
                                         mode: "range",
@@ -428,16 +428,16 @@ const MainAttendance = () => {
                             customPageSize={10}
                             divclassName="overflow-x-auto"
                             tableclassName="w-full whitespace-nowrap"
-                            theadclassName="ltr:text-left rtl:text-right bg-slate-100 text-slate-500 dark:text-zink-200 dark:bg-zink-600"
-                            thclassName="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500"
-                            tdclassName="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500"
+                            theadclassName="ltr:text-left rtl:text-right bg-slate-100 text-slate-500 dark:text-zinc-200 dark:bg-zinc-600"
+                            thclassName="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zinc-500"
+                            tdclassName="px-3.5 py-2.5 border-y border-slate-200 dark:border-zinc-500"
                         />
                         :
                         (<div className="noresult">
                             <div className="py-6 text-center">
                                 <Search className="size-6 mx-auto text-sky-500 fill-sky-100 dark:sky-500/20" />
                                 <h5 className="mt-2 mb-1">Sorry! No Result Found</h5>
-                                <p className="mb-0 text-slate-500 dark:text-zink-200">We've searched more than 10+ Attendance We did not find any Attendance for you search.</p>
+                                <p className="mb-0 text-slate-500 dark:text-zinc-200">We've searched more than 10+ Attendance We did not find any Attendance for you search.</p>
                             </div>
                         </div>)}
                 </div>
@@ -447,24 +447,24 @@ const MainAttendance = () => {
 
             <Modal show={show} onHide={() => setShow(!show)} modal-center="true"
                 className="fixed flex flex-col transition-all duration-300 ease-in-out left-2/4 z-drawer -translate-x-2/4 -translate-y-2/4"
-                dialogClassName="w-screen md:w-[30rem] bg-white shadow rounded-md dark:bg-zink-600">
-                <Modal.Header className="flex items-center justify-between p-4 border-b dark:border-zink-300/20"
+                dialogClassName="w-screen md:w-[30rem] bg-white shadow rounded-md dark:bg-zinc-600">
+                <Modal.Header className="flex items-center justify-between p-4 border-b dark:border-zinc-300/20"
                     closeButtonClass="transition-all duration-200 ease-linear text-slate-400 hover:text-red-500">
                     <Modal.Title className="text-16">Attendance Info (05 June, 2023)</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="max-h-[calc(theme('height.screen')_-_180px)] p-4 overflow-y-auto">
-                    <div className="rounded-md bg-slate-100 dark:bg-zink-500/50">
+                    <div className="rounded-md bg-slate-100 dark:bg-zinc-500/50">
                         <div className="p-3">
-                            <p className="mb-1 text-slate-500 dark:text-zink-200">Check In Date & Time</p>
+                            <p className="mb-1 text-slate-500 dark:text-zinc-200">Check In Date & Time</p>
                             <h6>Monday, 05 June, 2023 <b>08:29 AM</b></h6>
                         </div>
                         <div className="p-5">
-                            <div className="flex items-center justify-center size-24 mx-auto bg-white rounded-full dark:bg-zink-600 text-16 outline outline-white dark:outline-zink-600 outline-offset-4">
+                            <div className="flex items-center justify-center size-24 mx-auto bg-white rounded-full dark:bg-zinc-600 text-16 outline outline-white dark:outline-zinc-600 outline-offset-4">
                                 <b>08:15</b> <small className="ltr:ml-1 rtl:mr-1">Hrs</small>
                             </div>
                         </div>
                         <div className="p-3">
-                            <p className="mb-1 text-slate-500 dark:text-zink-200">Check Out Date & Time</p>
+                            <p className="mb-1 text-slate-500 dark:text-zinc-200">Check Out Date & Time</p>
                             <h6>Monday, 05 June, 2023 <b>06:11 AM</b></h6>
                         </div>
                     </div>

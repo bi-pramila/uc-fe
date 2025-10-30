@@ -24,34 +24,34 @@ const Footer = () => {
                             <p className="mb-5 text-slate-500 dark:text-zinc-400">Premium Multipurpose Admin & Dashboard Template You can build any type of web application like eCommerce, CRM, CMS, Project management apps, Admin Panels, etc using Tailwick.</p>
                             <ul className="flex items-center gap-3">
                                 <li>
-                                    <a href="#!" className="flex items-center justify-center size-10 transition-all duration-200 ease-linear border rounded-full text-slate-500 border-slate-200 dark:text-zinc-400 dark:border-zinc-800 hover:text-custom-500 dark:hover:text-custom-500">
+                                    <a href="#!" className="flex items-center justify-center size-10 transition-all duration-200 ease-linear border rounded-full text-slate-500 border-slate-200 dark:text-zinc-400 dark:border-zinc-800 hover:text-fecustom-500 dark:hover:text-fecustom-500">
                                         <Facebook className="size-4"></Facebook>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#!" className="flex items-center justify-center size-10 transition-all duration-200 ease-linear border rounded-full text-slate-500 border-slate-200 dark:text-zinc-400 dark:border-zinc-800 hover:text-custom-500 dark:hover:text-custom-500">
+                                    <a href="#!" className="flex items-center justify-center size-10 transition-all duration-200 ease-linear border rounded-full text-slate-500 border-slate-200 dark:text-zinc-400 dark:border-zinc-800 hover:text-fecustom-500 dark:hover:text-fecustom-500">
                                         <Linkedin className="size-4"></Linkedin>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#!" className="flex items-center justify-center size-10 transition-all duration-200 ease-linear border rounded-full text-slate-500 border-slate-200 dark:text-zinc-400 dark:border-zinc-800 hover:text-custom-500 dark:hover:text-custom-500">
+                                    <a href="#!" className="flex items-center justify-center size-10 transition-all duration-200 ease-linear border rounded-full text-slate-500 border-slate-200 dark:text-zinc-400 dark:border-zinc-800 hover:text-fecustom-500 dark:hover:text-fecustom-500">
                                         <Instagram className="size-4"></Instagram>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#!" className="flex items-center justify-center size-10 transition-all duration-200 ease-linear border rounded-full text-slate-500 border-slate-200 dark:text-zinc-400 dark:border-zinc-800 hover:text-custom-500 dark:hover:text-custom-500">
+                                    <a href="#!" className="flex items-center justify-center size-10 transition-all duration-200 ease-linear border rounded-full text-slate-500 border-slate-200 dark:text-zinc-400 dark:border-zinc-800 hover:text-fecustom-500 dark:hover:text-fecustom-500">
                                         <Twitter className="size-4"></Twitter>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#!" className="flex items-center justify-center size-10 transition-all duration-200 ease-linear border rounded-full text-slate-500 border-slate-200 dark:text-zinc-400 dark:border-zinc-800 hover:text-custom-500 dark:hover:text-custom-500">
+                                    <a href="#!" className="flex items-center justify-center size-10 transition-all duration-200 ease-linear border rounded-full text-slate-500 border-slate-200 dark:text-zinc-400 dark:border-zinc-800 hover:text-fecustom-500 dark:hover:text-fecustom-500">
                                         <Youtube className="size-4"></Youtube>
                                     </a>
                                 </li>
                             </ul>
                         </div>
                         <div className="col-span-12 md:col-span-4 lg:col-span-4 xl:col-span-3">
-                            <h5 className="mb-4 font-medium tracking-wider dark:text-zink-50">Dashboards</h5>
+                            <h5 className="mb-4 font-medium tracking-wider dark:text-zinc-50">Dashboards</h5>
                             <ul className="flex flex-col gap-3 text-15">
                                 <li>
                                     <a href="#!" className="relative inline-block transition-all duration-200 ease-linear text-slate-500 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-50 before:absolute before:border-b before:border-slate-200 dark:before:border-zinc-700 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear">Analytics</a>
@@ -94,7 +94,7 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className="col-span-12 md:col-span-4 lg:col-span-4 xl:col-span-2">
-                            <h5 className="mb-4 font-medium tracking-wider dark:text-zink-50">Get Help</h5>
+                            <h5 className="mb-4 font-medium tracking-wider dark:text-zinc-50">Get Help</h5>
                             <ul className="flex flex-col gap-3 text-15">
                                 <li>
                                     <a href="#!" className="relative inline-block transition-all duration-200 ease-linear text-slate-500 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-50 before:absolute before:border-b before:border-slate-200 dark:before:border-zinc-700 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear">About Us</a>

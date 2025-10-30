@@ -1,9 +1,9 @@
-const plugin = require('tailwindcss/plugin')
+const plugin = require('tailwindcss/plugin');
 
-module.exports = plugin(function ({ addComponents, theme }) {
+const scrollHintPlugin = plugin(function ({ addComponents, theme }) {
     addComponents({
         '.scroll-hint-icon': {
-            '@apply bg-slate-400 dark:bg-zink-400': {},
+            '@apply bg-slate-400 dark:bg-zinc-400': {},
             height: '90px',
             
             '.scroll-hint-text': {
@@ -11,8 +11,10 @@ module.exports = plugin(function ({ addComponents, theme }) {
             }
         },
         
-        ':root': {
-            '--plyr-color-main':    theme('colors.custom.500')
-        }
+        // ':root': {
+        //     '--plyr-color-main':    theme('colors.custom.500')
+        // }
     })
-})
+});
+
+module.exports = scrollHintPlugin;

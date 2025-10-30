@@ -59,10 +59,10 @@ const Login = (props: any) => {
     React.useEffect(() => {
         const bodyElement = document.body;
 
-        bodyElement.classList.add('flex', 'items-center', 'justify-center', 'min-h-screen', 'py-16', 'lg:py-10', 'bg-slate-50', 'dark:bg-zink-800', 'dark:text-zink-100', 'font-public');
+        bodyElement.classList.add('flex', 'items-center', 'justify-center', 'min-h-screen', 'py-16', 'lg:py-10', 'bg-slate-50', 'dark:bg-zinc-800', 'dark:text-zinc-100', 'font-public');
 
         return () => {
-            bodyElement.classList.remove('flex', 'items-center', 'justify-center', 'min-h-screen', 'py-16', 'lg:py-10', 'bg-slate-50', 'dark:bg-zink-800', 'dark:text-zink-100', 'font-public');
+            bodyElement.classList.remove('flex', 'items-center', 'justify-center', 'min-h-screen', 'py-16', 'lg:py-10', 'bg-slate-50', 'dark:bg-zinc-800', 'dark:text-zinc-100', 'font-public');
         }
     }, []);
 
@@ -79,8 +79,8 @@ const Login = (props: any) => {
                         </Link>
 
                         <div className="mt-8 text-center">
-                            <h4 className="mb-1 text-custom-500 dark:text-custom-500">Welcome Back !</h4>
-                            <p className="text-slate-500 dark:text-zink-200">Sign in to continue to Ucartz</p>
+                            <h4 className="mb-1 text-fecustom-500 dark:text-fecustom-500">Welcome Back !</h4>
+                            <p className="text-slate-500 dark:text-zinc-200">Sign in to continue to Ucartz</p>
                         </div>
 
                         {success && (
@@ -103,7 +103,7 @@ const Login = (props: any) => {
                                     type="text"
                                     id="email"
                                     name="email"
-                                    className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200"
+                                    className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200"
                                     placeholder="Enter username or email"
                                     onChange={formik.handleChange}
                                     onBlur={formik.handleBlur}
@@ -115,14 +115,14 @@ const Login = (props: any) => {
 
                             </div>
                             <div className="mb-3">
-                                <Link className="text-primary font-medium text-sm mb-2 float-end fw-medium text-custom-500" to="/auth-reset-password-basic" data-discover="true">Forgot Password ?</Link>
+                                <Link className="text-primary font-medium text-sm mb-2 float-end fw-medium text-fecustom-500" to="/auth-reset-password-basic" data-discover="true">Forgot Password ?</Link>
                                    
                                 <label htmlFor="password" className="inline-block mb-2 text-base font-medium">Password</label>
                                 <input
                                     type="password"
                                     id="password"
                                     name="password"
-                                    className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200"
+                                    className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200"
                                     placeholder="Enter password"
                                     onChange={formik.handleChange}
                                     onBlur={formik.handleBlur}
@@ -134,20 +134,20 @@ const Login = (props: any) => {
                             </div>
                             <div>
                                 <div className="flex items-center gap-2">
-                                    <input id="checkboxDefault1" className="size-4 border rounded-sm appearance-none bg-slate-100 border-slate-200 dark:bg-zink-600 dark:border-zink-500 checked:bg-custom-500 checked:border-custom-500 dark:checked:bg-custom-500 dark:checked:border-custom-500 checked:disabled:bg-custom-400 checked:disabled:border-custom-400" type="checkbox" value="" />
+                                    <input id="checkboxDefault1" className="size-4 border rounded-sm appearance-none bg-slate-100 border-slate-200 dark:bg-zinc-600 dark:border-zinc-500 checked:bg-fecustom-500 checked:border-fecustom-500 dark:checked:bg-fecustom-500 dark:checked:border-fecustom-500 checked:disabled:bg-fecustom-400 checked:disabled:border-fecustom-400" type="checkbox" value="" />
                                     <label htmlFor="checkboxDefault1" className="inline-block text-base font-medium align-middle cursor-pointer">Remember me</label>
                                 </div>
                                 {/* <div id="remember-error" className="hidden mt-1 text-sm text-red-500">Please check the "Remember me" before submitting the form.</div> */}
                             </div>
                             <div className="mt-10">
-                                <button type="submit" disabled={loading} className="w-full text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">{loading ? "Signing in..." : "Sign In"}</button>
+                                <button type="submit" disabled={loading} className="w-full text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20">{loading ? "Signing in..." : "Sign In"}</button>
                             </div>
 
-                            <div className="relative text-center my-9 before:absolute before:top-3 before:left-0 before:right-0 before:border-t before:border-t-slate-200 dark:before:border-t-zink-500">
-                                <h5 className="inline-block px-2 py-0.5 text-sm bg-white text-slate-500 dark:bg-zink-600 dark:text-zink-200 rounded relative">Sign In with</h5>
+                            <div className="relative text-center my-9 before:absolute before:top-3 before:left-0 before:right-0 before:border-t before:border-t-slate-200 dark:before:border-t-zinc-500">
+                                <h5 className="inline-block px-2 py-0.5 text-sm bg-white text-slate-500 dark:bg-zinc-600 dark:text-zinc-200 rounded relative">Sign In with</h5>
                             </div> 
                             <div className="mt-10 text-center">
-                                <p className="mb-0 text-slate-500 dark:text-zink-200">Don't have an account ? <Link to="/register" className="font-semibold underline transition-all duration-150 ease-linear text-slate-500 dark:text-zink-200 hover:text-custom-500 dark:hover:text-custom-500"> SignUp</Link> </p>
+                                <p className="mb-0 text-slate-500 dark:text-zinc-200">Don't have an account ? <Link to="/register" className="font-semibold underline transition-all duration-150 ease-linear text-slate-500 dark:text-zinc-200 hover:text-fecustom-500 dark:hover:text-fecustom-500"> SignUp</Link> </p>
                             </div>
                         </form>
                     </div>

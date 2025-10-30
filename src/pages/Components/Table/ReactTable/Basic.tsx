@@ -62,9 +62,9 @@ const Basic = () => {
                         customPageSize={10}
                         divclassName="my-2 col-span-12 overflow-x-auto lg:col-span-12"
                         tableclassName="display stripe group dataTable w-full text-sm align-middle whitespace-nowrap"
-                        theadclassName="border-b border-slate-200 dark:border-zink-500"
-                        thclassName="ltr:!text-left rtl:!text-right p-3 group-[.bordered]:border group-[.bordered]:border-slate-200 group-[.bordered]:dark:border-zink-500 sorting px-3 py-4 text-slate-900 bg-slate-200/50 font-semibold text-left dark:text-zink-50 dark:bg-zink-600 dark:group-[.bordered]:border-zink-500 sorting_asc"
-                        tdclassName="p-3 group-[.bordered]:border group-[.bordered]:border-slate-200 group-[.bordered]:dark:border-zink-500"
+                        theadclassName="border-b border-slate-200 dark:border-zinc-500"
+                        thclassName="ltr:!text-left rtl:!text-right p-3 group-[.bordered]:border group-[.bordered]:border-slate-200 group-[.bordered]:dark:border-zinc-500 sorting px-3 py-4 text-slate-900 bg-slate-200/50 font-semibold text-left dark:text-zinc-50 dark:bg-zinc-600 dark:group-[.bordered]:border-zinc-500 sorting_asc"
+                        tdclassName="p-3 group-[.bordered]:border group-[.bordered]:border-slate-200 group-[.bordered]:dark:border-zinc-500"
                         PaginationClassName="flex flex-col items-center mt-5 md:flex-row"
                     />
                 </div>

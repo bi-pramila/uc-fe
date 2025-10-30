@@ -1,6 +1,6 @@
-const plugin = require('tailwindcss/plugin')
+const plugin = require('tailwindcss/plugin');
 
-module.exports = plugin(function ({ addComponents, theme }) {
+const dropzonePlugin = plugin(function ({ addComponents, theme }) {
     addComponents({
         '.dropzone': {
             minHeight: '200px',
@@ -26,4 +26,6 @@ module.exports = plugin(function ({ addComponents, theme }) {
             }
         },
     })
-})
+});
+
+module.exports = dropzonePlugin;

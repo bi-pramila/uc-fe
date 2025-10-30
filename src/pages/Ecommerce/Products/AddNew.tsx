@@ -72,30 +72,30 @@ const AddNew = () => {
                                 <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 xl:grid-cols-12">
                                     <div className="xl:col-span-6">
                                         <label htmlFor="productNameInput" className="inline-block mb-2 text-base font-medium">Product Title</label>
-                                        <input type="text" id="productNameInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Product title" required />
-                                        <p className="mt-1 text-sm text-slate-400 dark:text-zink-200">Do not exceed 20 characters when entering the product name.</p>
+                                        <input type="text" id="productNameInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="Product title" required />
+                                        <p className="mt-1 text-sm text-slate-400 dark:text-zinc-200">Do not exceed 20 characters when entering the product name.</p>
                                     </div>
                                     <div className="xl:col-span-6">
                                         <label htmlFor="productCodeInput" className="inline-block mb-2 text-base font-medium">Product Code</label>
-                                        <input type="text" id="productCodeInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Product Code" value="TWT145015" disabled required />
-                                        <p className="mt-1 text-sm text-slate-400 dark:text-zink-200">Code will be generated automatically</p>
+                                        <input type="text" id="productCodeInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="Product Code" value="TWT145015" disabled required />
+                                        <p className="mt-1 text-sm text-slate-400 dark:text-zinc-200">Code will be generated automatically</p>
                                     </div>
                                     <div className="xl:col-span-4">
                                         <label htmlFor="qualityInput" className="inline-block mb-2 text-base font-medium">Quantity</label>
-                                        <input type="number" id="qualityInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Quantity" required />
+                                        <input type="number" id="qualityInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="Quantity" required />
                                     </div>
                                     <div className="xl:col-span-4">
                                         <label htmlFor="skuInput" className="inline-block mb-2 text-base font-medium">SKU</label>
-                                        <input type="text" id="skuInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="TWT-LP-ALU-08" required />
+                                        <input type="text" id="skuInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="TWT-LP-ALU-08" required />
                                     </div>
                                     <div className="xl:col-span-4">
                                         <label htmlFor="brandInput" className="inline-block mb-2 text-base font-medium">Brand</label>
-                                        <input type="text" id="brandInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Brand" required />
+                                        <input type="text" id="brandInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="Brand" required />
                                     </div>
                                     <div className="xl:col-span-4">
                                         <label htmlFor="categorySelect" className="inline-block mb-2 text-base font-medium">Category</label>
                                         <Select
-                                            className="border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200"
+                                            className="border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200"
                                             options={options}
                                             isSearchable={false} // To disable search
                                             name="categorySelect"
@@ -105,7 +105,7 @@ const AddNew = () => {
                                     <div className="xl:col-span-4">
                                         <label htmlFor="productTypeSelect" className="inline-block mb-2 text-base font-medium">Product Type</label>
                                         <Select
-                                            className="border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200"
+                                            className="border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200"
                                             options={productTypeSelect}
                                             isSearchable={false} // To disable search
                                             name="productTypeSelect"
@@ -115,7 +115,7 @@ const AddNew = () => {
                                     <div className="xl:col-span-4">
                                         <label htmlFor="genderSelect" className="inline-block mb-2 text-base font-medium">Gender</label>
                                         <Select
-                                            className="border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200"
+                                            className="border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200"
                                             options={genderSelect}
                                             isSearchable={false} // To disable search
                                             name="genderSelect"
@@ -153,7 +153,7 @@ const AddNew = () => {
                                                 <input id="selectColor9" className="inline-block size-5 align-middle border rounded-sm appearance-none cursor-pointer bg-slate-200 border-slate-200 checked:bg-slate-200 checked:border-slate-200 disabled:opacity-75 disabled:cursor-default" type="checkbox" value="color7" name="selectColor" />
                                             </div>
                                             <div>
-                                                <Link to="#!" className="flex items-center justify-center size-5 border rounded-sm border-slate-200 dark:border-zink-500">
+                                                <Link to="#!" className="flex items-center justify-center size-5 border rounded-sm border-slate-200 dark:border-zinc-500">
                                                     <Pencil className="size-3" />
                                                 </Link>
                                             </div>
@@ -164,31 +164,31 @@ const AddNew = () => {
                                         <div className="flex flex-wrap items-center gap-2">
                                             <div>
                                                 <input id="selectSizeXS" className="hidden peer" type="checkbox" value="XS" name="selectSize" />
-                                                <label htmlFor="selectSizeXS" className="flex items-center justify-center size-10 text-xs border rounded-md cursor-pointer border-slate-200 dark:border-zink-500 peer-checked:bg-custom-50 dark:peer-checked:bg-custom-500/20 peer-checked:border-custom-300 dark:peer-checked:border-custom-700 peer-disabled:bg-slate-50 dark:peer-disabled:bg-slate-500/15 peer-disabled:border-slate-100 dark:peer-disabled:border-slate-800 peer-disabled:cursor-default peer-disabled:text-slate-500 dark:peer-disabled:text-zink-200">XS</label>
+                                                <label htmlFor="selectSizeXS" className="flex items-center justify-center size-10 text-xs border rounded-md cursor-pointer border-slate-200 dark:border-zinc-500 peer-checked:bg-fecustom-50 dark:peer-checked:bg-fecustom-500/20 peer-checked:border-fecustom-300 dark:peer-checked:border-fecustom-700 peer-disabled:bg-slate-50 dark:peer-disabled:bg-slate-500/15 peer-disabled:border-slate-100 dark:peer-disabled:border-slate-800 peer-disabled:cursor-default peer-disabled:text-slate-500 dark:peer-disabled:text-zinc-200">XS</label>
                                             </div>
                                             <div>
                                                 <input id="selectSizeS" className="hidden peer" type="checkbox" value="S" name="selectSize" defaultChecked />
-                                                <label htmlFor="selectSizeS" className="flex items-center justify-center size-10 text-xs border rounded-md cursor-pointer border-slate-200 dark:border-zink-500 peer-checked:bg-custom-50 dark:peer-checked:bg-custom-500/20 peer-checked:border-custom-300 dark:peer-checked:border-custom-700 peer-disabled:bg-slate-50 dark:peer-disabled:bg-slate-500/15 peer-disabled:border-slate-100 dark:peer-disabled:border-slate-800 peer-disabled:cursor-default peer-disabled:text-slate-500 dark:peer-disabled:text-zink-200">S</label>
+                                                <label htmlFor="selectSizeS" className="flex items-center justify-center size-10 text-xs border rounded-md cursor-pointer border-slate-200 dark:border-zinc-500 peer-checked:bg-fecustom-50 dark:peer-checked:bg-fecustom-500/20 peer-checked:border-fecustom-300 dark:peer-checked:border-fecustom-700 peer-disabled:bg-slate-50 dark:peer-disabled:bg-slate-500/15 peer-disabled:border-slate-100 dark:peer-disabled:border-slate-800 peer-disabled:cursor-default peer-disabled:text-slate-500 dark:peer-disabled:text-zinc-200">S</label>
                                             </div>
                                             <div>
                                                 <input id="selectSizeM" className="hidden peer" type="checkbox" value="M" name="selectSize" />
-                                                <label htmlFor="selectSizeM" className="flex items-center justify-center size-10 text-xs border rounded-md cursor-pointer border-slate-200 dark:border-zink-500 peer-checked:bg-custom-50 dark:peer-checked:bg-custom-500/20 peer-checked:border-custom-300 dark:peer-checked:border-custom-700 peer-disabled:bg-slate-50 dark:peer-disabled:bg-slate-500/15 peer-disabled:border-slate-100 dark:peer-disabled:border-slate-800 peer-disabled:cursor-default peer-disabled:text-slate-500 dark:peer-disabled:text-zink-200">M</label>
+                                                <label htmlFor="selectSizeM" className="flex items-center justify-center size-10 text-xs border rounded-md cursor-pointer border-slate-200 dark:border-zinc-500 peer-checked:bg-fecustom-50 dark:peer-checked:bg-fecustom-500/20 peer-checked:border-fecustom-300 dark:peer-checked:border-fecustom-700 peer-disabled:bg-slate-50 dark:peer-disabled:bg-slate-500/15 peer-disabled:border-slate-100 dark:peer-disabled:border-slate-800 peer-disabled:cursor-default peer-disabled:text-slate-500 dark:peer-disabled:text-zinc-200">M</label>
                                             </div>
                                             <div>
                                                 <input id="selectSizeL" className="hidden peer" type="checkbox" value="L" name="selectSize" />
-                                                <label htmlFor="selectSizeL" className="flex items-center justify-center size-10 text-xs border rounded-md cursor-pointer border-slate-200 dark:border-zink-500 peer-checked:bg-custom-50 dark:peer-checked:bg-custom-500/20 peer-checked:border-custom-300 dark:peer-checked:border-custom-700 peer-disabled:bg-slate-50 dark:peer-disabled:bg-slate-500/15 peer-disabled:border-slate-100 dark:peer-disabled:border-slate-800 peer-disabled:cursor-default peer-disabled:text-slate-500 dark:peer-disabled:text-zink-200">L</label>
+                                                <label htmlFor="selectSizeL" className="flex items-center justify-center size-10 text-xs border rounded-md cursor-pointer border-slate-200 dark:border-zinc-500 peer-checked:bg-fecustom-50 dark:peer-checked:bg-fecustom-500/20 peer-checked:border-fecustom-300 dark:peer-checked:border-fecustom-700 peer-disabled:bg-slate-50 dark:peer-disabled:bg-slate-500/15 peer-disabled:border-slate-100 dark:peer-disabled:border-slate-800 peer-disabled:cursor-default peer-disabled:text-slate-500 dark:peer-disabled:text-zinc-200">L</label>
                                             </div>
                                             <div>
                                                 <input id="selectSizeXL" className="hidden peer" type="checkbox" value="XL" name="selectSize" />
-                                                <label htmlFor="selectSizeXL" className="flex items-center justify-center size-10 text-xs border rounded-md cursor-pointer border-slate-200 dark:border-zink-500 peer-checked:bg-custom-50 dark:peer-checked:bg-custom-500/20 peer-checked:border-custom-300 dark:peer-checked:border-custom-700 peer-disabled:bg-slate-50 dark:peer-disabled:bg-slate-500/15 peer-disabled:border-slate-100 dark:peer-disabled:border-slate-800 peer-disabled:cursor-default peer-disabled:text-slate-500 dark:peer-disabled:text-zink-200">XL</label>
+                                                <label htmlFor="selectSizeXL" className="flex items-center justify-center size-10 text-xs border rounded-md cursor-pointer border-slate-200 dark:border-zinc-500 peer-checked:bg-fecustom-50 dark:peer-checked:bg-fecustom-500/20 peer-checked:border-fecustom-300 dark:peer-checked:border-fecustom-700 peer-disabled:bg-slate-50 dark:peer-disabled:bg-slate-500/15 peer-disabled:border-slate-100 dark:peer-disabled:border-slate-800 peer-disabled:cursor-default peer-disabled:text-slate-500 dark:peer-disabled:text-zinc-200">XL</label>
                                             </div>
                                             <div>
                                                 <input id="selectSize2XL" className="hidden peer" type="checkbox" value="2XL" name="selectSize" />
-                                                <label htmlFor="selectSize2XL" className="flex items-center justify-center size-10 text-xs border rounded-md cursor-pointer border-slate-200 dark:border-zink-500 peer-checked:bg-custom-50 dark:peer-checked:bg-custom-500/20 peer-checked:border-custom-300 dark:peer-checked:border-custom-700 peer-disabled:bg-slate-50 dark:peer-disabled:bg-slate-500/15 peer-disabled:border-slate-100 dark:peer-disabled:border-slate-800 peer-disabled:cursor-default peer-disabled:text-slate-500 dark:peer-disabled:text-zink-200">2XL</label>
+                                                <label htmlFor="selectSize2XL" className="flex items-center justify-center size-10 text-xs border rounded-md cursor-pointer border-slate-200 dark:border-zinc-500 peer-checked:bg-fecustom-50 dark:peer-checked:bg-fecustom-500/20 peer-checked:border-fecustom-300 dark:peer-checked:border-fecustom-700 peer-disabled:bg-slate-50 dark:peer-disabled:bg-slate-500/15 peer-disabled:border-slate-100 dark:peer-disabled:border-slate-800 peer-disabled:cursor-default peer-disabled:text-slate-500 dark:peer-disabled:text-zinc-200">2XL</label>
                                             </div>
                                             <div>
                                                 <input id="selectSize3XL" className="hidden peer" type="checkbox" value="3XL" name="selectSize" />
-                                                <label htmlFor="selectSize3XL" className="flex items-center justify-center size-10 text-xs border rounded-md cursor-pointer border-slate-200 dark:border-zink-500 peer-checked:bg-custom-50 dark:peer-checked:bg-custom-500/20 peer-checked:border-custom-300 dark:peer-checked:border-custom-700 peer-disabled:bg-slate-50 dark:peer-disabled:bg-slate-500/15 peer-disabled:border-slate-100 dark:peer-disabled:border-slate-800 peer-disabled:cursor-default peer-disabled:text-slate-500 dark:peer-disabled:text-zink-200">3XL</label>
+                                                <label htmlFor="selectSize3XL" className="flex items-center justify-center size-10 text-xs border rounded-md cursor-pointer border-slate-200 dark:border-zinc-500 peer-checked:bg-fecustom-50 dark:peer-checked:bg-fecustom-500/20 peer-checked:border-fecustom-300 dark:peer-checked:border-fecustom-700 peer-disabled:bg-slate-50 dark:peer-disabled:bg-slate-500/15 peer-disabled:border-slate-100 dark:peer-disabled:border-slate-800 peer-disabled:cursor-default peer-disabled:text-slate-500 dark:peer-disabled:text-zinc-200">3XL</label>
                                             </div>
                                         </div>
                                     </div>
@@ -200,12 +200,12 @@ const AddNew = () => {
                                                 handleAcceptfiles(acceptfiles);
                                             }}>
                                             {({ getRootProps }: any) => (
-                                                <div className="flex items-center justify-center bg-white border border-dashed rounded-md cursor-pointer dropzone border-slate-300 dark:bg-zink-700 dark:border-zink-500 dropzone2">
+                                                <div className="flex items-center justify-center bg-white border border-dashed rounded-md cursor-pointer dropzone border-slate-300 dark:bg-zinc-700 dark:border-zinc-500 dropzone2">
                                                     <div className="w-full py-5 text-lg text-center dz-message needsclick" {...getRootProps()} >
                                                         <div className="mb-3">
-                                                            <UploadCloud className="block size-12 mx-auto text-slate-500 fill-slate-200 dark:text-zink-200 dark:fill-zink-500" />
+                                                            <UploadCloud className="block size-12 mx-auto text-slate-500 fill-slate-200 dark:text-zinc-200 dark:fill-zinc-500" />
                                                         </div>
-                                                        <h5 className="mb-0 font-normal text-slate-500 dark:text-zink-200 text-15">Drag and drop your product images or <Link to="#!">browse</Link> your product images</h5>
+                                                        <h5 className="mb-0 font-normal text-slate-500 dark:text-zinc-200 text-15">Drag and drop your product images or <Link to="#!">browse</Link> your product images</h5>
                                                     </div>
                                                 </div>
                                             )}
@@ -215,20 +215,20 @@ const AddNew = () => {
                                                 (selectfiles || [])?.map((file: any, index: number) => {
                                                     return (
                                                         <li className="mt-5" id="dropzone-preview-list2">
-                                                            <div className="border rounded border-slate-200 dark:border-zink-500">
+                                                            <div className="border rounded border-slate-200 dark:border-zinc-500">
                                                                 <div className="p-2 text-center">
                                                                     <div>
-                                                                        <div className="p-2 mx-auto rounded-md size-14 bg-slate-100 dark:bg-zink-600">
+                                                                        <div className="p-2 mx-auto rounded-md size-14 bg-slate-100 dark:bg-zinc-600">
                                                                             <img className="block w-full h-full rounded-md" src={file.priview} alt={file.name} />
                                                                         </div>
                                                                     </div>
                                                                     <div className="pt-3">
                                                                         <h5 className="mb-1 text-15" data-dz-name>{file.path}</h5>
-                                                                        <p className="mb-0 text-slate-500 dark:text-zink-200" data-dz-size>{file.formattedSize}</p>
+                                                                        <p className="mb-0 text-slate-500 dark:text-zinc-200" data-dz-size>{file.formattedSize}</p>
                                                                         <strong className="error text-danger" data-dz-errormessage></strong>
                                                                     </div>
                                                                     <div className="mt-2">
-                                                                        <button data-dz-remove className="px-2 py-1.5 text-xs text-white bg-red-500 border-red-500 btn hover:text-white hover:bg-red-600 hover:border-red-600 focus:text-white focus:bg-red-600 focus:border-red-600 focus:ring focus:ring-red-100 active:text-white active:bg-red-600 active:border-red-600 active:ring active:ring-red-100 dark:ring-custom-400/20" onClick={() => {
+                                                                        <button data-dz-remove className="px-2 py-1.5 text-xs text-white bg-red-500 border-red-500 btn hover:text-white hover:bg-red-600 hover:border-red-600 focus:text-white focus:bg-red-600 focus:border-red-600 focus:ring focus:ring-red-100 active:text-white active:bg-red-600 active:border-red-600 active:ring active:ring-red-100 dark:ring-fecustom-400/20" onClick={() => {
                                                                             const newImages = [...selectfiles];
                                                                             newImages.splice(index, 1);
                                                                             setSelectfiles(newImages);
@@ -245,20 +245,20 @@ const AddNew = () => {
                                     <div className="lg:col-span-2 xl:col-span-12">
                                         <div>
                                             <label htmlFor="productDescription" className="inline-block mb-2 text-base font-medium">Description</label>
-                                            <textarea className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" id="productDescription" placeholder="Enter Description" rows={5}></textarea>
+                                            <textarea className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" id="productDescription" placeholder="Enter Description" rows={5}></textarea>
                                         </div>
                                     </div>
                                     <div className="xl:col-span-4">
                                         <label htmlFor="productPrice" className="inline-block mb-2 text-base font-medium">Price</label>
-                                        <input type="number" id="productPrice" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="$0.00" required />
+                                        <input type="number" id="productPrice" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="$0.00" required />
                                     </div>
                                     <div className="xl:col-span-4">
                                         <label htmlFor="productDiscounts" className="inline-block mb-2 text-base font-medium">Discounts</label>
-                                        <input type="number" id="productDiscounts" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="0%" required />
+                                        <input type="number" id="productDiscounts" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="0%" required />
                                     </div>
                                     <div className="xl:col-span-4">
                                         <label htmlFor="taxApplicable" className="inline-block mb-2 text-base font-medium">TAX Applicable</label>
-                                        <select className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" data-choices data-choices-search-false name="taxApplicable" id="taxApplicable">
+                                        <select className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" data-choices data-choices-search-false name="taxApplicable" id="taxApplicable">
                                             <option value="">Select TAX Applicable</option>
                                             <option value="none">none</option>
                                             <option value="Exclusive">Exclusive</option>
@@ -270,7 +270,7 @@ const AddNew = () => {
                                         <label htmlFor="publishDateTime" className="inline-block mb-2 text-base font-medium">Publish Date & Time</label>
                                         <Flatpickr
                                             id="publishDateTime"
-                                            className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200"
+                                            className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200"
                                             options={{
                                                 dateFormat: "d M, Y",
                                                 enableTime: true,
@@ -280,7 +280,7 @@ const AddNew = () => {
                                     </div>
                                     <div className="xl:col-span-4">
                                         <label htmlFor="productStatus" className="inline-block mb-2 text-base font-medium">Status</label>
-                                        <select className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" data-choices data-choices-search-false name="productStatus" id="productStatus">
+                                        <select className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" data-choices data-choices-search-false name="productStatus" id="productStatus">
                                             <option value="Draft">Draft</option>
                                             <option value="Published">Published</option>
                                             <option value="Scheduled">Scheduled</option>
@@ -289,19 +289,19 @@ const AddNew = () => {
                                     </div>
                                     <div className="xl:col-span-4">
                                         <label htmlFor="productVisibility" className="inline-block mb-2 text-base font-medium">Visibility</label>
-                                        <select className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" data-choices data-choices-search-false name="productVisibility" id="productVisibility">
+                                        <select className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" data-choices data-choices-search-false name="productVisibility" id="productVisibility">
                                             <option value="Public">Public</option>
                                             <option value="Hidden">Hidden</option>
                                         </select>
                                     </div>
                                     <div className="lg:col-span-2 xl:col-span-12">
                                         <label htmlFor="productTag" className="inline-block mb-2 text-base font-medium">Product Tag</label>
-                                        <input className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" id="productTag" data-choices data-choices-text-unique-true type="text" value="Fashion, Clothes, Headphones" />
+                                        <input className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" id="productTag" data-choices data-choices-text-unique-true type="text" value="Fashion, Clothes, Headphones" />
                                     </div>
                                 </div>
                                 <div className="flex justify-end gap-2 mt-4">
-                                    <button type="reset" className="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100 focus:text-red-500 focus:bg-red-100 active:text-red-500 active:bg-red-100 dark:bg-zink-700 dark:hover:bg-red-500/10 dark:focus:bg-red-500/10 dark:active:bg-red-500/10">Reset</button>
-                                    <button type="submit" className="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Create Product</button>
+                                    <button type="reset" className="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100 focus:text-red-500 focus:bg-red-100 active:text-red-500 active:bg-red-100 dark:bg-zinc-700 dark:hover:bg-red-500/10 dark:focus:bg-red-500/10 dark:active:bg-red-500/10">Reset</button>
+                                    <button type="submit" className="text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20">Create Product</button>
                                     <button type="button" className="text-white bg-green-500 border-green-500 btn hover:text-white hover:bg-green-600 hover:border-green-600 focus:text-white focus:bg-green-600 focus:border-green-600 focus:ring focus:ring-green-100 active:text-white active:bg-green-600 active:border-green-600 active:ring active:ring-green-100 dark:ring-green-400/10">Draft & Preview</button>
                                 </div>
                             </form>
@@ -313,14 +313,14 @@ const AddNew = () => {
                         <div className="card-body">
                             <h6 className="mb-4 text-15">Product Card Preview</h6>
 
-                            <div className="px-5 py-8 rounded-md bg-sky-50 dark:bg-zink-600">
+                            <div className="px-5 py-8 rounded-md bg-sky-50 dark:bg-zinc-600">
                                 <img src={productImg03} alt="" className="block mx-auto h-44" />
                             </div>
 
                             <div className="mt-3">
                                 <h5 className="mb-2">$145.99 <small className="font-normal line-through">299.99</small></h5>
                                 <h6 className="mb-1 text-15">Fastcolors Typography Men</h6>
-                                <p className="text-slate-500 dark:text-zink-200">Men's Fashion</p>
+                                <p className="text-slate-500 dark:text-zinc-200">Men's Fashion</p>
                             </div>
                             <h6 className="mt-3 mb-2 text-15">Colors</h6>
                             <div className="flex flex-wrap items-center gap-2">
@@ -342,27 +342,27 @@ const AddNew = () => {
                             <div className="flex flex-wrap items-center gap-2">
                                 <div>
                                     <input id="selectSizePreXS" className="hidden peer" type="checkbox" value="XS" name="selectSizePre" />
-                                    <label htmlFor="selectSizePreXS" className="flex items-center justify-center size-8 text-xs border rounded-md cursor-pointer border-slate-200 dark:border-zink-500 peer-checked:bg-custom-50 dark:peer-checked:bg-custom-500/20 peer-checked:border-custom-300 dark:peer-checked:border-custom-700 peer-disabled:bg-slate-50 dark:peer-disabled:bg-slate-500/15 peer-disabled:border-slate-100 dark:peer-disabled:border-slate-800 peer-disabled:cursor-default peer-disabled:text-slate-500 dark:peer-disabled:text-zink-200">XS</label>
+                                    <label htmlFor="selectSizePreXS" className="flex items-center justify-center size-8 text-xs border rounded-md cursor-pointer border-slate-200 dark:border-zinc-500 peer-checked:bg-fecustom-50 dark:peer-checked:bg-fecustom-500/20 peer-checked:border-fecustom-300 dark:peer-checked:border-fecustom-700 peer-disabled:bg-slate-50 dark:peer-disabled:bg-slate-500/15 peer-disabled:border-slate-100 dark:peer-disabled:border-slate-800 peer-disabled:cursor-default peer-disabled:text-slate-500 dark:peer-disabled:text-zinc-200">XS</label>
                                 </div>
                                 <div>
                                     <input id="selectSizePreS" className="hidden peer" type="checkbox" value="S" name="selectSizePre" />
-                                    <label htmlFor="selectSizePreS" className="flex items-center justify-center size-8 text-xs border rounded-md cursor-pointer border-slate-200 dark:border-zink-500 peer-checked:bg-custom-50 dark:peer-checked:bg-custom-500/20 peer-checked:border-custom-300 dark:peer-checked:border-custom-700 peer-disabled:bg-slate-50 dark:peer-disabled:bg-slate-500/15 peer-disabled:border-slate-100 dark:peer-disabled:border-slate-800 peer-disabled:cursor-default peer-disabled:text-slate-500 dark:peer-disabled:text-zink-200">S</label>
+                                    <label htmlFor="selectSizePreS" className="flex items-center justify-center size-8 text-xs border rounded-md cursor-pointer border-slate-200 dark:border-zinc-500 peer-checked:bg-fecustom-50 dark:peer-checked:bg-fecustom-500/20 peer-checked:border-fecustom-300 dark:peer-checked:border-fecustom-700 peer-disabled:bg-slate-50 dark:peer-disabled:bg-slate-500/15 peer-disabled:border-slate-100 dark:peer-disabled:border-slate-800 peer-disabled:cursor-default peer-disabled:text-slate-500 dark:peer-disabled:text-zinc-200">S</label>
                                 </div>
                                 <div>
                                     <input id="selectSizePreM" className="hidden peer" type="checkbox" value="M" name="selectSizePre" />
-                                    <label htmlFor="selectSizePreM" className="flex items-center justify-center size-8 text-xs border rounded-md cursor-pointer border-slate-200 dark:border-zink-500 peer-checked:bg-custom-50 dark:peer-checked:bg-custom-500/20 peer-checked:border-custom-300 dark:peer-checked:border-custom-700 peer-disabled:bg-slate-50 dark:peer-disabled:bg-slate-500/15 peer-disabled:border-slate-100 dark:peer-disabled:border-slate-800 peer-disabled:cursor-default peer-disabled:text-slate-500 dark:peer-disabled:text-zink-200">M</label>
+                                    <label htmlFor="selectSizePreM" className="flex items-center justify-center size-8 text-xs border rounded-md cursor-pointer border-slate-200 dark:border-zinc-500 peer-checked:bg-fecustom-50 dark:peer-checked:bg-fecustom-500/20 peer-checked:border-fecustom-300 dark:peer-checked:border-fecustom-700 peer-disabled:bg-slate-50 dark:peer-disabled:bg-slate-500/15 peer-disabled:border-slate-100 dark:peer-disabled:border-slate-800 peer-disabled:cursor-default peer-disabled:text-slate-500 dark:peer-disabled:text-zinc-200">M</label>
                                 </div>
                                 <div>
                                     <input id="selectSizePreL" className="hidden peer" type="checkbox" value="L" name="selectSizePre" />
-                                    <label htmlFor="selectSizePreL" className="flex items-center justify-center size-8 text-xs border rounded-md cursor-pointer border-slate-200 dark:border-zink-500 peer-checked:bg-custom-50 dark:peer-checked:bg-custom-500/20 peer-checked:border-custom-300 dark:peer-checked:border-custom-700 peer-disabled:bg-slate-50 dark:peer-disabled:bg-slate-500/15 peer-disabled:border-slate-100 dark:peer-disabled:border-slate-800 peer-disabled:cursor-default peer-disabled:text-slate-500 dark:peer-disabled:text-zink-200">L</label>
+                                    <label htmlFor="selectSizePreL" className="flex items-center justify-center size-8 text-xs border rounded-md cursor-pointer border-slate-200 dark:border-zinc-500 peer-checked:bg-fecustom-50 dark:peer-checked:bg-fecustom-500/20 peer-checked:border-fecustom-300 dark:peer-checked:border-fecustom-700 peer-disabled:bg-slate-50 dark:peer-disabled:bg-slate-500/15 peer-disabled:border-slate-100 dark:peer-disabled:border-slate-800 peer-disabled:cursor-default peer-disabled:text-slate-500 dark:peer-disabled:text-zinc-200">L</label>
                                 </div>
                                 <div>
                                     <input id="selectSizePreXL" className="hidden peer" type="checkbox" value="XL" name="selectSizePre" />
-                                    <label htmlFor="selectSizePreXL" className="flex items-center justify-center size-8 text-xs border rounded-md cursor-pointer border-slate-200 dark:border-zink-500 peer-checked:bg-custom-50 dark:peer-checked:bg-custom-500/20 peer-checked:border-custom-300 dark:peer-checked:border-custom-700 peer-disabled:bg-slate-50 dark:peer-disabled:bg-slate-500/15 peer-disabled:border-slate-100 dark:peer-disabled:border-slate-800 peer-disabled:cursor-default peer-disabled:text-slate-500 dark:peer-disabled:text-zink-200">XL</label>
+                                    <label htmlFor="selectSizePreXL" className="flex items-center justify-center size-8 text-xs border rounded-md cursor-pointer border-slate-200 dark:border-zinc-500 peer-checked:bg-fecustom-50 dark:peer-checked:bg-fecustom-500/20 peer-checked:border-fecustom-300 dark:peer-checked:border-fecustom-700 peer-disabled:bg-slate-50 dark:peer-disabled:bg-slate-500/15 peer-disabled:border-slate-100 dark:peer-disabled:border-slate-800 peer-disabled:cursor-default peer-disabled:text-slate-500 dark:peer-disabled:text-zinc-200">XL</label>
                                 </div>
                             </div>
                             <div className="flex gap-2 mt-4">
-                                <button type="button" className="w-full bg-white border-dashed text-custom-500 btn border-custom-500 hover:text-custom-500 hover:bg-custom-50 hover:border-custom-600 focus:text-custom-600 focus:bg-custom-50 focus:border-custom-600 active:text-custom-600 active:bg-custom-50 active:border-custom-600 dark:bg-zink-700 dark:ring-custom-400/20 dark:hover:bg-custom-800/20 dark:focus:bg-custom-800/20 dark:active:bg-custom-800/20">Create Products</button>
+                                <button type="button" className="w-full bg-white border-dashed text-fecustom-500 btn border-fecustom-500 hover:text-fecustom-500 hover:bg-fecustom-50 hover:border-fecustom-600 focus:text-fecustom-600 focus:bg-fecustom-50 focus:border-fecustom-600 active:text-fecustom-600 active:bg-fecustom-50 active:border-fecustom-600 dark:bg-zinc-700 dark:ring-fecustom-400/20 dark:hover:bg-fecustom-800/20 dark:focus:bg-fecustom-800/20 dark:active:bg-fecustom-800/20">Create Products</button>
                                 <button type="button" className="w-full text-white bg-purple-500 border-purple-500 btn hover:text-white hover:bg-purple-600 hover:border-purple-600 focus:text-white focus:bg-purple-600 focus:border-purple-600 focus:ring focus:ring-purple-100 active:text-white active:bg-purple-600 active:border-purple-600 active:ring active:ring-purple-100 dark:ring-purple-400/10">Draft</button>
                             </div>
                         </div>

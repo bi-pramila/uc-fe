@@ -1,9 +1,11 @@
-const plugin = require('tailwindcss/plugin')
+const plugin = require('tailwindcss/plugin');
 
-module.exports = plugin(function ({ addComponents }) {
+const prismjsPlugin = plugin(function ({ addComponents }) {
     addComponents({
-        ':not(pre) > code[class*="language-"], pre[class*="language-"]': {
-            '@apply dark:bg-zink-500': {},
+        '.prism-code': {
+            '@apply dark:bg-zinc-500': {},
         },
     })
-})
+});
+
+module.exports = prismjsPlugin;

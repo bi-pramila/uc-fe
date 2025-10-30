@@ -1,9 +1,9 @@
-const plugin = require('tailwindcss/plugin')
+const plugin = require('tailwindcss/plugin');
 
-module.exports = plugin(function ({ addComponents, theme }) {
+const toastifyPlugin = plugin(function ({ addComponents, theme }) {
     addComponents({
         '.toastify': {
-            '@apply text-white inline-block bg-custom-500 fixed opacity-0 rounded-md cursor-pointer no-underline': {},
+            '@apply text-white inline-block bg-fecustom-500 fixed opacity-0 rounded-md cursor-pointer no-underline': {},
             padding: '12px 16px',
             maxWidth: 'calc(50% - 20px)',
             zIndex: '9999',
@@ -51,12 +51,14 @@ module.exports = plugin(function ({ addComponents, theme }) {
             maxWidth: 'fit-content',
         },
 
-        '@media only screen and (max-width: 360px)': {
-            '.toastify-right, .toastify-left': {
-                '@apply mx-auto inset-x-0': {},
-                maxWidth: 'fit-content',
-            }
-        }
+        // '@media only screen and (max-width: 360px)': {
+        //     '.toastify-right, .toastify-left': {
+        //         '@apply mx-auto inset-x-0': {},
+        //         maxWidth: 'fit-content',
+        //     }
+        // }
 
     })
-})
+});
+
+module.exports = toastifyPlugin;

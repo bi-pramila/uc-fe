@@ -37,7 +37,7 @@ const Feedback = () => {
                         modules={[Pagination, Autoplay]}>
                         <SwiperSlide>
                             <div className="p-5 text-center" data-aos="fade-up" data-aos-easing="linear">
-                                <div className="size-20 mx-auto rounded-full bg-custom-500/10">
+                                <div className="size-20 mx-auto rounded-full bg-fecustom-500/10">
                                     <img src={avatar2} alt="" className="size-20 rounded-full" />
                                 </div>
                                 <p className="mt-6 text-16">" The best templates which is supported multiple programming languages with beautiful templates. thank you for the valuable template. "</p>
@@ -111,8 +111,8 @@ const Feedback = () => {
                         </div>
                         <div className="ltr:lg:text-right rtl:lg:text-left lg:col-span-4">
                             <form action="#!" className="relative" data-aos="fade-left">
-                                <input type="email" id="subscribeInput" className="py-3 ltr:pr-40 rtl:pl-40 bg-slate-100 dark:bg-zinc-800/40 form-input text-slate-200 border-slate-200 dark:border-zinc-800 focus:outline-none focus:border-custom-500 dark:focus:border-custom-500 placeholder:text-slate-500 dark:placeholder:text-zinc-400 backdrop-blur-md" autoComplete="off" placeholder="tailwick@themesdesign.com" required />
-                                <button type="submit" className="absolute px-6 py-2 text-base transition-all duration-200 ease-linear border-0 ltr:right-1 rtl:left-1 text-custom-50 btn top-1 bottom-1 bg-gradient-to-r from-custom-500 to-purple-500 hover:text-white hover:from-purple-500 hover:to-custom-500">Subscribe Now</button>
+                                <input type="email" id="subscribeInput" className="py-3 ltr:pr-40 rtl:pl-40 bg-slate-100 dark:bg-zinc-800/40 form-input text-slate-200 border-slate-200 dark:border-zinc-800 focus:outline-none focus:border-fecustom-500 dark:focus:border-fecustom-500 placeholder:text-slate-500 dark:placeholder:text-zinc-400 backdrop-blur-md" autoComplete="off" placeholder="tailwick@themesdesign.com" required />
+                                <button type="submit" className="absolute px-6 py-2 text-base transition-all duration-200 ease-linear border-0 ltr:right-1 rtl:left-1 text-fecustom-50 btn top-1 bottom-1 bg-gradient-to-r from-fecustom-500 to-purple-500 hover:text-white hover:from-purple-500 hover:to-fecustom-500">Subscribe Now</button>
                             </form>
                         </div>
                     </div>

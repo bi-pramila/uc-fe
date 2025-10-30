@@ -19,8 +19,8 @@ const GalleryAnimation = () => {
                                 <img src={image1} alt="" className="transition-all duration-300 ease-linear group-hover/gallery:scale-110" />
                             </div>
                             <div className="pt-3">
-                                <h5 className="mb-1 text-16"><a href="#!" className="transition-all duration-300 ease-linear hover:text-custom-500">Cinematic Metro</a></h5>
-                                <p className="text-slate-500 dark:zink-200">Artyom is depicted as a silent protagonist and a blank slate for the player.</p>
+                                <h5 className="mb-1 text-16"><a href="#!" className="transition-all duration-300 ease-linear hover:text-fecustom-500">Cinematic Metro</a></h5>
+                                <p className="text-slate-500 dark:zinc-200">Artyom is depicted as a silent protagonist and a blank slate for the player.</p>
                             </div>
                         </div>
                         <div className="relative overflow-hidden rounded-md group/gallery">
@@ -28,8 +28,8 @@ const GalleryAnimation = () => {
                                 <img src={image2} alt="" className="transition-all duration-300 ease-linear group-hover/gallery:scale-110" />
                             </div>
                             <div className="pt-3">
-                                <h5 className="mb-1 text-16"><a href="#!" className="transition-all duration-300 ease-linear hover:text-custom-500">Cinematic Metro</a></h5>
-                                <p className="text-slate-500 dark:zink-200">Artyom is depicted as a silent protagonist and a blank slate for the player.</p>
+                                <h5 className="mb-1 text-16"><a href="#!" className="transition-all duration-300 ease-linear hover:text-fecustom-500">Cinematic Metro</a></h5>
+                                <p className="text-slate-500 dark:zinc-200">Artyom is depicted as a silent protagonist and a blank slate for the player.</p>
                             </div>
                         </div>
                         <div className="relative overflow-hidden rounded-md group/gallery">
@@ -37,8 +37,8 @@ const GalleryAnimation = () => {
                                 <img src={image3} alt="" className="transition-all duration-300 ease-linear group-hover/gallery:scale-110" />
                             </div>
                             <div className="pt-3">
-                                <h5 className="mb-1 text-16"><a href="#!" className="transition-all duration-300 ease-linear hover:text-custom-500">Cinematic Metro</a></h5>
-                                <p className="text-slate-500 dark:zink-200">Artyom is depicted as a silent protagonist and a blank slate for the player.</p>
+                                <h5 className="mb-1 text-16"><a href="#!" className="transition-all duration-300 ease-linear hover:text-fecustom-500">Cinematic Metro</a></h5>
+                                <p className="text-slate-500 dark:zinc-200">Artyom is depicted as a silent protagonist and a blank slate for the player.</p>
                             </div>
                         </div>
                         <div className="relative overflow-hidden rounded-md group/gallery">
@@ -46,8 +46,8 @@ const GalleryAnimation = () => {
                                 <img src={image4} alt="" className="transition-all duration-300 ease-linear group-hover/gallery:scale-110" />
                             </div>
                             <div className="pt-3">
-                                <h5 className="mb-1 text-16"><a href="#!" className="transition-all duration-300 ease-linear hover:text-custom-500">Cinematic Metro</a></h5>
-                                <p className="text-slate-500 dark:zink-200">Artyom is depicted as a silent protagonist and a blank slate for the player.</p>
+                                <h5 className="mb-1 text-16"><a href="#!" className="transition-all duration-300 ease-linear hover:text-fecustom-500">Cinematic Metro</a></h5>
+                                <p className="text-slate-500 dark:zinc-200">Artyom is depicted as a silent protagonist and a blank slate for the player.</p>
                             </div>
                         </div>
                         <div className="relative overflow-hidden rounded-md group/gallery">
@@ -55,8 +55,8 @@ const GalleryAnimation = () => {
                                 <img src={image5} alt="" className="transition-all duration-300 ease-linear group-hover/gallery:scale-110" />
                             </div>
                             <div className="pt-3">
-                                <h5 className="mb-1 text-16"><a href="#!" className="transition-all duration-300 ease-linear hover:text-custom-500">Cinematic Metro</a></h5>
-                                <p className="text-slate-500 dark:zink-200">Artyom is depicted as a silent protagonist and a blank slate for the player.</p>
+                                <h5 className="mb-1 text-16"><a href="#!" className="transition-all duration-300 ease-linear hover:text-fecustom-500">Cinematic Metro</a></h5>
+                                <p className="text-slate-500 dark:zinc-200">Artyom is depicted as a silent protagonist and a blank slate for the player.</p>
                             </div>
                         </div>
                     </div>

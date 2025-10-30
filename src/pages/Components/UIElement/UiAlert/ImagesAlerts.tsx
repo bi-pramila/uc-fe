@@ -20,7 +20,7 @@ const ImagesAlerts = () => {
                     <h6 className="mb-4 text-15">Alerts with Images</h6>
                     <div className="grid grid-cols-1 gap-5 xl:grid-cols-2">
                         <div className="flex flex-col gap-3">
-                            <Alert className="flex gap-2 px-4 py-3 text-sm border rounded-md md:items-center border-custom-200 text-custom-500 bg-custom-50 dark:bg-custom-400/20 dark:border-custom-500/50">
+                            <Alert className="flex gap-2 px-4 py-3 text-sm border rounded-md md:items-center border-fecustom-200 text-fecustom-500 bg-fecustom-50 dark:bg-fecustom-400/20 dark:border-fecustom-500/50">
                                 <Alert.Image src={avatar1} alt="" className="size-8 rounded-full" />
                                 <Alert.Bold>Custom</Alert.Bold> alert! You should check in on some of those fields below.
                             </Alert>
@@ -50,7 +50,7 @@ const ImagesAlerts = () => {
                                 <Alert.Image src={avatar7} alt="" className="size-8 rounded-full" />
                                 <Alert.Bold>Warning</Alert.Bold> alert! You should check in on some of those fields below.
                             </Alert>
-                            <Alert className="flex gap-2 px-4 py-3 text-sm border rounded-md md:items-center text-slate-500 border-slate-200 bg-slate-50 dark:bg-zink-500/30 dark:border-zink-500 dark:text-zink-200">
+                            <Alert className="flex gap-2 px-4 py-3 text-sm border rounded-md md:items-center text-slate-500 border-slate-200 bg-slate-50 dark:bg-zinc-500/30 dark:border-zinc-500 dark:text-zinc-200">
                                 <Alert.Image src={avatar8} alt="" className="size-8 rounded-full" />
                                 <Alert.Bold>Light</Alert.Bold> alert! You should check in on some of those fields below.
                             </Alert>

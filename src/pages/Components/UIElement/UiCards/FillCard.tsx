@@ -6,15 +6,15 @@ const FillCard = () => {
         <React.Fragment>
             <h5 className="mb-5 underline">Fill Card</h5>
             <div className="grid grid-cols-1 gap-x-5 md:grid-cols-2 xl:grid-cols-4">
-                <div className="card bg-custom-500 border-custom-500 dark:bg-custom-800 dark:border-custom-800">
+                <div className="card bg-fecustom-500 border-fecustom-500 dark:bg-fecustom-800 dark:border-fecustom-800">
                     <div className="card-body">
                         <h6 className="mb-4 text-white text-15">
                             Custom Card
                         </h6>
-                        <p className="mb-4 dark:text-custom-300 text-custom-200">
+                        <p className="mb-4 dark:text-fecustom-300 text-fecustom-200">
                             With supporting text below as a natural lead-in to additional content.
                         </p>
-                        <a className="inline-flex items-center gap-2 text-sm font-medium transition-all duration-200 ease-linear text-custom-300 hover:text-custom-100" href="#!">
+                        <a className="inline-flex items-center gap-2 text-sm font-medium transition-all duration-200 ease-linear text-fecustom-300 hover:text-fecustom-100" href="#!">
                             Card link <ChevronRight className="inline-block size-4"></ChevronRight>
                         </a>
                     </div>

@@ -13,7 +13,7 @@ const HorizontalPricing = () => {
 
                         <div className="grid grid-cols-1 gap-5 xl:grid-cols-12">
                             <div className="xl:col-span-8">
-                                <p className="relative before:absolute before:border-b before:border-slate-200 dark:before:border-zink-500 before:bottom-2 before:right-0 before:left-0"><span className="relative pr-2 bg-white dark:bg-zink-700 dark:text-zink-200 text-slate-500">Everything Includes</span></p>
+                                <p className="relative before:absolute before:border-b before:border-slate-200 dark:before:border-zinc-500 before:bottom-2 before:right-0 before:left-0"><span className="relative pr-2 bg-white dark:bg-zinc-700 dark:text-zinc-200 text-slate-500">Everything Includes</span></p>
                                 <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                                     <div>
                                         <ul className="flex flex-col gap-3 mt-5">
@@ -49,12 +49,12 @@ const HorizontalPricing = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="xl:col-span-4 card bg-custom-500 !mb-0 dark:bg-custom-500">
+                            <div className="xl:col-span-4 card bg-fecustom-500 !mb-0 dark:bg-fecustom-500">
                                 <div className="flex flex-col h-full card-body">
-                                    <p className="mb-3 text-custom-100">Per Month</p>
+                                    <p className="mb-3 text-fecustom-100">Per Month</p>
                                     <div className="mt-auto">
                                         <h3 className="mb-2 text-white">$29.99</h3>
-                                        <button type="button" className="w-full text-white btn bg-custom-600 border-custom-600 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Buy Now</button>
+                                        <button type="button" className="w-full text-white btn bg-fecustom-600 border-fecustom-600 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20">Buy Now</button>
                                     </div>
                                 </div>
                             </div>
@@ -67,7 +67,7 @@ const HorizontalPricing = () => {
 
                         <div className="grid grid-cols-1 gap-5 xl:grid-cols-12">
                             <div className="xl:col-span-8">
-                                <p className="relative before:absolute before:border-b before:border-slate-200 dark:before:border-zink-500 before:bottom-2 before:right-0 before:left-0"><span className="relative pr-2 bg-white dark:bg-zink-700 dark:text-zink-200 text-slate-500">Everything Includes</span></p>
+                                <p className="relative before:absolute before:border-b before:border-slate-200 dark:before:border-zinc-500 before:bottom-2 before:right-0 before:left-0"><span className="relative pr-2 bg-white dark:bg-zinc-700 dark:text-zinc-200 text-slate-500">Everything Includes</span></p>
                                 <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                                     <div>
                                         <ul className="flex flex-col gap-3 mt-5">

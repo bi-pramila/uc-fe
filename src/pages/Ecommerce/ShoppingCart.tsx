@@ -93,23 +93,23 @@ const ShoppingCart = () => {
                     {(cart || []).map((item: any, key: number) => (<div className="card products" id={`product${item.id}`} key={key}>
                         <div className="card-body">
                             <div className="grid grid-cols-1 gap-4 lg:grid-cols-12">
-                                <div className="p-4 rounded-md lg:col-span-2 bg-slate-100 dark:bg-zink-600">
+                                <div className="p-4 rounded-md lg:col-span-2 bg-slate-100 dark:bg-zinc-600">
                                     <img src={item.img} alt="" />
                                 </div>
                                 <div className="flex flex-col lg:col-span-4">
                                     <div>
                                         <h5 className="mb-1 text-16"><Link to="/apps-ecommerce-product-overview">{item.product}</Link></h5>
-                                        <p className="mb-2 text-slate-500 dark:text-zink-200"><Link to="#!">{item.category}</Link></p>
-                                        <p className="mb-1 text-slate-500 dark:text-zink-200">Color: <span className="text-slate-800 dark:text-zink-50">{item.color}</span></p>
-                                        <p className="mb-3 text-slate-500 dark:text-zink-200">Size: <span className="text-slate-800 dark:text-zink-50">{item.size}</span></p>
+                                        <p className="mb-2 text-slate-500 dark:text-zinc-200"><Link to="#!">{item.category}</Link></p>
+                                        <p className="mb-1 text-slate-500 dark:text-zinc-200">Color: <span className="text-slate-800 dark:text-zinc-50">{item.color}</span></p>
+                                        <p className="mb-3 text-slate-500 dark:text-zinc-200">Size: <span className="text-slate-800 dark:text-zinc-50">{item.size}</span></p>
                                     </div>
                                     <div className="flex items-center gap-2 mt-auto">
-                                        <div className="inline-flex p-2 text-center border rounded input-step border-slate-200 dark:border-zink-500">
-                                            <button type="button" className="border w-7 leading-[15px] minus-value bg-slate-200 dark:bg-zink-600 dark:border-zink-600 rounded transition-all duration-200 ease-linear border-slate-200 text-slate-500 dark:text-zink-200 hover:bg-custom-500 dark:hover:bg-custom-500 hover:text-custom-50 dark:hover:text-custom-50 hover:border-custom-500 dark:hover:border-custom-500 focus:bg-custom-500 dark:focus:bg-custom-500 focus:border-custom-500 dark:focus:border-custom-500 focus:text-custom-50 dark:focus:text-custom-50"
+                                        <div className="inline-flex p-2 text-center border rounded input-step border-slate-200 dark:border-zinc-500">
+                                            <button type="button" className="border w-7 leading-[15px] minus-value bg-slate-200 dark:bg-zinc-600 dark:border-zinc-600 rounded transition-all duration-200 ease-linear border-slate-200 text-slate-500 dark:text-zinc-200 hover:bg-fecustom-500 dark:hover:bg-fecustom-500 hover:text-fecustom-50 dark:hover:text-fecustom-50 hover:border-fecustom-500 dark:hover:border-fecustom-500 focus:bg-fecustom-500 dark:focus:bg-fecustom-500 focus:border-fecustom-500 dark:focus:border-fecustom-500 focus:text-fecustom-50 dark:focus:text-fecustom-50"
                                                 onClick={() => countDown(item.id, item.quantity, item.price)}>
                                                 <Minus className="inline-block size-4" /></button>
-                                            <input type="number" className="text-center ltr:pl-2 rtl:pr-2 w-15 h-7 products-quantity dark:bg-zink-700 focus:shadow-none" value={item.quantity.toString()} min="0" max="100" readOnly />
-                                            <button type="button" className="transition-all duration-200 ease-linear border rounded border-slate-200 bg-slate-200 dark:bg-zink-600 dark:border-zink-600 w-7 plus-value text-slate-500 dark:text-zink-200 hover:bg-custom-500 dark:hover:bg-custom-500 hover:text-custom-50 dark:hover:text-custom-50 hover:border-custom-500 dark:hover:border-custom-500 focus:bg-custom-500 dark:focus:bg-custom-500 focus:border-custom-500 dark:focus:border-custom-500 focus:text-custom-50 dark:focus:text-custom-50"
+                                            <input type="number" className="text-center ltr:pl-2 rtl:pr-2 w-15 h-7 products-quantity dark:bg-zinc-700 focus:shadow-none" value={item.quantity.toString()} min="0" max="100" readOnly />
+                                            <button type="button" className="transition-all duration-200 ease-linear border rounded border-slate-200 bg-slate-200 dark:bg-zinc-600 dark:border-zinc-600 w-7 plus-value text-slate-500 dark:text-zinc-200 hover:bg-fecustom-500 dark:hover:bg-fecustom-500 hover:text-fecustom-50 dark:hover:text-fecustom-50 hover:border-fecustom-500 dark:hover:border-fecustom-500 focus:bg-fecustom-500 dark:focus:bg-fecustom-500 focus:border-fecustom-500 dark:focus:border-fecustom-500 focus:text-fecustom-50 dark:focus:text-fecustom-50"
                                                 onClick={() => countUP(item.id, item.quantity, item.price)}>
                                                 <Plus className="inline-block size-4" /></button>
                                         </div>
@@ -118,7 +118,7 @@ const ShoppingCart = () => {
                                 </div>
                                 <div className="flex justify-between w-full lg:flex-col lg:col-end-13 lg:col-span-2">
                                     <div className="mb-auto ltr:lg:text-right rtl:lg:text-left">
-                                        <h6 className="text-16 products-price">$<span>{item.price}</span> {item.delPrice && <small className="font-normal line-through text-slate-500 dark:text-zink-200">{item.delPrice}</small>}</h6>
+                                        <h6 className="text-16 products-price">$<span>{item.price}</span> {item.delPrice && <small className="font-normal line-through text-slate-500 dark:text-zinc-200">{item.delPrice}</small>}</h6>
                                     </div>
                                     <h6 className="mt-auto text-16 ltr:lg:text-right rtl:lg:text-left">$<span className="products-line-price">{item.total.toFixed(2)}</span></h6>
                                 </div>
@@ -130,7 +130,7 @@ const ShoppingCart = () => {
                         <div className="py-6 text-center">
                             <Search className="size-6 mx-auto text-sky-500 fill-sky-100 dark:sky-500/20" />
                             <h5 className="mt-2 mb-1">Sorry! No Result Found</h5>
-                            <p className="mb-0 text-slate-500 dark:text-zink-200">We've searched more than 299+ orders We did not find any orders for you search.</p>
+                            <p className="mb-0 text-slate-500 dark:text-zinc-200">We've searched more than 299+ orders We did not find any orders for you search.</p>
                         </div>
                     </div>}
                 </div>
@@ -143,34 +143,34 @@ const ShoppingCart = () => {
                                     <table className="w-full">
                                         <tbody className="table-total">
                                             <tr>
-                                                <td className="py-2 text-slate-500 dark:text-zink-200">
+                                                <td className="py-2 text-slate-500 dark:text-zinc-200">
                                                     Sub Total
                                                 </td>
-                                                <td className="py-2 text-slate-500 dark:text-zink-200 cart-subtotal">
+                                                <td className="py-2 text-slate-500 dark:text-zinc-200 cart-subtotal">
                                                     ${subTotal.toFixed(2)}
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td className="py-2 text-slate-500 dark:text-zink-200">
+                                                <td className="py-2 text-slate-500 dark:text-zinc-200">
                                                     Estimated Tax (18%)
                                                 </td>
-                                                <td className="py-2 text-slate-500 dark:text-zink-200 cart-tax">
+                                                <td className="py-2 text-slate-500 dark:text-zinc-200 cart-tax">
                                                     ${tax.toFixed(2)}
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td className="py-2 text-slate-500 dark:text-zink-200">
+                                                <td className="py-2 text-slate-500 dark:text-zinc-200">
                                                     Item Discounts (12%)
                                                 </td>
-                                                <td className="py-2 text-slate-500 dark:text-zink-200 cart-discount">
+                                                <td className="py-2 text-slate-500 dark:text-zinc-200 cart-discount">
                                                     -${dis.toFixed(2)}
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td className="py-2 text-slate-500 dark:text-zink-200">
+                                                <td className="py-2 text-slate-500 dark:text-zinc-200">
                                                     Shipping Charge
                                                 </td>
-                                                <td className="py-2 text-slate-500 dark:text-zink-200 cart-shipping">
+                                                <td className="py-2 text-slate-500 dark:text-zinc-200 cart-shipping">
                                                     ${charge}
                                                 </td>
                                             </tr>
@@ -189,12 +189,12 @@ const ShoppingCart = () => {
                         </div>
                         <div className="flex gap-2 mt-5 shrink-0">
                             <Link to="/apps-ecommerce-product-list" className="w-full text-white bg-red-500 border-red-500 btn hover:text-white hover:bg-red-600 hover:border-red-600 focus:text-white focus:bg-red-600 focus:border-red-600 focus:ring focus:ring-red-100 active:text-white active:bg-red-600 active:border-red-600 active:ring active:ring-red-100 dark:ring-red-400/20">Continue to Shopping</Link>
-                            <Link to="/apps-ecommerce-checkout" className="w-full text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Checkout</Link>
+                            <Link to="/apps-ecommerce-checkout" className="w-full text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20">Checkout</Link>
                         </div>
 
                         <div className="flex items-center gap-5 p-4 mt-5 card">
-                            <div className="flex items-center justify-center size-12 rounded-md bg-slate-100 dark:bg-zink-600">
-                                <Truck className="size-6 text-slate-500 fill-slate-300 dark:text-zink-200 dark:fill-zink-500" />
+                            <div className="flex items-center justify-center size-12 rounded-md bg-slate-100 dark:bg-zinc-600">
+                                <Truck className="size-6 text-slate-500 fill-slate-300 dark:text-zinc-200 dark:fill-zinc-500" />
                             </div>
                             <div>
                                 <h6 className="mb-1">Estimated Delivery</h6>
@@ -202,12 +202,12 @@ const ShoppingCart = () => {
                             </div>
                         </div>
                         <div className="flex items-center gap-5 p-4 card">
-                            <div className="flex items-center justify-center size-12 rounded-md bg-slate-100 dark:bg-zink-600">
-                                <Container className="size-6 text-slate-500 fill-slate-300 dark:text-zink-200 dark:fill-zink-500" />
+                            <div className="flex items-center justify-center size-12 rounded-md bg-slate-100 dark:bg-zinc-600">
+                                <Container className="size-6 text-slate-500 fill-slate-300 dark:text-zinc-200 dark:fill-zinc-500" />
                             </div>
                             <div>
                                 <h6 className="mb-1">Free Shipping & Returns</h6>
-                                <p className="text-slate-500 dark:text-zink-200">On all orders over $200.00</p>
+                                <p className="text-slate-500 dark:text-zinc-200">On all orders over $200.00</p>
                             </div>
                         </div>
                     </div>

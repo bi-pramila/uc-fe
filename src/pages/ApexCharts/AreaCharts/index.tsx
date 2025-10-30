@@ -35,19 +35,19 @@ const AreaCharts = () => {
                     <div className="card-body">
                         <h6 className="mb-4 text-15">Datetime X-Axis</h6>
                         <div className="flex flex-wrap gap-2 toolbar align-items-start justify-content-center">
-                            <button type="button" className="px-2 py-1.5 text-xs text-custom-500 btn bg-custom-100 hover:text-white hover:bg-custom-600 focus:text-white focus:bg-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:ring active:ring-custom-100 dark:bg-custom-500/20 dark:text-custom-500 dark:hover:bg-custom-500 dark:hover:text-white dark:focus:bg-custom-500 dark:focus:text-white dark:active:bg-custom-500 dark:active:text-white dark:ring-custom-400/20 [&.active]:bg-custom-500 [&.active]:text-white" id="one_month">
+                            <button type="button" className="px-2 py-1.5 text-xs text-fecustom-500 btn bg-fecustom-100 hover:text-white hover:bg-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:ring active:ring-fecustom-100 dark:bg-fecustom-500/20 dark:text-fecustom-500 dark:hover:bg-fecustom-500 dark:hover:text-white dark:focus:bg-fecustom-500 dark:focus:text-white dark:active:bg-fecustom-500 dark:active:text-white dark:ring-fecustom-400/20 [&.active]:bg-fecustom-500 [&.active]:text-white" id="one_month">
                                 1M
                             </button>
-                            <button type="button" className="px-2 py-1.5 text-xs text-custom-500 btn bg-custom-100 hover:text-white hover:bg-custom-600 focus:text-white focus:bg-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:ring active:ring-custom-100 dark:bg-custom-500/20 dark:text-custom-500 dark:hover:bg-custom-500 dark:hover:text-white dark:focus:bg-custom-500 dark:focus:text-white dark:active:bg-custom-500 dark:active:text-white dark:ring-custom-400/20 [&.active]:bg-custom-500 [&.active]:text-white" id="six_months">
+                            <button type="button" className="px-2 py-1.5 text-xs text-fecustom-500 btn bg-fecustom-100 hover:text-white hover:bg-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:ring active:ring-fecustom-100 dark:bg-fecustom-500/20 dark:text-fecustom-500 dark:hover:bg-fecustom-500 dark:hover:text-white dark:focus:bg-fecustom-500 dark:focus:text-white dark:active:bg-fecustom-500 dark:active:text-white dark:ring-fecustom-400/20 [&.active]:bg-fecustom-500 [&.active]:text-white" id="six_months">
                                 6M
                             </button>
-                            <button type="button" className="px-2 py-1.5 text-xs text-custom-500 btn bg-custom-100 hover:text-white hover:bg-custom-600 focus:text-white focus:bg-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:ring active:ring-custom-100 dark:bg-custom-500/20 dark:text-custom-500 dark:hover:bg-custom-500 dark:hover:text-white dark:focus:bg-custom-500 dark:focus:text-white dark:active:bg-custom-500 dark:active:text-white dark:ring-custom-400/20 active [&.active]:bg-custom-500 [&.active]:text-white" id="one_year">
+                            <button type="button" className="px-2 py-1.5 text-xs text-fecustom-500 btn bg-fecustom-100 hover:text-white hover:bg-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:ring active:ring-fecustom-100 dark:bg-fecustom-500/20 dark:text-fecustom-500 dark:hover:bg-fecustom-500 dark:hover:text-white dark:focus:bg-fecustom-500 dark:focus:text-white dark:active:bg-fecustom-500 dark:active:text-white dark:ring-fecustom-400/20 active [&.active]:bg-fecustom-500 [&.active]:text-white" id="one_year">
                                 1Y
                             </button>
-                            <button type="button" className="px-2 py-1.5 text-xs text-custom-500 btn bg-custom-100 hover:text-white hover:bg-custom-600 focus:text-white focus:bg-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:ring active:ring-custom-100 dark:bg-custom-500/20 dark:text-custom-500 dark:hover:bg-custom-500 dark:hover:text-white dark:focus:bg-custom-500 dark:focus:text-white dark:active:bg-custom-500 dark:active:text-white dark:ring-custom-400/20 [&.active]:bg-custom-500 [&.active]:text-white" id="ytd">
+                            <button type="button" className="px-2 py-1.5 text-xs text-fecustom-500 btn bg-fecustom-100 hover:text-white hover:bg-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:ring active:ring-fecustom-100 dark:bg-fecustom-500/20 dark:text-fecustom-500 dark:hover:bg-fecustom-500 dark:hover:text-white dark:focus:bg-fecustom-500 dark:focus:text-white dark:active:bg-fecustom-500 dark:active:text-white dark:ring-fecustom-400/20 [&.active]:bg-fecustom-500 [&.active]:text-white" id="ytd">
                                 YTD
                             </button>
-                            <button type="button" className="px-2 py-1.5 text-xs text-custom-500 btn bg-custom-100 hover:text-white hover:bg-custom-600 focus:text-white focus:bg-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:ring active:ring-custom-100 dark:bg-custom-500/20 dark:text-custom-500 dark:hover:bg-custom-500 dark:hover:text-white dark:focus:bg-custom-500 dark:focus:text-white dark:active:bg-custom-500 dark:active:text-white dark:ring-custom-400/20 [&.active]:bg-custom-500 [&.active]:text-white" id="all">
+                            <button type="button" className="px-2 py-1.5 text-xs text-fecustom-500 btn bg-fecustom-100 hover:text-white hover:bg-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:ring active:ring-fecustom-100 dark:bg-fecustom-500/20 dark:text-fecustom-500 dark:hover:bg-fecustom-500 dark:hover:text-white dark:focus:bg-fecustom-500 dark:focus:text-white dark:active:bg-fecustom-500 dark:active:text-white dark:ring-fecustom-400/20 [&.active]:bg-fecustom-500 [&.active]:text-white" id="all">
                                 ALL
                             </button>
                         </div>
@@ -64,7 +64,7 @@ const AreaCharts = () => {
                     <div className="card-body">
                         <h6 className="mb-4 text-15">Github Style</h6>
                         <div>
-                            <div className="bg-slate-100 dark:bg-zink-600">
+                            <div className="bg-slate-100 dark:bg-zinc-600">
                                 <GithubStyleChart chartId="areaMonthsChart" />
                             </div>
 
@@ -73,14 +73,14 @@ const AreaCharts = () => {
                                     <img className="size-10 rounded" src={user2} data-hovercard-user-id="634573" alt="" />
                                 </div>
                                 <div className="grow">
-                                    <Link to="#" className="font-medium text-15 text-slate-800 dark:text-zink-50">Themesdesign</Link>
-                                    <div className="text-sm cmeta text-slate-500 dark:text-zink-200">
-                                        <span className="font-medium commits text-slate-800 dark:text-zink-50"></span> commits
+                                    <Link to="#" className="font-medium text-15 text-slate-800 dark:text-zinc-50">Themesdesign</Link>
+                                    <div className="text-sm cmeta text-slate-500 dark:text-zinc-200">
+                                        <span className="font-medium commits text-slate-800 dark:text-zinc-50"></span> commits
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="bg-slate-100 dark:bg-zink-600">
+                            <div className="bg-slate-100 dark:bg-zinc-600">
                                 <AreaYearsChart chartId="areaYearsChart" />
                             </div>
                         </div>

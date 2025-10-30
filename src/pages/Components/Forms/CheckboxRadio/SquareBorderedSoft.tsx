@@ -9,63 +9,63 @@ const SquareBorderedSoft: React.FC = () => {
 
                     <div className="flex flex-col gap-2">
                         <div className="flex items-center gap-2">
-                            <input id="radioSquare1" className="size-4 border rounded-sm appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zink-600 dark:border-zink-500 checked:bg-custom-500 checked:border-custom-500 dark:checked:bg-custom-400 dark:checked:border-custom-400" type="radio" value="" defaultChecked />
+                            <input id="radioSquare1" className="size-4 border rounded-sm appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zinc-600 dark:border-zinc-500 checked:bg-fecustom-500 checked:border-fecustom-500 dark:checked:bg-fecustom-400 dark:checked:border-fecustom-400" type="radio" value="" defaultChecked />
                             <label htmlFor="radioSquare1" className="align-middle">
                                 Custom
                             </label>
                         </div>
 
                         <div className="flex items-center gap-2">
-                            <input id="radioSquare2" className="size-4 border rounded-sm appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zink-600 dark:border-zink-500 checked:bg-green-500 checked:border-green-500 dark:checked:bg-green-400 dark:checked:border-green-400" type="radio" value="" />
+                            <input id="radioSquare2" className="size-4 border rounded-sm appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zinc-600 dark:border-zinc-500 checked:bg-green-500 checked:border-green-500 dark:checked:bg-green-400 dark:checked:border-green-400" type="radio" value="" />
                             <label htmlFor="radioSquare2" className="align-middle">
                                 Green
                             </label>
                         </div>
 
                         <div className="flex items-center gap-2">
-                            <input id="radioSquare3" className="size-4 border rounded-sm appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zink-600 dark:border-zink-500 checked:bg-orange-500 checked:border-orange-500 dark:checked:bg-orange-400 dark:checked:border-orange-400" type="radio" value="" defaultChecked />
+                            <input id="radioSquare3" className="size-4 border rounded-sm appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zinc-600 dark:border-zinc-500 checked:bg-orange-500 checked:border-orange-500 dark:checked:bg-orange-400 dark:checked:border-orange-400" type="radio" value="" defaultChecked />
                             <label htmlFor="radioSquare3" className="align-middle">
                                 Orange
                             </label>
                         </div>
 
                         <div className="flex items-center gap-2">
-                            <input id="radioSquare4" className="size-4 border rounded-sm appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zink-600 dark:border-zink-500 checked:bg-sky-500 checked:border-sky-500 dark:checked:bg-sky-400 dark:checked:border-sky-400" type="radio" value="" />
+                            <input id="radioSquare4" className="size-4 border rounded-sm appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zinc-600 dark:border-zinc-500 checked:bg-sky-500 checked:border-sky-500 dark:checked:bg-sky-400 dark:checked:border-sky-400" type="radio" value="" />
                             <label htmlFor="radioSquare4" className="align-middle">
                                 Sky
                             </label>
                         </div>
 
                         <div className="flex items-center gap-2">
-                            <input id="radioSquare5" className="size-4 border rounded-sm appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zink-600 dark:border-zink-500 checked:bg-yellow-500 checked:border-yellow-500 dark:checked:bg-yellow-400 dark:checked:border-yellow-400" type="radio" value="" />
+                            <input id="radioSquare5" className="size-4 border rounded-sm appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zinc-600 dark:border-zinc-500 checked:bg-yellow-500 checked:border-yellow-500 dark:checked:bg-yellow-400 dark:checked:border-yellow-400" type="radio" value="" />
                             <label htmlFor="radioSquare5" className="align-middle">
                                 Yellow
                             </label>
                         </div>
 
                         <div className="flex items-center gap-2">
-                            <input id="radioSquare6" className="size-4 border rounded-sm appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zink-600 dark:border-zink-500 checked:bg-red-500 checked:border-red-500 dark:checked:bg-red-400 dark:checked:border-red-400" type="radio" value="" defaultChecked />
+                            <input id="radioSquare6" className="size-4 border rounded-sm appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zinc-600 dark:border-zinc-500 checked:bg-red-500 checked:border-red-500 dark:checked:bg-red-400 dark:checked:border-red-400" type="radio" value="" defaultChecked />
                             <label htmlFor="radioSquare6" className="align-middle">
                                 Red
                             </label>
                         </div>
 
                         <div className="flex items-center gap-2">
-                            <input id="radioSquare7" className="size-4 border rounded-sm appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zink-600 dark:border-zink-500 checked:bg-purple-500 checked:border-purple-500 dark:checked:bg-purple-400 dark:checked:border-purple-400" type="radio" value="" defaultChecked />
+                            <input id="radioSquare7" className="size-4 border rounded-sm appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zinc-600 dark:border-zinc-500 checked:bg-purple-500 checked:border-purple-500 dark:checked:bg-purple-400 dark:checked:border-purple-400" type="radio" value="" defaultChecked />
                             <label htmlFor="radioSquare7" className="align-middle">
                                 Purple
                             </label>
                         </div>
 
                         <div className="flex items-center gap-2">
-                            <input id="radioSquare8" className="size-4 border rounded-sm appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zink-600 dark:border-zink-500 checked:bg-slate-300 checked:border-slate-300 dark:checked:bg-zink-200 dark:checked:border-zink-200" type="radio" value="" />
+                            <input id="radioSquare8" className="size-4 border rounded-sm appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zinc-600 dark:border-zinc-500 checked:bg-slate-300 checked:border-slate-300 dark:checked:bg-zinc-200 dark:checked:border-zinc-200" type="radio" value="" />
                             <label htmlFor="radioSquare8" className="align-middle">
                                 Light
                             </label>
                         </div>
 
                         <div className="flex items-center gap-2">
-                            <input id="radioSquare9" className="size-4 border rounded-sm appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zink-600 dark:border-zink-500 checked:bg-slate-700 checked:border-slate-700 dark:checked:bg-zink-400 dark:checked:border-zink-400" type="radio" value="" defaultChecked />
+                            <input id="radioSquare9" className="size-4 border rounded-sm appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zinc-600 dark:border-zinc-500 checked:bg-slate-700 checked:border-slate-700 dark:checked:bg-zinc-400 dark:checked:border-zinc-400" type="radio" value="" defaultChecked />
                             <label htmlFor="radioSquare9" className="align-middle">
                                 Dark
                             </label>
@@ -79,63 +79,63 @@ const SquareBorderedSoft: React.FC = () => {
 
                     <div className="flex flex-col gap-2">
                         <div className="flex items-center gap-2">
-                            <input id="radioBordered1" className="size-4 bg-white border rounded-full appearance-none cursor-pointer dark:bg-zink-700 border-slate-200 dark:border-zink-500 checked:bg-custom-500 checked:border-custom-500 dark:checked:bg-custom-400 dark:checked:border-custom-400" type="radio" value="" defaultChecked />
+                            <input id="radioBordered1" className="size-4 bg-white border rounded-full appearance-none cursor-pointer dark:bg-zinc-700 border-slate-200 dark:border-zinc-500 checked:bg-fecustom-500 checked:border-fecustom-500 dark:checked:bg-fecustom-400 dark:checked:border-fecustom-400" type="radio" value="" defaultChecked />
                             <label htmlFor="radioBordered1" className="align-middle">
                                 Custom
                             </label>
                         </div>
 
                         <div className="flex items-center gap-2">
-                            <input id="radioBordered2" className="size-4 bg-white border rounded-full appearance-none cursor-pointer dark:bg-zink-700 border-slate-200 dark:border-zink-500 checked:bg-green-500 checked:border-green-500 dark:checked:bg-green-400 dark:checked:border-green-400" type="radio" value="" />
+                            <input id="radioBordered2" className="size-4 bg-white border rounded-full appearance-none cursor-pointer dark:bg-zinc-700 border-slate-200 dark:border-zinc-500 checked:bg-green-500 checked:border-green-500 dark:checked:bg-green-400 dark:checked:border-green-400" type="radio" value="" />
                             <label htmlFor="radioBordered2" className="align-middle">
                                 Green
                             </label>
                         </div>
 
                         <div className="flex items-center gap-2">
-                            <input id="radioBordered3" className="size-4 bg-white border rounded-full appearance-none cursor-pointer dark:bg-zink-700 border-slate-200 dark:border-zink-500 checked:bg-orange-500 checked:border-orange-500 dark:checked:bg-orange-400 dark:checked:border-orange-400" type="radio" value="" defaultChecked />
+                            <input id="radioBordered3" className="size-4 bg-white border rounded-full appearance-none cursor-pointer dark:bg-zinc-700 border-slate-200 dark:border-zinc-500 checked:bg-orange-500 checked:border-orange-500 dark:checked:bg-orange-400 dark:checked:border-orange-400" type="radio" value="" defaultChecked />
                             <label htmlFor="radioBordered3" className="align-middle">
                                 Orange
                             </label>
                         </div>
 
                         <div className="flex items-center gap-2">
-                            <input id="radioBordered4" className="size-4 bg-white border rounded-full appearance-none cursor-pointer dark:bg-zink-700 border-slate-200 dark:border-zink-500 checked:bg-sky-500 checked:border-sky-500 dark:checked:bg-sky-400 dark:checked:border-sky-400" type="radio" value="" />
+                            <input id="radioBordered4" className="size-4 bg-white border rounded-full appearance-none cursor-pointer dark:bg-zinc-700 border-slate-200 dark:border-zinc-500 checked:bg-sky-500 checked:border-sky-500 dark:checked:bg-sky-400 dark:checked:border-sky-400" type="radio" value="" />
                             <label htmlFor="radioBordered4" className="align-middle">
                                 Sky
                             </label>
                         </div>
 
                         <div className="flex items-center gap-2">
-                            <input id="radioBordered5" className="size-4 bg-white border rounded-full appearance-none cursor-pointer dark:bg-zink-700 border-slate-200 dark:border-zink-500 checked:bg-yellow-500 checked:border-yellow-500 dark:checked:bg-yellow-400 dark:checked:border-yellow-400" type="radio" value="" />
+                            <input id="radioBordered5" className="size-4 bg-white border rounded-full appearance-none cursor-pointer dark:bg-zinc-700 border-slate-200 dark:border-zinc-500 checked:bg-yellow-500 checked:border-yellow-500 dark:checked:bg-yellow-400 dark:checked:border-yellow-400" type="radio" value="" />
                             <label htmlFor="radioBordered5" className="align-middle">
                                 Yellow
                             </label>
                         </div>
 
                         <div className="flex items-center gap-2">
-                            <input id="radioBordered6" className="size-4 bg-white border rounded-full appearance-none cursor-pointer dark:bg-zink-700 border-slate-200 dark:border-zink-500 checked:bg-red-500 checked:border-red-500 dark:checked:bg-red-400 dark:checked:border-red-400" type="radio" value="" defaultChecked />
+                            <input id="radioBordered6" className="size-4 bg-white border rounded-full appearance-none cursor-pointer dark:bg-zinc-700 border-slate-200 dark:border-zinc-500 checked:bg-red-500 checked:border-red-500 dark:checked:bg-red-400 dark:checked:border-red-400" type="radio" value="" defaultChecked />
                             <label htmlFor="radioBordered6" className="align-middle">
                                 Red
                             </label>
                         </div>
 
                         <div className="flex items-center gap-2">
-                            <input id="radioBordered7" className="size-4 bg-white border rounded-full appearance-none cursor-pointer dark:bg-zink-700 border-slate-200 dark:border-zink-500 checked:bg-purple-500 checked:border-purple-500 dark:checked:bg-purple-400 dark:checked:border-purple-400" type="radio" value="" defaultChecked />
+                            <input id="radioBordered7" className="size-4 bg-white border rounded-full appearance-none cursor-pointer dark:bg-zinc-700 border-slate-200 dark:border-zinc-500 checked:bg-purple-500 checked:border-purple-500 dark:checked:bg-purple-400 dark:checked:border-purple-400" type="radio" value="" defaultChecked />
                             <label htmlFor="radioBordered7" className="align-middle">
                                 Purple
                             </label>
                         </div>
 
                         <div className="flex items-center gap-2">
-                            <input id="radioBordered8" className="size-4 bg-white border rounded-full appearance-none cursor-pointer dark:bg-zink-700 border-slate-200 dark:border-zink-500 checked:bg-slate-300 checked:border-slate-300 dark:checked:bg-zink-200 dark:checked:border-zink-200" type="radio" value="" />
+                            <input id="radioBordered8" className="size-4 bg-white border rounded-full appearance-none cursor-pointer dark:bg-zinc-700 border-slate-200 dark:border-zinc-500 checked:bg-slate-300 checked:border-slate-300 dark:checked:bg-zinc-200 dark:checked:border-zinc-200" type="radio" value="" />
                             <label htmlFor="radioBordered8" className="align-middle">
                                 Light
                             </label>
                         </div>
 
                         <div className="flex items-center gap-2">
-                            <input id="radioBordered9" className="size-4 bg-white border rounded-full appearance-none cursor-pointer dark:bg-zink-700 border-slate-200 dark:border-zink-500 checked:bg-slate-700 checked:border-slate-700 dark:checked:bg-zink-400 dark:checked:border-zink-400" type="radio" value="" defaultChecked />
+                            <input id="radioBordered9" className="size-4 bg-white border rounded-full appearance-none cursor-pointer dark:bg-zinc-700 border-slate-200 dark:border-zinc-500 checked:bg-slate-700 checked:border-slate-700 dark:checked:bg-zinc-400 dark:checked:border-zinc-400" type="radio" value="" defaultChecked />
                             <label htmlFor="radioBordered9" className="align-middle">
                                 Dark
                             </label>
@@ -149,7 +149,7 @@ const SquareBorderedSoft: React.FC = () => {
 
                     <div className="flex flex-col gap-2">
                         <div className="flex items-center gap-2">
-                            <input id="radioSoft1" className="size-4 border rounded-sm appearance-none cursor-pointer border-custom-200 bg-custom-50 checked:bg-custom-500 checked:border-custom-500 dark:border-custom-800 dark:bg-custom-500/20 dark:checked:bg-custom-500 dark:checked:border-custom-500" type="radio" value="" />
+                            <input id="radioSoft1" className="size-4 border rounded-sm appearance-none cursor-pointer border-fecustom-200 bg-fecustom-50 checked:bg-fecustom-500 checked:border-fecustom-500 dark:border-fecustom-800 dark:bg-fecustom-500/20 dark:checked:bg-fecustom-500 dark:checked:border-fecustom-500" type="radio" value="" />
                             <label htmlFor="radioSoft1" className="align-middle">
                                 Custom
                             </label>
@@ -198,14 +198,14 @@ const SquareBorderedSoft: React.FC = () => {
                         </div>
 
                         <div className="flex items-center gap-2">
-                            <input id="radioSoft8" className="size-4 border rounded-full appearance-none cursor-pointer border-slate-200 bg-slate-50 checked:bg-slate-300 checked:border-slate-300 dark:border-zink-500 dark:bg-zink-600 dark:checked:bg-zink-200 dark:checked:border-zink-200" type="radio" value="" />
+                            <input id="radioSoft8" className="size-4 border rounded-full appearance-none cursor-pointer border-slate-200 bg-slate-50 checked:bg-slate-300 checked:border-slate-300 dark:border-zinc-500 dark:bg-zinc-600 dark:checked:bg-zinc-200 dark:checked:border-zinc-200" type="radio" value="" />
                             <label htmlFor="radioSoft8" className="align-middle">
                                 Light
                             </label>
                         </div>
 
                         <div className="flex items-center gap-2">
-                            <input id="radioSoft9" className="size-4 border rounded-full appearance-none cursor-pointer border-slate-300 bg-slate-200 checked:bg-slate-700 checked:border-slate-700 dark:border-zink-500 dark:bg-zink-600 dark:checked:bg-zink-400 dark:checked:border-zink-400" type="radio" value="" defaultChecked />
+                            <input id="radioSoft9" className="size-4 border rounded-full appearance-none cursor-pointer border-slate-300 bg-slate-200 checked:bg-slate-700 checked:border-slate-700 dark:border-zinc-500 dark:bg-zinc-600 dark:checked:bg-zinc-400 dark:checked:border-zinc-400" type="radio" value="" defaultChecked />
                             <label htmlFor="radioSoft9" className="align-middle">
                                 Dark
                             </label>

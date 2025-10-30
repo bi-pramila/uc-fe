@@ -14,7 +14,7 @@ const TrafficResources = () => {
                             <div className="flex items-center mb-3">
                                 <h6 className="grow text-15">Traffic Resources</h6>
                                 <div className="relative">
-                                    <Link to="#" className="transition-all duration-300 ease-linear text-custom-500 hover:text-custom-700">View Status
+                                    <Link to="#" className="transition-all duration-300 ease-linear text-fecustom-500 hover:text-fecustom-700">View Status
                                         <MoveRight className="inline-block size-4 align-middle ltr:ml-2 rtl:mr-2"></MoveRight></Link>
                                 </div>
                             </div>
@@ -45,17 +45,17 @@ const TrafficResources = () => {
                         <div className="card-body">
                             <div className="flex items-center mb-2">
                                 <h5 className="grow"><CountUp end={1596} className="counter-value" /></h5>
-                                <span className="px-2.5 py-0.5 text-xs inline-block font-medium rounded border bg-white border-red-100 text-red-500 dark:bg-zink-700 dark:border-red-900">
+                                <span className="px-2.5 py-0.5 text-xs inline-block font-medium rounded border bg-white border-red-100 text-red-500 dark:bg-zinc-700 dark:border-red-900">
                                     <TrendingDown className="inline-block size-3 ltr:mr-1 rtl:ml-1"></TrendingDown> 6.8%</span>
                             </div>
                             <h6 className="mb-0">Monthly Orders Goal (20000+)</h6>
                             <div>
                                 <div className="flex items-center justify-between mt-5 mb-2">
-                                    <p className="text-slate-500 dark:text-zink-200">Total Orders</p>
-                                    <h6 className="mb-0 text-custom-500">85%</h6>
+                                    <p className="text-slate-500 dark:text-zinc-200">Total Orders</p>
+                                    <h6 className="mb-0 text-fecustom-500">85%</h6>
                                 </div>
-                                <div className="w-full bg-slate-200 rounded-full h-2.54 dark:bg-zink-600">
-                                    <div className="bg-custom-500 h-2.5 rounded-full" style={{ width: "85%" }}></div>
+                                <div className="w-full bg-slate-200 rounded-full h-2.54 dark:bg-zinc-600">
+                                    <div className="bg-fecustom-500 h-2.5 rounded-full" style={{ width: "85%" }}></div>
                                 </div>
                             </div>
                         </div>

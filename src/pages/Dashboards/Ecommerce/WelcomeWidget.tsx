@@ -153,7 +153,7 @@ const WelcomeWidget = () => {
                         <div className="col-span-12 lg:col-span-8 2xl:col-span-7">
                             <h5 className="mb-3 font-normal tracking-wide text-slate-200">Welcome Paula Keenan 🎉</h5>
                             <p className="mb-5 text-slate-400">An ecommerce dashboard has just that purpose. It provides your ecommerce team with a clear overview of key financial and website KPIs at any time.</p>
-                            <button type="button" className="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-500/20 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-500/20 dark:ring-custom-400/20">Take a Product</button>
+                            <button type="button" className="text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-500/20 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-500/20 dark:ring-fecustom-400/20">Take a Product</button>
                         </div>
                         <div className="hidden col-span-12 2xl:col-span-3 lg:col-span-2 lg:col-start-11 2xl:col-start-10 lg:block">
                             <img src={dashboard} alt="" className="h-40 ltr:2xl:ml-auto rtl:2xl:mr-auto" />

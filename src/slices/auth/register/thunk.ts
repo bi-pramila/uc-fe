@@ -15,9 +15,9 @@ export const registerUser = (user: User
 ): ThunkAction<void, RootState, unknown, Action<string>> => async (dispatch: Dispatch) => {
     try {
         let response: any;
-        if (process.env.REACT_APP_DEFAULTAUTH === "fake") {
+        if (import.meta.env.VITE_DEFAULTAUTH === "fake") {
             response = await postFakeRegister(user);
-        } else if (process.env.REACT_APP_DEFAULTAUTH === "firebase") {
+        } else if (import.meta.env.VITE_DEFAULTAUTH === "firebase") {
             
             // initialize relevant method of both Auth
             const fireBaseBackend = getFirebaseBackend();

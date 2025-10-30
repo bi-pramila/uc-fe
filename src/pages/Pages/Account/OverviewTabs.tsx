@@ -57,16 +57,16 @@ const OverviewTabs = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="text-center card bg-custom-500 xl:col-span-3">
+                        <div className="text-center card bg-fecustom-500 xl:col-span-3">
                             <div className="flex flex-col h-full card-body">
                                 <img src={medal} alt="" className="w-2/6 mx-auto" />
                                 <div className="mt-5 mb-auto">
                                     <h5 className="mb-1 text-white">Congratulation Paula</h5>
-                                    <p className="text-custom-200">on your outstanding achievement! Your hard work and dedication have truly paid off.</p>
+                                    <p className="text-fecustom-200">on your outstanding achievement! Your hard work and dedication have truly paid off.</p>
                                 </div>
-                                <div className="p-3 mt-5 rounded-md bg-custom-600">
+                                <div className="p-3 mt-5 rounded-md bg-fecustom-600">
                                     <h2 className="mb-1 text-white">1054</h2>
-                                    <p className="text-custom-200">It's very easy to convert your points to cash now.</p>
+                                    <p className="text-fecustom-200">It's very easy to convert your points to cash now.</p>
                                 </div>
                             </div>
                         </div>
@@ -74,8 +74,8 @@ const OverviewTabs = () => {
                     <div className="card">
                         <div className="card-body">
                             <h6 className="mb-3 text-15">Overview</h6>
-                            <p className="mb-2 text-slate-500 dark:text-zink-200">A Web Developer creates and designs different websites for clients. They are responsible for their aesthetic as well as their function. Professionals in this field may also need to be able to ensure sites are compatible with multiple types of media. Web Developers need to have a firm understanding of programming and graphical design. Having a strong resume that emphasizes these attributes makes it significantly easier to get hired as a Web Developer.</p>
-                            <p className="text-slate-500 dark:text-zink-200">As a web designer, my objective is to make a positive impact on clients, co-workers, and the Internet using my skills and experience to design compelling and attractive websites. Solving code problems. Editing & Design with designing team in the company to build perfect web designs.</p>
+                            <p className="mb-2 text-slate-500 dark:text-zinc-200">A Web Developer creates and designs different websites for clients. They are responsible for their aesthetic as well as their function. Professionals in this field may also need to be able to ensure sites are compatible with multiple types of media. Web Developers need to have a firm understanding of programming and graphical design. Having a strong resume that emphasizes these attributes makes it significantly easier to get hired as a Web Developer.</p>
+                            <p className="text-slate-500 dark:text-zinc-200">As a web designer, my objective is to make a positive impact on clients, co-workers, and the Internet using my skills and experience to design compelling and attractive websites. Solving code problems. Editing & Design with designing team in the company to build perfect web designs.</p>
                         </div>
                     </div>
                 </div>
@@ -90,8 +90,8 @@ const OverviewTabs = () => {
                                             (tableData || [])?.map((item: TableData, index: number) => (
                                                 <tr key={index}>
                                                     <th className="py-2 font-semibold ps-0" scope="row">{item.label}</th>
-                                                    <td className="py-2 text-right text-slate-500 dark:text-zink-200">
-                                                        {item.link ? <a href="http://themesdesign.in/" rel="noopener"className="text-custom-500">www.themesdesign.in</a> : item.value}
+                                                    <td className="py-2 text-right text-slate-500 dark:text-zinc-200">
+                                                        {item.link ? <a href="http://themesdesign.in/" rel="noopener"className="text-fecustom-500">www.themesdesign.in</a> : item.value}
                                                     </td>
                                                 </tr>
 
@@ -106,16 +106,16 @@ const OverviewTabs = () => {
                         <div className="card-body">
                             <h6 className="mb-4 text-15">Earning Reports</h6>
 
-                            <div className="divide-y divide-slate-200 dark:divide-zink-500">
+                            <div className="divide-y divide-slate-200 dark:divide-zinc-500">
                                 {
                                     (earningReports || [])?.map((item: EarningReport, index: number) => (
                                         <div className={`flex items-center gap-3 ${index === earningReports.length - 1 ? "pt-3" : index === earningReports.length - 2 ? "py-3" : "pb-3"}`} key={index}>
-                                            <div className="flex items-center justify-center size-12 rounded-full bg-slate-100 dark:bg-zink-600">
-                                                <item.icon className="size-5 text-slate-500 dark:text-zink-200"></item.icon>
+                                            <div className="flex items-center justify-center size-12 rounded-full bg-slate-100 dark:bg-zinc-600">
+                                                <item.icon className="size-5 text-slate-500 dark:text-zinc-200"></item.icon>
                                             </div>
                                             <div>
                                                 <h6 className="text-lg">{item.amount}</h6>
-                                                <p className="text-slate-500 dark:text-zink-200">{item.description}</p>
+                                                <p className="text-slate-500 dark:text-zinc-200">{item.description}</p>
                                             </div>
                                         </div>
                                     ))
@@ -134,22 +134,22 @@ const OverviewTabs = () => {
                             <table className="w-full whitespace-nowrap">
                                 <thead className="ltr:text-left rtl:text-right">
                                     <tr>
-                                        <th className="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500">Date</th>
-                                        <th className="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500">Amount</th>
-                                        <th className="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500">Status</th>
-                                        <th className="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500">Description</th>
-                                        <th className="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500">PDF</th>
+                                        <th className="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zinc-500">Date</th>
+                                        <th className="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zinc-500">Amount</th>
+                                        <th className="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zinc-500">Status</th>
+                                        <th className="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zinc-500">Description</th>
+                                        <th className="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zinc-500">PDF</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {
                                         (transactions || [])?.map((item: Transaction, index: number) => (
                                             <tr key={index}>
-                                                <td className="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">{item.date}</td>
-                                                <td className="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">{item.amount}</td>
-                                                <td className={`px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500 ${item.text}`}>{item.status}</td>
-                                                <td className="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">{item.description}</td>
-                                                <td className="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500"><a href="#!" className="transition-all duration-150 ease-linear text-custom-500 hover:text-custom-600"><i className="ri-download-2-line"></i></a></td>
+                                                <td className="px-3.5 py-2.5 border-y border-slate-200 dark:border-zinc-500">{item.date}</td>
+                                                <td className="px-3.5 py-2.5 border-y border-slate-200 dark:border-zinc-500">{item.amount}</td>
+                                                <td className={`px-3.5 py-2.5 border-y border-slate-200 dark:border-zinc-500 ${item.text}`}>{item.status}</td>
+                                                <td className="px-3.5 py-2.5 border-y border-slate-200 dark:border-zinc-500">{item.description}</td>
+                                                <td className="px-3.5 py-2.5 border-y border-slate-200 dark:border-zinc-500"><a href="#!" className="transition-all duration-150 ease-linear text-fecustom-500 hover:text-fecustom-600"><i className="ri-download-2-line"></i></a></td>
                                             </tr>
 
                                         ))
@@ -166,13 +166,13 @@ const OverviewTabs = () => {
                         <div className="flex flex-col gap-3">
                             {
                                 (cardOverview || [])?.map((item: CardOverview, index: number) => (
-                                    <a key={index} href="#!" className="flex items-center gap-3 p-2 border rounded-md border-slate-200 dark:border-zink-500">
+                                    <a key={index} href="#!" className="flex items-center gap-3 p-2 border rounded-md border-slate-200 dark:border-zinc-500">
                                         <div className="flex items-center justify-center size-12 rounded-md shrink-0">
                                             <img src={item.image} alt="" className="h-10" />
                                         </div>
                                         <div className="grow">
                                             <h5 className="mb-1 text-15">{item.name}</h5>
-                                            <p className="text-sm text-slate-500 dark:text-zink-200">{item.cardNumber}</p>
+                                            <p className="text-sm text-slate-500 dark:text-zinc-200">{item.cardNumber}</p>
                                         </div>
                                         <div>
                                             {item.isPrimary && <span className="px-2.5 py-0.5 inline-block text-xs font-medium rounded border bg-sky-100 border-transparent text-sky-500 dark:bg-sky-500/20 dark:border-transparent">Primary</span>}
@@ -182,7 +182,7 @@ const OverviewTabs = () => {
                             }
                         </div>
                         <div className="mt-3 text-center">
-                            <a href="#!" className="inline-block underline text-custom-500">Add New Card <MoveRight className="inline-block size-4 ml-2 rtl:-rotate-180"></MoveRight></a>
+                            <a href="#!" className="inline-block underline text-fecustom-500">Add New Card <MoveRight className="inline-block size-4 ml-2 rtl:-rotate-180"></MoveRight></a>
                         </div>
                     </div>
                 </div>
@@ -190,27 +190,27 @@ const OverviewTabs = () => {
                     <div className="card-body">
                         <div className="flex items-center mb-3">
                             <h6 className="grow text-15">Plan Details</h6>
-                            <a href="#!" className="underline text-custom-500">Change Plan</a>
+                            <a href="#!" className="underline text-fecustom-500">Change Plan</a>
                         </div>
                         <div className="grid grid-cols-1 gap-5 mb-3 md:grid-cols-3">
                             <div>
-                                <p className="mb-1 text-slate-500 dark:text-zink-200">Plan Type</p>
+                                <p className="mb-1 text-slate-500 dark:text-zinc-200">Plan Type</p>
                                 <h6>Regular Plan</h6>
                             </div>
                             <div>
-                                <p className="mb-1 text-slate-500 dark:text-zink-200">Monthly Limit</p>
+                                <p className="mb-1 text-slate-500 dark:text-zinc-200">Monthly Limit</p>
                                 <h6>2 Download</h6>
                             </div>
                             <div>
-                                <p className="mb-1 text-slate-500 dark:text-zink-200">Cost</p>
+                                <p className="mb-1 text-slate-500 dark:text-zinc-200">Cost</p>
                                 <h6>$26/Monthly</h6>
                             </div>
                         </div>
-                        <div className="px-4 py-3 mb-2 text-sm rounded-md text-slate-500 dark:text-zink-200 bg-slate-50 dark:bg-zink-600">
+                        <div className="px-4 py-3 mb-2 text-sm rounded-md text-slate-500 dark:text-zinc-200 bg-slate-50 dark:bg-zinc-600">
                             <h6 className="mb-1">Our discounted pricing is available until August 16, 2023.</h6>
-                            <p>After this date, our pricing will transition to $22. For more details, click <a href="#!" className="font-semibold text-slate-700 dark:text-zink-50">Learn More</a></p>
+                            <p>After this date, our pricing will transition to $22. For more details, click <a href="#!" className="font-semibold text-slate-700 dark:text-zinc-50">Learn More</a></p>
                         </div>
-                        <p className="mb-2 text-slate-500 dark:text-zink-200">Plan Benefits</p>
+                        <p className="mb-2 text-slate-500 dark:text-zinc-200">Plan Benefits</p>
                         <ul className="flex flex-col gap-1 list-disc list-inside">
                             <li>Build with TailwindCSS & Vite</li>
                             <li>Multiple Layouts</li>

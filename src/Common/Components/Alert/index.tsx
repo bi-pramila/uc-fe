@@ -28,7 +28,7 @@ export const AlertClose: React.FC<AlertProps> = ({ className }) => {
     const { handleAlertToggle } = useAlertContext()
     return (
         <button
-            className={className ? className : 'absolute top-0 bottom-0 right-0 p-3 transition text-custom-200 hover:text-custom-500 dark:text-custom-400/50 dark:hover:text-custom-500'}
+            className={className ? className : 'absolute top-0 bottom-0 right-0 p-3 transition text-fecustom-200 hover:text-fecustom-500 dark:text-fecustom-400/50 dark:hover:text-fecustom-500'}
             onClick={handleAlertToggle}
         >
             <X className="h-5"></X>

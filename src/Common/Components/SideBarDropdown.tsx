@@ -168,7 +168,7 @@ interface ContentProps {
   currentPath?: any;
 }
 const Content: React.FC<ContentProps> = ({ as: Component = 'div', className, children }) => {
-  const getClassName = className ? className : "absolute z-50 py-2 mt-1 text-left list-none bg-white rounded-md shadow-md dropdown-menu min-w-max dark:bg-zink-400";
+  const getClassName = className ? className : "absolute z-50 py-2 mt-1 text-left list-none bg-white rounded-md shadow-md dropdown-menu min-w-max dark:bg-zinc-400";
   return (
     <Component
       className={getClassName}

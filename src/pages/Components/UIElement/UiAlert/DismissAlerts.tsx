@@ -9,8 +9,8 @@ const DismissAlerts = () => {
                     <h6 className="mb-4 text-15">Dismiss Alerts</h6>
                     <div className="grid grid-cols-1 gap-5 xl:grid-cols-2">
                         <div className="flex flex-col gap-3">
-                            <Alert className="relative p-3 pr-12 text-sm border border-transparent rounded-md text-custom-500 bg-custom-50 dark:bg-custom-400/20">
-                                <Alert.Close className="absolute top-0 bottom-0 right-0 p-3 transition text-custom-200 hover:text-custom-500 dark:text-custom-400/50 dark:hover:text-custom-500" />
+                            <Alert className="relative p-3 pr-12 text-sm border border-transparent rounded-md text-fecustom-500 bg-fecustom-50 dark:bg-fecustom-400/20">
+                                <Alert.Close className="absolute top-0 bottom-0 right-0 p-3 transition text-fecustom-200 hover:text-fecustom-500 dark:text-fecustom-400/50 dark:hover:text-fecustom-500" />
                                 <Alert.Bold className="font-bold">Custom</Alert.Bold> alert! You should check in on some of those fields below.
                             </Alert>
                             <Alert className="relative p-3 pr-12 text-sm text-green-500 border border-transparent rounded-md bg-green-50 dark:bg-green-400/20">
@@ -39,8 +39,8 @@ const DismissAlerts = () => {
                                 <Alert.Close className="absolute top-0 bottom-0 right-0 p-3 text-purple-200 transition hover:text-purple-500 dark:text-purple-400/50 dark:hover:text-purple-500" />
                                 <Alert.Bold className="font-bold">Warning</Alert.Bold> alert! You should check in on some of those fields below.
                             </Alert>
-                            <Alert className="relative p-3 pr-12 text-sm border border-transparent rounded-md text-slate-500 bg-slate-50 dark:bg-zink-400/20 dark:text-zink-200">
-                                <Alert.Close className="absolute top-0 bottom-0 right-0 p-3 transition text-slate-200 hover:text-slate-500 dark:text-zink-300 dark:hover:text-zink-200" />
+                            <Alert className="relative p-3 pr-12 text-sm border border-transparent rounded-md text-slate-500 bg-slate-50 dark:bg-zinc-400/20 dark:text-zinc-200">
+                                <Alert.Close className="absolute top-0 bottom-0 right-0 p-3 transition text-slate-200 hover:text-slate-500 dark:text-zinc-300 dark:hover:text-zinc-200" />
                                 <Alert.Bold className="font-bold">Light</Alert.Bold> alert! You should check in on some of those fields below.
                             </Alert>
                         </div>

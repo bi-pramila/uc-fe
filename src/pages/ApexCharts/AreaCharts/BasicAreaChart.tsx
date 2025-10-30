@@ -61,7 +61,7 @@ const BasicAreaChart = ({ chartId }: any) => {
                 dir="ltr"
                 options={options}
                 series={series || []}
-                data-chart-colors='["bg-custom-500"]'
+                data-chart-colors='["bg-fecustom-500"]'
                 id={chartId}
                 className="apex-charts"
                 type='area'

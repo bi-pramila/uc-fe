@@ -178,12 +178,12 @@ const GridView = () => {
             <form action="#!" className="mb-5">
                 <div className="grid grid-cols-1 gap-5 lg:grid-cols-12">
                     <div className="relative lg:col-span-4 xl:col-span-3">
-                        <input type="text" className="ltr:pl-8 rtl:pr-8 search form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Search for name, email, phone number etc..." autoComplete="off" onChange={(e) => filterSearchData(e)} />
-                        <Search className="inline-block size-4 absolute ltr:left-2.5 rtl:right-2.5 top-2.5 text-slate-500 dark:text-zink-200 fill-slate-100 dark:fill-zink-600" />
+                        <input type="text" className="ltr:pl-8 rtl:pr-8 search form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="Search for name, email, phone number etc..." autoComplete="off" onChange={(e) => filterSearchData(e)} />
+                        <Search className="inline-block size-4 absolute ltr:left-2.5 rtl:right-2.5 top-2.5 text-slate-500 dark:text-zinc-200 fill-slate-100 dark:fill-zinc-600" />
                     </div>
                     <div className="lg:col-span-3 lg:col-start-10">
                         <div className="flex gap-2 lg:justify-end">
-                            <button type="button" className="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20" onClick={toggle}>
+                            <button type="button" className="text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20" onClick={toggle}>
                                 <Plus className="inline-block size-4" /> <span className="align-middle">Add User</span>
                             </button>
                             <button type='button' className="flex items-center justify-center size-[37.5px] p-0 text-white btn bg-slate-500 border-slate-500 hover:text-white hover:bg-slate-600 hover:border-slate-600 focus:text-white focus:bg-slate-600 focus:border-slate-600 focus:ring focus:ring-slate-100 active:text-white active:bg-slate-600 active:border-slate-600 active:ring active:ring-slate-100 dark:ring-slate-400/10"><SlidersHorizontal className="size-4" /></button>
@@ -195,32 +195,32 @@ const GridView = () => {
             <div className="grid grid-cols-1 gap-x-5 md:grid-cols-2 xl:grid-cols-4">
                 {(data || []).map((item: any, key: number) => (<div className="card" key={key}>
                     <div className="card-body">
-                        <div className="relative flex items-center justify-center size-16 mx-auto text-lg rounded-full bg-slate-100 dark:bg-zink-600">
+                        <div className="relative flex items-center justify-center size-16 mx-auto text-lg rounded-full bg-slate-100 dark:bg-zinc-600">
                             {item.img ? <img src={item.img} alt="" className="size-16 rounded-full" /> : (item.name.split(' ').map((word: any) => word.charAt(0)).join(''))}
-                            {item.isActive ? <span className="absolute size-3 bg-green-400 border-2 border-white rounded-full dark:border-zink-700 bottom-1 ltr:right-1 rtl:left-1"></span> :
-                                <span className="absolute size-3 bg-red-400 border-2 border-white rounded-full dark:border-zink-500 bottom-1 right-1"></span>}
+                            {item.isActive ? <span className="absolute size-3 bg-green-400 border-2 border-white rounded-full dark:border-zinc-700 bottom-1 ltr:right-1 rtl:left-1"></span> :
+                                <span className="absolute size-3 bg-red-400 border-2 border-white rounded-full dark:border-zinc-500 bottom-1 right-1"></span>}
                         </div>
                         <div className="mt-4 text-center">
                             <h5 className="mb-1 text-16"><Link to="/pages-account">{item.name}</Link></h5>
-                            <p className="mb-3 text-slate-500 dark:text-zink-200">{item.username}</p>
-                            <p className="text-slate-500 dark:text-zink-200">{item.address}</p>
+                            <p className="mb-3 text-slate-500 dark:text-zinc-200">{item.username}</p>
+                            <p className="text-slate-500 dark:text-zinc-200">{item.address}</p>
                         </div>
                         <div className="flex gap-2 mt-5">
-                            <Link to="/apps-chat" className="bg-white text-custom-500 btn border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:bg-zink-700 dark:hover:bg-custom-500 dark:ring-custom-400/20 dark:focus:bg-custom-500 grow"><MessagesSquare className="inline-block size-4 ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Send Message</span></Link>
+                            <Link to="/apps-chat" className="bg-white text-fecustom-500 btn border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:bg-zinc-700 dark:hover:bg-fecustom-500 dark:ring-fecustom-400/20 dark:focus:bg-fecustom-500 grow"><MessagesSquare className="inline-block size-4 ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Send Message</span></Link>
                             <Dropdown className="relative">
-                                <Dropdown.Trigger type="button" id="userGridDropdown12" className="flex items-center justify-center size-[37.5px] p-0 text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">
+                                <Dropdown.Trigger type="button" id="userGridDropdown12" className="flex items-center justify-center size-[37.5px] p-0 text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20">
                                     <MoreHorizontal className="size-4" />
                                 </Dropdown.Trigger>
-                                <Dropdown.Content placement="right-end" className="absolute z-50 py-2 mt-1 ltr:text-left rtl:text-right list-none bg-white rounded-md shadow-md min-w-[10rem] dark:bg-zink-600" aria-labelledby="userGridDropdown12">
+                                <Dropdown.Content placement="right-end" className="absolute z-50 py-2 mt-1 ltr:text-left rtl:text-right list-none bg-white rounded-md shadow-md min-w-[10rem] dark:bg-zinc-600" aria-labelledby="userGridDropdown12">
                                     <li>
-                                        <Link className="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" to="/pages-account"><Eye className="inline-block size-3 ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Overview</span></Link>
+                                        <Link className="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zinc-100 dark:hover:bg-zinc-500 dark:hover:text-zinc-200 dark:focus:bg-zinc-500 dark:focus:text-zinc-200" to="/pages-account"><Eye className="inline-block size-3 ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Overview</span></Link>
                                     </li>
                                     <li>
-                                        <Link data-modal-target="addUserModal" className="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" to="#!" onClick={() => handleUpdateDataClick(item)}>
+                                        <Link data-modal-target="addUserModal" className="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zinc-100 dark:hover:bg-zinc-500 dark:hover:text-zinc-200 dark:focus:bg-zinc-500 dark:focus:text-zinc-200" to="#!" onClick={() => handleUpdateDataClick(item)}>
                                             <FileEdit className="inline-block size-3 ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Edit</span></Link>
                                     </li>
                                     <li>
-                                        <Link className="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" to="#!" onClick={() => onClickDelete(item)}><Trash2 className="inline-block size-3 ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Delete</span></Link>
+                                        <Link className="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zinc-100 dark:hover:bg-zinc-500 dark:hover:text-zinc-200 dark:focus:bg-zinc-500 dark:focus:text-zinc-200" to="#!" onClick={() => onClickDelete(item)}><Trash2 className="inline-block size-3 ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Delete</span></Link>
                                     </li>
                                 </Dropdown.Content>
                             </Dropdown>
@@ -240,8 +240,8 @@ const GridView = () => {
             {/* User Modal */}
             <Modal show={show} onHide={toggle} id="defaultModal" modal-center="true"
                 className="fixed flex flex-col transition-all duration-300 ease-in-out left-2/4 z-drawer -translate-x-2/4 -translate-y-2/4"
-                dialogClassName="w-screen md:w-[30rem] bg-white shadow rounded-md dark:bg-zink-600">
-                <Modal.Header className="flex items-center justify-between p-4 border-b border-slate-200 dark:border-zink-500"
+                dialogClassName="w-screen md:w-[30rem] bg-white shadow rounded-md dark:bg-zinc-600">
+                <Modal.Header className="flex items-center justify-between p-4 border-b border-slate-200 dark:border-zinc-500"
                     closeButtonClass="transition-all duration-200 ease-linear text-slate-500 hover:text-red-500">
                     <Modal.Title className="text-16">{!!isEdit ? "Edit User" : "Add User"}</Modal.Title>
                 </Modal.Header>
@@ -252,7 +252,7 @@ const GridView = () => {
                         return false;
                     }}>
                         <div className="mb-3">
-                            <div className="relative size-24 mx-auto mb-4 rounded-full shadow-md bg-slate-100 profile-user dark:bg-zink-500">
+                            <div className="relative size-24 mx-auto mb-4 rounded-full shadow-md bg-slate-100 profile-user dark:bg-zinc-500">
                                 <img src={selectedImage || validation.values.img || dummyImg} alt="" className="object-cover w-full h-full rounded-full user-profile-image" />
                                 <div className="absolute bottom-0 flex items-center justify-center size-8 rounded-full ltr:right-0 rtl:left-0 profile-photo-edit">
                                     <input
@@ -262,8 +262,8 @@ const GridView = () => {
                                         accept="image/*"
                                         className="hidden profile-img-file-input"
                                         onChange={handleImageChange} />
-                                    <label htmlFor="profile-img-file-input" className="flex items-center justify-center size-8 bg-white rounded-full shadow-lg cursor-pointer dark:bg-zink-600 profile-photo-edit">
-                                        <ImagePlus className="size-4 text-slate-500 fill-slate-200 dark:text-zink-200 dark:fill-zink-500" />
+                                    <label htmlFor="profile-img-file-input" className="flex items-center justify-center size-8 bg-white rounded-full shadow-lg cursor-pointer dark:bg-zinc-600 profile-photo-edit">
+                                        <ImagePlus className="size-4 text-slate-500 fill-slate-200 dark:text-zinc-200 dark:fill-zinc-500" />
                                     </label>
                                 </div>
                             </div>
@@ -274,7 +274,7 @@ const GridView = () => {
 
                         <div className="mb-3">
                             <label htmlFor="userNameInput" className="inline-block mb-2 text-base font-medium">Name</label>
-                            <input type="text" id="userNameInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter name"
+                            <input type="text" id="userNameInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="Enter name"
                                 name="name"
                                 onChange={validation.handleChange}
                                 value={validation.values.name || ""}
@@ -285,7 +285,7 @@ const GridView = () => {
                         </div>
                         <div className="mb-3">
                             <label htmlFor="usernameInput" className="inline-block mb-2 text-base font-medium">Username</label>
-                            <input type="text" id="usernameInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Username"
+                            <input type="text" id="usernameInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="Enter Username"
                                 name="username"
                                 onChange={validation.handleChange}
                                 value={validation.values.username || ""}
@@ -296,7 +296,7 @@ const GridView = () => {
                         </div>
                         <div className="mb-3">
                             <label htmlFor="addressInput" className="inline-block mb-2 text-base font-medium">Address</label>
-                            <input type="text" id="addressInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Address"
+                            <input type="text" id="addressInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="Enter Address"
                                 name="address"
                                 onChange={validation.handleChange}
                                 value={validation.values.address || ""}
@@ -306,8 +306,8 @@ const GridView = () => {
                             ) : null}
                         </div>
                         <div className="flex justify-end gap-2 mt-4">
-                            <button type="reset" data-modal-close="addDocuments" className="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100 focus:text-red-500 focus:bg-red-100 active:text-red-500 active:bg-red-100 dark:bg-zink-600 dark:hover:bg-red-500/10 dark:focus:bg-red-500/10 dark:active:bg-red-500/10" onClick={toggle}>Cancel</button>
-                            <button type="submit" className="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">
+                            <button type="reset" data-modal-close="addDocuments" className="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100 focus:text-red-500 focus:bg-red-100 active:text-red-500 active:bg-red-100 dark:bg-zinc-600 dark:hover:bg-red-500/10 dark:focus:bg-red-500/10 dark:active:bg-red-500/10" onClick={toggle}>Cancel</button>
+                            <button type="submit" className="text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20">
                                 {!!isEdit ? "Update User" : "Add User"}
                             </button>
                         </div>

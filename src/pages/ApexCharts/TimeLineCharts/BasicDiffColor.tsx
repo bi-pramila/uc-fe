@@ -61,7 +61,7 @@ const BasicTimeline = ({ chartId }: any) => {
                 dir="ltr"
                 options={options}
                 series={series || []}
-                data-chart-colors='["bg-custom-500"]'
+                data-chart-colors='["bg-fecustom-500"]'
                 id={chartId}
                 className="apex-charts"
                 height={350}
@@ -154,7 +154,7 @@ const DiffColor = ({ chartId }: any) => {
                 dir="ltr"
                 options={options}
                 series={series || []}
-                data-chart-colors='["bg-custom-500", "bg-yellow-500", "bg-green-500", "bg-sky-500", "bg-purple-500"]'
+                data-chart-colors='["bg-fecustom-500", "bg-yellow-500", "bg-green-500", "bg-sky-500", "bg-purple-500"]'
                 id={chartId}
                 className="apex-charts"
                 height={350}

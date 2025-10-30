@@ -81,7 +81,7 @@ const AnnotationLine = ({ chartId }: any) => {
                     fillColor: '#fff',
                     strokeColor: 'red',
                     radius: 2,
-                    cssClass: 'apexcharts-custom-class'
+                    cssClass: 'apexcharts-fecustom-class'
                 },
                 label: {
                     borderColor: '#FF4560',
@@ -133,7 +133,7 @@ const AnnotationLine = ({ chartId }: any) => {
                 dir="ltr"
                 options={options}
                 series={series || []}
-                data-chart-colors='["bg-custom-500"]'
+                data-chart-colors='["bg-fecustom-500"]'
                 id={chartId}
                 className="apex-charts"
                 type='line'

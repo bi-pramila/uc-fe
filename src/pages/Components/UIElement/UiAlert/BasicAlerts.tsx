@@ -9,7 +9,7 @@ const BasicAlerts = () => {
                     <h6 className="mb-4 text-15">Basic Alerts</h6>
                     <div className="grid grid-cols-1 gap-5 xl:grid-cols-2">
                         <div className="flex flex-col gap-3">
-                            <Alert className="px-4 py-3 text-sm border border-transparent rounded-md text-custom-500 bg-custom-50 dark:bg-custom-400/20">
+                            <Alert className="px-4 py-3 text-sm border border-transparent rounded-md text-fecustom-500 bg-fecustom-50 dark:bg-fecustom-400/20">
                                 <Alert.Bold>Custom</Alert.Bold> alert! You should check in on some of those fields below.
                             </Alert>
                             <Alert className="px-4 py-3 text-sm text-green-500 border border-transparent rounded-md bg-green-50 dark:bg-green-400/20">
@@ -32,7 +32,7 @@ const BasicAlerts = () => {
                             <Alert className="px-4 py-3 text-sm text-purple-500 border border-transparent rounded-md bg-purple-50 dark:bg-purple-400/20">
                                 <Alert.Bold>Warning</Alert.Bold> alert! You should check in on some of those fields below.
                             </Alert>
-                            <Alert className="px-4 py-3 text-sm rounded-md text-slate-500 bg-slate-50 dark:bg-zink-400/20 dark:text-zink-200">
+                            <Alert className="px-4 py-3 text-sm rounded-md text-slate-500 bg-slate-50 dark:bg-zinc-400/20 dark:text-zinc-200">
                                 <Alert.Bold>Light</Alert.Bold> alert! You should check in on some of those fields below.
                             </Alert>
                         </div>

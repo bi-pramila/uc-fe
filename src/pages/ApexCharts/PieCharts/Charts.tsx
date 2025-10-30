@@ -30,7 +30,7 @@ const SimplePie = ({ chartId }: any) => {
         dir="ltr"
         options={options}
         series={series || []}
-        data-chart-colors='["bg-custom-500", "bg-orange-500", "bg-green-500", "bg-yellow-500", "bg-purple-500"]'
+        data-chart-colors='["bg-fecustom-500", "bg-orange-500", "bg-green-500", "bg-yellow-500", "bg-purple-500"]'
         id={chartId}
         className="apex-charts"
         height={350}
@@ -61,7 +61,7 @@ const SimpleDonut = ({ chartId }: any) => {
         dir="ltr"
         options={options}
         series={series || []}
-        data-chart-colors='["bg-custom-500", "bg-orange-500", "bg-green-500", "bg-sky-500", "bg-yellow-500"]'
+        data-chart-colors='["bg-fecustom-500", "bg-orange-500", "bg-green-500", "bg-sky-500", "bg-yellow-500"]'
         id={chartId}
         className="apex-charts"
         height={350}
@@ -109,7 +109,7 @@ const DonutUpdate = ({ chartId }: any) => {
         dir="ltr"
         options={options}
         series={series || []}
-        data-chart-colors='["bg-custom-400", "bg-orange-400", "bg-green-400", "bg-yellow-400"]'
+        data-chart-colors='["bg-fecustom-400", "bg-orange-400", "bg-green-400", "bg-yellow-400"]'
         id={chartId}
         className="apex-charts"
         height={230}
@@ -162,7 +162,7 @@ const MonochromePie = ({ chartId }: any) => {
         dir="ltr"
         options={options}
         series={series || []}
-        data-chart-colors='["bg-custom-500"]'
+        data-chart-colors='["bg-fecustom-500"]'
         id={chartId}
         className="apex-charts"
         height={300}
@@ -208,7 +208,7 @@ const GradientDonut = ({ chartId }: any) => {
         dir="ltr"
         options={options}
         series={series || []}
-        data-chart-colors='["bg-custom-500", "bg-orange-500", "bg-green-500", "bg-yellow-500", "bg-purple-500"]'
+        data-chart-colors='["bg-fecustom-500", "bg-orange-500", "bg-green-500", "bg-yellow-500", "bg-purple-500"]'
         id={chartId}
         className="apex-charts"
         height={280}
@@ -251,7 +251,7 @@ const SemiDonut = ({ chartId }: any) => {
         dir="ltr"
         options={options}
         series={series || []}
-        data-chart-colors='["bg-custom-500", "bg-orange-500", "bg-green-500", "bg-yellow-500", "bg-purple-500"]'
+        data-chart-colors='["bg-fecustom-500", "bg-orange-500", "bg-green-500", "bg-yellow-500", "bg-purple-500"]'
         id={chartId}
         className="apex-charts"
         height={280}
@@ -329,7 +329,7 @@ const PatternDonut = ({ chartId }: any) => {
         dir="ltr"
         options={options}
         series={series || []}
-        data-chart-colors='["bg-custom-500", "bg-orange-500", "bg-green-500", "bg-yellow-500", "bg-purple-500"]'
+        data-chart-colors='["bg-fecustom-500", "bg-orange-500", "bg-green-500", "bg-yellow-500", "bg-purple-500"]'
         id={chartId}
         className="apex-charts"
         height={350}
@@ -383,7 +383,7 @@ const ImagePie = ({ chartId }: any) => {
         dir="ltr"
         options={options}
         series={series || []}
-        data-chart-colors='["bg-custom-500", "bg-orange-500", "bg-green-500", "bg-yellow-500", "bg-purple-500"]'
+        data-chart-colors='["bg-fecustom-500", "bg-orange-500", "bg-green-500", "bg-yellow-500", "bg-purple-500"]'
         id={chartId}
         className="apex-charts"
         height={350}

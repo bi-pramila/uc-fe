@@ -1,33 +1,64 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# =========================
+# Root level ignores (applies to whole repo)
+# =========================
 
-# dependencies
-/node_modules
-/.pnp
+# Dependency directories
+node_modules/
+
+# Logs
+*.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment (shared root)
+.env
+.env.*
+!*.env.example
+
+
+# Yarn Plug'n'Play
+.pnp.cjs
+.pnp.data.json
+.pnp.loader.mjs
 .pnp.js
+.pnp/
 
-# testing
-/coverage
-
-# production
-/build
+# Coverage
+coverage/
 
 # IDE / Editor files
-.vscode/
+.vscode/*
 .vscode/settings.json
 .idea/
 *.swp
+.vscode/*
+!.vscode/extensions.json
+.idea
 
-# misc
+# System files
 .DS_Store
+Thumbs.db
+*.local
 
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# =========================
+# Frontend (frontend)
+# =========================
+node_modules/
+build/
+dist/
 
-npm-debug.log*
-package-lock.json*
-yarn-debug.log*
-yarn-error.log*
-yarn.lock*
+# Profile
+.rspack-profile-*/
+
+# Dependency directories
+.yarn/cache/
+.yarn/unplugged/
+
+# Lockfiles (optional - if you don't want to track them)
+yarn.lock
+package-lock.json
+
+# If you sometimes remove yarn.lock as part of cleaning:
+*.lock

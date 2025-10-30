@@ -282,10 +282,10 @@ const Checkout = () => {
                 <div className="xl:col-span-8">
                     <div className="flex items-center gap-3 mb-5">
                         <div className="grow">
-                            <Link to="#!" className="transition-all duration-300 ease-linear text-custom-500 hover:text-custom-600"><ChevronLeft className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1 rtl:rotate-180" /> <span className="align-middle">Back to Cart</span></Link>
+                            <Link to="#!" className="transition-all duration-300 ease-linear text-fecustom-500 hover:text-fecustom-600"><ChevronLeft className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1 rtl:rotate-180" /> <span className="align-middle">Back to Cart</span></Link>
                         </div>
                         <div className="shrink-0">
-                            <button type="button" className="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20"><span className="align-middle">Place Order</span> <MoveRight className="inline-block size-4 align-middle ltr:ml-1 rtl:mr-1 rtl:rotate-180" /></button>
+                            <button type="button" className="text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20"><span className="align-middle">Place Order</span> <MoveRight className="inline-block size-4 align-middle ltr:ml-1 rtl:mr-1 rtl:rotate-180" /></button>
                         </div>
                     </div>
                     <div className="card">
@@ -295,50 +295,50 @@ const Checkout = () => {
                                 <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-12">
                                     <div className="xl:col-span-4">
                                         <label htmlFor="firstNameInput" className="inline-block mb-2 text-base font-medium">First Name</label>
-                                        <input type="text" id="firstNameInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter First Name" />
+                                        <input type="text" id="firstNameInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="Enter First Name" />
                                     </div>
                                     <div className="xl:col-span-4">
                                         <label htmlFor="middleNameInput" className="inline-block mb-2 text-base font-medium">Middle Name</label>
-                                        <input type="text" id="middleNameInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Middle Name" />
+                                        <input type="text" id="middleNameInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="Enter Middle Name" />
                                     </div>
                                     <div className="xl:col-span-4">
                                         <label htmlFor="lastNameInput" className="inline-block mb-2 text-base font-medium">Last Name</label>
-                                        <input type="text" id="lastNameInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Last Name" />
+                                        <input type="text" id="lastNameInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="Enter Last Name" />
                                     </div>
                                     <div className="xl:col-span-4">
                                         <label htmlFor="phoneNumberInput" className="inline-block mb-2 text-base font-medium">Phone Number</label>
-                                        <input type="text" id="phoneNumberInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="(012) 345 678 9010" />
+                                        <input type="text" id="phoneNumberInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="(012) 345 678 9010" />
                                     </div>
                                     <div className="xl:col-span-4">
                                         <label htmlFor="alternativeNumberInput" className="inline-block mb-2 text-base font-medium">Alternative Number</label>
-                                        <input type="text" id="alternativeNumberInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="(012) 345 678 9010" />
+                                        <input type="text" id="alternativeNumberInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="(012) 345 678 9010" />
                                     </div>
                                     <div className="xl:col-span-4">
                                         <label htmlFor="emailAddressInput" className="inline-block mb-2 text-base font-medium">Email Address</label>
-                                        <input type="email" id="emailAddressInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter email" />
+                                        <input type="email" id="emailAddressInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="Enter email" />
                                     </div>
                                     <div className="xl:col-span-12">
                                         <label htmlFor="streetAddressInput" className="inline-block mb-2 text-base font-medium">Street Address</label>
-                                        <input type="text" id="streetAddressInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Street address" />
+                                        <input type="text" id="streetAddressInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="Street address" />
                                     </div>
                                     <div className="xl:col-span-12">
                                         <label htmlFor="townCityInput" className="inline-block mb-2 text-base font-medium">Town/City</label>
-                                        <input type="text" id="townCityInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Town/City" />
+                                        <input type="text" id="townCityInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="Town/City" />
                                     </div>
                                     <div className="xl:col-span-4">
                                         <label htmlFor="stateInput" className="inline-block mb-2 text-base font-medium">State</label>
-                                        <input type="text" id="stateInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="State" />
+                                        <input type="text" id="stateInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="State" />
                                     </div>
                                     <div className="xl:col-span-4">
                                         <label htmlFor="countryInput" className="inline-block mb-2 text-base font-medium">Country</label>
                                         <Select id="countryInput" name="countryInput"
-                                            className="border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200"
+                                            className="border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200"
                                             options={countryOptions}
                                         />
                                     </div>
                                     <div className="xl:col-span-4">
                                         <label htmlFor="zipcodeInput" className="inline-block mb-2 text-base font-medium">ZipCode</label>
-                                        <input type="text" id="zipcodeInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="ZipCode" />
+                                        <input type="text" id="zipcodeInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="ZipCode" />
                                     </div>
                                 </div>
                             </form>
@@ -351,14 +351,14 @@ const Checkout = () => {
 
                             <div className="grid grid-cols-1 gap-5 xl:grid-cols-2">
                                 <div className="flex items-center gap-3">
-                                    <input id="deliveryOption1" className="size-4 border rounded-full appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zink-600 dark:border-zink-500 checked:bg-purple-500 checked:border-purple-500 dark:checked:bg-purple-500 dark:checked:border-purple-500 checked:disabled:bg-purple-400 checked:disabled:border-purple-400 peer" type="radio" name="deliveryChoose" value="express-delivery" defaultChecked />
-                                    <label htmlFor="deliveryOption1" className="flex flex-col gap-4 p-5 border rounded-md cursor-pointer md:flex-row border-slate-200 dark:border-zink-500 peer-checked:border-purple-500 dark:peer-checked:border-purple-700 grow">
+                                    <input id="deliveryOption1" className="size-4 border rounded-full appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zinc-600 dark:border-zinc-500 checked:bg-purple-500 checked:border-purple-500 dark:checked:bg-purple-500 dark:checked:border-purple-500 checked:disabled:bg-purple-400 checked:disabled:border-purple-400 peer" type="radio" name="deliveryChoose" value="express-delivery" defaultChecked />
+                                    <label htmlFor="deliveryOption1" className="flex flex-col gap-4 p-5 border rounded-md cursor-pointer md:flex-row border-slate-200 dark:border-zinc-500 peer-checked:border-purple-500 dark:peer-checked:border-purple-700 grow">
                                         <span className="shrink-0">
                                             <img src={delivery1} alt="" className="h-12" />
                                         </span>
                                         <span className="grow">
                                             <span className="block mb-1 font-semibold text-15">Express Delivery</span>
-                                            <span className="text-slate-500 dark:text-zink-200">Expected delivery: 01 Nov, Wednesday</span>
+                                            <span className="text-slate-500 dark:text-zinc-200">Expected delivery: 01 Nov, Wednesday</span>
                                         </span>
                                         <span className="shrink-0">
                                             <span className="block text-lg font-semibold">$11.99</span>
@@ -366,14 +366,14 @@ const Checkout = () => {
                                     </label>
                                 </div>
                                 <div className="flex items-center gap-3">
-                                    <input id="deliveryOption2" className="size-4 border rounded-full appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zink-600 dark:border-zink-500 checked:bg-purple-500 checked:border-purple-500 dark:checked:bg-purple-500 dark:checked:border-purple-500 checked:disabled:bg-purple-400 checked:disabled:border-purple-400 peer" type="radio" name="deliveryChoose" value="express-delivery" />
-                                    <label htmlFor="deliveryOption2" className="flex flex-col gap-4 p-5 border rounded-md cursor-pointer md:flex-row border-slate-200 dark:border-zink-500 peer-checked:border-purple-500 dark:peer-checked:border-purple-700 grow">
+                                    <input id="deliveryOption2" className="size-4 border rounded-full appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zinc-600 dark:border-zinc-500 checked:bg-purple-500 checked:border-purple-500 dark:checked:bg-purple-500 dark:checked:border-purple-500 checked:disabled:bg-purple-400 checked:disabled:border-purple-400 peer" type="radio" name="deliveryChoose" value="express-delivery" />
+                                    <label htmlFor="deliveryOption2" className="flex flex-col gap-4 p-5 border rounded-md cursor-pointer md:flex-row border-slate-200 dark:border-zinc-500 peer-checked:border-purple-500 dark:peer-checked:border-purple-700 grow">
                                         <span className="shrink-0">
                                             <img src={delivery2} alt="" className="h-12" />
                                         </span>
                                         <span className="grow">
                                             <span className="block mb-1 font-semibold text-15">Air Logistic Delivery</span>
-                                            <span className="text-slate-500 dark:text-zink-200">Expected delivery: 06 Nov, Monday</span>
+                                            <span className="text-slate-500 dark:text-zinc-200">Expected delivery: 06 Nov, Monday</span>
                                         </span>
                                         <span className="shrink-0">
                                             <span className="block text-lg font-semibold">$5</span>
@@ -381,14 +381,14 @@ const Checkout = () => {
                                     </label>
                                 </div>
                                 <div className="flex items-center gap-3">
-                                    <input id="deliveryOption3" className="size-4 border rounded-full appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zink-600 dark:border-zink-500 checked:bg-purple-500 checked:border-purple-500 dark:checked:bg-purple-500 dark:checked:border-purple-500 checked:disabled:bg-purple-400 checked:disabled:border-purple-400 peer" type="radio" name="deliveryChoose" value="express-delivery" />
-                                    <label htmlFor="deliveryOption3" className="flex flex-col gap-4 p-5 border rounded-md cursor-pointer md:flex-row border-slate-200 dark:border-zink-500 peer-checked:border-purple-500 dark:peer-checked:border-purple-700 grow">
+                                    <input id="deliveryOption3" className="size-4 border rounded-full appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zinc-600 dark:border-zinc-500 checked:bg-purple-500 checked:border-purple-500 dark:checked:bg-purple-500 dark:checked:border-purple-500 checked:disabled:bg-purple-400 checked:disabled:border-purple-400 peer" type="radio" name="deliveryChoose" value="express-delivery" />
+                                    <label htmlFor="deliveryOption3" className="flex flex-col gap-4 p-5 border rounded-md cursor-pointer md:flex-row border-slate-200 dark:border-zinc-500 peer-checked:border-purple-500 dark:peer-checked:border-purple-700 grow">
                                         <span className="shrink-0">
                                             <img src={delivery3} alt="" className="h-12" />
                                         </span>
                                         <span className="grow">
                                             <span className="block mb-1 font-semibold text-15">Free Delivery</span>
-                                            <span className="text-slate-500 dark:text-zink-200">Expected delivery: 11 Nov, Saturday</span>
+                                            <span className="text-slate-500 dark:text-zinc-200">Expected delivery: 11 Nov, Saturday</span>
                                         </span>
                                         <span className="shrink-0">
                                             <span className="block text-lg font-semibold">$0</span>
@@ -406,15 +406,15 @@ const Checkout = () => {
                                 <div className="grid grid-cols-1 gap-5 xl:grid-cols-12">
                                     <div className="xl:col-span-12">
                                         <label htmlFor="cardNumberInput" className="inline-block mb-2 text-base font-medium">Card Number</label>
-                                        <input type="text" pattern="\d*" maxLength={16} id="cardNumberInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="XXXX XXXX XXXX XXXX" />
+                                        <input type="text" pattern="\d*" maxLength={16} id="cardNumberInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="XXXX XXXX XXXX XXXX" />
                                     </div>
                                     <div className="xl:col-span-6">
                                         <label htmlFor="expiringInput" className="inline-block mb-2 text-base font-medium">Expiring (MM/YY)</label>
-                                        <input type="text" pattern="\d*" maxLength={4} id="expiringInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="MM/YY" />
+                                        <input type="text" pattern="\d*" maxLength={4} id="expiringInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="MM/YY" />
                                     </div>
                                     <div className="xl:col-span-6">
                                         <label htmlFor="cvvInput" className="inline-block mb-2 text-base font-medium">CVV Code</label>
-                                        <input type="text" pattern="\d*" maxLength={3} id="cvvInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="000" />
+                                        <input type="text" pattern="\d*" maxLength={3} id="cvvInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="000" />
                                     </div>
                                 </div>
                             </form>
@@ -442,73 +442,73 @@ const Checkout = () => {
                                 <table className="w-full">
                                     <tbody>
                                         <tr>
-                                            <td className="px-3.5 py-4 border-b border-dashed first:pl-0 last:pr-0 border-slate-200 dark:border-zink-500">
+                                            <td className="px-3.5 py-4 border-b border-dashed first:pl-0 last:pr-0 border-slate-200 dark:border-zinc-500">
                                                 <div className="flex items-center gap-3">
                                                     <div className="flex items-center justify-center size-12 rounded-md bg-slate-100 shrink-0">
                                                         <img src={productImg08} alt="" className="h-8" />
                                                     </div>
                                                     <div className="grow">
-                                                        <h6 className="mb-1 text-15"><Link to="/apps-ecommerce-product-overview" className="transition-all duration-300 ease-linear hover:text-custom-500">Roar Twill Blue Baseball Cap</Link></h6>
-                                                        <p className="text-slate-500 dark:text-zink-200">$149.99 x 02</p>
+                                                        <h6 className="mb-1 text-15"><Link to="/apps-ecommerce-product-overview" className="transition-all duration-300 ease-linear hover:text-fecustom-500">Roar Twill Blue Baseball Cap</Link></h6>
+                                                        <p className="text-slate-500 dark:text-zinc-200">$149.99 x 02</p>
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td className="px-3.5 py-4 border-b border-dashed first:pl-0 last:pr-0 border-slate-200 dark:border-zink-500 ltr:text-right rtl:text-left">$299.98</td>
+                                            <td className="px-3.5 py-4 border-b border-dashed first:pl-0 last:pr-0 border-slate-200 dark:border-zinc-500 ltr:text-right rtl:text-left">$299.98</td>
                                         </tr>
                                         <tr>
-                                            <td className="px-3.5 py-4 border-b border-dashed first:pl-0 last:pr-0 border-slate-200 dark:border-zink-500">
+                                            <td className="px-3.5 py-4 border-b border-dashed first:pl-0 last:pr-0 border-slate-200 dark:border-zinc-500">
                                                 <div className="flex items-center gap-3">
                                                     <div className="flex items-center justify-center size-12 rounded-md bg-slate-100 shrink-0">
                                                         <img src={productImg04} alt="" className="h-8" />
                                                     </div>
                                                     <div className="grow">
-                                                        <h6 className="mb-1 text-15"><Link to="/apps-ecommerce-product-overview" className="transition-all duration-300 ease-linear hover:text-custom-500">Mesh Ergonomic Green Chair</Link></h6>
-                                                        <p className="text-slate-500 dark:text-zink-200">$362.21 x 1</p>
+                                                        <h6 className="mb-1 text-15"><Link to="/apps-ecommerce-product-overview" className="transition-all duration-300 ease-linear hover:text-fecustom-500">Mesh Ergonomic Green Chair</Link></h6>
+                                                        <p className="text-slate-500 dark:text-zinc-200">$362.21 x 1</p>
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td className="px-3.5 py-4 border-b border-dashed first:pl-0 last:pr-0 border-slate-200 dark:border-zink-500 ltr:text-right rtl:text-left">$362.21</td>
+                                            <td className="px-3.5 py-4 border-b border-dashed first:pl-0 last:pr-0 border-slate-200 dark:border-zinc-500 ltr:text-right rtl:text-left">$362.21</td>
                                         </tr>
                                         <tr>
-                                            <td className="px-3.5 py-4 border-b border-dashed first:pl-0 last:pr-0 border-slate-200 dark:border-zink-500">
+                                            <td className="px-3.5 py-4 border-b border-dashed first:pl-0 last:pr-0 border-slate-200 dark:border-zinc-500">
                                                 <div className="flex items-center gap-3">
                                                     <div className="flex items-center justify-center size-12 rounded-md bg-slate-100 shrink-0">
                                                         <img src={productImg01} alt="" className="h-8" />
                                                     </div>
                                                     <div className="grow">
-                                                        <h6 className="mb-1 text-15"><Link to="/apps-ecommerce-product-overview" className="transition-all duration-300 ease-linear hover:text-custom-500">Smartest Printed T-shirt</Link></h6>
-                                                        <p className="text-slate-500 dark:text-zink-200">$89.99 x 03</p>
+                                                        <h6 className="mb-1 text-15"><Link to="/apps-ecommerce-product-overview" className="transition-all duration-300 ease-linear hover:text-fecustom-500">Smartest Printed T-shirt</Link></h6>
+                                                        <p className="text-slate-500 dark:text-zinc-200">$89.99 x 03</p>
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td className="px-3.5 py-4 border-b border-dashed first:pl-0 last:pr-0 border-slate-200 dark:border-zink-500 ltr:text-right rtl:text-left">$269.97</td>
+                                            <td className="px-3.5 py-4 border-b border-dashed first:pl-0 last:pr-0 border-slate-200 dark:border-zinc-500 ltr:text-right rtl:text-left">$269.97</td>
                                         </tr>
                                         <tr>
-                                            <td className="px-3.5 pt-4 pb-3 first:pl-0 last:pr-0 text-slate-500 dark:text-zink-200">
+                                            <td className="px-3.5 pt-4 pb-3 first:pl-0 last:pr-0 text-slate-500 dark:text-zinc-200">
                                                 Sub Total
                                             </td>
                                             <td className="px-3.5 pt-4 pb-3 first:pl-0 last:pr-0 ltr:text-right rtl:text-left">$932.16</td>
                                         </tr>
                                         <tr>
-                                            <td className="px-3.5 py-3 first:pl-0 last:pr-0 text-slate-500 dark:text-zink-200">
+                                            <td className="px-3.5 py-3 first:pl-0 last:pr-0 text-slate-500 dark:text-zinc-200">
                                                 Estimated Tax (18%)
                                             </td>
                                             <td className="px-3.5 py-3 first:pl-0 last:pr-0 ltr:text-right rtl:text-left">$167.79</td>
                                         </tr>
                                         <tr>
-                                            <td className="px-3.5 py-3 first:pl-0 last:pr-0 text-slate-500 dark:text-zink-200">
+                                            <td className="px-3.5 py-3 first:pl-0 last:pr-0 text-slate-500 dark:text-zinc-200">
                                                 Item Discounts (12%)
                                             </td>
                                             <td className="px-3.5 py-3 first:pl-0 last:pr-0 ltr:text-right rtl:text-left">-$111.86</td>
                                         </tr>
                                         <tr>
-                                            <td className="px-3.5 py-3 first:pl-0 last:pr-0 text-slate-500 dark:text-zink-200">
+                                            <td className="px-3.5 py-3 first:pl-0 last:pr-0 text-slate-500 dark:text-zinc-200">
                                                 Shipping Charge
                                             </td>
                                             <td className="px-3.5 py-3 first:pl-0 last:pr-0 ltr:text-right rtl:text-left">$0</td>
                                         </tr>
                                         <tr className="font-semibold">
-                                            <td className="px-3.5 pt-3 first:pl-0 last:pr-0 text-slate-500 dark:text-zink-200">
+                                            <td className="px-3.5 pt-3 first:pl-0 last:pr-0 text-slate-500 dark:text-zinc-200">
                                                 Total Amount (USD)
                                             </td>
                                             <td className="px-3.5 pt-3 first:pl-0 last:pr-0 ltr:text-right rtl:text-left">$988.09</td>
@@ -517,7 +517,7 @@ const Checkout = () => {
                                 </table>
                             </div>
                             <div className="mt-4">
-                                <button type="button" className="w-full text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20"><span className="align-middle">Place Order</span> <MoveRight className="inline-block size-4 align-middle ltr:ml-1 rtl:mr-1 rtl:rotate-180" /></button>
+                                <button type="button" className="w-full text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20"><span className="align-middle">Place Order</span> <MoveRight className="inline-block size-4 align-middle ltr:ml-1 rtl:mr-1 rtl:rotate-180" /></button>
                             </div>
                         </div>
                     </div>
@@ -526,15 +526,15 @@ const Checkout = () => {
                         <div className="flex flex-col gap-3 md:items-center card-body md:flex-row">
                             <div className="grow">
                                 <h6 className="mb-1 text-15">Care + Package</h6>
-                                <p className="text-slate-500 dark:text-zink-200">2 year of additional care</p>
+                                <p className="text-slate-500 dark:text-zinc-200">2 year of additional care</p>
                             </div>
                             <div className="shrink-0">
                                 <b>$24.99</b>
                             </div>
                             <div className="shrink-0">
                                 <div className="relative inline-block w-10 align-middle transition duration-200 ease-in">
-                                    <input type="checkbox" name="carePackage" id="carePackage" className="absolute block size-5 transition duration-300 ease-linear border-2 rounded-full appearance-none cursor-pointer border-slate-200 dark:border-zink-600 bg-white/80 dark:bg-zink-400 peer/published checked:bg-custom-500 dark:checked:bg-custom-500 ltr:checked:right-0 rtl:checked:left-0 checked:border-custom-100 dark:checked:border-custom-900 arrow-none checked:bg-none" />
-                                    <label htmlFor="carePackage" className="block h-5 overflow-hidden duration-300 ease-linear border rounded-full cursor-pointer cursor-pointertransition border-slate-200 dark:border-zink-500 bg-slate-200 dark:bg-zink-600 peer-checked/published:bg-custom-100 dark:peer-checked/published:bg-custom-900 peer-checked/published:border-custom-100 dark:peer-checked/published:border-custom-900"></label>
+                                    <input type="checkbox" name="carePackage" id="carePackage" className="absolute block size-5 transition duration-300 ease-linear border-2 rounded-full appearance-none cursor-pointer border-slate-200 dark:border-zinc-600 bg-white/80 dark:bg-zinc-400 peer/published checked:bg-fecustom-500 dark:checked:bg-fecustom-500 ltr:checked:right-0 rtl:checked:left-0 checked:border-fecustom-100 dark:checked:border-fecustom-900 arrow-none checked:bg-none" />
+                                    <label htmlFor="carePackage" className="block h-5 overflow-hidden duration-300 ease-linear border rounded-full cursor-pointer cursor-pointertransition border-slate-200 dark:border-zinc-500 bg-slate-200 dark:bg-zinc-600 peer-checked/published:bg-fecustom-100 dark:peer-checked/published:bg-fecustom-900 peer-checked/published:border-fecustom-100 dark:peer-checked/published:border-fecustom-900"></label>
                                 </div>
                             </div>
                         </div>
@@ -543,15 +543,15 @@ const Checkout = () => {
                         <div className="flex flex-col gap-3 md:items-center card-body md:flex-row">
                             <div className="grow">
                                 <h6 className="mb-1 text-15">Environment Friendly</h6>
-                                <p className="text-slate-500 dark:text-zink-200">The primary goal of eco-warriors is creating</p>
+                                <p className="text-slate-500 dark:text-zinc-200">The primary goal of eco-warriors is creating</p>
                             </div>
                             <div className="shrink-0">
                                 <b>$19.99</b>
                             </div>
                             <div className="shrink-0">
                                 <div className="relative inline-block w-10 align-middle transition duration-200 ease-in">
-                                    <input type="checkbox" name="friendlyCheckbox" id="friendlyCheckbox" className="absolute block size-5 transition duration-300 ease-linear border-2 rounded-full appearance-none cursor-pointer border-slate-200 dark:border-zink-600 bg-white/80 dark:bg-zink-400 peer/published checked:bg-custom-500 dark:checked:bg-custom-500 ltr:checked:right-0 rtl:checked:left-0 checked:border-custom-100 dark:checked:border-custom-900 arrow-none checked:bg-none" />
-                                    <label htmlFor="friendlyCheckbox" className="block h-5 overflow-hidden duration-300 ease-linear border rounded-full cursor-pointer cursor-pointertransition border-slate-200 dark:border-zink-500 bg-slate-200 dark:bg-zink-600 peer-checked/published:bg-custom-100 dark:peer-checked/published:bg-custom-900 peer-checked/published:border-custom-100 dark:peer-checked/published:border-custom-900"></label>
+                                    <input type="checkbox" name="friendlyCheckbox" id="friendlyCheckbox" className="absolute block size-5 transition duration-300 ease-linear border-2 rounded-full appearance-none cursor-pointer border-slate-200 dark:border-zinc-600 bg-white/80 dark:bg-zinc-400 peer/published checked:bg-fecustom-500 dark:checked:bg-fecustom-500 ltr:checked:right-0 rtl:checked:left-0 checked:border-fecustom-100 dark:checked:border-fecustom-900 arrow-none checked:bg-none" />
+                                    <label htmlFor="friendlyCheckbox" className="block h-5 overflow-hidden duration-300 ease-linear border rounded-full cursor-pointer cursor-pointertransition border-slate-200 dark:border-zinc-500 bg-slate-200 dark:bg-zinc-600 peer-checked/published:bg-fecustom-100 dark:peer-checked/published:bg-fecustom-900 peer-checked/published:border-fecustom-100 dark:peer-checked/published:border-fecustom-900"></label>
                                 </div>
                             </div>
                         </div>

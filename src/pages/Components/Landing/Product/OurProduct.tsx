@@ -26,7 +26,7 @@ const OurProduct = () => {
                                 <div className="flex items-center gap-3 mt-3">
                                     <h6 className="text-16 grow">$299.99</h6>
                                     <div className="shrink-0">
-                                        <button type="button" className="px-2 py-1.5 text-xs text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Add to Cart</button>
+                                        <button type="button" className="px-2 py-1.5 text-xs text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20">Add to Cart</button>
                                     </div>
                                 </div>
                             </div>
@@ -41,7 +41,7 @@ const OurProduct = () => {
                                 <div className="flex items-center gap-3 mt-3">
                                     <h6 className="text-16 grow">$129.49</h6>
                                     <div className="shrink-0">
-                                        <button type="button" className="px-2 py-1.5 text-xs text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Add to Cart</button>
+                                        <button type="button" className="px-2 py-1.5 text-xs text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20">Add to Cart</button>
                                     </div>
                                 </div>
                             </div>
@@ -56,7 +56,7 @@ const OurProduct = () => {
                                 <div className="flex items-center gap-3 mt-3">
                                     <h6 className="text-16 grow">$149.99</h6>
                                     <div className="shrink-0">
-                                        <button type="button" className="px-2 py-1.5 text-xs text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Add to Cart</button>
+                                        <button type="button" className="px-2 py-1.5 text-xs text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20">Add to Cart</button>
                                     </div>
                                 </div>
                             </div>
@@ -71,7 +71,7 @@ const OurProduct = () => {
                                 <div className="flex items-center gap-3 mt-3">
                                     <h6 className="text-16 grow">$174.65</h6>
                                     <div className="shrink-0">
-                                        <button type="button" className="px-2 py-1.5 text-xs text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Add to Cart</button>
+                                        <button type="button" className="px-2 py-1.5 text-xs text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20">Add to Cart</button>
                                     </div>
                                 </div>
                             </div>

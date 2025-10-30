@@ -1,6 +1,6 @@
-const plugin = require('tailwindcss/plugin')
+const plugin = require('tailwindcss/plugin');
 
-module.exports = plugin(function ({ addBase, theme }) {
+const headingsPlugin = plugin(function ({ addBase, theme }) {
     addBase({
         'h1': { fontSize: theme('fontSize.4xl'), fontWeight: theme('fontWeight.semibold') },
         'h2': { fontSize: theme('fontSize.3xl'), fontWeight: theme('fontWeight.semibold') },
@@ -10,7 +10,9 @@ module.exports = plugin(function ({ addBase, theme }) {
         'h6': { fontSize: theme('fontSize.base'), fontWeight: theme('fontWeight.semibold') },
 
         'h1, h2, h3, h4, h5, h6': {
-            '@apply text-slate-800 dark:text-zink-50': {},
+            '@apply text-slate-800 dark:text-zinc-50': {},
         }
     })
-})
+});
+
+module.exports = headingsPlugin;

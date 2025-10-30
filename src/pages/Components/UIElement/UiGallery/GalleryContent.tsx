@@ -17,36 +17,36 @@ const GalleryContent = () => {
                         <div className="relative rounded-md group/gallery">
                             <img src={image1} alt="" className="rounded-md" />
                             <div className="pt-3">
-                                <h5 className="mb-1 text-16"><a href="#!" className="transition-all duration-300 ease-linear hover:text-custom-500">Cinematic Metro</a></h5>
-                                <p className="text-slate-500 dark:text-zink-200">Artyom is depicted as a silent protagonist and a blank slate for the player.</p>
+                                <h5 className="mb-1 text-16"><a href="#!" className="transition-all duration-300 ease-linear hover:text-fecustom-500">Cinematic Metro</a></h5>
+                                <p className="text-slate-500 dark:text-zinc-200">Artyom is depicted as a silent protagonist and a blank slate for the player.</p>
                             </div>
                         </div>
                         <div className="relative rounded-md group/gallery">
                             <img src={image2} alt="" className="rounded-md" />
                             <div className="pt-3">
-                                <h5 className="mb-1 text-16"><a href="#!" className="transition-all duration-300 ease-linear hover:text-custom-500">Cinematic Metro</a></h5>
-                                <p className="text-slate-500 dark:text-zink-200">Artyom is depicted as a silent protagonist and a blank slate for the player.</p>
+                                <h5 className="mb-1 text-16"><a href="#!" className="transition-all duration-300 ease-linear hover:text-fecustom-500">Cinematic Metro</a></h5>
+                                <p className="text-slate-500 dark:text-zinc-200">Artyom is depicted as a silent protagonist and a blank slate for the player.</p>
                             </div>
                         </div>
                         <div className="relative rounded-md group/gallery">
                             <img src={image3} alt="" className="rounded-md" />
                             <div className="pt-3">
-                                <h5 className="mb-1 text-16"><a href="#!" className="transition-all duration-300 ease-linear hover:text-custom-500">Cinematic Metro</a></h5>
-                                <p className="text-slate-500 dark:text-zink-200">Artyom is depicted as a silent protagonist and a blank slate for the player.</p>
+                                <h5 className="mb-1 text-16"><a href="#!" className="transition-all duration-300 ease-linear hover:text-fecustom-500">Cinematic Metro</a></h5>
+                                <p className="text-slate-500 dark:text-zinc-200">Artyom is depicted as a silent protagonist and a blank slate for the player.</p>
                             </div>
                         </div>
                         <div className="relative rounded-md group/gallery">
                             <img src={image4} alt="" className="rounded-md" />
                             <div className="pt-3">
-                                <h5 className="mb-1 text-16"><a href="#!" className="transition-all duration-300 ease-linear hover:text-custom-500">Cinematic Metro</a></h5>
-                                <p className="text-slate-500 dark:text-zink-200">Artyom is depicted as a silent protagonist and a blank slate for the player.</p>
+                                <h5 className="mb-1 text-16"><a href="#!" className="transition-all duration-300 ease-linear hover:text-fecustom-500">Cinematic Metro</a></h5>
+                                <p className="text-slate-500 dark:text-zinc-200">Artyom is depicted as a silent protagonist and a blank slate for the player.</p>
                             </div>
                         </div>
                         <div className="relative rounded-md group/gallery">
                             <img src={image5} alt="" className="rounded-md" />
                             <div className="pt-3">
-                                <h5 className="mb-1 text-16"><a href="#!" className="transition-all duration-300 ease-linear hover:text-custom-500">Cinematic Metro</a></h5>
-                                <p className="text-slate-500 dark:text-zink-200">Artyom is depicted as a silent protagonist and a blank slate for the player.</p>
+                                <h5 className="mb-1 text-16"><a href="#!" className="transition-all duration-300 ease-linear hover:text-fecustom-500">Cinematic Metro</a></h5>
+                                <p className="text-slate-500 dark:text-zinc-200">Artyom is depicted as a silent protagonist and a blank slate for the player.</p>
                             </div>
                         </div>
                     </div>

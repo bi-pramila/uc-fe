@@ -17,19 +17,19 @@ const Payslip = () => {
                             <img src={logoSm} alt="" />
                         </div>
                         <div className="text-center">
-                            <h5 className="relative before:absolute before:h-[1px] before:inset-x-0 before:-bottom-2.5 inline-block before:bg-gradient-to-r before:from-white dark:before:from-zink-700 before:via-custom-500 before:to-white dark:before:to-zink-700 dark:before:via-custom-500">Salary Slip</h5>
+                            <h5 className="relative before:absolute before:h-[1px] before:inset-x-0 before:-bottom-2.5 inline-block before:bg-gradient-to-r before:from-white dark:before:from-zinc-700 before:via-fecustom-500 before:to-white dark:before:to-zinc-700 dark:before:via-fecustom-500">Salary Slip</h5>
                         </div>
 
                         <div className="mt-16">
-                            <p className="mb-2 text-slate-500 dark:text-zink-200">Employee ID: <span className="font-semibold text-slate-800 dark:text-zink-50">#TWE1001524</span></p>
-                            <p className="mb-2 text-slate-500 dark:text-zink-200">Employee Name: <span className="font-semibold text-slate-800 dark:text-zink-50">Patricia Garcia</span></p>
-                            <p className="mb-2 text-slate-500 dark:text-zink-200">Experience: <span className="font-semibold text-slate-800 dark:text-zink-50">2 Year</span></p>
-                            <p className="text-slate-500 dark:text-zink-200">Create Date: <span className="font-semibold text-slate-800 dark:text-zink-50">08 Oct 2023</span></p>
+                            <p className="mb-2 text-slate-500 dark:text-zinc-200">Employee ID: <span className="font-semibold text-slate-800 dark:text-zinc-50">#TWE1001524</span></p>
+                            <p className="mb-2 text-slate-500 dark:text-zinc-200">Employee Name: <span className="font-semibold text-slate-800 dark:text-zinc-50">Patricia Garcia</span></p>
+                            <p className="mb-2 text-slate-500 dark:text-zinc-200">Experience: <span className="font-semibold text-slate-800 dark:text-zinc-50">2 Year</span></p>
+                            <p className="text-slate-500 dark:text-zinc-200">Create Date: <span className="font-semibold text-slate-800 dark:text-zinc-50">08 Oct 2023</span></p>
                         </div>
 
                         <div className="mt-10 overflow-x-auto">
                             <table className="w-full whitespace-nowrap">
-                                <thead className="ltr:text-left rtl:text-right bg-slate-100 dark:bg-zink-600">
+                                <thead className="ltr:text-left rtl:text-right bg-slate-100 dark:bg-zinc-600">
                                     <tr>
                                         <th className="px-3.5 py-2.5 font-semibold border border-transparent">Month</th>
                                         <th className="px-3.5 py-2.5 font-semibold border border-transparent">Salary Amount</th>
@@ -73,10 +73,10 @@ const Payslip = () => {
                         </div>
                         <div className="grid grid-cols-1 mt-10 2xl:grid-cols-12">
                             <div className="2xl:col-span-5">
-                                <p className="mb-2 text-slate-500 dark:text-zink-200">For any inquiries, please contact us at +(252) 0123 456 7890 or reach out via email at tailwick@themesdesign.com.</p>
-                                <p className="mb-2 text-slate-500 dark:text-zink-200">Best Regards,</p>
-                                <p className="mb-2 text-slate-500 dark:text-zink-200">Themesdesign</p>
-                                <p className="text-slate-500 dark:text-zink-200">Founder & CEO: <span className="font-semibold text-slate-800 dark:text-zink-50">Paula Keenan</span></p>
+                                <p className="mb-2 text-slate-500 dark:text-zinc-200">For any inquiries, please contact us at +(252) 0123 456 7890 or reach out via email at tailwick@themesdesign.com.</p>
+                                <p className="mb-2 text-slate-500 dark:text-zinc-200">Best Regards,</p>
+                                <p className="mb-2 text-slate-500 dark:text-zinc-200">Themesdesign</p>
+                                <p className="text-slate-500 dark:text-zinc-200">Founder & CEO: <span className="font-semibold text-slate-800 dark:text-zinc-50">Paula Keenan</span></p>
                             </div>
                             <div className="self-end text-center 2xl:col-span-2 2xl:col-start-11">
                                 <img src={signature} alt="" className="h-12 mx-auto" />

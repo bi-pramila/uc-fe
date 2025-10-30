@@ -140,7 +140,7 @@ const cardData = [
     },
     {
         icon: UserSquare,
-        iconColor: "text-custom-500 fill-custom-100 dark:fill-custom-500/20",
+        iconColor: "text-fecustom-500 fill-fecustom-100 dark:fill-fecustom-500/20",
         title: "Email & Phone",
         email: "tailwick@email.com",
         phone: "(570) 586 2588",

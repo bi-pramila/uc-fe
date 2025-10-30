@@ -1,6 +1,6 @@
-const plugin = require('tailwindcss/plugin')
+const plugin = require('tailwindcss/plugin');
 
-module.exports = plugin(function ({ addComponents, theme }) {
+const tippyPlugin = plugin(function ({ addComponents, theme }) {
     addComponents({
         '.tippy-box[data-animation=fade][data-state=hidden]': {
             '@apply opacity-0': {},
@@ -9,7 +9,7 @@ module.exports = plugin(function ({ addComponents, theme }) {
             maxWidth: 'calc(100vw - 10px)'
         },
         '.tippy-box': {
-            '@apply relative text-white rounded-md text-xs bg-slate-800 outline-0 whitespace-normal leading-snug dark:bg-zink-500': {},
+            '@apply relative text-white rounded-md text-xs bg-slate-800 outline-0 whitespace-normal leading-snug dark:bg-zinc-500': {},
             transitionProperty: 'transform, visibility, opacity',
 
             '&[data-placement^=top]': {
@@ -73,11 +73,13 @@ module.exports = plugin(function ({ addComponents, theme }) {
         },
 
         '.tippy-arrow': {
-            '@apply w-4 h-4 text-slate-800 dark:text-zink-500 before:absolute before:border-solid before:border-transparent': {},
+            '@apply w-4 h-4 text-slate-800 dark:text-zinc-500 before:absolute before:border-solid before:border-transparent': {},
         },
         '.tippy-content': {
             '@apply relative py-1 px-2': {},
             zIndex: 1
         }
     })
-})
+});
+
+module.exports = tippyPlugin;

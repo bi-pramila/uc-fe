@@ -170,7 +170,7 @@ const Event = () => {
             case "Ongoing":
                 return (<span className="px-2.5 py-0.5 text-xs inline-block font-medium rounded border bg-green-100 border-green-200 text-green-500 dark:bg-green-500/20 dark:border-green-500/20">{item}</span>);
             case "Draft":
-                return (<span className="px-2.5 py-0.5 text-xs inline-block font-medium rounded border bg-custom-100 border-custom-200 text-custom-500 dark:bg-custom-500/20 dark:border-custom-500/20">{item}</span>);
+                return (<span className="px-2.5 py-0.5 text-xs inline-block font-medium rounded border bg-fecustom-100 border-fecustom-200 text-fecustom-500 dark:bg-fecustom-500/20 dark:border-fecustom-500/20">{item}</span>);
             case "Closed":
                 return (<span className="px-2.5 py-0.5 text-xs inline-block font-medium rounded border bg-red-100 border-red-200 text-red-500 dark:bg-red-500/20 dark:border-red-500/20">{item}</span>);
             default:
@@ -222,19 +222,19 @@ const Event = () => {
                     <Dropdown.Trigger className="flex items-center justify-center size-[30px] p-0 text-slate-500 btn bg-slate-100 hover:text-white hover:bg-slate-600 focus:text-white focus:bg-slate-600 focus:ring focus:ring-slate-100 active:text-white active:bg-slate-600 active:ring active:ring-slate-100 dark:bg-slate-500/20 dark:text-slate-400 dark:hover:bg-slate-500 dark:hover:text-white dark:focus:bg-slate-500 dark:focus:text-white dark:active:bg-slate-500 dark:active:text-white dark:ring-slate-400/20" id="eventAction3" data-bs-toggle="dropdown">
                         <MoreHorizontal className="size-3" />
                     </Dropdown.Trigger>
-                    <Dropdown.Content placement={cell.row.index ? "top-end" : "right-end"} className="absolute z-50 py-2 mt-1 ltr:text-left rtl:text-right list-none bg-white rounded-md shadow-md min-w-[10rem] dark:bg-zink-600" aria-labelledby="eventAction3">
+                    <Dropdown.Content placement={cell.row.index ? "top-end" : "right-end"} className="absolute z-50 py-2 mt-1 ltr:text-left rtl:text-right list-none bg-white rounded-md shadow-md min-w-[10rem] dark:bg-zinc-600" aria-labelledby="eventAction3">
                         <li>
-                            <Link className="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" to="#!"><Eye className="inline-block size-3 ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Overview</span></Link>
+                            <Link className="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zinc-100 dark:hover:bg-zinc-500 dark:hover:text-zinc-200 dark:focus:bg-zinc-500 dark:focus:text-zinc-200" to="#!"><Eye className="inline-block size-3 ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Overview</span></Link>
                         </li>
                         <li>
-                            <Link data-modal-target="eventModal" className="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" to="#!" onClick={() => {
+                            <Link data-modal-target="eventModal" className="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zinc-100 dark:hover:bg-zinc-500 dark:hover:text-zinc-200 dark:focus:bg-zinc-500 dark:focus:text-zinc-200" to="#!" onClick={() => {
                                 const data = cell.row.original;
                                 handleUpdateDataClick(data);
                             }}>
                                 <FileEdit className="inline-block size-3 ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Edit</span></Link>
                         </li>
                         <li>
-                            <Link className="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" to="#!" onClick={() => {
+                            <Link className="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zinc-100 dark:hover:bg-zinc-500 dark:hover:text-zinc-200 dark:focus:bg-zinc-500 dark:focus:text-zinc-200" to="#!" onClick={() => {
                                 const data = cell.row.original;
                                 onClickDelete(data);
                             }}><Trash2 className="inline-block size-3 ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Delete</span></Link>
@@ -256,26 +256,26 @@ const Event = () => {
                     <div className="card">
                         <div className="card-body">
                             <div className="flex items-center gap-3 mb-5">
-                                <div className="rounded-full bg-slate-100 dark:bg-zink-600 shrink-0">
+                                <div className="rounded-full bg-slate-100 dark:bg-zinc-600 shrink-0">
                                     <img src={avatar1} alt="" className="rounded-full h-14" />
                                 </div>
                                 <div className="grow">
                                     <h6 className="mb-1 text-15">Paula Keenan <BadgeCheck className="inline-block size-4 text-sky-500 fill-sky-100 dark:fill-sky-500/20" /></h6>
-                                    <p className="text-slate-500 dark:text-zink-200">@paulak145</p>
+                                    <p className="text-slate-500 dark:text-zinc-200">@paulak145</p>
                                 </div>
                             </div>
-                            <div className="grid grid-cols-1 text-center divide-y sm:divide-y-0 sm:divide-x sm:grid-cols-3 divide-slate-200 dark:divide-zink-500 divide-dashed rtl:divide-x-reverse">
+                            <div className="grid grid-cols-1 text-center divide-y sm:divide-y-0 sm:divide-x sm:grid-cols-3 divide-slate-200 dark:divide-zinc-500 divide-dashed rtl:divide-x-reverse">
                                 <div className="py-3 sm:py-0 sm:px-3">
                                     <h6>489</h6>
-                                    <p className="text-slate-500 dark:text-zink-200">Posts</p>
+                                    <p className="text-slate-500 dark:text-zinc-200">Posts</p>
                                 </div>
                                 <div className="py-3 sm:py-0 sm:px-3">
                                     <h6>4.6k</h6>
-                                    <p className="text-slate-500 dark:text-zink-200">Follower</p>
+                                    <p className="text-slate-500 dark:text-zinc-200">Follower</p>
                                 </div>
                                 <div className="py-3 sm:py-0 sm:px-3">
                                     <h6>159</h6>
-                                    <p className="text-slate-500 dark:text-zink-200">Following</p>
+                                    <p className="text-slate-500 dark:text-zinc-200">Following</p>
                                 </div>
                             </div>
                         </div>
@@ -284,25 +284,25 @@ const Event = () => {
                         <div className="card-body">
                             <ul className="flex flex-col w-full gap-2 mb-4 text-sm font-medium shrink-0 nav-tabs">
                                 <li className="group grow">
-                                    <Link to="/dashboards-social" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zink-200 border border-transparent group-[.active]:bg-custom-500 dark:group-[.active]:bg-custom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-custom-500 dark:hover:text-custom-500 active:text-custom-500 dark:active:text-custom-500 -mb-[1px]"><Home className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Feed</span></Link>
+                                    <Link to="/dashboards-social" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zinc-200 border border-transparent group-[.active]:bg-fecustom-500 dark:group-[.active]:bg-fecustom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-fecustom-500 dark:hover:text-fecustom-500 active:text-fecustom-500 dark:active:text-fecustom-500 -mb-[1px]"><Home className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Feed</span></Link>
                                 </li>
                                 <li className="group grow">
-                                    <Link to="/apps-social-friends" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zink-200 border border-transparent group-[.active]:bg-custom-500 dark:group-[.active]:bg-custom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-custom-500 dark:hover:text-custom-500 active:text-custom-500 dark:active:text-custom-500 -mb-[1px]"><UserRound className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Friends</span></Link>
+                                    <Link to="/apps-social-friends" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zinc-200 border border-transparent group-[.active]:bg-fecustom-500 dark:group-[.active]:bg-fecustom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-fecustom-500 dark:hover:text-fecustom-500 active:text-fecustom-500 dark:active:text-fecustom-500 -mb-[1px]"><UserRound className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Friends</span></Link>
                                 </li>
                                 <li className="group grow active">
-                                    <Link to="/apps-social-event" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zink-200 border border-transparent group-[.active]:bg-custom-500 dark:group-[.active]:bg-custom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-custom-500 dark:hover:text-custom-500 active:text-custom-500 dark:active:text-custom-500 -mb-[1px]"><CalendarDays className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Event</span></Link>
+                                    <Link to="/apps-social-event" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zinc-200 border border-transparent group-[.active]:bg-fecustom-500 dark:group-[.active]:bg-fecustom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-fecustom-500 dark:hover:text-fecustom-500 active:text-fecustom-500 dark:active:text-fecustom-500 -mb-[1px]"><CalendarDays className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Event</span></Link>
                                 </li>
                                 <li className="group grow">
-                                    <Link to="/apps-social-video" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zink-200 border border-transparent group-[.active]:bg-custom-500 dark:group-[.active]:bg-custom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-custom-500 dark:hover:text-custom-500 active:text-custom-500 dark:active:text-custom-500 -mb-[1px]"><Clapperboard className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Watch Video</span></Link>
+                                    <Link to="/apps-social-video" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zinc-200 border border-transparent group-[.active]:bg-fecustom-500 dark:group-[.active]:bg-fecustom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-fecustom-500 dark:hover:text-fecustom-500 active:text-fecustom-500 dark:active:text-fecustom-500 -mb-[1px]"><Clapperboard className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Watch Video</span></Link>
                                 </li>
                                 <li className="group grow">
-                                    <Link to="/apps-social-marketplace" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zink-200 border border-transparent group-[.active]:bg-custom-500 dark:group-[.active]:bg-custom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-custom-500 dark:hover:text-custom-500 active:text-custom-500 dark:active:text-custom-500 -mb-[1px]"><ShoppingCart className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Marketplace</span></Link>
+                                    <Link to="/apps-social-marketplace" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zinc-200 border border-transparent group-[.active]:bg-fecustom-500 dark:group-[.active]:bg-fecustom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-fecustom-500 dark:hover:text-fecustom-500 active:text-fecustom-500 dark:active:text-fecustom-500 -mb-[1px]"><ShoppingCart className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Marketplace</span></Link>
                                 </li>
                                 <li className="group grow">
-                                    <Link to="/pages-account-settings" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zink-200 border border-transparent group-[.active]:bg-custom-500 dark:group-[.active]:bg-custom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-custom-500 dark:hover:text-custom-500 active:text-custom-500 dark:active:text-custom-500 -mb-[1px]"><Settings className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Settings</span></Link>
+                                    <Link to="/pages-account-settings" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zinc-200 border border-transparent group-[.active]:bg-fecustom-500 dark:group-[.active]:bg-fecustom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-fecustom-500 dark:hover:text-fecustom-500 active:text-fecustom-500 dark:active:text-fecustom-500 -mb-[1px]"><Settings className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Settings</span></Link>
                                 </li>
                             </ul>
-                            <p className="mb-4 text-slate-500 dark:text-zink-200">Suggestion Pages</p>
+                            <p className="mb-4 text-slate-500 dark:text-zinc-200">Suggestion Pages</p>
                             <ul className="flex flex-col gap-4">
                                 <li>
                                     <Link to="#!" className="flex gap-3">
@@ -336,42 +336,42 @@ const Event = () => {
                             <h6 className="mb-4 text-15">Active Friends</h6>
                             <div className="flex flex-wrap items-center gap-3">
                                 <Link to="#!" className="relative">
-                                    <img src={avatar2} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zink-500" />
-                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
+                                    <img src={avatar2} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zinc-500" />
+                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zinc-700 rounded-full"></span>
                                 </Link>
                                 <Link to="#!" className="relative">
-                                    <img src={avatar3} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zink-500" />
-                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
+                                    <img src={avatar3} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zinc-500" />
+                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zinc-700 rounded-full"></span>
                                 </Link>
                                 <Link to="#!" className="relative">
-                                    <img src={avatar4} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zink-500" />
-                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
+                                    <img src={avatar4} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zinc-500" />
+                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zinc-700 rounded-full"></span>
                                 </Link>
                                 <Link to="#!" className="relative">
-                                    <img src={avatar5} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zink-500" />
-                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
+                                    <img src={avatar5} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zinc-500" />
+                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zinc-700 rounded-full"></span>
                                 </Link>
                                 <Link to="#!" className="relative">
-                                    <img src={avatar6} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zink-500" />
-                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
+                                    <img src={avatar6} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zinc-500" />
+                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zinc-700 rounded-full"></span>
                                 </Link>
                                 <Link to="#!" className="relative">
-                                    <img src={avatar7} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zink-500" />
-                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
+                                    <img src={avatar7} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zinc-500" />
+                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zinc-700 rounded-full"></span>
                                 </Link>
                                 <Link to="#!" className="relative">
-                                    <img src={avatar8} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zink-500" />
-                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
+                                    <img src={avatar8} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zinc-500" />
+                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zinc-700 rounded-full"></span>
                                 </Link>
                                 <Link to="#!" className="relative">
-                                    <img src={avatar9} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zink-500" />
-                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
+                                    <img src={avatar9} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zinc-500" />
+                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zinc-700 rounded-full"></span>
                                 </Link>
                                 <Link to="#!" className="relative">
-                                    <img src={avatar10} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zink-500" />
-                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
+                                    <img src={avatar10} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zinc-500" />
+                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zinc-700 rounded-full"></span>
                                 </Link>
-                                <Link to="#!" className="relative flex items-center justify-center size-10 rounded-full bg-custom-100 text-custom-500 dark:bg-custom-500/20">
+                                <Link to="#!" className="relative flex items-center justify-center size-10 rounded-full bg-fecustom-100 text-fecustom-500 dark:bg-fecustom-500/20">
                                     5+
                                 </Link>
                             </div>
@@ -385,10 +385,10 @@ const Event = () => {
                         </div>
                         <div className="flex gap-2 xl:col-span-4 xl:col-start-9">
                             <div className="relative grow">
-                                <input type="text" className="ltr:pl-8 rtl:pr-8 search form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Search for ..." autoComplete="off" onChange={(e) => filterSearchData(e)} />
-                                <Search className="inline-block size-4 absolute ltr:left-2.5 rtl:right-2.5 top-2.5 text-slate-500 dark:text-zink-200 fill-slate-100 dark:fill-zink-600" />
+                                <input type="text" className="ltr:pl-8 rtl:pr-8 search form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="Search for ..." autoComplete="off" onChange={(e) => filterSearchData(e)} />
+                                <Search className="inline-block size-4 absolute ltr:left-2.5 rtl:right-2.5 top-2.5 text-slate-500 dark:text-zinc-200 fill-slate-100 dark:fill-zinc-600" />
                             </div>
-                            <button data-modal-target="eventModal" type="button" className="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20" onClick={toggle}>
+                            <button data-modal-target="eventModal" type="button" className="text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20" onClick={toggle}>
                                 <Plus className="inline-block size-4" /> <span className="align-middle">Add Event</span>
                             </button>
                         </div>
@@ -405,8 +405,8 @@ const Event = () => {
                             customPageSize={10}
                             divclassName="overflow-x-auto"
                             tableclassName="w-full border-separate table-custom border-spacing-y-2 whitespace-nowrap"
-                            theadclassName="ltr:text-left rtl:text-right relative bg-white rounded-md after:absolute ltr:after:border-l-2 rtl:after:border-r-2 ltr:after:left-0 rtl:after:right-0 after:top-0 after:bottom-0 after:border-transparent dark:bg-zink-700"
-                            trclassName="relative bg-white rounded-md after:absolute ltr:after:border-l-2 rtl:after:border-r-2 ltr:after:left-0 rtl:after:right-0 after:top-0 after:bottom-0 after:border-transparent dark:bg-zink-700"
+                            theadclassName="ltr:text-left rtl:text-right relative bg-white rounded-md after:absolute ltr:after:border-l-2 rtl:after:border-r-2 ltr:after:left-0 rtl:after:right-0 after:top-0 after:bottom-0 after:border-transparent dark:bg-zinc-700"
+                            trclassName="relative bg-white rounded-md after:absolute ltr:after:border-l-2 rtl:after:border-r-2 ltr:after:left-0 rtl:after:right-0 after:top-0 after:bottom-0 after:border-transparent dark:bg-zinc-700"
                             thclassName="px-3.5 py-2.5 font-semibold sort"
                             tdclassName="px-3.5 py-2.5"
                         />
@@ -415,12 +415,12 @@ const Event = () => {
                             <div className="py-6 text-center">
                                 <Search className="size-6 mx-auto text-sky-500 fill-sky-100 dark:sky-500/20" />
                                 <h5 className="mt-2 mb-1">Sorry! No Result Found</h5>
-                                <p className="mb-0 text-slate-500 dark:text-zink-200">We've searched more than 299+ Events We did not find any Events for you search.</p>
+                                <p className="mb-0 text-slate-500 dark:text-zinc-200">We've searched more than 299+ Events We did not find any Events for you search.</p>
                             </div>
                         </div>)}
 
                     <div className="flex justify-center mt-3 mb-5">
-                        <button type="button" className="flex items-center text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">
+                        <button type="button" className="flex items-center text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20">
                             <svg className="size-4 ltr:mr-2 rtl:ml-2 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
@@ -434,8 +434,8 @@ const Event = () => {
             {/* Event Modal */}
             <Modal show={show} onHide={toggle} id="defaultModal" modal-center="true"
                 className="fixed flex flex-col transition-all duration-300 ease-in-out left-2/4 z-drawer -translate-x-2/4 -translate-y-2/4"
-                dialogClassName="w-screen md:w-[30rem] bg-white shadow rounded-md dark:bg-zink-600 flex flex-col h-full">
-                <Modal.Header className="flex items-center justify-between p-4 border-b dark:border-zink-500"
+                dialogClassName="w-screen md:w-[30rem] bg-white shadow rounded-md dark:bg-zinc-600 flex flex-col h-full">
+                <Modal.Header className="flex items-center justify-between p-4 border-b dark:border-zinc-500"
                     closeButtonClass="transition-all duration-200 ease-linear text-slate-400 hover:text-red-500">
                     <Modal.Title className="text-16">{!!isEdit ? "Edit Event" : "Create Event"}</Modal.Title>
                 </Modal.Header>
@@ -447,7 +447,7 @@ const Event = () => {
                     }}>
                         <div className="mb-4">
                             <label htmlFor="eventTitle" className="inline-block mb-2 text-base font-medium">Event Name</label>
-                            <input type="text" id="eventTitle" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Event title"
+                            <input type="text" id="eventTitle" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="Event title"
                                 name="eventName"
                                 onChange={validation.handleChange}
                                 value={validation.values.eventName || ""}
@@ -460,7 +460,7 @@ const Event = () => {
                             <label htmlFor="eventDateInput" className="inline-block mb-2 text-base font-medium">Start Date</label>
                             <Flatpickr
                                 id="eventDateInput"
-                                className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200 flatpickr-input"
+                                className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200 flatpickr-input"
                                 options={{
                                     dateFormat: "d M, Y"
                                 }}
@@ -477,7 +477,7 @@ const Event = () => {
                             <label htmlFor="eventTimeInput" className="inline-block mb-2 text-base font-medium">End Date</label>
                             <Flatpickr
                                 id="eventDateInput"
-                                className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200 flatpickr-input"
+                                className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200 flatpickr-input"
                                 options={{
                                     dateFormat: "d M, Y"
                                 }}
@@ -493,7 +493,7 @@ const Event = () => {
                         </div>
                         <div className="mb-4">
                             <label htmlFor="numberRegistered" className="inline-block mb-2 text-base font-medium">Registered Number</label>
-                            <input className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" id="numberRegistered" type="text" placeholder="0"
+                            <input className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" id="numberRegistered" type="text" placeholder="0"
                                 name="numberRegistered"
                                 onChange={validation.handleChange}
                                 value={validation.values.numberRegistered || ""}
@@ -504,7 +504,7 @@ const Event = () => {
                         </div>
                         <div className="mb-4">
                             <label htmlFor="totalSeat" className="inline-block mb-2 text-base font-medium">Total Seat</label>
-                            <input className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" id="totalSeat" type="text" placeholder="0"
+                            <input className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" id="totalSeat" type="text" placeholder="0"
                                 name="total"
                                 onChange={validation.handleChange}
                                 value={validation.values.total || ""}
@@ -515,7 +515,7 @@ const Event = () => {
                         </div>
                         <div className="mb-4">
                             <label htmlFor="statusSelect" className="inline-block mb-2 text-base font-medium">Status</label>
-                            <select className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" id="statusSelect" data-choices data-choices-search-false
+                            <select className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" id="statusSelect" data-choices data-choices-search-false
                                 name="status"
                                 onChange={validation.handleChange}
                                 value={validation.values.status || ""}
@@ -530,7 +530,7 @@ const Event = () => {
                             ) : null}
                         </div>
                         <div className="text-right">
-                            <button type="submit" className="text-white transition-all duration-200 ease-linear btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">
+                            <button type="submit" className="text-white transition-all duration-200 ease-linear btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20">
                                 {!!isEdit ? "Update" : "Create Event"}
                             </button>
                         </div>

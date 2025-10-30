@@ -19,7 +19,7 @@ const CardAnimation = () => {
                         <h6 className="mb-4 text-15">
                             Card title
                         </h6>
-                        <p className="mt-2 text-slate-500 dark:text-zink-200">
+                        <p className="mt-2 text-slate-500 dark:text-zinc-200">
                             With supporting text below as a natural lead-in to additional content.
                         </p>
                     </div>
@@ -29,7 +29,7 @@ const CardAnimation = () => {
                         <h6 className="mb-4 text-15">
                             Card title
                         </h6>
-                        <p className="text-slate-500 dark:text-zink-200">
+                        <p className="text-slate-500 dark:text-zinc-200">
                             With supporting text below as a natural lead-in to additional content.
                         </p>
                     </div>
@@ -43,7 +43,7 @@ const CardAnimation = () => {
                         <h6 className="mb-4 text-15">
                             Card title
                         </h6>
-                        <p className="text-slate-500 dark:text-zink-200">
+                        <p className="text-slate-500 dark:text-zinc-200">
                             With supporting text below as a natural lead-in to additional content.
                         </p>
                     </div>
@@ -54,7 +54,7 @@ const CardAnimation = () => {
                         <h6 className="mb-4 text-15">
                             Card title
                         </h6>
-                        <p className="text-slate-500 dark:text-zink-200">
+                        <p className="text-slate-500 dark:text-zinc-200">
                             With supporting text below as a natural lead-in to additional content.
                         </p>
                     </div>

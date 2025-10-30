@@ -19,7 +19,17 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "paths": {
+      "Routes/*": ["Routes/*"],
+      "Common/*": ["Common/*"],
+      "Layout/*": ["Layout/*"],
+      "pages/*": ["pages/*"],
+      "assets/*": ["assets/*"],
+      "slices/*": ["slices/*"],
+      "helpers/*": ["helpers/*"],
+      "locales/*": ["locales/*"]
+    }
   },
   "include": [
     "src"

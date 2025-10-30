@@ -1,6 +1,6 @@
-const plugin = require('tailwindcss/plugin')
+const plugin = require('tailwindcss/plugin');
 
-module.exports = plugin(function ({ addComponents, theme }) {
+const mapsPlugin = plugin(function ({ addComponents, theme }) {
     addComponents({
         '.leaflet-map': {
             height: '300px',
@@ -16,26 +16,37 @@ module.exports = plugin(function ({ addComponents, theme }) {
         },
 
         '.gmaps-overlay': {
-            '@apply block text-center text-white text-base leading-10 rounded bg-custom-500':{}, 
+            '@apply block text-center text-white text-base leading-10 rounded bg-fecustom-500':{}, 
             padding: '10px 20px',
         },
 
+        '.gmaps-overlay': {
+            '@apply block text-center text-white text-base leading-10 rounded bg-fecustom-500': {},
+            padding: '10px 20px',
+        },
         '.gmaps-overlay_arrow': {
-            '@apply left-1/2 w-0 h-0 absolute':{},
-            marginLeft: '-16px',            
-            '&.above': {
-                bottom: '-15px',
-                borderLeft: `16px solid transparent`,
-                borderRight: `16px solid transparent`,
-                borderTop: `16px solid ${theme('colors.custom.500')}`
-            },
-
-            '&.below': {
-                top: '-15px',
-                borderLeft: `16px solid transparent`,
-                borderRight: `16px solid transparent`,
-                borderBottom: `16px solid ${theme('colors.custom.500')}`
-            }
+            '@apply left-1/2 w-0 h-0 absolute': {},
+            marginLeft: '-16px',
         }
+
+        // '.gmaps-overlay_arrow': {
+        //     '@apply left-1/2 w-0 h-0 absolute':{},
+        //     marginLeft: '-16px',            
+        //     '&.above': {
+        //         bottom: '-15px',
+        //         borderLeft: `16px solid transparent`,
+        //         borderRight: `16px solid transparent`,
+        //         borderTop: `16px solid ${theme('colors.custom.500')}`
+        //     },
+
+        //     '&.below': {
+        //         top: '-15px',
+        //         borderLeft: `16px solid transparent`,
+        //         borderRight: `16px solid transparent`,
+        //         borderBottom: `16px solid ${theme('colors.custom.500')}`
+        //     }
+        // }
     })
-})
+});
+
+module.exports = mapsPlugin;

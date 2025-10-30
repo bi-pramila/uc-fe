@@ -49,9 +49,9 @@ const OptionsMultipleRemove = () => {
             <div className="card">
                 <div className="card-body">
                     <h6 className="mb-1 text-15">Options added via config with no sorting</h6>
-                    <p className="mb-4 text-slate-500 dark:text-zink-200">Set <code className="text-xs text-pink-500 select-all">data-choices data-choices-sorting-false</code> attribute.</p>
+                    <p className="mb-4 text-slate-500 dark:text-zinc-200">Set <code className="text-xs text-pink-500 select-all">data-choices data-choices-sorting-false</code> attribute.</p>
                     <Select
-                        className="border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200"
+                        className="border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200"
                         id="choices-single-no-sorting"
                         name="choices-single-no-sorting"
                         data-choices data-choices-sorting-false
@@ -61,9 +61,9 @@ const OptionsMultipleRemove = () => {
             <div className="card">
                 <div className="card-body">
                     <h6 className="mb-1 text-15">Default Multiple Select</h6>
-                    <p className="mb-4 text-slate-500 dark:text-zink-200">Set <code className="text-xs text-pink-500 select-all">data-choices multiple</code> attribute.</p>
+                    <p className="mb-4 text-slate-500 dark:text-zinc-200">Set <code className="text-xs text-pink-500 select-all">data-choices multiple</code> attribute.</p>
                     <Select
-                        className="border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200"
+                        className="border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200"
                         id="choices-multiple-default"
                         data-choices name="choices-multiple-default"
                         defaultValue={[MultipleOptions[0]]}
@@ -75,9 +75,9 @@ const OptionsMultipleRemove = () => {
             <div className="card">
                 <div className="card-body">
                     <h6 className="mb-1 text-15">With Remove Button</h6>
-                    <p className="mb-4 text-slate-500 dark:text-zink-200">Set <code className="text-xs text-pink-500 select-all">data-choices isClearable isMulti</code> attribute.</p>
+                    <p className="mb-4 text-slate-500 dark:text-zinc-200">Set <code className="text-xs text-pink-500 select-all">data-choices isClearable isMulti</code> attribute.</p>
                     <Select
-                        className="border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" id="choices-multiple-remove-button"
+                        className="border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" id="choices-multiple-remove-button"
                         name="choices-multiple-remove-button"
                         defaultValue={[RemoveMultipleOptions[0]]}
                         isClearable

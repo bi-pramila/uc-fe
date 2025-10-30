@@ -81,7 +81,7 @@ const Friends = () => {
             enableColumnFilter: false,
             cell: (cell: any) => {
                 return (
-                    <Link to="#!" className="text-custom-500 username">{cell.getValue()}</Link>);
+                    <Link to="#!" className="text-fecustom-500 username">{cell.getValue()}</Link>);
             }
         },
         {
@@ -95,7 +95,7 @@ const Friends = () => {
             enableColumnFilter: false,
             cell: (cell: any) => {
                 return (
-                    <button type="button" className={`bg-white border-dashed group/item toggle-button status text-sky-500 btn border-sky-500 hover:text-sky-500 hover:bg-sky-50 hover:border-sky-600 focus:text-sky-600 focus:bg-sky-50 focus:border-sky-600 active:text-sky-600 active:bg-sky-50 active:border-sky-600 dark:bg-zink-700 dark:ring-sky-400/20 dark:hover:bg-sky-800/20 dark:focus:bg-sky-800/20 dark:active:bg-sky-800/20 px-2 py-1.5 text-xs ${cell.getValue() && "active"}`} onClick={() => btnFollow(cell.row.index)}>
+                    <button type="button" className={`bg-white border-dashed group/item toggle-button status text-sky-500 btn border-sky-500 hover:text-sky-500 hover:bg-sky-50 hover:border-sky-600 focus:text-sky-600 focus:bg-sky-50 focus:border-sky-600 active:text-sky-600 active:bg-sky-50 active:border-sky-600 dark:bg-zinc-700 dark:ring-sky-400/20 dark:hover:bg-sky-800/20 dark:focus:bg-sky-800/20 dark:active:bg-sky-800/20 px-2 py-1.5 text-xs ${cell.getValue() && "active"}`} onClick={() => btnFollow(cell.row.index)}>
                         <span className="group-[.active]/item:hidden block"><Plus className="inline-block size-3 mr-1" /> Follow</span>
                         <span className="group-[.active]/item:block hidden"><UserRoundX className="inline-block size-3 mr-1" /> Unfollow</span>
                     </button>);
@@ -112,26 +112,26 @@ const Friends = () => {
                     <div className="card">
                         <div className="card-body">
                             <div className="flex items-center gap-3 mb-5">
-                                <div className="rounded-full bg-slate-100 shrink-0 dark:bg-zink-600">
+                                <div className="rounded-full bg-slate-100 shrink-0 dark:bg-zinc-600">
                                     <img src={avatar1} alt="" className="rounded-full h-14" />
                                 </div>
                                 <div className="grow">
                                     <h6 className="mb-1 text-15">Paula Keenan <BadgeCheck className="inline-block size-4 text-sky-500 fill-sky-100 dark:fill-sky-500/20" /></h6>
-                                    <p className="text-slate-500 dark:text-zink-200">@paulak145</p>
+                                    <p className="text-slate-500 dark:text-zinc-200">@paulak145</p>
                                 </div>
                             </div>
-                            <div className="grid grid-cols-1 text-center divide-y sm:divide-y-0 sm:divide-x sm:grid-cols-3 divide-slate-200 dark:divide-zink-500 divide-dashed rtl:divide-x-reverse">
+                            <div className="grid grid-cols-1 text-center divide-y sm:divide-y-0 sm:divide-x sm:grid-cols-3 divide-slate-200 dark:divide-zinc-500 divide-dashed rtl:divide-x-reverse">
                                 <div className="py-3 sm:py-0 sm:px-3">
                                     <h6>489</h6>
-                                    <p className="text-slate-500 dark:text-zink-200">Posts</p>
+                                    <p className="text-slate-500 dark:text-zinc-200">Posts</p>
                                 </div>
                                 <div className="py-3 sm:py-0 sm:px-3">
                                     <h6>4.6k</h6>
-                                    <p className="text-slate-500 dark:text-zink-200">Follower</p>
+                                    <p className="text-slate-500 dark:text-zinc-200">Follower</p>
                                 </div>
                                 <div className="py-3 sm:py-0 sm:px-3">
                                     <h6>159</h6>
-                                    <p className="text-slate-500 dark:text-zink-200">Following</p>
+                                    <p className="text-slate-500 dark:text-zinc-200">Following</p>
                                 </div>
                             </div>
                         </div>
@@ -140,25 +140,25 @@ const Friends = () => {
                         <div className="card-body">
                             <ul className="flex flex-col w-full gap-2 mb-4 text-sm font-medium shrink-0 nav-tabs">
                                 <li className="group grow">
-                                    <Link to="/dashboards-social" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zink-200 border border-transparent group-[.active]:bg-custom-500 dark:group-[.active]:bg-custom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-custom-500 dark:hover:text-custom-500 active:text-custom-500 dark:active:text-custom-500 -mb-[1px]"><Home className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Feed</span></Link>
+                                    <Link to="/dashboards-social" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zinc-200 border border-transparent group-[.active]:bg-fecustom-500 dark:group-[.active]:bg-fecustom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-fecustom-500 dark:hover:text-fecustom-500 active:text-fecustom-500 dark:active:text-fecustom-500 -mb-[1px]"><Home className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Feed</span></Link>
                                 </li>
                                 <li className="group grow active">
-                                    <Link to="/apps-social-friends" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zink-200 border border-transparent group-[.active]:bg-custom-500 dark:group-[.active]:bg-custom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-custom-500 dark:hover:text-custom-500 active:text-custom-500 dark:active:text-custom-500 -mb-[1px]"><UserRound className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Friends</span></Link>
+                                    <Link to="/apps-social-friends" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zinc-200 border border-transparent group-[.active]:bg-fecustom-500 dark:group-[.active]:bg-fecustom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-fecustom-500 dark:hover:text-fecustom-500 active:text-fecustom-500 dark:active:text-fecustom-500 -mb-[1px]"><UserRound className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Friends</span></Link>
                                 </li>
                                 <li className="group grow">
-                                    <Link to="/apps-social-event" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zink-200 border border-transparent group-[.active]:bg-custom-500 dark:group-[.active]:bg-custom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-custom-500 dark:hover:text-custom-500 active:text-custom-500 dark:active:text-custom-500 -mb-[1px]"><CalendarDays className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Event</span></Link>
+                                    <Link to="/apps-social-event" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zinc-200 border border-transparent group-[.active]:bg-fecustom-500 dark:group-[.active]:bg-fecustom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-fecustom-500 dark:hover:text-fecustom-500 active:text-fecustom-500 dark:active:text-fecustom-500 -mb-[1px]"><CalendarDays className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Event</span></Link>
                                 </li>
                                 <li className="group grow">
-                                    <Link to="/apps-social-video" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zink-200 border border-transparent group-[.active]:bg-custom-500 dark:group-[.active]:bg-custom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-custom-500 dark:hover:text-custom-500 active:text-custom-500 dark:active:text-custom-500 -mb-[1px]"><Clapperboard className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Watch Video</span></Link>
+                                    <Link to="/apps-social-video" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zinc-200 border border-transparent group-[.active]:bg-fecustom-500 dark:group-[.active]:bg-fecustom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-fecustom-500 dark:hover:text-fecustom-500 active:text-fecustom-500 dark:active:text-fecustom-500 -mb-[1px]"><Clapperboard className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Watch Video</span></Link>
                                 </li>
                                 <li className="group grow">
-                                    <Link to="/apps-social-marketplace" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zink-200 border border-transparent group-[.active]:bg-custom-500 dark:group-[.active]:bg-custom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-custom-500 dark:hover:text-custom-500 active:text-custom-500 dark:active:text-custom-500 -mb-[1px]"><ShoppingCart className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Marketplace</span></Link>
+                                    <Link to="/apps-social-marketplace" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zinc-200 border border-transparent group-[.active]:bg-fecustom-500 dark:group-[.active]:bg-fecustom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-fecustom-500 dark:hover:text-fecustom-500 active:text-fecustom-500 dark:active:text-fecustom-500 -mb-[1px]"><ShoppingCart className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Marketplace</span></Link>
                                 </li>
                                 <li className="group grow">
-                                    <Link to="/pages-account-settings" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zink-200 border border-transparent group-[.active]:bg-custom-500 dark:group-[.active]:bg-custom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-custom-500 dark:hover:text-custom-500 active:text-custom-500 dark:active:text-custom-500 -mb-[1px]"><Settings className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Settings</span></Link>
+                                    <Link to="/pages-account-settings" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zinc-200 border border-transparent group-[.active]:bg-fecustom-500 dark:group-[.active]:bg-fecustom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-fecustom-500 dark:hover:text-fecustom-500 active:text-fecustom-500 dark:active:text-fecustom-500 -mb-[1px]"><Settings className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Settings</span></Link>
                                 </li>
                             </ul>
-                            <p className="mb-4 text-slate-500 dark:text-zink-200">Suggestion Pages</p>
+                            <p className="mb-4 text-slate-500 dark:text-zinc-200">Suggestion Pages</p>
                             <ul className="flex flex-col gap-4">
                                 <li>
                                     <Link to="#!" className="flex gap-3">
@@ -192,42 +192,42 @@ const Friends = () => {
                             <h6 className="mb-4 text-15">Active Friends</h6>
                             <div className="flex flex-wrap items-center gap-3">
                                 <Link to="#!" className="relative">
-                                    <img src={avatar2} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zink-500" />
-                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
+                                    <img src={avatar2} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zinc-500" />
+                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zinc-700 rounded-full"></span>
                                 </Link>
                                 <Link to="#!" className="relative">
-                                    <img src={avatar3} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zink-500" />
-                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
+                                    <img src={avatar3} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zinc-500" />
+                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zinc-700 rounded-full"></span>
                                 </Link>
                                 <Link to="#!" className="relative">
-                                    <img src={avatar4} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zink-500" />
-                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
+                                    <img src={avatar4} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zinc-500" />
+                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zinc-700 rounded-full"></span>
                                 </Link>
                                 <Link to="#!" className="relative">
-                                    <img src={avatar5} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zink-500" />
-                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
+                                    <img src={avatar5} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zinc-500" />
+                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zinc-700 rounded-full"></span>
                                 </Link>
                                 <Link to="#!" className="relative">
-                                    <img src={avatar6} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zink-500" />
-                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
+                                    <img src={avatar6} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zinc-500" />
+                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zinc-700 rounded-full"></span>
                                 </Link>
                                 <Link to="#!" className="relative">
-                                    <img src={avatar7} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zink-500" />
-                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
+                                    <img src={avatar7} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zinc-500" />
+                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zinc-700 rounded-full"></span>
                                 </Link>
                                 <Link to="#!" className="relative">
-                                    <img src={avatar8} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zink-500" />
-                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
+                                    <img src={avatar8} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zinc-500" />
+                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zinc-700 rounded-full"></span>
                                 </Link>
                                 <Link to="#!" className="relative">
-                                    <img src={avatar9} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zink-500" />
-                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
+                                    <img src={avatar9} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zinc-500" />
+                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zinc-700 rounded-full"></span>
                                 </Link>
                                 <Link to="#!" className="relative">
-                                    <img src={avatar10} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zink-500" />
-                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
+                                    <img src={avatar10} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zinc-500" />
+                                    <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zinc-700 rounded-full"></span>
                                 </Link>
-                                <Link to="#!" className="relative flex items-center justify-center size-10 rounded-full bg-custom-100 text-custom-500 dark:bg-custom-500/20">
+                                <Link to="#!" className="relative flex items-center justify-center size-10 rounded-full bg-fecustom-100 text-fecustom-500 dark:bg-fecustom-500/20">
                                     5+
                                 </Link>
                             </div>
@@ -242,18 +242,18 @@ const Friends = () => {
                                 <Dropdown.Trigger href="#!" className="inline-block py-3" id="dropdownMenuLink">
                                     <span className="dropdown-title">{type}</span> <ChevronDown className="inline-block size-4 ml-1" />
                                 </Dropdown.Trigger>
-                                <Dropdown.Content placement="right-end" className="absolute z-50 py-2 mt-1 text-left list-none bg-white rounded-md shadow-md min-w-[9rem] dark:bg-zink-600" aria-labelledby="dropdownMenuButton">
+                                <Dropdown.Content placement="right-end" className="absolute z-50 py-2 mt-1 text-left list-none bg-white rounded-md shadow-md min-w-[9rem] dark:bg-zinc-600" aria-labelledby="dropdownMenuButton">
                                     <li>
-                                        <Link className="block px-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" to="#!" onClick={() => setType("Name")}>Name</Link>
+                                        <Link className="block px-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zinc-100 dark:hover:bg-zinc-500 dark:hover:text-zinc-200 dark:focus:bg-zinc-500 dark:focus:text-zinc-200" to="#!" onClick={() => setType("Name")}>Name</Link>
                                     </li>
                                     <li>
-                                        <Link className="block px-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" to="#!" onClick={() => setType("Username")}>Username</Link>
+                                        <Link className="block px-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zinc-100 dark:hover:bg-zinc-500 dark:hover:text-zinc-200 dark:focus:bg-zinc-500 dark:focus:text-zinc-200" to="#!" onClick={() => setType("Username")}>Username</Link>
                                     </li>
                                     <li>
-                                        <Link className="block px-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" to="#!" onClick={() => setType("Date")}>Date</Link>
+                                        <Link className="block px-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zinc-100 dark:hover:bg-zinc-500 dark:hover:text-zinc-200 dark:focus:bg-zinc-500 dark:focus:text-zinc-200" to="#!" onClick={() => setType("Date")}>Date</Link>
                                     </li>
                                     <li>
-                                        <Link className="block px-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" to="#!" onClick={() => setType("Status")}>Status</Link>
+                                        <Link className="block px-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zinc-100 dark:hover:bg-zinc-500 dark:hover:text-zinc-200 dark:focus:bg-zinc-500 dark:focus:text-zinc-200" to="#!" onClick={() => setType("Status")}>Status</Link>
                                     </li>
                                 </Dropdown.Content>
                             </Dropdown>
@@ -267,10 +267,10 @@ const Friends = () => {
                             customPageSize={10}
                             divclassName="overflow-x-auto"
                             tableclassName="w-full border-separate table-custom border-spacing-y-2 whitespace-nowrap"
-                            theadclassName="ltr:text-left rtl:text-right relative bg-white rounded-md dark:bg-zink-700"
+                            theadclassName="ltr:text-left rtl:text-right relative bg-white rounded-md dark:bg-zinc-700"
                             thclassName="px-3.5 py-2.5 font-semibold sort"
                             tdclassName="px-3.5 py-2.5 "
-                            trclassName="relative bg-white rounded-md dark:bg-zink-700"
+                            trclassName="relative bg-white rounded-md dark:bg-zinc-700"
                             PaginationClassName="flex flex-col items-center mt-4 mb-5 md:flex-row"
                         />
                         :
@@ -278,7 +278,7 @@ const Friends = () => {
                             <div className="py-6 text-center">
                                 <Search className="size-6 mx-auto text-sky-500 fill-sky-100 dark:sky-500/20" />
                                 <h5 className="mt-2 mb-1">Sorry! No Result Found</h5>
-                                <p className="mb-0 text-slate-500 dark:text-zink-200">We've searched more than 299+ Friends We did not find any Friends for you search.</p>
+                                <p className="mb-0 text-slate-500 dark:text-zinc-200">We've searched more than 299+ Friends We did not find any Friends for you search.</p>
                             </div>
                         </div>)}
                 </div>

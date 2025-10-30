@@ -26,26 +26,26 @@ const SocialMediaDashboard = () => {
                     <div className="card">
                         <div className="card-body">
                             <div className="flex items-center gap-3 mb-5">
-                                <div className="rounded-full bg-slate-100 shrink-0 dark:bg-zink-600">
+                                <div className="rounded-full bg-slate-100 shrink-0 dark:bg-zinc-600">
                                     <img src={avatar1} alt="" className="rounded-full h-14" />
                                 </div>
                                 <div className="grow">
                                     <h6 className="mb-1 text-15">Paula Keenan <BadgeCheck className="inline-block size-4 text-sky-500 fill-sky-100 dark:fill-sky-500/20" /></h6>
-                                    <p className="text-slate-500 dark:text-zink-200">@paulak145</p>
+                                    <p className="text-slate-500 dark:text-zinc-200">@paulak145</p>
                                 </div>
                             </div>
-                            <div className="grid grid-cols-1 text-center divide-y sm:divide-y-0 sm:divide-x sm:grid-cols-3 divide-slate-200 dark:divide-zink-500 divide-dashed rtl:divide-x-reverse">
+                            <div className="grid grid-cols-1 text-center divide-y sm:divide-y-0 sm:divide-x sm:grid-cols-3 divide-slate-200 dark:divide-zinc-500 divide-dashed rtl:divide-x-reverse">
                                 <div className="py-3 sm:py-0 sm:px-3">
                                     <h6>489</h6>
-                                    <p className="text-slate-500 dark:text-zink-200">Posts</p>
+                                    <p className="text-slate-500 dark:text-zinc-200">Posts</p>
                                 </div>
                                 <div className="py-3 sm:py-0 sm:px-3">
                                     <h6>4.6k</h6>
-                                    <p className="text-slate-500 dark:text-zink-200">Follower</p>
+                                    <p className="text-slate-500 dark:text-zinc-200">Follower</p>
                                 </div>
                                 <div className="py-3 sm:py-0 sm:px-3">
                                     <h6>159</h6>
-                                    <p className="text-slate-500 dark:text-zink-200">Following</p>
+                                    <p className="text-slate-500 dark:text-zinc-200">Following</p>
                                 </div>
                             </div>
                         </div>
@@ -54,25 +54,25 @@ const SocialMediaDashboard = () => {
                         <div className="card-body">
                             <ul className="flex flex-col w-full gap-2 mb-4 text-sm font-medium shrink-0 nav-tabs">
                                 <li className="group grow active">
-                                    <Link to="/dashboards-social" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zink-200 border border-transparent group-[.active]:bg-custom-500 dark:group-[.active]:bg-custom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-custom-500 dark:hover:text-custom-500 active:text-custom-500 dark:active:text-custom-500 -mb-[1px]"><Home className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Feed</span></Link>
+                                    <Link to="/dashboards-social" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zinc-200 border border-transparent group-[.active]:bg-fecustom-500 dark:group-[.active]:bg-fecustom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-fecustom-500 dark:hover:text-fecustom-500 active:text-fecustom-500 dark:active:text-fecustom-500 -mb-[1px]"><Home className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Feed</span></Link>
                                 </li>
                                 <li className="group grow">
-                                    <Link to="/apps-social-friends" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zink-200 border border-transparent group-[.active]:bg-custom-500 dark:group-[.active]:bg-custom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-custom-500 dark:hover:text-custom-500 active:text-custom-500 dark:active:text-custom-500 -mb-[1px]"><UserRound className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Friends</span></Link>
+                                    <Link to="/apps-social-friends" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zinc-200 border border-transparent group-[.active]:bg-fecustom-500 dark:group-[.active]:bg-fecustom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-fecustom-500 dark:hover:text-fecustom-500 active:text-fecustom-500 dark:active:text-fecustom-500 -mb-[1px]"><UserRound className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Friends</span></Link>
                                 </li>
                                 <li className="group grow">
-                                    <Link to="/apps-social-event" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zink-200 border border-transparent group-[.active]:bg-custom-500 dark:group-[.active]:bg-custom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-custom-500 dark:hover:text-custom-500 active:text-custom-500 dark:active:text-custom-500 -mb-[1px]"><CalendarDays className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Event</span></Link>
+                                    <Link to="/apps-social-event" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zinc-200 border border-transparent group-[.active]:bg-fecustom-500 dark:group-[.active]:bg-fecustom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-fecustom-500 dark:hover:text-fecustom-500 active:text-fecustom-500 dark:active:text-fecustom-500 -mb-[1px]"><CalendarDays className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Event</span></Link>
                                 </li>
                                 <li className="group grow">
-                                    <Link to="/apps-social-video" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zink-200 border border-transparent group-[.active]:bg-custom-500 dark:group-[.active]:bg-custom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-custom-500 dark:hover:text-custom-500 active:text-custom-500 dark:active:text-custom-500 -mb-[1px]"><Clapperboard className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Watch Video</span></Link>
+                                    <Link to="/apps-social-video" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zinc-200 border border-transparent group-[.active]:bg-fecustom-500 dark:group-[.active]:bg-fecustom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-fecustom-500 dark:hover:text-fecustom-500 active:text-fecustom-500 dark:active:text-fecustom-500 -mb-[1px]"><Clapperboard className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Watch Video</span></Link>
                                 </li>
                                 <li className="group grow">
-                                    <Link to="/apps-social-marketplace" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zink-200 border border-transparent group-[.active]:bg-custom-500 dark:group-[.active]:bg-custom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-custom-500 dark:hover:text-custom-500 active:text-custom-500 dark:active:text-custom-500 -mb-[1px]"><ShoppingCart className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Marketplace</span></Link>
+                                    <Link to="/apps-social-marketplace" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zinc-200 border border-transparent group-[.active]:bg-fecustom-500 dark:group-[.active]:bg-fecustom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-fecustom-500 dark:hover:text-fecustom-500 active:text-fecustom-500 dark:active:text-fecustom-500 -mb-[1px]"><ShoppingCart className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Marketplace</span></Link>
                                 </li>
                                 <li className="group grow">
-                                    <Link to="/pages-account-settings" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zink-200 border border-transparent group-[.active]:bg-custom-500 dark:group-[.active]:bg-custom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-custom-500 dark:hover:text-custom-500 active:text-custom-500 dark:active:text-custom-500 -mb-[1px]"><Settings className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Settings</span></Link>
+                                    <Link to="/pages-account-settings" className="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zinc-200 border border-transparent group-[.active]:bg-fecustom-500 dark:group-[.active]:bg-fecustom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-fecustom-500 dark:hover:text-fecustom-500 active:text-fecustom-500 dark:active:text-fecustom-500 -mb-[1px]"><Settings className="inline-block size-4 align-middle ltr:mr-1 rtl:ml-1" /> <span className="align-middle">Settings</span></Link>
                                 </li>
                             </ul>
-                            <p className="mb-4 text-slate-500 dark:text-zink-200">Suggestion Pages</p>
+                            <p className="mb-4 text-slate-500 dark:text-zinc-200">Suggestion Pages</p>
                             <ul className="flex flex-col gap-4">
                                 <li>
                                     <Link to="#!" className="flex gap-3">
@@ -108,9 +108,9 @@ const SocialMediaDashboard = () => {
                                 {(activeFriendsData || []).map((item: any, key: number) => (
                                     <React.Fragment key={key}>
                                         {key <= 8 ? (<Link to="#!" className="relative">
-                                            <img src={item} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zink-500" />
-                                            <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
-                                        </Link>) : key === 9 && (<Link to="#!" className="relative flex items-center justify-center size-10 rounded-full bg-custom-100 text-custom-500 dark:bg-custom-500/20">
+                                            <img src={item} alt="" className="h-10 border rounded-full border-slate-200 dark:border-zinc-500" />
+                                            <span className="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zinc-700 rounded-full"></span>
+                                        </Link>) : key === 9 && (<Link to="#!" className="relative flex items-center justify-center size-10 rounded-full bg-fecustom-100 text-fecustom-500 dark:bg-fecustom-500/20">
                                             {activeFriendsData.length - 9}+
                                         </Link>)}
                                     </React.Fragment>

@@ -42,28 +42,28 @@ const ComingSoon = () => {
 
                     <div className="mt-8 text-center">
                         <h4 className="mb-2 text-purple-500 dark:text-purple-500">Coming Soon ...</h4>
-                        <p className="text-slate-500 dark:text-zink-200">We'll be here in a brief moment.</p>
+                        <p className="text-slate-500 dark:text-zinc-200">We'll be here in a brief moment.</p>
                     </div>
 
                     <div>
                         <div className="mt-8">
                             <div className="flex items-center justify-between mt-14">
                                 <div data-countdown="Oct 30, 2025" className="flex flex-wrap gap-3 countdownlist">
-                                    <div className="flex flex-col items-center justify-center size-24 p-2 text-center bg-white rounded dark:bg-zink-600/50 countdownlist-item">
-                                        <div className="count-title text-slate-500 dark:text-zink-200">Days</div>
-                                        <div className="mt-2 text-2xl font-semibold count-num dark:text-zink-50">{days}</div>
+                                    <div className="flex flex-col items-center justify-center size-24 p-2 text-center bg-white rounded dark:bg-zinc-600/50 countdownlist-item">
+                                        <div className="count-title text-slate-500 dark:text-zinc-200">Days</div>
+                                        <div className="mt-2 text-2xl font-semibold count-num dark:text-zinc-50">{days}</div>
                                     </div>
-                                    <div className="flex flex-col items-center justify-center size-24 p-2 text-center bg-white rounded dark:bg-zink-600/50 countdownlist-item">
-                                        <div className="count-title text-slate-500 dark:text-zink-200">Hours</div>
-                                        <div className="mt-2 text-2xl font-semibold count-num dark:text-zink-50">{hours}</div>
+                                    <div className="flex flex-col items-center justify-center size-24 p-2 text-center bg-white rounded dark:bg-zinc-600/50 countdownlist-item">
+                                        <div className="count-title text-slate-500 dark:text-zinc-200">Hours</div>
+                                        <div className="mt-2 text-2xl font-semibold count-num dark:text-zinc-50">{hours}</div>
                                     </div>
-                                    <div className="flex flex-col items-center justify-center size-24 p-2 text-center bg-white rounded dark:bg-zink-600/50 countdownlist-item">
-                                        <div className="count-title text-slate-500 dark:text-zink-200">Minutes</div>
-                                        <div className="mt-2 text-2xl font-semibold count-num dark:text-zink-50">{minutes}</div>
+                                    <div className="flex flex-col items-center justify-center size-24 p-2 text-center bg-white rounded dark:bg-zinc-600/50 countdownlist-item">
+                                        <div className="count-title text-slate-500 dark:text-zinc-200">Minutes</div>
+                                        <div className="mt-2 text-2xl font-semibold count-num dark:text-zinc-50">{minutes}</div>
                                     </div>
-                                    <div className="flex flex-col items-center justify-center size-24 p-2 text-center bg-white rounded dark:bg-zink-600/50 countdownlist-item">
-                                        <div className="count-title text-slate-500 dark:text-zink-200">Seconds</div>
-                                        <div className="mt-2 text-2xl font-semibold count-num dark:text-zink-50">{seconds}</div>
+                                    <div className="flex flex-col items-center justify-center size-24 p-2 text-center bg-white rounded dark:bg-zinc-600/50 countdownlist-item">
+                                        <div className="count-title text-slate-500 dark:text-zinc-200">Seconds</div>
+                                        <div className="mt-2 text-2xl font-semibold count-num dark:text-zinc-50">{seconds}</div>
                                     </div>
                                 </div>
 
@@ -72,10 +72,10 @@ const ComingSoon = () => {
 
                         <div className="mt-10 text-center">
                             <h5 className="mb-2">Be alerted when our launch happens.</h5>
-                            <p className="mb-5 text-slate-500 dark:text-zink-200">Don't worry, we won't inundate your inbox 😊</p>
+                            <p className="mb-5 text-slate-500 dark:text-zinc-200">Don't worry, we won't inundate your inbox 😊</p>
                             <form action="#!" className="relative">
-                                <input type="email" id="inputEmail" className="py-2.5 form-input dark:bg-zink-600/50 border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter your email" required />
-                                <button type="submit" className="px-2.5 py-1.5 text-sm text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20 absolute top-[5px] ltr:right-1 rtl:left-1">Send</button>
+                                <input type="email" id="inputEmail" className="py-2.5 form-input dark:bg-zinc-600/50 border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="Enter your email" required />
+                                <button type="submit" className="px-2.5 py-1.5 text-sm text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20 absolute top-[5px] ltr:right-1 rtl:left-1">Send</button>
                             </form>
                         </div>
 
@@ -94,9 +94,9 @@ const ComingSoon = () => {
                             <i className="text-4xl text-green-500 ri-verified-badge-line"></i>
                             <div className="mt-5 mb-4">
                                 <h4 className="mb-2">We've Launched our new website</h4>
-                                <p className="text-slate-500 dark:text-zink-200">Click the below button to visit our website.</p>
+                                <p className="text-slate-500 dark:text-zinc-200">Click the below button to visit our website.</p>
                             </div>
-                            <Link to="/" className="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Back to Home</Link>
+                            <Link to="/" className="text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20">Back to Home</Link>
                         </div>
                     </div>
 
@@ -112,7 +112,7 @@ const ComingSoon = () => {
 
     return (
         <React.Fragment>
-            <div className="mb-0 border-none shadow-none lg:w-[500px] card bg-white/70 dark:bg-zink-500/70">
+            <div className="mb-0 border-none shadow-none lg:w-[500px] card bg-white/70 dark:bg-zinc-500/70">
                 <div className="!px-10 !py-12 card-body">
                     {countDownBlock}
                 </div>

@@ -13,9 +13,9 @@ const SalesRevenue = () => {
                     <div className="flex flex-col gap-4 mb-4 md:mb-3 md:items-center md:flex-row">
                         <h6 className="grow text-15">Sales Revenue Overview</h6>
                         <div className="relative">
-                            <CalendarRange className="absolute size-4 ltr:left-3 rtl:right-3 top-3 text-slate-500 dark:text-zink-200"></CalendarRange>
+                            <CalendarRange className="absolute size-4 ltr:left-3 rtl:right-3 top-3 text-slate-500 dark:text-zinc-200"></CalendarRange>
                             <Flatpickr
-                                className="ltr:pl-10 rtl:pr-10 form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200"
+                                className="ltr:pl-10 rtl:pr-10 form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200"
                                 options={{
                                     dateFormat: "d M, Y",
                                     mode: "range",
@@ -31,7 +31,7 @@ const SalesRevenue = () => {
                                     <BarChart />
                                 </div>
                                 <div className="grow">
-                                    <p className="mb-1 text-slate-500 dark:text-zink-200">Total Sales</p>
+                                    <p className="mb-1 text-slate-500 dark:text-zinc-200">Total Sales</p>
                                     <h5 className="text-15">$
                                     <CountUp end={1517.36} decimals={2}  className="counter-value" />k</h5>
                                 </div>
@@ -43,7 +43,7 @@ const SalesRevenue = () => {
                                     <TrendingUp />
                                 </div>
                                 <div className="grow">
-                                    <p className="mb-1 text-slate-500 dark:text-zink-200">Total Profit</p>
+                                    <p className="mb-1 text-slate-500 dark:text-zinc-200">Total Profit</p>
                                     <h5 className="text-15">$<CountUp end={746.84} decimals={2} className="counter-value" />k</h5>
                                 </div>
                             </div>

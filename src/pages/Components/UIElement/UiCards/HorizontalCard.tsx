@@ -18,11 +18,11 @@ const HorizontalCard = () => {
                             <h6 className="mb-4 text-15">
                                 Card title
                             </h6>
-                            <p className="text-slate-500 dark:text-zink-200">
+                            <p className="text-slate-500 dark:text-zinc-200">
                                 Some quick example text to build on the card title and make up the bulk of the card's content.
                             </p>
                             <div className="mt-5 sm:mt-auto">
-                                <p className="text-sm text-slate-500 dark:text-zink-200">
+                                <p className="text-sm text-slate-500 dark:text-zinc-200">
                                     Last updated 5 mins ago
                                 </p>
                             </div>
@@ -32,14 +32,14 @@ const HorizontalCard = () => {
                 <div className="card sm:flex">
                     <div className="flex flex-wrap">
                         <div className="flex flex-col h-full card-body">
-                            <h6 className="text-gray-800 text-15 dark:text-zink-50">
+                            <h6 className="text-gray-800 text-15 dark:text-zinc-50">
                                 Card title
                             </h6>
-                            <p className="mt-2 text-slate-500 dark:text-zink-200">
+                            <p className="mt-2 text-slate-500 dark:text-zinc-200">
                                 Some quick example text to build on the card title and make up the bulk of the card's content.
                             </p>
                             <div className="mt-5 sm:mt-auto">
-                                <p className="text-slate-500 ext-sm dark:text-zink-200">
+                                <p className="text-slate-500 ext-sm dark:text-zinc-200">
                                     Last updated 5 mins ago
                                 </p>
                             </div>

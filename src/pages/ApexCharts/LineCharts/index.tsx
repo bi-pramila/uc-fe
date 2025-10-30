@@ -74,7 +74,7 @@ const LineChart = () => {
         {/* <div className="card">
           <div className="card-body">
             <h6 className="mb-4 text-15">Realtime Charts</h6>
-            <div id="realtimeCharts" className="apex-charts" data-chart-colors='["bg-custom-500"]' dir="ltr"></div>
+            <div id="realtimeCharts" className="apex-charts" data-chart-colors='["bg-fecustom-500"]' dir="ltr"></div>
           </div>
         </div> */}
       </div>

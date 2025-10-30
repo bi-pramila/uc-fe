@@ -29,7 +29,7 @@ const Events = [
         title: 'Repeating Event',
         start: new Date(y, m, d + 4, 16, 0),
         allDay: false,
-        className: 'border-none rounded-md py-1.5 px-3 w-[100%] transition-all text-custom-500 !bg-custom-100 dark:!bg-custom-500/20'
+        className: 'border-none rounded-md py-1.5 px-3 w-[100%] transition-all text-fecustom-500 !bg-fecustom-100 dark:!bg-fecustom-500/20'
     },
     {
         id: "5",
@@ -59,7 +59,7 @@ const Events = [
         title: 'Click for Google',
         start: new Date(y, m, 28),
         end: new Date(y, m, 29), url: 'http://google.com/',
-        className: 'border-none rounded-md py-1.5 px-3 w-[100%] text-custom-500 !bg-custom-100 dark:!bg-custom-500/20'
+        className: 'border-none rounded-md py-1.5 px-3 w-[100%] text-fecustom-500 !bg-fecustom-100 dark:!bg-fecustom-500/20'
     }
 ];
 
@@ -67,8 +67,8 @@ const CalenderCategories = [
     {
         id: "1",
         title: "My Event 1",
-        dataClass: "border-none rounded-md py-1.5 px-3 w-[100%] transition-all text-custom-500 !bg-custom-100 dark:!bg-custom-500/20",
-        className: "external-event fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event dark:focus:text-white dark:active:text-white active:text-white focus:ring active:ring btn dark:hover:text-white text-custom-500 bg-custom-100 hover:text-white hover:bg-custom-600 focus:bg-custom-600 focus:ring-custom-100 active:bg-custom-600 active:ring-custom-100 dark:bg-custom-500/20 dark:text-custom-500 dark:hover:bg-custom-500 dark:focus:bg-custom-500 dark:active:bg-custom-500 dark:ring-custom-400/20"
+        dataClass: "border-none rounded-md py-1.5 px-3 w-[100%] transition-all text-fecustom-500 !bg-fecustom-100 dark:!bg-fecustom-500/20",
+        className: "external-event fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event dark:focus:text-white dark:active:text-white active:text-white focus:ring active:ring btn dark:hover:text-white text-fecustom-500 bg-fecustom-100 hover:text-white hover:bg-fecustom-600 focus:bg-fecustom-600 focus:ring-fecustom-100 active:bg-fecustom-600 active:ring-fecustom-100 dark:bg-fecustom-500/20 dark:text-fecustom-500 dark:hover:bg-fecustom-500 dark:focus:bg-fecustom-500 dark:active:bg-fecustom-500 dark:ring-fecustom-400/20"
     },
     {
         id: "2",

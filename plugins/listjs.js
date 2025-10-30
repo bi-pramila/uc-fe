@@ -1,18 +1,18 @@
-const plugin = require('tailwindcss/plugin')
+const plugin = require('tailwindcss/plugin');
 
-module.exports = plugin(function ({ addComponents, theme }) {
+const listjsPlugin = plugin(function ({ addComponents, theme }) {
     addComponents({
         '.listjs-pagination': {
             '@apply mb-0 justify-end gap-2': {},
 
             'li': {
                 '.page': {
-                    '@apply flex items-center justify-center size-8 border border-slate-200 dark:border-zink-500 rounded-md': {},
+                    '@apply flex items-center justify-center size-8 border border-slate-200 dark:border-zinc-500 rounded-md': {},
                 },
 
                 '&.active': {
                     '.page': {
-                        '@apply text-white bg-custom-500 border-custom-500': {},
+                        '@apply text-white bg-fecustom-500 border-fecustom-500': {},
                     }
                 }
             }
@@ -22,4 +22,6 @@ module.exports = plugin(function ({ addComponents, theme }) {
             '@apply flex items-center select-none': {},
         }
     })
-})
+});
+
+module.exports = listjsPlugin;

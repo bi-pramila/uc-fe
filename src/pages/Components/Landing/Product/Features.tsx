@@ -21,7 +21,7 @@ const Features = () => {
                                 <li>Good Quality & Condition</li>
                                 <li>Segments of Solid Rubber</li>
                             </ul>
-                            <a href="#!" className="text-custom-500 text-16" data-aos="fade-right" data-aos-delay="600"
+                            <a href="#!" className="text-fecustom-500 text-16" data-aos="fade-right" data-aos-delay="600"
                             >Shopping Now <MoveRight className="inline-block size-4 align-middle ltr:ml-1 rtl:mr-1 rtl:rotate-180"></MoveRight>
                             </a>
                         </div>

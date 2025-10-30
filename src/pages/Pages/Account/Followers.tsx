@@ -24,7 +24,7 @@ const employeeData: EmployeeData[] = [
         phone: "+213 617 219 6245",
         experience: "1.5 years",
         salary: "$463.42",
-        text: "absolute inline-block px-5 py-1 text-xs ltr:left-0 rtl:right-0 text-custom-600 bg-custom-100 dark:bg-custom-500/20 top-5 ltr:rounded-e rtl:rounded-l"
+        text: "absolute inline-block px-5 py-1 text-xs ltr:left-0 rtl:right-0 text-fecustom-600 bg-fecustom-100 dark:bg-fecustom-500/20 top-5 ltr:rounded-e rtl:rounded-l"
     },
     {
         id: 2,
@@ -123,7 +123,7 @@ const Followers = () => {
                         <div className="card-body">
                             <p className={employee.text}>{employee.position}</p>
                             <div className="flex items-center justify-end">
-                                <p className="text-slate-500 dark:text-zink-200">Doj : {employee.doj}</p>
+                                <p className="text-slate-500 dark:text-zinc-200">Doj : {employee.doj}</p>
                             </div>
                             <div className="mt-4 text-center">
                                 <div className="flex justify-center">
@@ -134,12 +134,12 @@ const Followers = () => {
                                 <a href="#!">
                                     <h4 className="mt-4 mb-2 font-semibold text-16">{employee.name}</h4>
                                 </a>
-                                <div className="text-slate-500 dark:text-zink-200">
+                                <div className="text-slate-500 dark:text-zinc-200">
                                     <p className="mb-1">{employee.email}</p>
                                     <p>{employee.phone}</p>
-                                    <p className="inline-block px-3 py-1 my-4 font-semibold rounded-md text-slate-600 bg-slate-100 dark:bg-zink-600 dark:text-zink-200">Exp. : {employee.experience}</p>
-                                    <h4 className="text-15 text-custom-500">Salary : {employee.salary}
-                                        <span className="text-xs font-normal text-slate-500 dark:text-zink-200">/ Month</span>
+                                    <p className="inline-block px-3 py-1 my-4 font-semibold rounded-md text-slate-600 bg-slate-100 dark:bg-zinc-600 dark:text-zinc-200">Exp. : {employee.experience}</p>
+                                    <h4 className="text-15 text-fecustom-500">Salary : {employee.salary}
+                                        <span className="text-xs font-normal text-slate-500 dark:text-zinc-200">/ Month</span>
                                     </h4>
                                 </div>
                             </div>
@@ -149,34 +149,34 @@ const Followers = () => {
             </div>
             <div className="flex flex-col items-center gap-4 mb-4 md:flex-row">
                 <div className="grow">
-                    <p className="text-slate-500 dark:text-zink-200">Showing <b>8</b> of <b>18</b> Results</p>
+                    <p className="text-slate-500 dark:text-zinc-200">Showing <b>8</b> of <b>18</b> Results</p>
                 </div>
                 <ul className="flex flex-wrap items-center gap-2">
                     <li>
-                        <a href="#!" className="inline-flex items-center justify-center bg-white dark:bg-zink-700 size-8 transition-all duration-150 ease-linear border border-slate-200 dark:border-zink-500 rounded text-slate-500 dark:text-zink-200 hover:text-custom-500 dark:hover:text-custom-500 hover:bg-custom-50 dark:hover:bg-custom-500/10 focus:bg-custom-50 dark:focus:bg-custom-500/10 focus:text-custom-500 dark:focus:text-custom-500 [&.active]:text-custom-50 dark:[&.active]:text-custom-50 [&.active]:bg-custom-500 dark:[&.active]:bg-custom-500 [&.active]:border-custom-500 dark:[&.active]:border-custom-500 [&.disabled]:text-slate-400 dark:[&.disabled]:text-zink-300 [&.disabled]:cursor-auto">
+                        <a href="#!" className="inline-flex items-center justify-center bg-white dark:bg-zinc-700 size-8 transition-all duration-150 ease-linear border border-slate-200 dark:border-zinc-500 rounded text-slate-500 dark:text-zinc-200 hover:text-fecustom-500 dark:hover:text-fecustom-500 hover:bg-fecustom-50 dark:hover:bg-fecustom-500/10 focus:bg-fecustom-50 dark:focus:bg-fecustom-500/10 focus:text-fecustom-500 dark:focus:text-fecustom-500 [&.active]:text-fecustom-50 dark:[&.active]:text-fecustom-50 [&.active]:bg-fecustom-500 dark:[&.active]:bg-fecustom-500 [&.active]:border-fecustom-500 dark:[&.active]:border-fecustom-500 [&.disabled]:text-slate-400 dark:[&.disabled]:text-zinc-300 [&.disabled]:cursor-auto">
                             <ChevronLeft className="size-4 rtl:rotate-180"></ChevronLeft>
                         </a>
                     </li>
                     <li>
-                        <a href="#!" className="inline-flex items-center justify-center bg-white dark:bg-zink-700 size-8 transition-all duration-150 ease-linear border border-slate-200 dark:border-zink-500 rounded text-slate-500 dark:text-zink-200 hover:text-custom-500 dark:hover:text-custom-500 hover:bg-custom-50 dark:hover:bg-custom-500/10 focus:bg-custom-50 dark:focus:bg-custom-500/10 focus:text-custom-500 dark:focus:text-custom-500 [&.active]:text-custom-50 dark:[&.active]:text-custom-50 [&.active]:bg-custom-500 dark:[&.active]:bg-custom-500 [&.active]:border-custom-500 dark:[&.active]:border-custom-500 [&.disabled]:text-slate-400 dark:[&.disabled]:text-zink-300 [&.disabled]:cursor-auto">1</a>
+                        <a href="#!" className="inline-flex items-center justify-center bg-white dark:bg-zinc-700 size-8 transition-all duration-150 ease-linear border border-slate-200 dark:border-zinc-500 rounded text-slate-500 dark:text-zinc-200 hover:text-fecustom-500 dark:hover:text-fecustom-500 hover:bg-fecustom-50 dark:hover:bg-fecustom-500/10 focus:bg-fecustom-50 dark:focus:bg-fecustom-500/10 focus:text-fecustom-500 dark:focus:text-fecustom-500 [&.active]:text-fecustom-50 dark:[&.active]:text-fecustom-50 [&.active]:bg-fecustom-500 dark:[&.active]:bg-fecustom-500 [&.active]:border-fecustom-500 dark:[&.active]:border-fecustom-500 [&.disabled]:text-slate-400 dark:[&.disabled]:text-zinc-300 [&.disabled]:cursor-auto">1</a>
                     </li>
                     <li>
-                        <a href="#!" className="inline-flex items-center justify-center bg-white dark:bg-zink-700 size-8 transition-all duration-150 ease-linear border border-slate-200 dark:border-zink-500 rounded text-slate-500 dark:text-zink-200 hover:text-custom-500 dark:hover:text-custom-500 hover:bg-custom-50 dark:hover:bg-custom-500/10 focus:bg-custom-50 dark:focus:bg-custom-500/10 focus:text-custom-500 dark:focus:text-custom-500 [&.active]:text-custom-50 dark:[&.active]:text-custom-50 [&.active]:bg-custom-500 dark:[&.active]:bg-custom-500 [&.active]:border-custom-500 dark:[&.active]:border-custom-500 [&.disabled]:text-slate-400 dark:[&.disabled]:text-zink-300 [&.disabled]:cursor-auto">2</a>
+                        <a href="#!" className="inline-flex items-center justify-center bg-white dark:bg-zinc-700 size-8 transition-all duration-150 ease-linear border border-slate-200 dark:border-zinc-500 rounded text-slate-500 dark:text-zinc-200 hover:text-fecustom-500 dark:hover:text-fecustom-500 hover:bg-fecustom-50 dark:hover:bg-fecustom-500/10 focus:bg-fecustom-50 dark:focus:bg-fecustom-500/10 focus:text-fecustom-500 dark:focus:text-fecustom-500 [&.active]:text-fecustom-50 dark:[&.active]:text-fecustom-50 [&.active]:bg-fecustom-500 dark:[&.active]:bg-fecustom-500 [&.active]:border-fecustom-500 dark:[&.active]:border-fecustom-500 [&.disabled]:text-slate-400 dark:[&.disabled]:text-zinc-300 [&.disabled]:cursor-auto">2</a>
                     </li>
                     <li>
-                        <a href="#!" className="inline-flex items-center justify-center bg-white dark:bg-zink-700 size-8 transition-all duration-150 ease-linear border border-slate-200 dark:border-zink-500 rounded text-slate-500 dark:text-zink-200 hover:text-custom-500 dark:hover:text-custom-500 hover:bg-custom-50 dark:hover:bg-custom-500/10 focus:bg-custom-50 dark:focus:bg-custom-500/10 focus:text-custom-500 dark:focus:text-custom-500 [&.active]:text-custom-50 dark:[&.active]:text-custom-50 [&.active]:bg-custom-500 dark:[&.active]:bg-custom-500 [&.active]:border-custom-500 dark:[&.active]:border-custom-500 [&.disabled]:text-slate-400 dark:[&.disabled]:text-zink-300 [&.disabled]:cursor-auto active">3</a>
+                        <a href="#!" className="inline-flex items-center justify-center bg-white dark:bg-zinc-700 size-8 transition-all duration-150 ease-linear border border-slate-200 dark:border-zinc-500 rounded text-slate-500 dark:text-zinc-200 hover:text-fecustom-500 dark:hover:text-fecustom-500 hover:bg-fecustom-50 dark:hover:bg-fecustom-500/10 focus:bg-fecustom-50 dark:focus:bg-fecustom-500/10 focus:text-fecustom-500 dark:focus:text-fecustom-500 [&.active]:text-fecustom-50 dark:[&.active]:text-fecustom-50 [&.active]:bg-fecustom-500 dark:[&.active]:bg-fecustom-500 [&.active]:border-fecustom-500 dark:[&.active]:border-fecustom-500 [&.disabled]:text-slate-400 dark:[&.disabled]:text-zinc-300 [&.disabled]:cursor-auto active">3</a>
                     </li>
                     <li>
-                        <a href="#!" className="inline-flex items-center justify-center bg-white dark:bg-zink-700 size-8 transition-all duration-150 ease-linear border border-slate-200 dark:border-zink-500 rounded text-slate-500 dark:text-zink-200 hover:text-custom-500 dark:hover:text-custom-500 hover:bg-custom-50 dark:hover:bg-custom-500/10 focus:bg-custom-50 dark:focus:bg-custom-500/10 focus:text-custom-500 dark:focus:text-custom-500 [&.active]:text-custom-50 dark:[&.active]:text-custom-50 [&.active]:bg-custom-500 dark:[&.active]:bg-custom-500 [&.active]:border-custom-500 dark:[&.active]:border-custom-500 [&.disabled]:text-slate-400 dark:[&.disabled]:text-zink-300 [&.disabled]:cursor-auto">4</a>
+                        <a href="#!" className="inline-flex items-center justify-center bg-white dark:bg-zinc-700 size-8 transition-all duration-150 ease-linear border border-slate-200 dark:border-zinc-500 rounded text-slate-500 dark:text-zinc-200 hover:text-fecustom-500 dark:hover:text-fecustom-500 hover:bg-fecustom-50 dark:hover:bg-fecustom-500/10 focus:bg-fecustom-50 dark:focus:bg-fecustom-500/10 focus:text-fecustom-500 dark:focus:text-fecustom-500 [&.active]:text-fecustom-50 dark:[&.active]:text-fecustom-50 [&.active]:bg-fecustom-500 dark:[&.active]:bg-fecustom-500 [&.active]:border-fecustom-500 dark:[&.active]:border-fecustom-500 [&.disabled]:text-slate-400 dark:[&.disabled]:text-zinc-300 [&.disabled]:cursor-auto">4</a>
                     </li>
                     <li>
-                        <a href="#!" className="inline-flex items-center justify-center bg-white dark:bg-zink-700 size-8 transition-all duration-150 ease-linear border border-slate-200 dark:border-zink-500 rounded text-slate-500 dark:text-zink-200 hover:text-custom-500 dark:hover:text-custom-500 hover:bg-custom-50 dark:hover:bg-custom-500/10 focus:bg-custom-50 dark:focus:bg-custom-500/10 focus:text-custom-500 dark:focus:text-custom-500 [&.active]:text-custom-50 dark:[&.active]:text-custom-50 [&.active]:bg-custom-500 dark:[&.active]:bg-custom-500 [&.active]:border-custom-500 dark:[&.active]:border-custom-500 [&.disabled]:text-slate-400 dark:[&.disabled]:text-zink-300 [&.disabled]:cursor-auto">5</a>
+                        <a href="#!" className="inline-flex items-center justify-center bg-white dark:bg-zinc-700 size-8 transition-all duration-150 ease-linear border border-slate-200 dark:border-zinc-500 rounded text-slate-500 dark:text-zinc-200 hover:text-fecustom-500 dark:hover:text-fecustom-500 hover:bg-fecustom-50 dark:hover:bg-fecustom-500/10 focus:bg-fecustom-50 dark:focus:bg-fecustom-500/10 focus:text-fecustom-500 dark:focus:text-fecustom-500 [&.active]:text-fecustom-50 dark:[&.active]:text-fecustom-50 [&.active]:bg-fecustom-500 dark:[&.active]:bg-fecustom-500 [&.active]:border-fecustom-500 dark:[&.active]:border-fecustom-500 [&.disabled]:text-slate-400 dark:[&.disabled]:text-zinc-300 [&.disabled]:cursor-auto">5</a>
                     </li>
                     <li>
-                        <a href="#!" className="inline-flex items-center justify-center bg-white dark:bg-zink-700 size-8 transition-all duration-150 ease-linear border border-slate-200 dark:border-zink-500 rounded text-slate-500 dark:text-zink-200 hover:text-custom-500 dark:hover:text-custom-500 hover:bg-custom-50 dark:hover:bg-custom-500/10 focus:bg-custom-50 dark:focus:bg-custom-500/10 focus:text-custom-500 dark:focus:text-custom-500 [&.active]:text-custom-50 dark:[&.active]:text-custom-50 [&.active]:bg-custom-500 dark:[&.active]:bg-custom-500 [&.active]:border-custom-500 dark:[&.active]:border-custom-500 [&.disabled]:text-slate-400 dark:[&.disabled]:text-zink-300 [&.disabled]:cursor-auto">6</a>
+                        <a href="#!" className="inline-flex items-center justify-center bg-white dark:bg-zinc-700 size-8 transition-all duration-150 ease-linear border border-slate-200 dark:border-zinc-500 rounded text-slate-500 dark:text-zinc-200 hover:text-fecustom-500 dark:hover:text-fecustom-500 hover:bg-fecustom-50 dark:hover:bg-fecustom-500/10 focus:bg-fecustom-50 dark:focus:bg-fecustom-500/10 focus:text-fecustom-500 dark:focus:text-fecustom-500 [&.active]:text-fecustom-50 dark:[&.active]:text-fecustom-50 [&.active]:bg-fecustom-500 dark:[&.active]:bg-fecustom-500 [&.active]:border-fecustom-500 dark:[&.active]:border-fecustom-500 [&.disabled]:text-slate-400 dark:[&.disabled]:text-zinc-300 [&.disabled]:cursor-auto">6</a>
                     </li>
                     <li>
-                        <a href="#!" className="inline-flex items-center justify-center bg-white dark:bg-zink-700 size-8 transition-all duration-150 ease-linear border border-slate-200 dark:border-zink-500 rounded text-slate-500 dark:text-zink-200 hover:text-custom-500 dark:hover:text-custom-500 hover:bg-custom-50 dark:hover:bg-custom-500/10 focus:bg-custom-50 dark:focus:bg-custom-500/10 focus:text-custom-500 dark:focus:text-custom-500 [&.active]:text-custom-50 dark:[&.active]:text-custom-50 [&.active]:bg-custom-500 dark:[&.active]:bg-custom-500 [&.active]:border-custom-500 dark:[&.active]:border-custom-500 [&.disabled]:text-slate-400 dark:[&.disabled]:text-zink-300 [&.disabled]:cursor-auto">
+                        <a href="#!" className="inline-flex items-center justify-center bg-white dark:bg-zinc-700 size-8 transition-all duration-150 ease-linear border border-slate-200 dark:border-zinc-500 rounded text-slate-500 dark:text-zinc-200 hover:text-fecustom-500 dark:hover:text-fecustom-500 hover:bg-fecustom-50 dark:hover:bg-fecustom-500/10 focus:bg-fecustom-50 dark:focus:bg-fecustom-500/10 focus:text-fecustom-500 dark:focus:text-fecustom-500 [&.active]:text-fecustom-50 dark:[&.active]:text-fecustom-50 [&.active]:bg-fecustom-500 dark:[&.active]:bg-fecustom-500 [&.active]:border-fecustom-500 dark:[&.active]:border-fecustom-500 [&.disabled]:text-slate-400 dark:[&.disabled]:text-zinc-300 [&.disabled]:cursor-auto">
                             <ChevronRight className="size-4 rtl:rotate-180" />
                         </a>
                     </li>

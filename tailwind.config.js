@@ -1,9 +1,12 @@
+// tailwind.config.js
 const colors = require('tailwindcss/colors');
 
-module.exports = {
+/** @type {import('tailwindcss').Config} */
+const config = {
     content: [
         "./public/index.html",
-        "./src/**/*.{js,ts,jsx,tsx}",
+        "./src/**/*.{js,jsx,ts,tsx,scss,cjs}",
+        "./plugins/**/*.{js,jsx,ts,tsx,scss,cjs}",
         "./node_modules/simplebar-react/**/*",
         "./node_modules/apexcharts/**/*",
         "./node_modules/@fullcalendar/**/*",
@@ -107,7 +110,7 @@ module.exports = {
                 'topbar-modern': colors.white,
 
 
-                custom: {
+                fecustom: {
                     50: colors.blue[50],
                     100: colors.blue[100],
                     200: colors.blue[200],
@@ -203,7 +206,7 @@ module.exports = {
                     950: colors.purple[950],
                 },
 
-                zink: {
+                zinc: {
                     50: "#E2EAF3",
                     100: "#C8D7E9",
                     200: "#92AFD3",
@@ -262,27 +265,24 @@ module.exports = {
             },
         },
     },
-    plugins: [
+    plugins:[
         require('./plugins/headings.js'),
         require('./plugins/buttons.js'),
         require('./plugins/forms.js'),
         require('./plugins/card.js'),
         require('./plugins/drawer.js'),
-        //third party libraries
         require('./plugins/flatpicker.js'),
         require('./plugins/simplebar.js'),
         require('./plugins/swiper.js'),
         require('./plugins/toastify.js'),
         require('./plugins/dropzone.js'),
-        // require('./plugins/colorpicker.js'),  // instead react-color picker
         require('./plugins/ckeditor.js'),
         require('./plugins/apexcharts.js'),
-        require('./plugins/maps.js'), // google-maps-react
-        // require('./plugins/multijs.js'), // instead react-dual-listbox
+        require('./plugins/maps.js'),
         require('./plugins/fullcalendar.js'),
         require('./plugins/lightbox.js'),
         require('./plugins/prismjs.js'),
-        //apps pages
         require('./plugins/apps.js'),
-    ]
+    ],
 };
+module.exports = config;

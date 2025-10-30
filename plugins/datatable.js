@@ -1,6 +1,6 @@
-const plugin = require('tailwindcss/plugin')
+const plugin = require('tailwindcss/plugin');
 
-module.exports = plugin(function ({ addComponents, theme }) {
+const datatablePlugin = plugin(function ({ addComponents, theme }) {
     addComponents({
         'table': {
             '&.dataTable': {
@@ -66,4 +66,6 @@ module.exports = plugin(function ({ addComponents, theme }) {
             }
         }
     })
-})
+});
+
+module.exports = datatablePlugin;

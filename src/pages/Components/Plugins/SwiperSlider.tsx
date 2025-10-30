@@ -59,8 +59,8 @@ const SwiperSlider = () => {
                                 <SwiperSlide><img src={image7} alt="" /></SwiperSlide>
                                 <SwiperSlide><img src={image8} alt="" /></SwiperSlide>
                                 <SwiperSlide><img src={image9} alt="" /></SwiperSlide>
-                                <div className="swiper-button-next after:hidden text-custom-500"><ChevronRight /></div>
-                                <div className="swiper-button-prev after:hidden text-custom-500"><ChevronLeft /></div>
+                                <div className="swiper-button-next after:hidden text-fecustom-500"><ChevronRight /></div>
+                                <div className="swiper-button-prev after:hidden text-fecustom-500"><ChevronLeft /></div>
                             </Swiper>
                         </div>
                     </div>
@@ -115,8 +115,8 @@ const SwiperSlider = () => {
                                 <SwiperSlide><img src={image4} alt="" /></SwiperSlide>
                                 <SwiperSlide><img src={image5} alt="" /></SwiperSlide>
                                 <SwiperSlide><img src={image6} alt="" /></SwiperSlide>
-                                <div className="swiper-button-next after:hidden text-custom-500"><ChevronRight /></div>
-                                <div className="swiper-button-prev after:hidden text-custom-500"><ChevronLeft /></div>
+                                <div className="swiper-button-next after:hidden text-fecustom-500"><ChevronRight /></div>
+                                <div className="swiper-button-prev after:hidden text-fecustom-500"><ChevronLeft /></div>
                             </Swiper>
                         </div>
                     </div>

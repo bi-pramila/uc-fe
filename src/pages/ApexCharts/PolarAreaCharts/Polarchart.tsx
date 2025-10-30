@@ -29,7 +29,7 @@ const BasicPolar = ({ chartId }: any) => {
                 dir="ltr"
                 options={options}
                 series={series || []}
-                data-chart-colors='["bg-custom-300", "bg-orange-300", "bg-green-300", "bg-yellow-300", "bg-purple-300", "bg-slate-300", "bg-red-300", "bg-emerald-200","bg-pink-200"]'
+                data-chart-colors='["bg-fecustom-300", "bg-orange-300", "bg-green-300", "bg-yellow-300", "bg-purple-300", "bg-slate-300", "bg-red-300", "bg-emerald-200","bg-pink-200"]'
                 id={chartId}
                 className="apex-charts"
                 height={350}
@@ -88,7 +88,7 @@ const MonochromeChart = ({ chartId }: any) => {
                 dir="ltr"
                 options={options}
                 series={series || []}
-                data-chart-colors='["bg-custom-500"]'
+                data-chart-colors='["bg-fecustom-500"]'
                 id={chartId}
                 className="apex-charts"
                 height={350}

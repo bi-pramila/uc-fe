@@ -9,11 +9,11 @@ const PlaceholderIconAvatar = () => {
                     <h6 className="mb-4">Placeholder Icon Avatar</h6>
                     <div className="grid grid-cols-1 gap-5 xl:grid-cols-2">
                         <div className="flex flex-wrap items-center gap-4">
-                            <div className="relative size-10 overflow-hidden rounded-full bg-slate-100 text-slate-500 dark:bg-zink-600 dark:text-zink-300">
-                                <User2 className="absolute left-0 right-0 inline-block size-10 mx-auto stroke-1 -bottom-1 fill-slate-200 dark:fill-zink-500"></User2>
+                            <div className="relative size-10 overflow-hidden rounded-full bg-slate-100 text-slate-500 dark:bg-zinc-600 dark:text-zinc-300">
+                                <User2 className="absolute left-0 right-0 inline-block size-10 mx-auto stroke-1 -bottom-1 fill-slate-200 dark:fill-zinc-500"></User2>
                             </div>
-                            <div className="relative size-10 overflow-hidden rounded-full bg-custom-100 text-custom-500 dark:bg-custom-950">
-                                <User2 className="absolute left-0 right-0 inline-block size-10 mx-auto stroke-1 -bottom-1 fill-custom-200 dark:fill-custom-900"></User2>
+                            <div className="relative size-10 overflow-hidden rounded-full bg-fecustom-100 text-fecustom-500 dark:bg-fecustom-950">
+                                <User2 className="absolute left-0 right-0 inline-block size-10 mx-auto stroke-1 -bottom-1 fill-fecustom-200 dark:fill-fecustom-900"></User2>
                             </div>
                             <div className="relative size-10 overflow-hidden text-green-500 bg-green-100 rounded-full dark:bg-green-900">
                                 <User2 className="absolute left-0 right-0 inline-block size-10 mx-auto stroke-1 -bottom-1 fill-green-200 dark:fill-green-800"></User2>
@@ -26,11 +26,11 @@ const PlaceholderIconAvatar = () => {
                             </div>
                         </div>
                         <div className="flex flex-wrap items-center gap-4">
-                            <div className="relative size-10 overflow-hidden rounded-md bg-slate-100 text-slate-500 dark:bg-zink-600 dark:text-zink-300">
-                                <User2 className="absolute left-0 right-0 inline-block size-10 mx-auto stroke-1 -bottom-1 fill-slate-200 dark:fill-zink-500"></User2>
+                            <div className="relative size-10 overflow-hidden rounded-md bg-slate-100 text-slate-500 dark:bg-zinc-600 dark:text-zinc-300">
+                                <User2 className="absolute left-0 right-0 inline-block size-10 mx-auto stroke-1 -bottom-1 fill-slate-200 dark:fill-zinc-500"></User2>
                             </div>
-                            <div className="relative size-10 overflow-hidden rounded-md bg-custom-100 text-custom-500 dark:bg-custom-950">
-                                <User2 className="absolute left-0 right-0 inline-block size-10 mx-auto stroke-1 -bottom-1 fill-custom-200 dark:fill-custom-900"></User2>
+                            <div className="relative size-10 overflow-hidden rounded-md bg-fecustom-100 text-fecustom-500 dark:bg-fecustom-950">
+                                <User2 className="absolute left-0 right-0 inline-block size-10 mx-auto stroke-1 -bottom-1 fill-fecustom-200 dark:fill-fecustom-900"></User2>
                             </div>
                             <div className="relative size-10 overflow-hidden text-green-500 bg-green-100 rounded-md dark:bg-green-900">
                                 <User2 className="absolute left-0 right-0 inline-block size-10 mx-auto stroke-1 -bottom-1 fill-green-200 dark:fill-green-800"></User2>

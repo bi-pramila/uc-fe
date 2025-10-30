@@ -26,7 +26,7 @@ const PopularAskQuestions = () => {
                         </Collapse.Trigger>
                         <Collapse.Content className="collapsible-content card">
                             <div className="card-body">
-                                <p className="mb-3 text-slate-500 dark:text-zink-200">To install Tailwind CSS, you can use npm or yarn by running the following commands:</p>
+                                <p className="mb-3 text-slate-500 dark:text-zinc-200">To install Tailwind CSS, you can use npm or yarn by running the following commands:</p>
                                 <ol className="flex flex-col gap-2 list-decimal list-inside">
                                     <li>
                                         <b>Using npm</b>
@@ -57,8 +57,8 @@ const PopularAskQuestions = () => {
                         </Collapse.Trigger>
                         <Collapse.Content className="collapsible-content card">
                             <div className="card-body">
-                                <p className="mb-3 text-slate-500 dark:text-zink-200">To enable dark mode in Tailwind CSS, update your <code className="text-xs text-pink-500 select-all">tailwind.config.js</code> file with the <code className="text-xs text-pink-500 select-all">darkMode</code> option. You can choose between two different dark mode strategies: <code className="text-xs text-pink-500 select-all">media</code> or <code className="text-xs text-pink-500 select-all">class</code>.</p>
-                                <p className="mb-3 text-slate-500 dark:text-zink-200">Using <code className="text-xs text-pink-500 select-all">class</code>, the dark mode is enabled by adding a <code className="text-xs text-pink-500 select-all">.dark</code> class to an ancestor element of your components:</p>
+                                <p className="mb-3 text-slate-500 dark:text-zinc-200">To enable dark mode in Tailwind CSS, update your <code className="text-xs text-pink-500 select-all">tailwind.config.js</code> file with the <code className="text-xs text-pink-500 select-all">darkMode</code> option. You can choose between two different dark mode strategies: <code className="text-xs text-pink-500 select-all">media</code> or <code className="text-xs text-pink-500 select-all">class</code>.</p>
+                                <p className="mb-3 text-slate-500 dark:text-zinc-200">Using <code className="text-xs text-pink-500 select-all">class</code>, the dark mode is enabled by adding a <code className="text-xs text-pink-500 select-all">.dark</code> class to an ancestor element of your components:</p>
                                 <PrismCode code={`module.exports = {
     darkMode: 'class', // or 'media'
     // ...
@@ -76,7 +76,7 @@ const PopularAskQuestions = () => {
                         </Collapse.Trigger>
                         <Collapse.Content className="collapsible-content card">
                             <div className="card-body">
-                                <p className="mb-3 text-slate-500 dark:text-zink-200">To get started with your first plugin, import Tailwind’s <code className="text-xs text-pink-500 select-all">plugin</code> function from <code className="text-xs text-pink-500 select-all">tailwindcss/plugin</code>. Then inside your <code className="text-xs text-pink-500 select-all">plugins</code> array, call the imported <code className="text-xs text-pink-500 select-all">plugin</code> function with an anonymous function as the first argument.</p>
+                                <p className="mb-3 text-slate-500 dark:text-zinc-200">To get started with your first plugin, import Tailwind’s <code className="text-xs text-pink-500 select-all">plugin</code> function from <code className="text-xs text-pink-500 select-all">tailwindcss/plugin</code>. Then inside your <code className="text-xs text-pink-500 select-all">plugins</code> array, call the imported <code className="text-xs text-pink-500 select-all">plugin</code> function with an anonymous function as the first argument.</p>
                                 <PrismCode code={`const plugin = require('tailwindcss/plugin')
 
     module.exports = {
@@ -101,7 +101,7 @@ const PopularAskQuestions = () => {
                         </Collapse.Trigger>
                         <Collapse.Content className="collapsible-content card">
                             <div className="card-body">
-                                <p className="mb-3 text-slate-500 dark:text-zink-200">You can customize the <code className="text-xs text-pink-500 select-all">tailwind.config.js</code> file to override the default configuration options provided by Tailwind CSS. The configuration file follows the following structure:</p>
+                                <p className="mb-3 text-slate-500 dark:text-zinc-200">You can customize the <code className="text-xs text-pink-500 select-all">tailwind.config.js</code> file to override the default configuration options provided by Tailwind CSS. The configuration file follows the following structure:</p>
                                 <PrismCode code={`module.exports = {
         purge: [],
         theme: {
@@ -125,7 +125,7 @@ const PopularAskQuestions = () => {
                         </Collapse.Trigger>
                         <Collapse.Content className="collapsible-content card">
                             <div className="card-body">
-                                <p className="mb-3 text-slate-500 dark:text-zink-200">Tailwind CSS generates responsive variants for most utilities, allowing you to create responsive designs easily. By default, it includes four breakpoints:</p>
+                                <p className="mb-3 text-slate-500 dark:text-zinc-200">Tailwind CSS generates responsive variants for most utilities, allowing you to create responsive designs easily. By default, it includes four breakpoints:</p>
 
                                 <ul className="flex flex-col gap-2 mb-2 list-disc list-inside">
                                     <li><code className="text-xs text-pink-500 select-all">sm</code>: 640px</li>

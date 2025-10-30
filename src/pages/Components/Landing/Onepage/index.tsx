@@ -46,8 +46,8 @@ const OnePage = () => {
             "bg-white",
             "text-body",
             "font-public",
-            "dark:text-zink-50",
-            "dark:bg-zink-800"
+            "dark:text-zinc-50",
+            "dark:bg-zinc-800"
         );
     }, []);
 

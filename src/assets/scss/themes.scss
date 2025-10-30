@@ -1,4 +1,9 @@
-@import "./icons.scss";
+//assets/scss/theme.scss
+@config "../../../tailwind.config.js";
+
 @import "./tailwind.scss";
-@import "../../../node_modules/prismjs/themes/prism-okaidia.css"; 
-@import "../../../node_modules/lightbox.js-react/dist/index.css"; 
+
+@import "./icons.scss";
+
+@import './custom-utilities.scss';
+

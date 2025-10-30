@@ -21,6 +21,30 @@ services:
       - ./Caddydata:/data
     restart: unless-stopped
     
+  db:
+    container_name: hosting-manager-db
+    image: mysql:8.0
+    environment:
+      - MYSQL_ROOT_PASSWORD=5HaD40DV74KF3
+      - MYSQL_DATABASE=hostingmanager
+      - MYSQL_USER=hostingmanager
+      - MYSQL_PASSWORD=8612aD5G619a25W
+    volumes:
+      - mysql_data:/var/lib/mysql
+    restart: unless-stopped
+
+  phpmyadmin:
+    container_name: hosting-manager-phpmyadmin
+    image: phpmyadmin:5-apache
+    depends_on:
+      - db
+    environment:
+      - PMA_HOST=db
+    ports:
+      - "8080:80"
+    restart: unless-stopped
 
  
 
+volumes:
+  mysql_data:

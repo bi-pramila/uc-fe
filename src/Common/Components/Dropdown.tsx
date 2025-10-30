@@ -67,7 +67,7 @@ export const Trigger: React.FC<TriggerProps> = ({ type, children, className, id 
   const { open, toggleOpen } = useContext(DropDownContext)!;
 
   const getClassNameButton = className ? className : "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded";
-  const getClassNameLink = className ? className : "transition-all duration-200 ease-linear bg-white border-dashed dropdown-toggle text-custom-500 btn border-custom-500 hover:text-custom-500 hover:bg-custom-50 hover:border-custom-600 focus:text-custom-600 focus:bg-custom-50 focus:border-custom-600 active:text-custom-600 active:bg-custom-50 active:border-custom-600 dark:focus:ring-custom-400/20 dark:bg-custom-400/20 ";
+  const getClassNameLink = className ? className : "transition-all duration-200 ease-linear bg-white border-dashed dropdown-toggle text-fecustom-500 btn border-fecustom-500 hover:text-fecustom-500 hover:bg-fecustom-50 hover:border-fecustom-600 focus:text-fecustom-600 focus:bg-fecustom-50 focus:border-fecustom-600 active:text-fecustom-600 active:bg-fecustom-50 active:border-fecustom-600 dark:focus:ring-fecustom-400/20 dark:bg-fecustom-400/20 ";
   return (
     <>
       {type === 'a' ? (
@@ -100,7 +100,7 @@ interface ContentProps {
 const Content: React.FC<ContentProps> = ({ as: Component = 'div', className, children, placement }) => {
   const { open, setOpen } = useContext(DropDownContext)!;
 
-  const getClassName = className || "absolute z-50 py-2 mt-1 text-left list-none bg-white rounded-md shadow-md dropdown-menu min-w-max dark:bg-zink-400";
+  const getClassName = className || "absolute z-50 py-2 mt-1 text-left list-none bg-white rounded-md shadow-md dropdown-menu min-w-max dark:bg-zinc-400";
 
   const [placementState, setPlacement] = useState('right-end' as 'right-end' | 'start-end' | 'top-end' | 'bottom-start' | 'bottom-end' | 'top-start');
 

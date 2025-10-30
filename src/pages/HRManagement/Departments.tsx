@@ -173,12 +173,12 @@ const Departments = () => {
             enableSorting: true,
             cell: (cell: any) => (
                 <div className="flex gap-2">
-                    <Link to="#!" data-modal-target="addDepartmentModal" className="flex items-center justify-center size-8 transition-all duration-200 ease-linear rounded-md bg-slate-100 dark:bg-zink-600 dark:text-zink-200 text-slate-500 hover:text-custom-500 dark:hover:text-custom-500 hover:bg-custom-100 dark:hover:bg-custom-500/20" onClick={() => {
+                    <Link to="#!" data-modal-target="addDepartmentModal" className="flex items-center justify-center size-8 transition-all duration-200 ease-linear rounded-md bg-slate-100 dark:bg-zinc-600 dark:text-zinc-200 text-slate-500 hover:text-fecustom-500 dark:hover:text-fecustom-500 hover:bg-fecustom-100 dark:hover:bg-fecustom-500/20" onClick={() => {
                         const data = cell.row.original;
                         handleUpdateDataClick(data);
                     }}>
                         <Pencil className="size-4" /></Link>
-                    <Link to="#!" className="flex items-center justify-center size-8 transition-all duration-200 ease-linear rounded-md bg-slate-100 dark:bg-zink-600 dark:text-zink-200 text-slate-500 hover:text-red-500 dark:hover:text-red-500 hover:bg-red-100 dark:hover:bg-red-500/20" onClick={() => {
+                    <Link to="#!" className="flex items-center justify-center size-8 transition-all duration-200 ease-linear rounded-md bg-slate-100 dark:bg-zinc-600 dark:text-zinc-200 text-slate-500 hover:text-red-500 dark:hover:text-red-500 hover:bg-red-100 dark:hover:bg-red-500/20" onClick={() => {
                         const data = cell.row.original;
                         onClickDelete(data);
                     }}><Trash2 className="size-4" /></Link>
@@ -198,7 +198,7 @@ const Departments = () => {
                     <div className="flex items-center gap-3 mb-4">
                         <h6 className="text-15 grow">Departments</h6>
                         <div className="shrink-0">
-                            <Link to="#!" data-modal-target="addDepartmentModal" type="button" className="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20" onClick={toggle}>
+                            <Link to="#!" data-modal-target="addDepartmentModal" type="button" className="text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20" onClick={toggle}>
                                 <Plus className="inline-block size-4" /> <span className="align-middle">Add Department</span>
                             </Link>
                         </div>
@@ -212,8 +212,8 @@ const Departments = () => {
                             divclassName="overflow-x-auto"
                             tableclassName="w-full whitespace-nowrap"
                             theadclassName="ltr:text-left rtl:text-right"
-                            thclassName="px-3.5 py-2.5 font-semibold border border-slate-200 dark:border-zink-500"
-                            tdclassName="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500"
+                            thclassName="px-3.5 py-2.5 font-semibold border border-slate-200 dark:border-zinc-500"
+                            tdclassName="px-3.5 py-2.5 border border-slate-200 dark:border-zinc-500"
                             PaginationClassName="flex flex-col items-center mt-5 md:flex-row"
                         />
                         :
@@ -221,7 +221,7 @@ const Departments = () => {
                             <div className="py-6 text-center">
                                 <Search className="size-6 mx-auto text-sky-500 fill-sky-100 dark:sky-500/20" />
                                 <h5 className="mt-2 mb-1">Sorry! No Result Found</h5>
-                                <p className="mb-0 text-slate-500 dark:text-zink-200">We've searched more than 5+ Departments We did not find any Departments for you search.</p>
+                                <p className="mb-0 text-slate-500 dark:text-zinc-200">We've searched more than 5+ Departments We did not find any Departments for you search.</p>
                             </div>
                         </div>)}
                 </div>
@@ -231,8 +231,8 @@ const Departments = () => {
 
             <Modal show={show} onHide={toggle} modal-center="true"
                 className="fixed flex flex-col transition-all duration-300 ease-in-out left-2/4 z-drawer -translate-x-2/4 -translate-y-2/4"
-                dialogClassName="w-screen md:w-[30rem] bg-white shadow rounded-md dark:bg-zink-600">
-                <Modal.Header className="flex items-center justify-between p-4 border-b dark:border-zink-500"
+                dialogClassName="w-screen md:w-[30rem] bg-white shadow rounded-md dark:bg-zinc-600">
+                <Modal.Header className="flex items-center justify-between p-4 border-b dark:border-zinc-500"
                     closeButtonClass="transition-all duration-200 ease-linear text-slate-400 hover:text-red-500">
                     <Modal.Title className="text-16">{!!isEdit ? "Edit Department" : "Add Department"}</Modal.Title>
                 </Modal.Header>
@@ -245,7 +245,7 @@ const Departments = () => {
                         <div className="grid grid-cols-1 gap-4 xl:grid-cols-12">
                             <div className="xl:col-span-12">
                                 <label htmlFor="departmentInput" className="inline-block mb-2 text-base font-medium">Department Name</label>
-                                <input type="text" id="departmentInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Department name"
+                                <input type="text" id="departmentInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="Department name"
                                     name="departmentName"
                                     onChange={validation.handleChange}
                                     value={validation.values.departmentName || ""}
@@ -256,7 +256,7 @@ const Departments = () => {
                             </div>
                             <div className="xl:col-span-12">
                                 <label htmlFor="headOfInput" className="inline-block mb-2 text-base font-medium">Head of Dep. Name</label>
-                                <input type="text" id="headOfInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Head name"
+                                <input type="text" id="headOfInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="Head name"
                                     name="HOD"
                                     onChange={validation.handleChange}
                                     value={validation.values.HOD || ""}
@@ -267,7 +267,7 @@ const Departments = () => {
                             </div>
                             <div className="xl:col-span-12">
                                 <label htmlFor="phoneNumberInput" className="inline-block mb-2 text-base font-medium">Phone Number</label>
-                                <input type="text" id="phoneNumberInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="(012) 1234 562 3145"
+                                <input type="text" id="phoneNumberInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="(012) 1234 562 3145"
                                     name="phone"
                                     onChange={validation.handleChange}
                                     value={validation.values.phone || ""}
@@ -278,7 +278,7 @@ const Departments = () => {
                             </div>
                             <div className="xl:col-span-12">
                                 <label htmlFor="emailInput" className="inline-block mb-2 text-base font-medium">Email</label>
-                                <input type="email" id="emailInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter email"
+                                <input type="email" id="emailInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="Enter email"
                                     name="email"
                                     onChange={validation.handleChange}
                                     value={validation.values.email || ""}
@@ -289,7 +289,7 @@ const Departments = () => {
                             </div>
                             <div className="xl:col-span-12">
                                 <label htmlFor="employeeNumberInput" className="inline-block mb-2 text-base font-medium">Total Employee</label>
-                                <input type="text" id="employeeNumberInput" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="0"
+                                <input type="text" id="employeeNumberInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="0"
                                     name="employee"
                                     onChange={validation.handleChange}
                                     value={validation.values.employee || ""}
@@ -300,8 +300,8 @@ const Departments = () => {
                             </div>
                         </div>
                         <div className="flex justify-end gap-2 mt-4">
-                            <button type="reset" data-modal-close="addDepartmentModal" className="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100 focus:text-red-500 focus:bg-red-100 active:text-red-500 active:bg-red-100 dark:bg-zink-600 dark:hover:bg-red-500/10 dark:focus:bg-red-500/10 dark:active:bg-red-500/10" onClick={toggle}>Cancel</button>
-                            <button type="submit" className="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">
+                            <button type="reset" data-modal-close="addDepartmentModal" className="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100 focus:text-red-500 focus:bg-red-100 active:text-red-500 active:bg-red-100 dark:bg-zinc-600 dark:hover:bg-red-500/10 dark:focus:bg-red-500/10 dark:active:bg-red-500/10" onClick={toggle}>Cancel</button>
+                            <button type="submit" className="text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20">
                                 {!!isEdit ? "Update" : "Add Department"}
                             </button>
                         </div>

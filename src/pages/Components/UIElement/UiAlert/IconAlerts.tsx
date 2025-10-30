@@ -9,7 +9,7 @@ const IconAlerts = () => {
                     <h6 className="mb-4 text-15">Alerts with Icon</h6>
                     <div className="grid grid-cols-1 gap-5 xl:grid-cols-2">
                         <div className="flex flex-col gap-3">
-                            <Alert className="flex gap-1 px-4 py-3 text-sm border rounded-md md:items-center border-custom-200 text-custom-500 bg-custom-50 dark:bg-custom-400/20 dark:border-custom-500/50">
+                            <Alert className="flex gap-1 px-4 py-3 text-sm border rounded-md md:items-center border-fecustom-200 text-fecustom-500 bg-fecustom-50 dark:bg-fecustom-400/20 dark:border-fecustom-500/50">
                                 <Alert.Icon />
                                 <Alert.Bold>Custom</Alert.Bold> alert! You should check in on some of those fields below.
                             </Alert>
@@ -39,7 +39,7 @@ const IconAlerts = () => {
                                 <Alert.Icon />
                                 <Alert.Bold>Warning</Alert.Bold> alert! You should check in on some of those fields below.
                             </Alert>
-                            <Alert className="flex gap-1 px-4 py-3 text-sm border rounded-md md:items-center text-slate-500 border-slate-200 bg-slate-50 dark:bg-zink-500/30 dark:border-zink-500 dark:text-zink-200">
+                            <Alert className="flex gap-1 px-4 py-3 text-sm border rounded-md md:items-center text-slate-500 border-slate-200 bg-slate-50 dark:bg-zinc-500/30 dark:border-zinc-500 dark:text-zinc-200">
                                 <Alert.Icon />
                                 <Alert.Bold>Light</Alert.Bold> alert! You should check in on some of those fields below.
                             </Alert>

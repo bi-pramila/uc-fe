@@ -1,24 +1,16 @@
-/*
-Template Name: Tailwick - Admin & Dashboard Template
-Author: Themesdesign
-Version: 1.1.0
-Website: https://themesdesign.in/
-Contact: Themesdesign@gmail.com
-File: tailwind scss File
-*/
-
-@import "fonts/fonts";
-
+// assets/scss/tailwind.scss 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+@import "fonts/fonts";
 @import "plugins/gridjs";
 @import "plugins/select";
 @import "plugins/multi-select";
 
 
-
+// Animation or custom rules follow...
 .group\/menu-link:hover,
 .animate {
    animation-iteration-count: 2;

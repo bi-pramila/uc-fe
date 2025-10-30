@@ -21,55 +21,55 @@ const TwoStepsBoxed = () => {
 
     return (
         <React.Fragment>
-            <div className="flex items-center justify-center min-h-screen px-4 py-16 bg-cover bg-auth-pattern dark:bg-auth-pattern-dark dark:text-zink-100 font-public">
-                <div className="mb-0 border-none shadow-none xl:w-2/3 card bg-white/70 dark:bg-zink-500/70">
+            <div className="flex items-center justify-center min-h-screen px-4 py-16 bg-cover bg-auth-pattern dark:bg-auth-pattern-dark dark:text-zinc-100 font-public">
+                <div className="mb-0 border-none shadow-none xl:w-2/3 card bg-white/70 dark:bg-zinc-500/70">
                     <div className="grid grid-cols-1 gap-0 lg:grid-cols-12">
                         <div className="lg:col-span-5">
                             <div className="!px-12 !py-12 card-body h-full flex flex-col">
 
                                 <div className="my-auto">
                                     <div className="text-center">
-                                        <h4 className="mb-2 text-custom-500 dark:text-custom-500">Verify Email</h4>
-                                        <p className="mb-8 text-slate-500 dark:text-zink-200">Please enter the <b className="font-medium">4</b> digit code sent to <b className="font-medium">tailwick@themesdesign.com</b></p>
+                                        <h4 className="mb-2 text-fecustom-500 dark:text-fecustom-500">Verify Email</h4>
+                                        <p className="mb-8 text-slate-500 dark:text-zinc-200">Please enter the <b className="font-medium">4</b> digit code sent to <b className="font-medium">tailwick@themesdesign.com</b></p>
                                     </div>
 
                                     <form autoComplete="off" action="/">
                                         <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4">
                                             <div>
                                                 <label htmlFor="digit1-input" className="hidden">Digit 1</label>
-                                                <input type="text" className="text-lg text-center form-input dark:bg-zink-600/50 border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" required placeholder="0"
+                                                <input type="text" className="text-lg text-center form-input dark:bg-zinc-600/50 border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" required placeholder="0"
                                                     //  onkeyup="moveToNext(1, event)" maxlength="1" 
                                                     id="digit1-input" />
                                             </div>
                                             <div>
                                                 <label htmlFor="digit2-input" className="hidden">Digit 2</label>
-                                                <input type="text" className="text-lg text-center form-input dark:bg-zink-600/50 border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" required placeholder="0"
+                                                <input type="text" className="text-lg text-center form-input dark:bg-zinc-600/50 border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" required placeholder="0"
                                                     //  onkeyup="moveToNext(2, event)" maxlength="1" 
                                                     id="digit2-input" />
                                             </div>
 
                                             <div>
                                                 <label htmlFor="digit3-input" className="hidden">Digit 3</label>
-                                                <input type="text" className="text-lg text-center form-input dark:bg-zink-600/50 border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" required placeholder="0"
+                                                <input type="text" className="text-lg text-center form-input dark:bg-zinc-600/50 border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" required placeholder="0"
                                                     //  onkeyup="moveToNext(3, event)" maxlength="1" 
                                                     id="digit3-input" />
                                             </div>
 
                                             <div>
                                                 <label htmlFor="digit4-input" className="hidden">Digit 4</label>
-                                                <input type="text" className="text-lg text-center form-input dark:bg-zink-600/50 border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" required placeholder="0"
+                                                <input type="text" className="text-lg text-center form-input dark:bg-zinc-600/50 border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" required placeholder="0"
                                                     //  onkeyup="moveToNext(4, event)" maxlength="1" 
                                                     id="digit4-input" />
                                             </div>
                                         </div>
                                         <div className="mt-10">
-                                            <button type="submit" className="w-full text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Confirm</button>
+                                            <button type="submit" className="w-full text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20">Confirm</button>
                                         </div>
                                     </form>
                                 </div>
                             </div>
                         </div>
-                        <div className="mx-2 mt-2 mb-2 border-none shadow-none lg:col-span-7 card bg-white/60 dark:bg-zink-500/60">
+                        <div className="mx-2 mt-2 mb-2 border-none shadow-none lg:col-span-7 card bg-white/60 dark:bg-zinc-500/60">
                             <div className="!px-10 !pt-10 h-full !pb-0 card-body flex flex-col">
                                 <div className="flex items-center justify-between gap-3">
                                     <div className="grow">
@@ -80,43 +80,43 @@ const TwoStepsBoxed = () => {
                                     </div>
                                     <div className="shrink-0">
                                         <Dropdown className="relative text-end">
-                                            <Dropdown.Trigger type="button" className="inline-flex items-center gap-3 transition-all duration-200 ease-linear dropdown-toggle btn border-slate-200 dark:border-zink-400/60 group/items focus:border-custom-500 dark:focus:border-custom-500" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                                            <Dropdown.Trigger type="button" className="inline-flex items-center gap-3 transition-all duration-200 ease-linear dropdown-toggle btn border-slate-200 dark:border-zinc-400/60 group/items focus:border-fecustom-500 dark:focus:border-fecustom-500" id="dropdownMenuButton" data-bs-toggle="dropdown">
                                                 <img src={us} alt="" className="object-cover h-5 rounded-full" />
-                                                <h6 className="text-base font-medium transition-all duration-200 ease-linear text-slate-600 group-hover/items:text-custom-500 dark:text-zink-200 dark:group-hover/items:text-custom-500">English</h6>
+                                                <h6 className="text-base font-medium transition-all duration-200 ease-linear text-slate-600 group-hover/items:text-fecustom-500 dark:text-zinc-200 dark:group-hover/items:text-fecustom-500">English</h6>
                                             </Dropdown.Trigger>
 
-                                            <Dropdown.Content placement="right-end" className="absolute z-50 p-3 mt-1 text-left list-none bg-white rounded-md shadow-md dropdown-menu min-w-[9rem] flex flex-col gap-3 dark:bg-zink-600" aria-labelledby="dropdownMenuButton">
+                                            <Dropdown.Content placement="right-end" className="absolute z-50 p-3 mt-1 text-left list-none bg-white rounded-md shadow-md dropdown-menu min-w-[9rem] flex flex-col gap-3 dark:bg-zinc-600" aria-labelledby="dropdownMenuButton">
                                                 <a href="#!" className="flex items-center gap-3 group/items">
                                                     <img src={us} alt="" className="object-cover h-4 rounded-full" />
-                                                    <h6 className="text-sm font-medium transition-all duration-200 ease-linear text-slate-600 group-hover/items:text-custom-500 dark:text-zink-200 dark:group-hover/items:text-custom-500">English</h6>
+                                                    <h6 className="text-sm font-medium transition-all duration-200 ease-linear text-slate-600 group-hover/items:text-fecustom-500 dark:text-zinc-200 dark:group-hover/items:text-fecustom-500">English</h6>
                                                 </a>
                                                 <a href="#!" className="flex items-center gap-3 group/items">
                                                     <img src={es} alt="" className="object-cover h-4 rounded-full" />
-                                                    <h6 className="text-sm font-medium transition-all duration-200 ease-linear text-slate-600 group-hover/items:text-custom-500 dark:text-zink-200 dark:group-hover/items:text-custom-500">Spanish</h6>
+                                                    <h6 className="text-sm font-medium transition-all duration-200 ease-linear text-slate-600 group-hover/items:text-fecustom-500 dark:text-zinc-200 dark:group-hover/items:text-fecustom-500">Spanish</h6>
                                                 </a>
                                                 <a href="#!" className="flex items-center gap-3 group/items">
                                                     <img src={de} alt="" className="object-cover h-4 rounded-full" />
-                                                    <h6 className="text-sm font-medium transition-all duration-200 ease-linear text-slate-600 group-hover/items:text-custom-500 dark:text-zink-200 dark:group-hover/items:text-custom-500">German</h6>
+                                                    <h6 className="text-sm font-medium transition-all duration-200 ease-linear text-slate-600 group-hover/items:text-fecustom-500 dark:text-zinc-200 dark:group-hover/items:text-fecustom-500">German</h6>
                                                 </a>
                                                 <a href="#!" className="flex items-center gap-3 group/items">
                                                     <img src={fr} alt="" className="object-cover h-4 rounded-full" />
-                                                    <h6 className="text-sm font-medium transition-all duration-200 ease-linear text-slate-600 group-hover/items:text-custom-500 dark:text-zink-200 dark:group-hover/items:text-custom-500">French</h6>
+                                                    <h6 className="text-sm font-medium transition-all duration-200 ease-linear text-slate-600 group-hover/items:text-fecustom-500 dark:text-zinc-200 dark:group-hover/items:text-fecustom-500">French</h6>
                                                 </a>
                                                 <a href="#!" className="flex items-center gap-3 group/items">
                                                     <img src={jp} alt="" className="object-cover h-4 rounded-full" />
-                                                    <h6 className="text-sm font-medium transition-all duration-200 ease-linear text-slate-600 group-hover/items:text-custom-500 dark:text-zink-200 dark:group-hover/items:text-custom-500">Japanese</h6>
+                                                    <h6 className="text-sm font-medium transition-all duration-200 ease-linear text-slate-600 group-hover/items:text-fecustom-500 dark:text-zinc-200 dark:group-hover/items:text-fecustom-500">Japanese</h6>
                                                 </a>
                                                 <a href="#!" className="flex items-center gap-3 group/items">
                                                     <img src={it} alt="" className="object-cover h-4 rounded-full" />
-                                                    <h6 className="text-sm font-medium transition-all duration-200 ease-linear text-slate-600 group-hover/items:text-custom-500 dark:text-zink-200 dark:group-hover/items:text-custom-500">Italian</h6>
+                                                    <h6 className="text-sm font-medium transition-all duration-200 ease-linear text-slate-600 group-hover/items:text-fecustom-500 dark:text-zinc-200 dark:group-hover/items:text-fecustom-500">Italian</h6>
                                                 </a>
                                                 <a href="#!" className="flex items-center gap-3 group/items">
                                                     <img src={ru} alt="" className="object-cover h-4 rounded-full" />
-                                                    <h6 className="text-sm font-medium transition-all duration-200 ease-linear text-slate-600 group-hover/items:text-custom-500 dark:text-zink-200 dark:group-hover/items:text-custom-500">Russian</h6>
+                                                    <h6 className="text-sm font-medium transition-all duration-200 ease-linear text-slate-600 group-hover/items:text-fecustom-500 dark:text-zinc-200 dark:group-hover/items:text-fecustom-500">Russian</h6>
                                                 </a>
                                                 <a href="#!" className="flex items-center gap-3 group/items">
                                                     <img src={ae} alt="" className="object-cover h-4 rounded-full" />
-                                                    <h6 className="text-sm font-medium transition-all duration-200 ease-linear text-slate-600 group-hover/items:text-custom-500 dark:text-zink-200 dark:group-hover/items:text-custom-500">Arabic</h6>
+                                                    <h6 className="text-sm font-medium transition-all duration-200 ease-linear text-slate-600 group-hover/items:text-fecustom-500 dark:text-zinc-200 dark:group-hover/items:text-fecustom-500">Arabic</h6>
                                                 </a>
                                             </Dropdown.Content>
                                         </Dropdown>

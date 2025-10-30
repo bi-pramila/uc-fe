@@ -16,14 +16,14 @@ const AboutUs = () => {
                 <div className="container 2xl:max-w-[87.5rem] px-4 mx-auto">
                     <div className="mx-auto text-center xl:max-w-3xl">
                         <h1 className="mb-6 leading-normal capitalize">Why Developers Should Embrace <span className="relative inline-block px-2 mx-2 before:block before:absolute before:-inset-1 before:-skew-y-6 before:bg-sky-50 dark:before:bg-sky-500/20 before:rounded-md before:backdrop-blur-xl"><span className="relative text-sky-500">Tailwick</span></span></h1>
-                        <p className="text-lg text-slate-500 dark:text-zink-200">The purpose of developer communities is to provide the resources for developers to learn anything they want to.</p>
+                        <p className="text-lg text-slate-500 dark:text-zinc-200">The purpose of developer communities is to provide the resources for developers to learn anything they want to.</p>
                     </div>
 
                     <div className="grid items-center grid-cols-1 gap-6 mt-20 lg:grid-cols-12">
                         <div className="lg:col-span-5">
                             <h1 className="mb-3 leading-normal capitalize">Craft a Complete Website Quickly with the Help of Design Blocks</h1>
-                            <p className="mb-6 text-lg text-slate-500 dark:text-zink-200">The block design approach basically breaks the design into small parts. These are built independently and then later combine into a customizable page which makes a website more flexible in terms of layout and content.</p>
-                            <button type="button" className="py-2.5 px-6 bg-white text-custom-500 btn border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:bg-zink-700 dark:hover:bg-custom-500 dark:ring-custom-400/20 dark:focus:bg-custom-500">
+                            <p className="mb-6 text-lg text-slate-500 dark:text-zinc-200">The block design approach basically breaks the design into small parts. These are built independently and then later combine into a customizable page which makes a website more flexible in terms of layout and content.</p>
+                            <button type="button" className="py-2.5 px-6 bg-white text-fecustom-500 btn border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:bg-zinc-700 dark:hover:bg-fecustom-500 dark:ring-fecustom-400/20 dark:focus:bg-fecustom-500">
                                 <span className="align-middle">Discover Now</span> <MoveRight className="inline-block size-4 align-middle ltr:ml-1 rtl:mr-1 rtl:rotate-180"></MoveRight></button>
                         </div>
                         <div className="text-center lg:col-span-6">
@@ -39,8 +39,8 @@ const AboutUs = () => {
                         </div>
                         <div className="lg:col-span-5">
                             <h1 className="mb-3 leading-normal capitalize">Boost Your Business Using Our Potent Tools</h1>
-                            <p className="mb-6 text-lg text-slate-500 dark:text-zink-200">The block design approach basically breaks the design into small parts. These are built independently and then later combine into a customizable page which makes a website more flexible in terms of layout and content.</p>
-                            <button type="button" className="py-2.5 px-6 bg-white text-custom-500 btn border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:bg-zink-700 dark:hover:bg-custom-500 dark:ring-custom-400/20 dark:focus:bg-custom-500">
+                            <p className="mb-6 text-lg text-slate-500 dark:text-zinc-200">The block design approach basically breaks the design into small parts. These are built independently and then later combine into a customizable page which makes a website more flexible in terms of layout and content.</p>
+                            <button type="button" className="py-2.5 px-6 bg-white text-fecustom-500 btn border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:bg-zinc-700 dark:hover:bg-fecustom-500 dark:ring-fecustom-400/20 dark:focus:bg-fecustom-500">
                                 <span className="align-middle">Discover Now</span> <MoveRight className="inline-block size-4 align-middle ltr:ml-1 rtl:mr-1 rtl:rotate-180"></MoveRight></button>
                         </div>
                     </div>
@@ -48,13 +48,13 @@ const AboutUs = () => {
                     <div className="grid items-center grid-cols-1 gap-5 mt-32 lg:grid-cols-12">
                         <div className="lg:col-span-5">
                             <h1 className="mb-3 leading-normal capitalize">Building a User-Friendly Website is Effortless</h1>
-                            <p className="mb-4 text-lg text-slate-500 dark:text-zink-200">With a user-friendly interface and easy navigation, the user decreases search time and increases satisfaction, fulfilling his needs in a fast and efficient way.</p>
+                            <p className="mb-4 text-lg text-slate-500 dark:text-zinc-200">With a user-friendly interface and easy navigation, the user decreases search time and increases satisfaction, fulfilling his needs in a fast and efficient way.</p>
                             <ul className="flex flex-col gap-3 mb-6 text-lg list-disc list-inside">
                                 <li>6+ Ready touse Dashboard</li>
                                 <li>Light, Dark & RTL Mode Support</li>
                                 <li>Multiple Layouts Support</li>
                             </ul>
-                            <button type="button" className="py-2.5 px-6 bg-white text-custom-500 btn border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:bg-zink-700 dark:hover:bg-custom-500 dark:ring-custom-400/20 dark:focus:bg-custom-500">
+                            <button type="button" className="py-2.5 px-6 bg-white text-fecustom-500 btn border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:bg-zinc-700 dark:hover:bg-fecustom-500 dark:ring-fecustom-400/20 dark:focus:bg-fecustom-500">
                                 <span className="align-middle">Discover Now</span> <MoveRight className="inline-block size-4 align-middle ltr:ml-1 rtl:mr-1 rtl:rotate-180"></MoveRight></button>
                         </div>
                         <div className="text-center lg:col-span-6">

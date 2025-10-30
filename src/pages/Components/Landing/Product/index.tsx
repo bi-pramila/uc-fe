@@ -45,14 +45,14 @@ const Product = () => {
             "bg-white",
             "text-body",
             "font-public",
-            "dark:text-zink-50",
-            "dark:bg-zink-800"
+            "dark:text-zinc-50",
+            "dark:bg-zinc-800"
         );
     }, []);
 
     return (
         <React.Fragment>
-            <div className="text-base bg-white text-body font-public dark:text-zink-50 dark:bg-zinc-900">
+            <div className="text-base bg-white text-body font-public dark:text-zinc-50 dark:bg-zinc-900">
                 <Navbar />
                 <Home />
                 <OurProduct />

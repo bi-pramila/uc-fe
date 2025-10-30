@@ -77,7 +77,7 @@ const RotatedLabels = ({ chartId }: any) => {
                 dir="ltr"
                 options={options}
                 series={series || []}
-                data-chart-colors='["bg-red-500", "bg-custom-500"]' 
+                data-chart-colors='["bg-red-500", "bg-fecustom-500"]' 
                 id={chartId}
                 className="apex-charts"
                 type='bar'

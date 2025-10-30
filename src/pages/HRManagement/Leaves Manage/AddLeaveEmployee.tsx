@@ -33,7 +33,7 @@ const AddLeaveEmployee = () => {
                                         <div>
                                             <label htmlFor="leaveType" className="inline-block mb-2 text-base font-medium">Leave Type</label>
                                             <Select
-                                                className="border-slate-200 focus:outline-none focus:border-custom-500"
+                                                className="border-slate-200 focus:outline-none focus:border-fecustom-500"
                                                 options={leaveOptions}
                                                 isSearchable={false}
                                                 placeholder="Select Leave Type"
@@ -43,14 +43,14 @@ const AddLeaveEmployee = () => {
                                     <div className="xl:col-span-6">
                                         <div>
                                             <label htmlFor="remainingLeaves" className="inline-block mb-2 text-base font-medium">Remaining Leaves</label>
-                                            <input type="text" id="remainingLeaves" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" value="18" disabled />
+                                            <input type="text" id="remainingLeaves" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" value="18" disabled />
                                         </div>
                                     </div>
                                     <div className="xl:col-span-6">
                                         <label htmlFor="fromInput" className="inline-block mb-2 text-base font-medium">Form</label>
                                         <Flatpickr
                                             id="fromInput"
-                                            className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200"
+                                            className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200"
                                             options={{
                                                 dateFormat: "d M, Y"
                                             }}
@@ -61,7 +61,7 @@ const AddLeaveEmployee = () => {
                                         <label htmlFor="toInput" className="inline-block mb-2 text-base font-medium">To</label>
                                         <Flatpickr
                                             id="toInput"
-                                            className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200"
+                                            className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200"
                                             options={{
                                                 dateFormat: "d M, Y"
                                             }}
@@ -71,13 +71,13 @@ const AddLeaveEmployee = () => {
                                     <div className="xl:col-span-6">
                                         <div>
                                             <label htmlFor="numberOfDayLeaves" className="inline-block mb-2 text-base font-medium">Number of Days</label>
-                                            <input type="text" id="numberOfDayLeaves" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" value="01" disabled />
+                                            <input type="text" id="numberOfDayLeaves" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" value="01" disabled />
                                         </div>
                                     </div>
                                     <div className="xl:col-span-6">
                                         <label htmlFor="leaveDayInput" className="inline-block mb-2 text-base font-medium">Leave Day</label>
                                         <Select
-                                            className="border-slate-200 focus:outline-none focus:border-custom-500"
+                                            className="border-slate-200 focus:outline-none focus:border-fecustom-500"
                                             options={leaveDayOptions}
                                             isSearchable={false}
                                             placeholder="Select Leave Day"
@@ -88,13 +88,13 @@ const AddLeaveEmployee = () => {
                                     <div className="md:col-span-2 xl:col-span-12">
                                         <div>
                                             <label htmlFor="reasonInput" className="inline-block mb-2 text-base font-medium">Reason</label>
-                                            <textarea className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" id="reasonInput" rows={3}></textarea>
+                                            <textarea className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" id="reasonInput" rows={3}></textarea>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="flex justify-end gap-2 mt-4">
-                                    <button type="reset" className="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100 focus:text-red-500 focus:bg-red-100 active:text-red-500 active:bg-red-100 dark:bg-zink-700 dark:hover:bg-red-500/10 dark:focus:bg-red-500/10 dark:active:bg-red-500/10">Reset</button>
-                                    <button type="button" className="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Apply Leave</button>
+                                    <button type="reset" className="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100 focus:text-red-500 focus:bg-red-100 active:text-red-500 active:bg-red-100 dark:bg-zinc-700 dark:hover:bg-red-500/10 dark:focus:bg-red-500/10 dark:active:bg-red-500/10">Reset</button>
+                                    <button type="button" className="text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20">Apply Leave</button>
                                 </div>
                             </form>
                         </div>

@@ -58,7 +58,7 @@ const BasicFunnel = ({ chartId }: any) => {
                 dir="ltr"
                 options={options}
                 series={series || []}
-                data-chart-colors='["bg-custom-500"]'
+                data-chart-colors='["bg-fecustom-500"]'
                 id={chartId}
                 className="apex-charts"
                 type='bar'
@@ -116,7 +116,7 @@ const PyramidFunnel = ({ chartId }: any) => {
                 dir="ltr"
                 options={options}
                 series={series || []}
-                data-chart-colors='["bg-custom-500", "bg-custom-400", "bg-custom-300", "bg-custom-200", "bg-purple-200", "bg-purple-300", "bg-purple-400", "bg-purple-500"]'
+                data-chart-colors='["bg-fecustom-500", "bg-fecustom-400", "bg-fecustom-300", "bg-fecustom-200", "bg-purple-200", "bg-purple-300", "bg-purple-400", "bg-purple-500"]'
                 id={chartId}
                 className="apex-charts"
                 type='bar'

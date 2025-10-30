@@ -1,54 +1,55 @@
+
 //
 // _gridjs.scss
 //
 
 .gridjs-container {
-    @apply text-slate-800 dark:text-zink-50;
+    @apply text-slate-800 dark:text-zinc-50;
 
 }
 
 .gridjs-footer {
     border-left: 1px solid;
     border-right: 1px solid;
-    @apply border-slate-200 bg-white shadow-none dark:border-zink-500 dark:bg-zink-700;
+    @apply border-slate-200 bg-white shadow-none dark:border-zinc-500 dark:bg-zinc-700;
 }
 
 input.gridjs-input {
-    @apply border-slate-200 bg-white dark:border-zink-500 dark:bg-zink-700;
+    @apply border-slate-200 bg-white dark:border-zinc-500 dark:bg-zinc-700;
 
     &:focus {
-        @apply shadow-none border-custom-500;
+        @apply shadow-none border border-fecustom-500;
     }
 }
 
 .gridjs-pagination {
-    @apply text-custom-600;
+    @apply text-fecustom-600;
 
     .gridjs-pages {
         button {
-            @apply border-slate-200 bg-white dark:border-zink-500 dark:bg-zink-700;
+            @apply border-slate-200 bg-white dark:border-zinc-500 dark:bg-zinc-700;
 
             &:focus {
-                @apply shadow-md border-r border-slate-200 dark:border-zink-500;
+                @apply shadow-md border-r border-slate-200 dark:border-zinc-500;
             }
 
             &:hover {
-                @apply text-slate-600 bg-slate-50 dark:bg-zink-600 dark:text-zink-100;
+                @apply text-slate-600 bg-slate-50 dark:bg-zinc-600 dark:text-zinc-100;
             }
 
             &:disabled,
             &[disabled],
             &:hover:disabled {
-                @apply text-slate-400 bg-white dark:bg-zink-700 dark:text-zink-200;
+                @apply text-slate-400 bg-white dark:bg-zinc-700 dark:text-zinc-200;
             }
 
             &.gridjs-spread,
             &.gridjs-currentPage {
-                @apply bg-white dark:bg-zink-700;
+                @apply bg-white dark:bg-zinc-700;
             }
 
             &:last-child {
-                @apply border-r border-slate-200 dark:border-zink-500;
+                @apply border-r border-slate-200 dark:border-zinc-500;
 
             }
         }
@@ -56,25 +57,25 @@ input.gridjs-input {
 }
 
 .gridjs-tbody {
-    @apply bg-white dark:bg-zink-700;
+    @apply bg-white dark:bg-zinc-700;
 }
 
 td {
     &.gridjs-td {
-        @apply border-slate-200 bg-transparent dark:border-zink-500;
+        @apply border-slate-200 bg-transparent dark:border-zinc-500;
     }
 }
 
 th {
     &.gridjs-th {
-        @apply text-slate-600 bg-slate-50 border-slate-200 dark:border-zink-500 dark:text-zink-100 dark:bg-zink-600;
+        @apply text-slate-600 bg-slate-50 border-slate-200 dark:border-zinc-500 dark:text-zinc-100 dark:bg-zinc-600;
     }
 
     &.gridjs-th-sort {
 
         &:hover,
         &:focus {
-            @apply bg-slate-200 dark:bg-zink-600;
+            @apply bg-slate-200 dark:bg-zinc-600;
         }
     }
 
@@ -83,20 +84,22 @@ th {
     }
 }
 
+@reference "tailwindcss";
+
 .gridjs-tr-selected {
-    @apply bg-slate-200 dark:bg-zink-600;
+    @apply bg-slate-200 dark:bg-zinc-600;
 }
 
 th.gridjs-th:first-child, td.gridjs-td:first-child{
     border-left: 1px solid;
-    @apply border-slate-200 dark:border-zink-500;
+    @apply border-slate-200 dark:border-zinc-500;
 }
 
 th.gridjs-th:last-child, td.gridjs-td:last-child {
     border-right: 1px solid;
-    @apply border-slate-200 dark:border-zink-500;
+    @apply border-slate-200 dark:border-zinc-500;
 }
 
 .gridjs-wrapper {
-    @apply border-slate-200 shadow-none dark:border-zink-500;
+    @apply border-slate-200 shadow-none dark:border-zinc-500;
 }

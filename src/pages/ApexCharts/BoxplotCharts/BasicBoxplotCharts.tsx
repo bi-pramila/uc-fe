@@ -62,7 +62,7 @@ const BasicBoxplotCharts = ({ chartId }: any) => {
                 dir="ltr"
                 options={options}
                 series={series || []}
-                data-chart-colors='["bg-custom-500", "bg-slate-100"]'
+                data-chart-colors='["bg-fecustom-500", "bg-slate-100"]'
                 id={chartId}
                 className="apex-charts"
                 type='boxPlot'

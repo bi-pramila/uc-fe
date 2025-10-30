@@ -70,10 +70,10 @@ const CartDrawer = ({ show, handleDrawer }: any) => {
 
     return (
         <React.Fragment>
-            <Drawer show={show} onHide={handleDrawer} id="cartSidePenal" drawer-end="true" className="fixed inset-y-0 flex flex-col w-full transition-transform duration-300 ease-in-out transform bg-white shadow dark:bg-zink-600 ltr:right-0 rtl:left-0 md:w-96 z-drawer">
-                <div className="flex items-center justify-between p-4 border-b border-slate-200 dark:border-zink-500">
+            <Drawer show={show} onHide={handleDrawer} id="cartSidePenal" drawer-end="true" className="fixed inset-y-0 flex flex-col w-full transition-transform duration-300 ease-in-out transform bg-white shadow dark:bg-zinc-600 ltr:right-0 rtl:left-0 md:w-96 z-drawer">
+                <div className="flex items-center justify-between p-4 border-b border-slate-200 dark:border-zinc-500">
                     <div className="grow">
-                        <h5 className="mb-0 text-16">Shopping Cart <span className="inline-flex items-center justify-center size-5 ml-1 text-[11px] font-medium border rounded-full text-white bg-custom-500 border-custom-500">3</span></h5>
+                        <h5 className="mb-0 text-16">Shopping Cart <span className="inline-flex items-center justify-center size-5 ml-1 text-[11px] font-medium border rounded-full text-white bg-fecustom-500 border-fecustom-500">3</span></h5>
                     </div>
                     <div className="shrink-0">
                         <Drawer.Header data-drawer-close="cartSidePenal" className="transition-all duration-150 ease-linear text-slate-500 hover:text-slate-800">
@@ -90,31 +90,31 @@ const CartDrawer = ({ show, handleDrawer }: any) => {
                             {
                                 (cart || [])?.map((item: AddToCard, index: number) => (
                                     <div key={index} className="flex gap-2 product" id={`product${item.id}`}>
-                                        <div className="flex items-center justify-center size-12 rounded-md bg-slate-100 shrink-0 dark:bg-zink-500">
+                                        <div className="flex items-center justify-center size-12 rounded-md bg-slate-100 shrink-0 dark:bg-zinc-500">
                                             <img src={item.img} alt="" className="h-8" />
                                         </div>
                                         <div className="overflow-hidden grow">
                                             <div className="ltr:float-right rtl:float-left">
-                                                <button className="transition-all duration-150 ease-linear text-slate-500 dark:text-zink-200 hover:text-red-500 dark:hover:text-red-500"
+                                                <button className="transition-all duration-150 ease-linear text-slate-500 dark:text-zinc-200 hover:text-red-500 dark:hover:text-red-500"
                                                     onClick={() => removeItem(item.id)}>
                                                     <X className="size-4"></X>
                                                 </button>
                                             </div>
-                                            <a href="#!" className="transition-all duration-200 ease-linear hover:text-custom-500">
+                                            <a href="#!" className="transition-all duration-200 ease-linear hover:text-fecustom-500">
                                                 <h6 className="mb-1 text-15">{item.title}</h6>
                                             </a>
                                             <div className="flex items-center mb-3">
                                                 <h5 className="text-base product-price"> $<span>{(item.price).toFixed(2)}</span></h5>
-                                                <div className={`font-normal rtl:mr-1 ltr:ml-1 dark:text-zink-200 ${index === addToCard.length - 3 ? "text-slate-500" : "text-slate-400"}`}>({item.name})</div>
+                                                <div className={`font-normal rtl:mr-1 ltr:ml-1 dark:text-zinc-200 ${index === addToCard.length - 3 ? "text-slate-500" : "text-slate-400"}`}>({item.name})</div>
                                             </div>
                                             <div className="flex items-center justify-between gap-3">
                                                 <div className="inline-flex text-center input-step">
-                                                    <button type="button" className="border size-9 leading-[15px] minus bg-white dark:bg-zink-700 dark:border-zink-500 ltr:rounded-l rtl:rounded-r transition-all duration-200 ease-linear border-slate-200 text-slate-500 dark:text-zink-200 hover:bg-custom-500 dark:hover:bg-custom-500 hover:text-custom-50 dark:hover:text-custom-50 hover:border-custom-500 dark:hover:border-custom-500 focus:bg-custom-500 dark:focus:bg-custom-500 focus:border-custom-500 dark:focus:border-custom-500 focus:text-custom-50 dark:focus:text-custom-50"
+                                                    <button type="button" className="border size-9 leading-[15px] minus bg-white dark:bg-zinc-700 dark:border-zinc-500 ltr:rounded-l rtl:rounded-r transition-all duration-200 ease-linear border-slate-200 text-slate-500 dark:text-zinc-200 hover:bg-fecustom-500 dark:hover:bg-fecustom-500 hover:text-fecustom-50 dark:hover:text-fecustom-50 hover:border-fecustom-500 dark:hover:border-fecustom-500 focus:bg-fecustom-500 dark:focus:bg-fecustom-500 focus:border-fecustom-500 dark:focus:border-fecustom-500 focus:text-fecustom-50 dark:focus:text-fecustom-50"
                                                         onClick={() => countDown(item.id, item.initialValue, item.price)}>
                                                         <Minus className="inline-block size-4"></Minus>
                                                     </button>
-                                                    <input type="number" className="w-12 text-center h-9 border-y product-quantity dark:bg-zink-700 focus:shadow-none dark:border-zink-500" value={item.initialValue.toString()} min="0" max="100" readOnly />
-                                                    <button type="button" className="transition-all duration-200 ease-linear bg-white border dark:bg-zink-700 dark:border-zink-500 ltr:rounded-r rtl:rounded-l size-9 border-slate-200 plus text-slate-500 dark:text-zink-200 hover:bg-custom-500 dark:hover:bg-custom-500 hover:text-custom-50 dark:hover:text-custom-50 hover:border-custom-500 dark:hover:border-custom-500 focus:bg-custom-500 dark:focus:bg-custom-500 focus:border-custom-500 dark:focus:border-custom-500 focus:text-custom-50 dark:focus:text-custom-50"
+                                                    <input type="number" className="w-12 text-center h-9 border-y product-quantity dark:bg-zinc-700 focus:shadow-none dark:border-zinc-500" value={item.initialValue.toString()} min="0" max="100" readOnly />
+                                                    <button type="button" className="transition-all duration-200 ease-linear bg-white border dark:bg-zinc-700 dark:border-zinc-500 ltr:rounded-r rtl:rounded-l size-9 border-slate-200 plus text-slate-500 dark:text-zinc-200 hover:bg-fecustom-500 dark:hover:bg-fecustom-500 hover:text-fecustom-50 dark:hover:text-fecustom-50 hover:border-fecustom-500 dark:hover:border-fecustom-500 focus:bg-fecustom-500 dark:focus:bg-fecustom-500 focus:border-fecustom-500 dark:focus:border-fecustom-500 focus:text-fecustom-50 dark:focus:text-fecustom-50"
                                                         onClick={() => countUP(item.id, item.initialValue, item.price)}>
                                                         <Plus className="inline-block size-4"></Plus>
                                                     </button>
@@ -127,7 +127,7 @@ const CartDrawer = ({ show, handleDrawer }: any) => {
                             }
                         </div>
                     </div>
-                    <div className="p-4 border-t border-slate-200 dark:border-zink-500">
+                    <div className="p-4 border-t border-slate-200 dark:border-zinc-500">
 
                         <table className="w-full mb-3 ">
                             <tbody className="table-total">
@@ -155,7 +155,7 @@ const CartDrawer = ({ show, handleDrawer }: any) => {
                         </table>
                         <div className="flex items-center justify-between gap-3">
                             <Link to="/apps-ecommerce-product-grid" className="w-full text-white btn bg-slate-500 border-slate-500 hover:text-white hover:bg-slate-600 hover:border-slate-600 focus:text-white focus:bg-slate-600 focus:border-slate-600 focus:ring focus:ring-slate-100 active:text-white active:bg-slate-600 active:border-slate-600 active:ring active:ring-slate-100 dark:ring-slate-400/10">Continue Shopping</Link>
-                            <Link to="/apps-ecommerce-checkout" className="w-full text-white bg-red-500 border-red-500 btn hover:text-white hover:bg-red-600 hover:border-red-600 focus:text-white focus:bg-red-600 focus:border-red-600 focus:ring focus:ring-red-100 active:text-white active:bg-red-600 active:border-red-600 active:ring active:ring-red-100 dark:ring-custom-400/20">Checkout</Link>
+                            <Link to="/apps-ecommerce-checkout" className="w-full text-white bg-red-500 border-red-500 btn hover:text-white hover:bg-red-600 hover:border-red-600 focus:text-white focus:bg-red-600 focus:border-red-600 focus:ring focus:ring-red-100 active:text-white active:bg-red-600 active:border-red-600 active:ring active:ring-red-100 dark:ring-fecustom-400/20">Checkout</Link>
                         </div>
                     </div>
                 </div>

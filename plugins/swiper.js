@@ -1,11 +1,13 @@
-const plugin = require('tailwindcss/plugin')
+const plugin = require('tailwindcss/plugin');
 
-module.exports = plugin(function ({ addComponents, theme }) {
+const swiperPlugin = plugin(function ({ addComponents, theme }) {
     addComponents({
         '.swiper-pagination-bullets': {
             '.swiper-pagination-bullet': {
-                '@apply bg-custom-500 size-4 border-4 dark:border-zinc-900 outline outline-1 outline-custom-500': {},
+                '@apply bg-fecustom-500 size-4 border-4 dark:border-zinc-900 outline outline-1 outline-fecustom-500': {},
             }
         },
     })
-})
+});
+
+module.exports = swiperPlugin;

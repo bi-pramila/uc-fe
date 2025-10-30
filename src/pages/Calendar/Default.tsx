@@ -281,7 +281,7 @@ const DefaultCalendar = () => {
                                 ))}
                                 <div>
                                     <label htmlFor="locale-select" className="inline-block mb-2 text-base font-medium">Locale:</label>
-                                    <select id="locale-select" className="form-select border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" onChange={(e) => changeLanguage(e)}>
+                                    <select id="locale-select" className="form-select border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" onChange={(e) => changeLanguage(e)}>
                                         <option value="en">English</option>
                                         <option value="es">Español</option>
                                         <option value="fr">Français</option>
@@ -290,20 +290,20 @@ const DefaultCalendar = () => {
                                     </select>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <input id='drop-remove' className="size-4 cursor-pointer bg-white border border-slate-200 checked:bg-none dark:bg-zink-700 dark:border-zink-500 rounded-sm appearance-none arrow-none relative after:absolute after:content-['\eb7b'] after:top-0 after:left-0 after:font-remix after:leading-none after:opacity-0 checked:after:opacity-100 after:text-custom-500 checked:border-custom-500 dark:after:text-custom-500 dark:checked:border-custom-800" type="checkbox" onChange={(e) => toggleDrop(e)} checked={toggledrop} />
+                                    <input id='drop-remove' className="size-4 cursor-pointer bg-white border border-slate-200 checked:bg-none dark:bg-zinc-700 dark:border-zinc-500 rounded-sm appearance-none arrow-none relative after:absolute after:content-['\eb7b'] after:top-0 after:left-0 after:font-remix after:leading-none after:opacity-0 checked:after:opacity-100 after:text-fecustom-500 checked:border-fecustom-500 dark:after:text-fecustom-500 dark:checked:border-fecustom-800" type="checkbox" onChange={(e) => toggleDrop(e)} checked={toggledrop} />
                                     <label htmlFor="drop-remove" className="align-middle cursor-pointer">
                                         Remove after drop
                                     </label>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <input id='businessCalendar' className="size-4 cursor-pointer bg-white border border-slate-200 checked:bg-none dark:bg-zink-700 dark:border-zink-500 rounded-sm appearance-none arrow-none relative after:absolute after:content-['\eb7b'] after:top-0 after:left-0 after:font-remix after:leading-none after:opacity-0 checked:after:opacity-100 after:text-custom-500 checked:border-custom-500 dark:after:text-custom-500 dark:checked:border-custom-800" type="checkbox" onChange={(e) => toggleBusinessHours(e)} checked={togglebusinesshours} />
+                                    <input id='businessCalendar' className="size-4 cursor-pointer bg-white border border-slate-200 checked:bg-none dark:bg-zinc-700 dark:border-zinc-500 rounded-sm appearance-none arrow-none relative after:absolute after:content-['\eb7b'] after:top-0 after:left-0 after:font-remix after:leading-none after:opacity-0 checked:after:opacity-100 after:text-fecustom-500 checked:border-fecustom-500 dark:after:text-fecustom-500 dark:checked:border-fecustom-800" type="checkbox" onChange={(e) => toggleBusinessHours(e)} checked={togglebusinesshours} />
                                     <label htmlFor="businessCalendar" className="align-middle cursor-pointer">
                                         Business Hours & Week
                                     </label>
                                 </div>
 
                                 <div className="flex items-center gap-2">
-                                    <input id='weekNumberCalendar' className="size-4 cursor-pointer bg-white border border-slate-200 checked:bg-none dark:bg-zink-700 dark:border-zink-500 rounded-sm appearance-none arrow-none relative after:absolute after:content-['\eb7b'] after:top-0 after:left-0 after:font-remix after:leading-none after:opacity-0 checked:after:opacity-100 after:text-custom-500 checked:border-custom-500 dark:after:text-custom-500 dark:checked:border-custom-800" type="checkbox" onChange={(e) => toggleWeekNumber(e)} checked={toggleweek} />
+                                    <input id='weekNumberCalendar' className="size-4 cursor-pointer bg-white border border-slate-200 checked:bg-none dark:bg-zinc-700 dark:border-zinc-500 rounded-sm appearance-none arrow-none relative after:absolute after:content-['\eb7b'] after:top-0 after:left-0 after:font-remix after:leading-none after:opacity-0 checked:after:opacity-100 after:text-fecustom-500 checked:border-fecustom-500 dark:after:text-fecustom-500 dark:checked:border-fecustom-800" type="checkbox" onChange={(e) => toggleWeekNumber(e)} checked={toggleweek} />
                                     <label htmlFor="weekNumberCalendar" className="align-middle cursor-pointer">
                                         Week Number
                                     </label>
@@ -318,8 +318,8 @@ const DefaultCalendar = () => {
 
             <Modal show={show} onHide={toggle} modal-center="true"
                 className="fixed flex flex-col transition-all duration-300 ease-in-out left-2/4 z-drawer -translate-x-2/4 -translate-y-2/4"
-                dialogClassName="w-screen md:w-[30rem] bg-white shadow rounded-md dark:bg-zink-600">
-                <Modal.Header className="flex items-center justify-between p-4 border-b dark:border-zink-500"
+                dialogClassName="w-screen md:w-[30rem] bg-white shadow rounded-md dark:bg-zinc-600">
+                <Modal.Header className="flex items-center justify-between p-4 border-b dark:border-zinc-500"
                     closeButtonClass="transition-all duration-200 ease-linear text-slate-400 hover:text-red-500">
                     <Modal.Title className="text-16">{!!isEdit ? "Edit Event" : "Add Event"}</Modal.Title>
                 </Modal.Header>
@@ -332,7 +332,7 @@ const DefaultCalendar = () => {
                         <div className="grid grid-cols-1 gap-4 xl:grid-cols-12">
                             <div className="xl:col-span-12">
                                 <label htmlFor="event-title" className="inline-block mb-2 text-base font-medium">Event Name</label>
-                                <input type="text" id="event-title" className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Event name"
+                                <input type="text" id="event-title" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" placeholder="Event name"
                                     name="title"
                                     onChange={validation.handleChange}
                                     value={validation.values.title || ""}
@@ -343,13 +343,13 @@ const DefaultCalendar = () => {
                             </div>
                             <div className="xl:col-span-12">
                                 <label htmlFor="event-category" className="inline-block mb-2 text-base font-medium">Category</label>
-                                <select required className="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" id="event-category"
+                                <select required className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200" id="event-category"
                                     name="className"
                                     onChange={validation.handleChange}
                                     value={validation.values.className || ""}
                                 >
                                     <option>Select Category</option>
-                                    <option value="border-none rounded-md py-1.5 px-3 w-[100%] transition-all text-custom-500 !bg-custom-100 dark:!bg-custom-500/20">Primary</option>
+                                    <option value="border-none rounded-md py-1.5 px-3 w-[100%] transition-all text-fecustom-500 !bg-fecustom-100 dark:!bg-fecustom-500/20">Primary</option>
                                     <option value="border-none rounded-md py-1.5 px-3 w-[100%] text-green-500 !bg-green-100 dark:!bg-green-500/20">Success</option>
                                     <option value="border-none rounded-md py-1.5 px-3 w-[100%] text-sky-500 !bg-sky-100 dark:!bg-sky-500/20">Info</option>
                                     <option value="border-none rounded-md py-1.5 px-3 w-[100%] text-yellow-500 !bg-yellow-100 dark:!bg-yellow-500/20">Warning</option>
@@ -361,9 +361,9 @@ const DefaultCalendar = () => {
                             </div>
                         </div>
                         <div className="flex justify-end gap-2 mt-4">
-                            <button type="reset" className="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100 focus:text-red-500 focus:bg-red-100 active:text-red-500 active:bg-red-100 dark:bg-zink-600 dark:hover:bg-red-500/10 dark:focus:bg-red-500/10 dark:active:bg-red-500/10" onClick={toggle}>Cancel</button>
-                            {!!isEdit && <button type="reset" id="btn-delete-event" className="text-white bg-red-500 border-red-500 btn hover:text-white hover:bg-red-600 hover:border-red-600 focus:text-white focus:bg-red-600 focus:border-red-600 focus:ring focus:ring-red-100 active:text-white active:bg-red-600 active:border-red-600 active:ring active:ring-red-100 dark:ring-custom-400/20" onClick={onClickDelete}>Delete</button>}
-                            <button type="submit" id="btn-save-event" className="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">{!!isEdit ? "Update" : "Add Event"}</button>
+                            <button type="reset" className="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100 focus:text-red-500 focus:bg-red-100 active:text-red-500 active:bg-red-100 dark:bg-zinc-600 dark:hover:bg-red-500/10 dark:focus:bg-red-500/10 dark:active:bg-red-500/10" onClick={toggle}>Cancel</button>
+                            {!!isEdit && <button type="reset" id="btn-delete-event" className="text-white bg-red-500 border-red-500 btn hover:text-white hover:bg-red-600 hover:border-red-600 focus:text-white focus:bg-red-600 focus:border-red-600 focus:ring focus:ring-red-100 active:text-white active:bg-red-600 active:border-red-600 active:ring active:ring-red-100 dark:ring-fecustom-400/20" onClick={onClickDelete}>Delete</button>}
+                            <button type="submit" id="btn-save-event" className="text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20">{!!isEdit ? "Update" : "Add Event"}</button>
                         </div>
                     </form>
                 </Modal.Body>

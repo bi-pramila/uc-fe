@@ -30,8 +30,8 @@ const UiAlert = () => {
                             <h6 className="mb-4 text-15">Top Border Alerts</h6>
                             <div className="grid grid-cols-1 gap-5 xl:grid-cols-2">
                                 <div className="flex flex-col gap-3">
-                                    <Alert className="relative p-3 pr-12 text-sm border border-t-2 border-transparent rounded-md border-t-custom-500 text-custom-500 bg-custom-50 dark:bg-custom-400/20 dark:border-t-custom-500/50">
-                                        <Alert.Close className="absolute top-0 bottom-0 right-0 p-3 transition text-custom-200 hover:text-custom-500 dark:text-custom-400/50 dark:hover:text-custom-500" />
+                                    <Alert className="relative p-3 pr-12 text-sm border border-t-2 border-transparent rounded-md border-t-fecustom-500 text-fecustom-500 bg-fecustom-50 dark:bg-fecustom-400/20 dark:border-t-fecustom-500/50">
+                                        <Alert.Close className="absolute top-0 bottom-0 right-0 p-3 transition text-fecustom-200 hover:text-fecustom-500 dark:text-fecustom-400/50 dark:hover:text-fecustom-500" />
                                         <Alert.Bold>Custom</Alert.Bold> alert! You should check in on some of those fields below.
                                     </Alert>
                                 </div>

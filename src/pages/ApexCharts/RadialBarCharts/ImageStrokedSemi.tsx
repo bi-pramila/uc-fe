@@ -190,7 +190,7 @@ const SemiRadial = ({ chartId }: any) => {
                 id={chartId}
                 className="apex-charts"
                 height={350}
-                data-chart-colors='["bg-custom-500"]'
+                data-chart-colors='["bg-fecustom-500"]'
                 type="radialBar"
             />
         </React.Fragment>

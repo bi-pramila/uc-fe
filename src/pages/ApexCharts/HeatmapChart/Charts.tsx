@@ -103,7 +103,7 @@ const BasicHeatmap = ({ chartId }: any) => {
                 dir="ltr"
                 options={options}
                 series={series || []}
-                data-chart-colors='["bg-custom-500"]'
+                data-chart-colors='["bg-fecustom-500"]'
                 id={chartId}
                 className="apex-charts"
                 type='heatmap'
@@ -256,7 +256,7 @@ const MultipleColors = ({ chartId }: any) => {
                 dir="ltr"
                 options={options}
                 series={series || []}
-                data-chart-colors='["bg-custom-500", "bg-purple-500", "bg-orange-500", "bg-yellow-500", "bg-green-500"]'
+                data-chart-colors='["bg-fecustom-500", "bg-purple-500", "bg-orange-500", "bg-yellow-500", "bg-green-500"]'
                 id={chartId}
                 className="apex-charts"
                 type='heatmap'
@@ -365,7 +365,7 @@ const ColorRange = ({ chartId }: any) => {
                 dir="ltr"
                 options={options}
                 series={series || []}
-                data-chart-colors='["bg-custom-500", "bg-purple-500", "bg-orange-500", "bg-yellow-500"]'
+                data-chart-colors='["bg-fecustom-500", "bg-purple-500", "bg-orange-500", "bg-yellow-500"]'
                 id={chartId}
                 className="apex-charts"
                 type='heatmap'

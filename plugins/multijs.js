@@ -1,12 +1,12 @@
-const plugin = require('tailwindcss/plugin')
+const plugin = require('tailwindcss/plugin');
 
-module.exports = plugin(function ({ addComponents, theme }) {
+const multijsPlugin = plugin(function ({ addComponents, theme }) {
     addComponents({
         '.multi-wrapper': {
             '@apply border-0': {},
         
             '.non-selected-wrapper': {
-                '@apply border border-slate-200 bg-white rounded-tl-md rounded-bl-md dark:border-zink-500 dark:bg-zink-700': {},
+                '@apply border border-slate-200 bg-white rounded-tl-md rounded-bl-md dark:border-zinc-500 dark:bg-zinc-700': {},
             },
 
             '.selected-wrapper, .non-selected-wrapper': {
@@ -20,10 +20,10 @@ module.exports = plugin(function ({ addComponents, theme }) {
                     '@apply h-2.5': {},
                 },
                 '&::-webkit-scrollbar-thumb': {
-                    '@apply border-2 border-white bg-slate-100 dark:bg-zink-600 dark:border-zink-700 rounded-md': {},
+                    '@apply border-2 border-white bg-slate-100 dark:bg-zinc-600 dark:border-zinc-700 rounded-md': {},
                 },
                 '&::-webkit-scrollbar-track': {
-                    '@apply bg-white rounded-md dark:bg-zink-700': {},
+                    '@apply bg-white rounded-md dark:bg-zinc-700': {},
                 },
             },
 
@@ -32,21 +32,23 @@ module.exports = plugin(function ({ addComponents, theme }) {
             },
 
             '.item': {
-                '@apply text-slate-700 dark:text-zink-100 dark:hover:text-zink-50 transition-all duration-200 ease-linear hover:bg-custom-500 hover:text-white': {},
+                '@apply text-slate-700 dark:text-zinc-100 dark:hover:text-zinc-50 transition-all duration-200 ease-linear hover:bg-fecustom-500 hover:text-white': {},
             },
 
             '.selected-wrapper': {
-                '@apply border border-slate-200 dark:border-zink-500 bg-white dark:bg-zink-700 rounded-tr-md rounded-br-md': {},
+                '@apply border border-slate-200 dark:border-zinc-500 bg-white dark:bg-zinc-700 rounded-tr-md rounded-br-md': {},
             },
 
             '.search-input': {
                 flex: '0 0 auto',
-                '@apply py-2 px-4 text-slate-700 dark:text-zink-100 bg-white dark:bg-zink-700 font-public text-base !border !border-solid !border-slate-200 dark:!border-zink-500 rounded-md mb-4 placeholder-slate-400 dark:placeholder-zink-300': {},
+                '@apply py-2 px-4 text-slate-700 dark:text-zinc-100 bg-white dark:bg-zinc-700 font-public text-base !border !border-solid !border-slate-200 dark:!border-zinc-500 rounded-md mb-4 placeholder-slate-400 dark:placeholder-zinc-300': {},
             },
 
             '.header': {
-                '@apply font-semibold text-slate-700 dark:text-zink-100': {},
+                '@apply font-semibold text-slate-700 dark:text-zinc-100': {},
             }
         },
     })
-})
+});
+
+module.exports = multijsPlugin;

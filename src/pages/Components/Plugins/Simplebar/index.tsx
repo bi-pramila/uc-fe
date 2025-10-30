@@ -14,7 +14,7 @@ const PSimpleBar = () => {
                         <div className="card">
                             <div className="card-body">
                                 <h6 className="mb-4 text-15">Default Scroll</h6>
-                                <SimpleBar style={{ maxHeight: " 220px" }} className="pr-2 text-slate-500 dark:text-zink-200">
+                                <SimpleBar style={{ maxHeight: " 220px" }} className="pr-2 text-slate-500 dark:text-zinc-200">
                                     <SimpleBarPara />
                                 </SimpleBar>
                             </div>
@@ -22,7 +22,7 @@ const PSimpleBar = () => {
                         <div className="card">
                             <div className="card-body">
                                 <h6 className="mb-4 text-15">Auto Hide False</h6>
-                                <SimpleBar autoHide={false} style={{ maxHeight: " 220px" }} className="pr-2 text-slate-500 dark:text-zink-200">
+                                <SimpleBar autoHide={false} style={{ maxHeight: " 220px" }} className="pr-2 text-slate-500 dark:text-zinc-200">
                                     <SimpleBarPara />
                                 </SimpleBar>
                             </div>
@@ -30,7 +30,7 @@ const PSimpleBar = () => {
                         <div className="card">
                             <div className="card-body">
                                 <h6 className="mb-4 text-15">RTL Direction</h6>
-                                <SimpleBar data-simplebar-direction='rtl' style={{ maxHeight: " 220px" }} className="pl-2 text-gray-400 dark:text-zink-200">
+                                <SimpleBar data-simplebar-direction='rtl' style={{ maxHeight: " 220px" }} className="pl-2 text-gray-400 dark:text-zinc-200">
                                     <SimpleBarPara />
                                 </SimpleBar>
                             </div>
@@ -43,7 +43,7 @@ const PSimpleBar = () => {
                         <div className="card">
                             <div className="card-body">
                                 <h6 className="mb-4 text-15">Custom Track</h6>
-                                <SimpleBar data-simplebar-track="custom" style={{ maxHeight: " 220px" }} className="pr-2 text-slate-500 dark:text-zink-200" >
+                                <SimpleBar data-simplebar-track="custom" style={{ maxHeight: " 220px" }} className="pr-2 text-slate-500 dark:text-zinc-200" >
                                     <SimpleBarPara />
                                 </SimpleBar>
                             </div>
@@ -52,7 +52,7 @@ const PSimpleBar = () => {
                         <div className="card">
                             <div className="card-body">
                                 <h6 className="mb-4 text-15">Green Track</h6>
-                                <SimpleBar data-simplebar-track="green" style={{ maxHeight: " 220px" }} className="pr-2 text-slate-500 dark:text-zink-200 simplebar-track-success">
+                                <SimpleBar data-simplebar-track="green" style={{ maxHeight: " 220px" }} className="pr-2 text-slate-500 dark:text-zinc-200 simplebar-track-success">
                                     <SimpleBarPara />
                                 </SimpleBar>
                             </div>
@@ -61,7 +61,7 @@ const PSimpleBar = () => {
                         <div className="card">
                             <div className="card-body">
                                 <h6 className="mb-4 text-15">Orange Track</h6>
-                                <SimpleBar data-simplebar-track="orange" style={{ maxHeight: " 220px" }} className="pr-2 text-slate-500 dark:text-zink-200">
+                                <SimpleBar data-simplebar-track="orange" style={{ maxHeight: " 220px" }} className="pr-2 text-slate-500 dark:text-zinc-200">
                                     <SimpleBarPara />
                                 </SimpleBar>
                             </div>
@@ -70,7 +70,7 @@ const PSimpleBar = () => {
                         <div className="card">
                             <div className="card-body">
                                 <h6 className="mb-4 text-15">Sky Track</h6>
-                                <SimpleBar data-simplebar-track="sky" style={{ maxHeight: " 220px" }} className="pr-2 text-slate-500 dark:text-zink-200">
+                                <SimpleBar data-simplebar-track="sky" style={{ maxHeight: " 220px" }} className="pr-2 text-slate-500 dark:text-zinc-200">
                                     <SimpleBarPara />
                                 </SimpleBar>
                             </div>
@@ -79,7 +79,7 @@ const PSimpleBar = () => {
                         <div className="card">
                             <div className="card-body">
                                 <h6 className="mb-4 text-15">Yellow Track</h6>
-                                <SimpleBar data-simplebar-track="yellow" style={{ maxHeight: " 220px" }} className="pr-2 text-slate-500 dark:text-zink-200">
+                                <SimpleBar data-simplebar-track="yellow" style={{ maxHeight: " 220px" }} className="pr-2 text-slate-500 dark:text-zinc-200">
                                     <SimpleBarPara />
                                 </SimpleBar>
                             </div>
@@ -88,7 +88,7 @@ const PSimpleBar = () => {
                         <div className="card">
                             <div className="card-body">
                                 <h6 className="mb-4 text-15">Red Track</h6>
-                                <SimpleBar data-simplebar-track="red" style={{ maxHeight: " 220px" }} className="pr-2 text-slate-500 dark:text-zink-200">
+                                <SimpleBar data-simplebar-track="red" style={{ maxHeight: " 220px" }} className="pr-2 text-slate-500 dark:text-zinc-200">
                                     <SimpleBarPara />
                                 </SimpleBar>
                             </div>

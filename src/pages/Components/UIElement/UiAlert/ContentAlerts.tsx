@@ -10,7 +10,7 @@ const ContentAlerts = () => {
                     <h6 className="mb-4 text-15">Content Alerts</h6>
                     <div className="grid grid-cols-1 gap-5 xl:grid-cols-2">
                         <div className="flex flex-col gap-3">
-                            <Alert className="flex gap-3 p-4 text-sm rounded-md text-custom-500 bg-custom-50 dark:bg-custom-400/20">
+                            <Alert className="flex gap-3 p-4 text-sm rounded-md text-fecustom-500 bg-fecustom-50 dark:bg-fecustom-400/20">
                                 <AlertCircle className="inline-block size-4 mt-0.5 shrink-0"></AlertCircle>
                                 <Alert.Content>
                                     <h6 className="mb-1">Hi! A simple Primary alert —check it out!</h6>

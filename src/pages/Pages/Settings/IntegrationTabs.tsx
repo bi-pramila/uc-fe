@@ -43,14 +43,14 @@ const IntegrationTabs = () => {
                                         <img src={item.logo} alt="" className="h-8" />
                                     </div>
                                     <div className="shrink-0">
-                                        <button type="button" className="px-2 py-1.5 text-xs bg-white border-dashed text-custom-500 btn border-custom-500 hover:text-custom-500 hover:bg-custom-50 hover:border-custom-600 focus:text-custom-600 focus:bg-custom-50 focus:border-custom-600 active:text-custom-600 active:bg-custom-50 active:border-custom-600 dark:bg-zink-700 dark:ring-custom-400/20 dark:hover:bg-custom-800/20 dark:focus:bg-custom-800/20 dark:active:bg-custom-800/20">
+                                        <button type="button" className="px-2 py-1.5 text-xs bg-white border-dashed text-fecustom-500 btn border-fecustom-500 hover:text-fecustom-500 hover:bg-fecustom-50 hover:border-fecustom-600 focus:text-fecustom-600 focus:bg-fecustom-50 focus:border-fecustom-600 active:text-fecustom-600 active:bg-fecustom-50 active:border-fecustom-600 dark:bg-zinc-700 dark:ring-fecustom-400/20 dark:hover:bg-fecustom-800/20 dark:focus:bg-fecustom-800/20 dark:active:bg-fecustom-800/20">
                                             <Cable className="inline-block size-3 ltr:mr-1 rtl:ml-1"></Cable>
                                             Connect</button>
                                     </div>
                                 </div>
 
                                 <h6 className="mb-2 text-16">{item.title}</h6>
-                                <p className="text-slate-500 dark:text-zink-200">{item.description}</p>
+                                <p className="text-slate-500 dark:text-zinc-200">{item.description}</p>
                             </div>
                         </div>
 

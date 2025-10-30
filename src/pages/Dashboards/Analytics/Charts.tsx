@@ -78,7 +78,7 @@ const PerspectiveChart = ({ chartId }: any) => {
                 dir="ltr"
                 options={options}
                 series={series}
-                data-chart-colors='["bg-custom-500"]'
+                data-chart-colors='["bg-fecustom-500"]'
                 id="platformPerspective"
                 className="apex-charts"
                 type='treemap'
@@ -238,7 +238,7 @@ const InteractionChart = ({ chartId }: any) => {
                 dir="ltr"
                 options={options}
                 series={series}
-                data-chart-colors='["bg-custom-500", "bg-purple-500"]'
+                data-chart-colors='["bg-fecustom-500", "bg-purple-500"]'
                 id="pagesInteraction"
                 className="apex-charts"
                 type='bar'
@@ -308,7 +308,7 @@ const UserDeviceChart = ({ chartId }: any) => {
                 dir="ltr"
                 options={options}
                 series={series}
-                data-chart-colors='["bg-custom-500", "bg-green-500", "bg-orange-500"]'
+                data-chart-colors='["bg-fecustom-500", "bg-green-500", "bg-orange-500"]'
                 id="userDeviceCharts"
                 className="apex-charts"
                 type='radar'
@@ -388,7 +388,7 @@ const SatisfactionChart = ({ chartId }: any) => {
                 dir="ltr"
                 options={options}
                 series={series}
-                data-chart-colors='["bg-custom-500"]'
+                data-chart-colors='["bg-fecustom-500"]'
                 id="satisfactionRate"
                 className="apex-charts"
                 type='radialBar'
@@ -580,7 +580,7 @@ const ReportChart = ({ chartId }: any) => {
                 dir="ltr"
                 options={options}
                 series={series}
-                data-chart-colors='["bg-custom-500", "bg-green-500"]'
+                data-chart-colors='["bg-fecustom-500", "bg-green-500"]'
                 id="lineWithDataLabel"
                 className="apex-charts"
                 type='line'
@@ -634,7 +634,7 @@ const SubscriptionChart = ({ chartId }: any) => {
                 dir="ltr"
                 options={options}
                 series={series}
-                data-chart-colors='["bg-custom-500", "bg-orange-500", "bg-green-500", "bg-yellow-500", "bg-purple-500"]'
+                data-chart-colors='["bg-fecustom-500", "bg-orange-500", "bg-green-500", "bg-yellow-500", "bg-purple-500"]'
                 id="subscriptionDistribution"
                 className="apex-charts"
                 type='donut'

@@ -136,7 +136,7 @@ const ApplicationReceivedChart = ({ chartId }: any) => {
                 dir="ltr"
                 options={options}
                 series={series}
-                data-chart-colors='["bg-custom-500", "bg-green-500"]'
+                data-chart-colors='["bg-fecustom-500", "bg-green-500"]'
                 id={chartId}
                 className="apex-charts"
                 type='line'
@@ -211,7 +211,7 @@ const TotalProjectsChart = ({ chartId }: any) => {
                 dir="ltr"
                 options={options}
                 series={series}
-                data-chart-colors='["bg-custom-500", "bg-yellow-500", "bg-green-400", "bg-red-400"]'
+                data-chart-colors='["bg-fecustom-500", "bg-yellow-500", "bg-green-400", "bg-red-400"]'
                 id={chartId}
                 className="-ml-2 apex-charts"
                 type='bar'
