@@ -1,7 +1,7 @@
 import React from 'react';
 
 //import images
-import dashboard from "assets/images/dashboard.png";
+import dashboard from "../../../assets/images/dashboard.png";
 
 const WelcomeWidget = () => {
     return (
