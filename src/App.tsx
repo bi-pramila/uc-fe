@@ -14,14 +14,14 @@ fakeBackend();
 // import { initFirebaseBackend } from "./helpers/firebase_helper";
 
 // const firebaseConfig = {
-//   apiKey: import.meta.env.VITE_APIKEY,
-//   authDomain: import.meta.env.VITE_AUTHDOMAIN,
+//   apiKey: process.env.VITE_APIKEY,
+//   authDomain: process.env.VITE_AUTHDOMAIN,
 //   databaseURL: process.env.REACT_APP_DATABASEURL,
-//   projectId: import.meta.env.VITE_PROJECTID,
-//   storageBucket: import.meta.env.VITE_STORAGEBUCKET,
-//   messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
-//   appId: import.meta.env.VITE_APPID,
-//   measurementId: import.meta.env.VITE_MEASUREMENTID,
+//   projectId: process.env.VITE_PROJECTID,
+//   storageBucket: process.env.VITE_STORAGEBUCKET,
+//   messagingSenderId: process.env.VITE_MESSAGINGSENDERID,
+//   appId: process.env.VITE_APPID,
+//   measurementId: process.env.VITE_MEASUREMENTID,
 // };
 
 // init firebase backend

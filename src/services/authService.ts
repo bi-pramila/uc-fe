@@ -1,46 +1,17 @@
+// authService
 import axios from "axios";
 
-const API_BASE = import.meta.env.REACT_APP_API_BASE_URL;
+const API_BASE = process.env.PUBLIC_API_BASE_URL;
 
-
-
-// --------------------
 // Types
-// --------------------
+import { User, AuthResponse, ResetPasswordResponse, ForgotPasswordResponse, LogoutResponse } from "../slices/auth/login/types";
 
-export interface User {
-  id: string;
-  name: string;
-  email: string;
-  // Add other fields returned from your API as needed
-}
-
-export interface AuthResponse {
-  success: boolean;
-  token: string; // if using token-based auth
-  user: User;
-  message?: string;
-}
-
-export interface ForgotPasswordResponse {
-  message: string;
-}
-
-export interface ResetPasswordResponse {
-  success: boolean;
-  message: string;
-}
-
-export interface LogoutResponse {
-  success: boolean;
-  message: string;
-}
 
 // --------------------
 // API Functions
 // --------------------
-
-export const login = async (email: string, password: string): Promise<AuthResponse> => {
+export const login = async (email: string, password: string): 
+Promise<AuthResponse> => {
   try {
     const res = await axios.post<AuthResponse>(
       `${API_BASE}/user/login`,
@@ -50,14 +21,20 @@ export const login = async (email: string, password: string): Promise<AuthRespon
         headers: { "Content-Type": "application/json" },
       }
     );
-    if (!res.data.token || !res.data.user) {
-      throw new Error(res.data.message || "Invalid login");
+    console.log("Full res object", res);
+    console.log("API response:", res.data);
+    if (!res.user) {
+      throw new Error(res.message || "Invalid login");
     }
-    return res.data;
+    return res;
+    
   } catch (err: any) {
+    console.error("Login API error:", err);
     throw err.response?.data || { message: "Login failed" };
   }
 };
+
+
 
 export const checkAuth = async (): Promise<AuthResponse | null> => {
   try {
@@ -70,6 +47,8 @@ export const checkAuth = async (): Promise<AuthResponse | null> => {
   }
 };
 
+
+
 export const getCurrentUser = async (): Promise<{ user: User }> => {
   try {
     const res = await axios.get<{ user: User }>(
@@ -81,6 +60,8 @@ export const getCurrentUser = async (): Promise<{ user: User }> => {
     throw err.response?.data || { message: "Not authenticated" };
   }
 };
+
+
 
 export const resetPassword = async (
   token: string,
@@ -98,6 +79,8 @@ export const resetPassword = async (
   }
 };
 
+
+
 export const forgotPassword = async (email: string): Promise<ForgotPasswordResponse> => {
   try {
     const res = await axios.post<ForgotPasswordResponse>(
@@ -113,6 +96,8 @@ export const forgotPassword = async (email: string): Promise<ForgotPasswordRespo
     throw err.response?.data || { message: "Failed to send reset link" };
   }
 };
+
+
 
 export const logout = async (): Promise<LogoutResponse> => {
   try {

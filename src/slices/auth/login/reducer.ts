@@ -1,3 +1,5 @@
+// slices/auth/login/reducer.ts
+
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { loginUser, logoutUser } from "./thunk";
 import { User, LoginResponse } from "./types";
@@ -27,8 +29,11 @@ const loginSlice = createSlice({
     initialState,
     reducers: {
         clearAuthState(state) {
+            state.user = null;             // Clear user on state clear
             state.error = null;
             state.success = false;
+            state.isUserLogout = false;
+            state.loading = false;
         },
     },
     extraReducers: (builder) => {
@@ -38,7 +43,8 @@ const loginSlice = createSlice({
             state.error = null;
             state.success = false;
         })
-        .addCase(loginUser.fulfilled, (state, action) => {
+        .addCase(loginUser.fulfilled, (state, action: PayloadAction<LoginResponse>) => {
+            
             state.user = action.payload.user;
             state.loading = false;
             state.success = true;
@@ -48,6 +54,7 @@ const loginSlice = createSlice({
             state.loading = false;
             state.error = action.payload as string || "Login failed";
             state.success = false;
+            state.user = null;
         })
         .addCase(logoutUser.fulfilled, (state) => {
             state.isUserLogout = true;

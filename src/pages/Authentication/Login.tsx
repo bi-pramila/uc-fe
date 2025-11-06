@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
 
@@ -35,13 +35,9 @@ const Login = (props: any) => {
         (state: RootState) => state.Login 
     );
 
-    // Navigate on successful login
-    useEffect(() => {
-        if (success && user) {
-        navigate("/dashboard");
-        dispatch(clearAuthState());
-        }
-    }, [success, user, navigate, dispatch]);
+    const [loginAttempted, setLoginAttempted] = useState(false);
+    const [hasNavigated, setHasNavigated] = useState(false);
+ 
 
     const formik = useFormik({
         enableReinitialize: true,
@@ -51,9 +47,41 @@ const Login = (props: any) => {
             password: Yup.string().required("Please Enter Your Password"),
         }),
         onSubmit: (values) => {
+            console.log("Submitting form: ", values);
+            setLoginAttempted(true);
             dispatch(loginUser({ email: values.email, password: values.password }))
         },
     });
+
+    // Navigate on successful login
+    useEffect(() => {
+        console.log("Login effect triggered:");
+        console.log("success:", success);
+        console.log("user:", user);
+
+        if (success && user && loginAttempted && !hasNavigated) {
+            console.log("Navigating to /dashboard");
+            navigate("/dashboard");
+            setHasNavigated(true);
+        }
+    }, [success, user, loginAttempted, navigate, hasNavigated]);
+
+    // Reset navigation flag when success becomes false (e.g., logout)
+    useEffect(() => {
+        if (!success) {
+            setHasNavigated(false);
+            setLoginAttempted(false);
+        }
+    }, [success]);
+
+    // Clear auth state when component unmounts
+    // useEffect(() => {
+    //     return () => {
+    //         dispatch(clearAuthState());
+    //     };
+    // }, [dispatch]);
+
+    
     
 
     React.useEffect(() => {
@@ -143,12 +171,12 @@ const Login = (props: any) => {
                                 <button type="submit" disabled={loading} className="w-full text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20">{loading ? "Signing in..." : "Sign In"}</button>
                             </div>
 
-                            <div className="relative text-center my-9 before:absolute before:top-3 before:left-0 before:right-0 before:border-t before:border-t-slate-200 dark:before:border-t-zinc-500">
+                            {/* <div className="relative text-center my-9 before:absolute before:top-3 before:left-0 before:right-0 before:border-t before:border-t-slate-200 dark:before:border-t-zinc-500">
                                 <h5 className="inline-block px-2 py-0.5 text-sm bg-white text-slate-500 dark:bg-zinc-600 dark:text-zinc-200 rounded relative">Sign In with</h5>
                             </div> 
                             <div className="mt-10 text-center">
                                 <p className="mb-0 text-slate-500 dark:text-zinc-200">Don't have an account ? <Link to="/register" className="font-semibold underline transition-all duration-150 ease-linear text-slate-500 dark:text-zinc-200 hover:text-fecustom-500 dark:hover:text-fecustom-500"> SignUp</Link> </p>
-                            </div>
+                            </div> */}
                         </form>
                     </div>
                 </div>
@@ -158,3 +186,5 @@ const Login = (props: any) => {
 }
 
 export default withRouter(Login);
+
+

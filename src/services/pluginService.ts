@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from "axios";
 
-const API_URL = `${import.meta.env.VITE_API_URL}/api/plugins`;
+const API_BASE = process.env.PUBLIC_API_BASE_URL;
 
 
 interface Plugin {
@@ -12,7 +12,7 @@ interface Plugin {
 
 // Fetch all plugins, returns an array of Plugin
 export const fetchPlugins = async (): Promise<Plugin[]> => {
-  const res: AxiosResponse<Plugin[]> = await axios.get(`${API_URL}/`);
+  const res: AxiosResponse<Plugin[]> = await axios.get(`${API_BASE}/api/plugins`);
   return res.data;
 };
 
@@ -20,7 +20,7 @@ export const fetchPlugins = async (): Promise<Plugin[]> => {
 export const uploadPlugin = async (file: File): Promise<any> => {
   const formData = new FormData();
   formData.append("zipfile", file);
-  const res = await axios.post(`${API_URL}/upload`, formData, {
+  const res = await axios.post(`${API_BASE}/api/plugins/upload`, formData, {
     headers: { "Content-Type": "multipart/form-data" },
   });
   return res.data;
@@ -28,12 +28,12 @@ export const uploadPlugin = async (file: File): Promise<any> => {
 
 // Activate a plugin by ID, returns any response data
 export const activatePlugin = async (id: string): Promise<any> => {
-  const res = await axios.post(`${API_URL}/${id}/activate`);
+  const res = await axios.post(`${API_BASE}/api/plugins/${id}/activate`);
   return res.data;
 };
 
 // Deactivate a plugin by ID, returns any response data
 export const deactivatePlugin = async (id: string): Promise<any> => {
-  const res = await axios.post(`${API_URL}/${id}/deactivate`);
+  const res = await axios.post(`${API_BASE}/api/plugins/${id}/deactivate`);
   return res.data;
 };

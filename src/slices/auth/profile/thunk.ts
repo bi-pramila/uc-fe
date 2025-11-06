@@ -14,10 +14,10 @@ export const editProfile = (user: User
 ): ThunkAction<void, RootState, unknown, Action<string>> => async (dispatch: Dispatch) => {
     try {
         let response: any;
-        if (import.meta.env.VITE_DEFAULTAUTH === "fake") {
+        if (process.env.VITE_DEFAULTAUTH === "fake") {
             response = await postFakeProfile(user)
 
-        } else if (import.meta.env.VITE_DEFAULTAUTH === "firebase") {
+        } else if (process.env.VITE_DEFAULTAUTH === "firebase") {
 
             const fireBaseBackend = getFirebaseBackend();
             response = await fireBaseBackend.editProfileAPI(

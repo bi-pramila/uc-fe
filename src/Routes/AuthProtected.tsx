@@ -1,3 +1,4 @@
+// AuthProtected.tsx
 import React, { ReactNode } from "react";
 import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
@@ -7,8 +8,8 @@ interface AuthProtectedProps {
 }
 
 const AuthProtected: React.FC<AuthProtectedProps> = ({ children }) => {
-  const isAuthenticated = useSelector(
-    (state:any) => !!state.auth?.user
+  const isAuthenticated = useSelector( 
+    (state:any) => !!state.Login?.user
   );
   
   if (!isAuthenticated) {
@@ -19,3 +20,4 @@ const AuthProtected: React.FC<AuthProtectedProps> = ({ children }) => {
 };
 
 export default AuthProtected;
+

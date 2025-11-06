@@ -37,11 +37,11 @@ const UserProfile = () => {
   const { error, success, user } = useSelector(selectProperties);
 
   useEffect(() => {
-    if (import.meta.env.VITE_DEFAULTAUTH === "fake") {
+    if (process.env.VITE_DEFAULTAUTH === "fake") {
       setEmail(user.email)
       setName(user.username);
       setIdx(user.uid)
-    } else if (import.meta.env.VITE_DEFAULTAUTH === "firebase") {
+    } else if (process.env.VITE_DEFAULTAUTH === "firebase") {
       setEmail(user.email)
       setName(user.username);
       setIdx(user.uid)

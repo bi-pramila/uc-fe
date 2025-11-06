@@ -1,3 +1,5 @@
+// allRoutes.ts
+
 // dashboard
 import Analytics from "pages/Dashboards/Analytics";
 import Ecommerce from "pages/Dashboards/Ecommerce";

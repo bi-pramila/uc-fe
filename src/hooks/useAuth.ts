@@ -1,3 +1,5 @@
+// hooks/useAuth.ts
+
 import { useState } from "react";
 import { login as loginService, logout as logoutService, checkAuth } from "../services/authService";
 

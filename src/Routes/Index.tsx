@@ -1,3 +1,4 @@
+// index.tsx
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { authProtectedRoutes, publicRoutes } from './allRoutes';
