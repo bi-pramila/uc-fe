@@ -1,9 +1,7 @@
 //assets/scss/theme.scss
-@config "../../../tailwind.config.js";
+@config '../../../tailwind.config.cjs';
 
-@import "./tailwind.scss";
-
-@import "./icons.scss";
-
+@import './tailwind.scss';
+@import './icons.scss';
 @import './custom-utilities.scss';
 

@@ -1,3 +1,5 @@
+// custom-utilities.scss
+
 @layer utilities {
   [type="checkbox"]:checked {
     background-repeat: no-repeat;
@@ -134,11 +136,11 @@
     --ck-color-base-text: theme('colors.slate.800');
     --ck-color-base-border: theme('colors.slate.300');
     --ck-color-button-default-hover-background: theme('colors.slate.100');
-    --ck-color-button-on-color: theme('colors.fecustom.500');
-    --ck-color-widget-type-around-button-active: theme('colors.fecustom.500');
-    --ck-color-base-active: theme('colors.fecustom.500');
-    --ck-color-button-on-background: theme('colors.fecustom.100');
-    --ck-color-button-on-hover-background: theme('colors.fecustom.50');
+    --ck-color-button-on-color: var(--color-fecustom-500);/*theme('colors.fecustom.500');*/
+    --ck-color-widget-type-around-button-active: var(--color-fecustom-500); /*theme('colors.fecustom.500');*/
+    --ck-color-base-active:  var(--color-fecustom-500); /*theme('colors.fecustom.500');*/
+    --ck-color-button-on-background: var(--color-fecustom-100); /*theme('colors.fecustom.100');*/
+    --ck-color-button-on-hover-background: var(--color-fecustom-50); /*theme('colors.fecustom.50');*/
     --ck-color-base-action: theme('colors.green.500');
     --ck-focus-outer-shadow: none;
     --ck-inner-shadow: none;
@@ -207,12 +209,12 @@
     .fc {
       --fc-border-color: theme('colors.slate.200');
       --fc-non-business-color: theme('colors.slate.100');
-      --fc-button-bg-color: theme('colors.fecustom.500');
-      --fc-button-border-color: theme('colors.fecustom.500');
-      --fc-button-hover-bg-color: theme('colors.fecustom.600');
-      --fc-button-hover-border-color: theme('colors.fecustom.600');
-      --fc-button-active-bg-color: theme('colors.fecustom.600');
-      --fc-button-active-border-color: theme('colors.fecustom.600');
+      --fc-button-bg-color: var(--color-fecustom-500); /*theme('colors.fecustom.500');*/
+      --fc-button-border-color: var(--color-fecustom-500); /*theme('colors.fecustom.500');*/
+      --fc-button-hover-bg-color: var(--color-fecustom-600); /*theme('colors.fecustom.600');*/
+      --fc-button-hover-border-color: var(--color-fecustom-600); /*theme('colors.fecustom.600');*/
+      --fc-button-active-bg-color: var(--color-fecustom-600); /*theme('colors.fecustom.600');*/
+      --fc-button-active-border-color: var(--color-fecustom-600); /*theme('colors.fecustom.600');*/
       --fc-neutral-bg-color: theme('colors.slate.50');
       --fc-neutral-text-color: theme('colors.slate.500');
       --fc-page-bg-color: theme('colors.white');
@@ -243,20 +245,23 @@
     bottom: -15px;
     border-left: 16px solid transparent;
     border-right: 16px solid transparent;
-    border-top: 16px solid theme('colors.fecustom.500'); /* Replace with actual value */
+    border-top: 16px solid var(--color-fecustom-500); /*  theme('colors.fecustom.500'); Replace with actual value */
   }
 
   .gmaps-overlay_arrow.below {
     top: -15px;
     border-left: 16px solid transparent;
     border-right: 16px solid transparent;
-    border-bottom: 16px solid theme('colors.fecustom.500'); /* Replace with actual value */
+    border-bottom: 16px solid var(--color-fecustom-500); /* theme('colors.fecustom.500'); Replace with actual value */
   }
 
 
 
   :root {
-    --plyr-color-main: theme('colors.fecustom.500'); /* Replace with actual color or static value */
+    --plyr-color-main: var(--color-fecustom-500); /* Replace with actual color or static value */
+
+    // --plyr-color-main: theme('colors.fecustom.500'); /* Replace with actual color or static value */
   }
   /* Add other complex selectors as needed */
 }
+

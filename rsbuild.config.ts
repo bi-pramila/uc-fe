@@ -5,7 +5,7 @@ import { pluginSass } from '@rsbuild/plugin-sass';
 import tailwindcss from '@tailwindcss/postcss';
 import autoprefixer from 'autoprefixer';
 
-import tailwindConfig from './tailwind.config.js';
+const tailwindConfig = require('./tailwind.config.cjs');
 
 console.log('Tailwind config:', tailwindConfig);
 
@@ -15,7 +15,7 @@ export default defineConfig({
   },
   tools: {
     postcss: (_, { addPlugins }) => {
-      addPlugins([tailwindcss(), autoprefixer()]);
+      addPlugins([tailwindcss({ config: tailwindConfig }), autoprefixer()]);
     },
   },
   plugins: [

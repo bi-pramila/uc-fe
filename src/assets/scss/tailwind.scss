@@ -1,7 +1,5 @@
-// assets/scss/tailwind.scss 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import './_variables.scss';
+@import "tailwindcss";
 
 
 @import "fonts/fonts";
@@ -16,3 +14,5 @@
    animation-iteration-count: 2;
    stroke-dasharray: 10;
 }
+
+

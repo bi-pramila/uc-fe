@@ -1,11 +1,40 @@
-// tailwind.config.js
+// tailwind.config.cjs
 const colors = require('tailwindcss/colors');
+const plugin = require('tailwindcss/plugin');
 
 /** @type {import('tailwindcss').Config} */
+
+
+
+// Dynamic Fecustom Color Plugin
+const dynamicColorPlugin = plugin(function({ addUtilities }) {
+  const steps = [50,100,200,300,400,500,600,700,800,900,950];
+  const properties = [
+    { prefix: 'bg', cssProp: 'backgroundColor' },
+    { prefix: 'border', cssProp: 'borderColor' },
+    { prefix: 'text', cssProp: 'color' },
+  ];
+
+  let utilities = {};
+
+  // Build all utility styles in one pass
+  for (const step of steps) {
+    for (const { prefix, cssProp } of properties) {
+      utilities[`.${prefix}-fecustom-${step}`] = {
+        [cssProp]: `var(--color-fecustom-${step})`,
+      };
+    }
+  }
+  
+  // Call addUtilities once, after all utilities have been collected
+  addUtilities(utilities, { variants: ['responsive', 'hover', 'focus', 'dark'] });
+});
+
 const config = {
     content: [
-        "./public/index.html",
         "./src/**/*.{js,jsx,ts,tsx,scss,cjs}",
+        "./assets/scss/**/*.{scss,css}",
+        "./public/index.html",
         "./plugins/**/*.{js,jsx,ts,tsx,scss,cjs}",
         "./node_modules/simplebar-react/**/*",
         "./node_modules/apexcharts/**/*",
@@ -111,17 +140,28 @@ const config = {
 
 
                 fecustom: {
-                    50: colors.blue[50],
-                    100: colors.blue[100],
-                    200: colors.blue[200],
-                    300: colors.blue[300],
-                    400: colors.blue[400],
-                    500: colors.blue[500], // Using Tailwind's color palette
-                    600: colors.blue[600],
-                    700: colors.blue[700],
-                    800: colors.blue[800],
-                    900: colors.blue[900],
-                    950: colors.blue[950],
+                     50: 'var(--color-fecustom-50)',
+                    100: 'var(--color-fecustom-100)',
+                    200: 'var(--color-fecustom-200)',
+                    300: 'var(--color-fecustom-300)',
+                    400: 'var(--color-fecustom-400)',
+                    500: 'var(--color-fecustom-500)',
+                    600: 'var(--color-fecustom-600)',
+                    700: 'var(--color-fecustom-700)',
+                    800: 'var(--color-fecustom-800)',
+                    900: 'var(--color-fecustom-900)',
+                    950: 'var(--color-fecustom-950)',
+                    // 50: colors.blue[50],
+                    // 100: colors.blue[100],
+                    // 200: colors.blue[200],
+                    // 300: colors.blue[300],
+                    // 400: colors.blue[400],
+                    // 500: colors.blue[500], // Using Tailwind's color palette
+                    // 600: colors.blue[600],
+                    // 700: colors.blue[700],
+                    // 800: colors.blue[800],
+                    // 900: colors.blue[900],
+                    // 950: colors.blue[950],
                 },
                 red: {
                     50: colors.red[50],
@@ -266,6 +306,7 @@ const config = {
         },
     },
     plugins:[
+        dynamicColorPlugin,
         require('./plugins/headings.js'),
         require('./plugins/buttons.js'),
         require('./plugins/forms.js'),
