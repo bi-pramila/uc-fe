@@ -42,8 +42,7 @@ export const logoutUser = createAsyncThunk<void, void, { rejectValue: string }>(
   "auth/logoutUser",
   async (_, thunkAPI) => {
     try {
-      localStorage.removeItem("authToken"); 
-      // Optionally: make a call to your API to invalidate the token/session
+      await logout();
     } catch (error) {
       return thunkAPI.rejectWithValue("Logout failed");
     }

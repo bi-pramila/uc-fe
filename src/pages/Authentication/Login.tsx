@@ -7,7 +7,6 @@ import * as Yup from "yup";
 import { useFormik } from "formik";
 
 import { loginUser } from "slices/auth/login/thunk";
-import { clearAuthState } from "slices/auth/login/reducer"; 
 import type { AppDispatch, RootState } from "app/store";
 
 // Image

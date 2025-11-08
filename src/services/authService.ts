@@ -34,8 +34,6 @@ Promise<AuthResponse> => {
   }
 };
 
-
-
 export const checkAuth = async (): Promise<AuthResponse | null> => {
   try {
     const res = await axios.get<AuthResponse>(`${API_BASE}/user/me`, {
@@ -46,8 +44,6 @@ export const checkAuth = async (): Promise<AuthResponse | null> => {
     return null;
   }
 };
-
-
 
 export const getCurrentUser = async (): Promise<{ user: User }> => {
   try {
