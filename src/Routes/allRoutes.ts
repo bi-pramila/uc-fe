@@ -197,6 +197,12 @@ import Settings from "pages/Pages/Settings";
 import Pricing from "pages/Pages/Pricing";
 import Faqs from "pages/Pages/Faqs";
 import ContactUs from "pages/Pages/ContactUs";
+import PluginUpload from "pages/Dashboards/PluginUpload";
+import UserList from "pages/Admin/UserList";
+import RoleList from "pages/Admin/RoleList";
+import RoleGroup from "pages/Admin/RoleGroup";
+import Permissions from "pages/Admin/Permissions";
+import Resources from "pages/Admin/Resources";
 
 interface RouteObject {
   path: string;
@@ -212,6 +218,19 @@ const authProtectedRoutes: Array<RouteObject> = [
   { path: "/dashboards-email", component: Email },
   { path: "/dashboards-hr", component: HRDashboard },
   { path: "/dashboards-social", component: SocialMediaDashboard },
+  { path: "/plugin-upload", component: PluginUpload },
+
+  //Admin
+  { path: "/admin/user-list", component: UserList },
+  { path: "/admin/roles", component: RoleList },
+  { path: "/admin/role-group", component: RoleGroup },
+  { path: "/admin/permissions", component: Permissions },
+  { path: "/admin/resources", component: Resources },
+
+
+
+
+
 
   // Ui Element
   { path: "/ui-alerts", component: UiAlert },
@@ -365,6 +384,12 @@ const authProtectedRoutes: Array<RouteObject> = [
 ];
 
 const publicRoutes = [
+
+
+  //Auth
+
+
+
   // Landing
   { path: "/onepage-landing", component: OnePage },
   { path: "/product-landing", component: Product },
@@ -425,6 +450,8 @@ const publicRoutes = [
   { path: "/login", component: Login },
   { path: "/logout", component: Logout },
   { path: "/register", component: Register },
+  { path: "/user/verify", component: BasicEmailVerify },
+  { path: "/reset-password", component: BasicCreatePassword },
 
 ]
 

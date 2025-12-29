@@ -1,34 +1,35 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
+import { registerUser, resetRegisterFlag } from "./thunk";
 
 interface RegisterState {
-    user: string;
-    error: string;
-    success: boolean;
+  success: boolean;
+  error: string | null;
 }
 
 const initialState: RegisterState = {
-    user: "",
-    success: false,
-    error: ""
+  success: false,
+  error: null,
 };
 
 const registerSlice = createSlice({
-    name: "register",
-    initialState,
-    reducers: {
-        registerSuccess(state: RegisterState, action: PayloadAction<string>) {
-            state.user = action.payload;
-            state.success = true;
-        },
-        registerFailed(state: RegisterState, action: PayloadAction<string | any>) {
-            state.error = action.payload;
-            state.success = false;
-        },
-        resetRegister(state: RegisterState, action: PayloadAction<boolean>) {
-            state.success = action.payload;
-        }
-    },
+  name: "Register",
+  initialState,
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(registerUser.fulfilled, (state) => {
+        state.success = true;
+        state.error = null;
+      })
+      .addCase(registerUser.rejected, (state, action) => {
+        state.success = false;
+        state.error = action.error.message || "Registration failed";
+      })
+      .addCase(resetRegisterFlag.fulfilled, (state) => {
+        state.success = false;
+        state.error = null;
+      });
+  },
 });
 
-export const { registerSuccess, registerFailed, resetRegister } = registerSlice.actions;
 export default registerSlice.reducer;

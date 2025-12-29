@@ -19,6 +19,7 @@ import {
     getInvoiceList as onGetInvoiceList,
 } from 'slices/thunk';
 import filterDataBySearch from 'Common/filterDataBySearch';
+import { InvoiceList } from 'Common/data';
 
 const ListView = () => {
 
@@ -31,7 +32,7 @@ const ListView = () => {
         })
     );
 
-    const { dataList } = useSelector(selectDataList);
+    const dataList = InvoiceList
     const [data, setData] = useState<any>([]);
 
     // Get Data

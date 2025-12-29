@@ -6,6 +6,44 @@ const menuData: any = [
         isTitle: true,
     },
     {
+        id: "admin",
+        label: 'Admin',
+        link: "/#",
+        icon: <MonitorDot />,
+        subItems: [
+            {
+                id: 'userlist',
+                label: 'Users',
+                link: '/admin/user-list',
+                parentId: "admin"
+            },
+            {
+                id: 'roles',
+                label: 'Roles',
+                link: '/admin/roles',
+                parentId: "admin"
+            },
+            {
+                id: 'roleGroups',
+                label: 'Role Groups',
+                link: '/admin/role-group',
+                parentId: "admin"
+            },
+            {
+                id: 'resources',
+                label: 'Resources',
+                link: '/admin/resources',
+                parentId: "admin"
+            },
+            {
+                id: 'permissions',
+                label: 'Permissions',
+                link: '/admin/permissions',
+                parentId: "admin"
+            },
+        ]
+    },
+    {
         id: "dashboard",
         label: 'Dashboards',
         link: "/#",
@@ -27,6 +65,12 @@ const menuData: any = [
                 id: 'emaildashboard',
                 label: 'Email',
                 link: '/dashboards-email',
+                parentId: "dashboard"
+            },
+            {
+                id: 'plugin-upload',
+                label: 'Plugin Upload',
+                link: '/plugin-upload',
                 parentId: "dashboard"
             },
             {
@@ -919,6 +963,12 @@ const menuData: any = [
                 id: 'file-upload',
                 label: 'File Upload',
                 link: '/forms-file-upload',
+                parentId: "form"
+            },
+            {
+                id: 'plugin-upload',
+                label: 'Plugin Upload',
+                link: '/plugin-upload',
                 parentId: "form"
             },
             {

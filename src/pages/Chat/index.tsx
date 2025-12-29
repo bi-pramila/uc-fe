@@ -73,7 +73,47 @@ const Chat = () => {
         })
     );
 
-    const { dataList } = useSelector(selectDataList);
+    const dataList = [
+  {
+    usermessages: [
+      {
+        id: 1,
+        msg: "Hey Satyam, are you free to discuss the UI changes?",
+        img: avatar5,
+        isSender: false
+      },
+      {
+        id: 2,
+        msg: "Yes, I’m available. Let me know what you need.",
+        img: avatar1,
+        isSender: true
+      },
+      {
+        id: 3,
+        msg: "We need to improve the chat responsiveness on mobile.",
+        img: avatar5,
+        isSender: false,
+        bookmark: true
+      },
+      {
+        id: 4,
+        msg: "Got it. I’ll refactor the layout and update breakpoints.",
+        img: avatar1,
+        isSender: true
+      },
+      {
+        id: 5,
+        msg: "Sharing the current mockups here.",
+        img: avatar5,
+        isSender: false,
+        attachments: [
+          { img: img2 },
+          { img: img2 }
+        ]
+      }
+    ]
+  }
+];
     const [data, setData] = useState<any>([]);
 
     // Get Message
