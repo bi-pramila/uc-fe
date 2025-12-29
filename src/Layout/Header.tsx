@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { ChevronsLeft, ChevronsRight, Gem, LogOut, Mail, MessagesSquare, Search, Settings, ShoppingCart, User2 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { createSelector } from 'reselect';
 
@@ -17,9 +17,13 @@ import NotificationDropdown from 'Common/NotificationDropdown';
 import { Dropdown } from 'Common/Components/Dropdown';
 import { changeLeftsidebarSizeType } from 'slices/thunk';
 
+import { logoutUser } from "slices/auth/login/thunk";
+
+
 const Header = ({ handleToggleDrawer, handleDrawer }: any) => {
 
     const dispatch = useDispatch<any>();
+    const navigate = useNavigate();
 
     // react-redux
     const selectLayoutState = (state: any) => state.Layout;
@@ -124,6 +128,17 @@ const Header = ({ handleToggleDrawer, handleDrawer }: any) => {
 
     const { user } = useSelector(selectProperties);
 
+    const handleLogout = async () => {
+         const resultAction = await dispatch(logoutUser());
+        if (logoutUser.fulfilled.match(resultAction)) {
+            console.log("✅ Logged out:", resultAction.payload);
+            navigate("/login");
+        } else {
+            console.error("❌ Logout failed:", resultAction.payload);
+        }
+    };
+
+
     return (
         <React.Fragment>
             <header id="page-topbar" className="ltr:md:left-vertical-menu rtl:md:right-vertical-menu group-data-[sidebar-size=md]:ltr:md:left-vertical-menu-md group-data-[sidebar-size=md]:rtl:md:right-vertical-menu-md group-data-[sidebar-size=sm]:ltr:md:left-vertical-menu-sm group-data-[sidebar-size=sm]:rtl:md:right-vertical-menu-sm group-data-[layout=horizontal]:ltr:left-0 group-data-[layout=horizontal]:rtl:right-0 fixed right-0 z-[1000] left-0 print:hidden group-data-[navbar=bordered]:m-4 group-data-[navbar=bordered]:[&.is-sticky]:mt-0 transition-all ease-linear duration-300 group-data-[navbar=hidden]:hidden group-data-[navbar=scroll]:absolute group/topbar group-data-[layout=horizontal]:z-[1004]">
@@ -222,7 +237,7 @@ const Header = ({ handleToggleDrawer, handleDrawer }: any) => {
                                                 <a className="block ltr:pr-4 rtl:pl-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:text-fecustom-500 focus:text-fecustom-500 dark:text-zinc-200 dark:hover:text-fecustom-500 dark:focus:text-fecustom-500" href={process.env.PUBLIC_URL + "/pages-pricing"}><Gem className="inline-block size-4 ltr:mr-2 rtl:ml-2"></Gem> Upgrade <span className="inline-flex items-center justify-center w-auto h-5 ltr:ml-2 rtl:mr-2 px-1 text-[12px] font-medium border rounded text-white bg-sky-500 border-sky-500">Pro</span></a>
                                             </li>
                                             <li className="pt-2 mt-2 border-t border-slate-200 dark:border-zinc-500">
-                                                <a className="block ltr:pr-4 rtl:pl-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:text-fecustom-500 focus:text-fecustom-500 dark:text-zinc-200 dark:hover:text-fecustom-500 dark:focus:text-fecustom-500" href={process.env.PUBLIC_URL + "/logout"}><LogOut className="inline-block size-4 ltr:mr-2 rtl:ml-2"></LogOut> Sign Out</a>
+                                                <a role="button" tabIndex={0} onClick={handleLogout} className="block ltr:pr-4 rtl:pl-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:text-fecustom-500 focus:text-fecustom-500 dark:text-zinc-200 dark:hover:text-fecustom-500 dark:focus:text-fecustom-500"><LogOut className="inline-block size-4 ltr:mr-2 rtl:ml-2"></LogOut> Sign Out</a>
                                             </li>
                                         </ul>
                                     </Dropdown.Content>

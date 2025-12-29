@@ -42,9 +42,11 @@ export const logoutUser = createAsyncThunk<void, void, { rejectValue: string }>(
   "auth/logoutUser",
   async (_, thunkAPI) => {
     try {
-      await logout();
-    } catch (error) {
-      return thunkAPI.rejectWithValue("Logout failed");
+      const res = await logout();
+      console.log("Logout API Response:", res);
+      return res;
+    } catch (error: any) {
+      return thunkAPI.rejectWithValue(error?.message || "Logout failed");
     }
   }
 );

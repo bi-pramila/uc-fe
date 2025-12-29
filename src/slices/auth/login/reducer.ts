@@ -57,11 +57,11 @@ const loginSlice = createSlice({
             state.user = null;
         })
         .addCase(logoutUser.fulfilled, (state) => {
-            state.isUserLogout = true;
             state.user = null;
             state.success = false;
             state.error = null;
             state.loading = false;
+            state.isUserLogout = true;
         });
     },
     
