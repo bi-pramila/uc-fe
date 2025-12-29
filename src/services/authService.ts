@@ -69,7 +69,9 @@ export const resetPassword = async (
       { token, newPassword },
       { headers: { "Content-Type": "application/json" } }
     );
-    return res.data;
+    console.log("Password reset API response:", res);
+    return res;
+    
   } catch (err: any) {
     throw err.response?.data || { message: "Password reset failed" };
   }

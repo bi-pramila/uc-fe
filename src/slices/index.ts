@@ -38,6 +38,10 @@ import InvoiceReducer from "./invoice/reducer"
 
 // Users
 import UsersReducer from "./users/reducer";
+import RoleGroupReducer from "./roleGroups/reducer";
+import UserRolesReducer from "./userRoles/reducer";
+import UserListReducer from "./userList/reducer";
+import ActionsReducer from "./actions/reducer"; 
 
 const rootReducer = combineReducers({
     Layout: LayoutReducer,
@@ -53,6 +57,10 @@ const rootReducer = combineReducers({
     Social: SocialReducer,
     Invoice: InvoiceReducer,
     Users: UsersReducer,
+    RoleGroup: RoleGroupReducer,
+    UserRoles: UserRolesReducer,
+    UserList: UserListReducer,
+    Actions: ActionsReducer
 });
 
 

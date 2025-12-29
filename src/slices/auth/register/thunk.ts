@@ -1,42 +1,23 @@
-import { ThunkAction } from "redux-thunk";
-import { RootState } from "slices";
-import { Action, Dispatch } from "redux";
-import { postFakeRegister } from "helpers/fakebackend_helper";
-import { registerFailed, registerSuccess, resetRegister } from "./reducer";
-import { getFirebaseBackend } from "helpers/firebase_helper";
+import { createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
 
-interface User {
+export const registerUser = createAsyncThunk(
+  "register/registerUser",
+  async (user: {
     email: string;
-    username: string;
+    name: string;
     password: string;
-}
+    role_id: string;
+  }) => {
+    const response = await axios.post(
+      "http://localhost:4000/api/user/register",
+      user
+    );
+    return response.data;
+  }
+);
 
-export const registerUser = (user: User
-): ThunkAction<void, RootState, unknown, Action<string>> => async (dispatch: Dispatch) => {
-    try {
-        let response: any;
-        if (process.env.VITE_DEFAULTAUTH === "fake") {
-            response = await postFakeRegister(user);
-        } else if (process.env.VITE_DEFAULTAUTH === "firebase") {
-            
-            // initialize relevant method of both Auth
-            const fireBaseBackend = getFirebaseBackend();
-
-            response = fireBaseBackend.registerUser(user.email, user.password);
-        }
-        if (response) {
-            dispatch(registerSuccess(response));
-        }
-    } catch (error) {
-        dispatch(registerFailed(error));
-    }
-};
-
-export const resetRegisterFlag = () => {
-    try {
-        const response = resetRegister(false);
-        return response;
-    } catch (error) {
-        return error;
-    }
-};
+export const resetRegisterFlag = createAsyncThunk(
+  "register/resetRegisterFlag",
+  async () => true
+);

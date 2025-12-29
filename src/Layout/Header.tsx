@@ -209,8 +209,8 @@ const Header = ({ handleToggleDrawer, handleDrawer }: any) => {
                                             <img src={userProfile} alt="" className="size-[37.5px] rounded-full" />
                                         </div>
                                     </Dropdown.Trigger>
-                                    <Dropdown.Content placement="right-end" className="absolute z-50 p-4 ltr:text-left rtl:text-right bg-white rounded-md shadow-md !top-4 dropdown-menu min-w-[14rem] dark:bg-zinc-600" aria-labelledby="dropdownMenuButton">
-                                        <h6 className="mb-2 text-sm font-normal text-slate-500 dark:text-zinc-300">Welcome to Tailwick</h6>
+                                    <Dropdown.Content placement="right-end" className="absolute z-50 p-4 ltr:text-left rtl:text-right bg-white rounded-md shadow-md !top-4 dropdown-menu min-w-[14rem] dark:bg-zinc-600 right-0 max-w-[calc(100vw-1rem)] overflow-auto" aria-labelledby="dropdownMenuButton">
+                                        <h6 className="mb-2 text-sm font-normal text-slate-500 dark:text-zinc-300">Welcome to Ucartz</h6>
                                         <a href="#!" className="flex gap-3 mb-3">
                                             <div className="relative inline-block shrink-0">
                                                 <div className="rounded bg-slate-100 dark:bg-zinc-500">
@@ -220,14 +220,14 @@ const Header = ({ handleToggleDrawer, handleDrawer }: any) => {
                                             </div>
                                             <div>
                                                 <h6 className="mb-1 text-15">{user.username || "admin"}</h6>
-                                                <p className="text-slate-500 dark:text-zinc-300">CEO & Founder</p>
+                                                {/* <p className="text-slate-500 dark:text-zinc-300">CEO & Founder</p> */}
                                             </div>
                                         </a>
                                         <ul>
                                             <li>
                                                 <a className="block ltr:pr-4 rtl:pl-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:text-fecustom-500 focus:text-fecustom-500 dark:text-zinc-200 dark:hover:text-fecustom-500 dark:focus:text-fecustom-500" href={process.env.PUBLIC_URL + "/user-profile"}><User2 className="inline-block size-4 ltr:mr-2 rtl:ml-2"></User2> Profile</a>
                                             </li>
-                                            <li>
+                                            {/* <li>
                                                 <a className="block ltr:pr-4 rtl:pl-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:text-fecustom-500 focus:text-fecustom-500 dark:text-zinc-200 dark:hover:text-fecustom-500 dark:focus:text-fecustom-500" href={process.env.PUBLIC_URL + "/apps-mailbox"}><Mail className="inline-block size-4 ltr:mr-2 rtl:ml-2"></Mail> Inbox <span className="inline-flex items-center justify-center size-5 ltr:ml-2 rtl:mr-2 text-[11px] font-medium border rounded-full text-white bg-red-500 border-red-500">15</span></a>
                                             </li>
                                             <li>
@@ -235,9 +235,9 @@ const Header = ({ handleToggleDrawer, handleDrawer }: any) => {
                                             </li>
                                             <li>
                                                 <a className="block ltr:pr-4 rtl:pl-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:text-fecustom-500 focus:text-fecustom-500 dark:text-zinc-200 dark:hover:text-fecustom-500 dark:focus:text-fecustom-500" href={process.env.PUBLIC_URL + "/pages-pricing"}><Gem className="inline-block size-4 ltr:mr-2 rtl:ml-2"></Gem> Upgrade <span className="inline-flex items-center justify-center w-auto h-5 ltr:ml-2 rtl:mr-2 px-1 text-[12px] font-medium border rounded text-white bg-sky-500 border-sky-500">Pro</span></a>
-                                            </li>
+                                            </li> */}
                                             <li className="pt-2 mt-2 border-t border-slate-200 dark:border-zinc-500">
-                                                <a role="button" tabIndex={0} onClick={handleLogout} className="block ltr:pr-4 rtl:pl-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:text-fecustom-500 focus:text-fecustom-500 dark:text-zinc-200 dark:hover:text-fecustom-500 dark:focus:text-fecustom-500"><LogOut className="inline-block size-4 ltr:mr-2 rtl:ml-2"></LogOut> Sign Out</a>
+                                                <Link className="block ltr:pr-4 rtl:pl-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:text-fecustom-500 focus:text-fecustom-500 dark:text-zinc-200 dark:hover:text-fecustom-500 dark:focus:text-fecustom-500" to={"/logout"}><LogOut className="inline-block size-4 ltr:mr-2 rtl:ml-2"></LogOut> Sign Out</Link>
                                             </li>
                                         </ul>
                                     </Dropdown.Content>

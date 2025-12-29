@@ -1,6 +1,6 @@
 // slices/auth/login/thunk.ts
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { login as loginUserService } from "../../../services/authService";
+import { login as loginUserService, logout } from "../../../services/authService";
 import { LoginCredentials, LoginResponse } from "./types";
 
 
