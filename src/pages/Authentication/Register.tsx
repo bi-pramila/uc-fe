@@ -2,178 +2,198 @@ import React from "react";
 import AuthIcon from "pages/AuthenticationInner/AuthIcon";
 import { useDispatch, useSelector } from "react-redux";
 import { registerUser, resetRegisterFlag } from "slices/thunk";
-import { createSelector } from 'reselect';
+import { createSelector } from "reselect";
 import { Facebook, Github, Mail, Twitter } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 
-// Formik validation
 import * as Yup from "yup";
 import { useFormik as useFormic } from "formik";
 
-// Image
 import logoLight from "assets/images/logo-light.png";
 import logoDark from "assets/images/logo-dark.png";
 import { RootState } from "slices";
 
 const Register = () => {
+  document.title = "Register | Tailwick - React Admin & Dashboard Template";
 
-    document.title = "Register | Tailwick - React Admin & Dashboard Template";
+  const dispatch = useDispatch<any>();
+  const navigation = useNavigate();
 
-    const dispatch = useDispatch<any>();
-    const navigation = useNavigate(); // Use the useNavigate hook
+  const selectRegister = createSelector(
+    (state: RootState) => state.Register,
+    (register) => ({
+      success: register.success,
+    })
+  );
 
-    const selectRegister = createSelector(
-        (state: RootState) => state.Register,
-        (register) => ({
-            success: register.success
+  const { success } = useSelector(selectRegister);
+
+  const validation: any = useFormic({
+    enableReinitialize: true,
+    initialValues: {
+      email: "",
+      name: "",
+      password: "",
+    },
+    validationSchema: Yup.object({
+      email: Yup.string().email().required("Please Enter Your Email"),
+      name: Yup.string().required("Please Enter Your Name"),
+      password: Yup.string().required("Please Enter Your Password"),
+    }),
+    onSubmit: (values: any) => {
+      dispatch(
+        registerUser({
+          ...values,
+          role_id: "1", // 👈 hardcoded, not from UI
         })
-    )
+      );
+    },
+  });
 
-    const { success } = useSelector(selectRegister)
+  React.useEffect(() => {
+    if (success) {
+      navigation("/login");
+    }
 
-    const validation: any = useFormic({
-        // enableReinitialize : use this flag when initial values needs to be changed
-        enableReinitialize: true,
+    setTimeout(() => {
+      dispatch(resetRegisterFlag());
+    }, 3000);
+  }, [dispatch, success, navigation]);
 
-        initialValues: {
-            email: "",
-            username: " ",
-            password: "",
-        },
-        validationSchema: Yup.object({
-            email: Yup.string().email().required("Please Enter Your Email"),
-            username: Yup.string().required("Please Enter Your Username"),
-            password: Yup.string().required("Please Enter Your Password"),
-        }),
-        onSubmit: (values: any) => {
-            dispatch(registerUser(values));
-        }
-    });
+  React.useEffect(() => {
+    const bodyElement = document.body;
 
-    React.useEffect(() => {
-
-        if (success) {
-            navigation('/login')
-        }
-
-        setTimeout(() => {
-            dispatch(resetRegisterFlag());
-        }, 3000);
-
-    }, [dispatch, success, navigation]);
-
-    React.useEffect(() => {
-        const bodyElement = document.body;
-
-        bodyElement.classList.add('flex', 'items-center', 'justify-center', 'min-h-screen', 'py-16', 'lg:py-10', 'bg-slate-50', 'dark:bg-zinc-800', 'dark:text-zinc-100', 'font-public');
-
-        return () => {
-            bodyElement.classList.remove('flex', 'items-center', 'justify-center', 'min-h-screen', 'py-16', 'lg:py-10', 'bg-slate-50', 'dark:bg-zinc-800', 'dark:text-zinc-100', 'font-public');
-        }
-    }, []);
-
-    return (
-        <React.Fragment>
-            <div className="relative">
-
-                <AuthIcon />
-
-                <div className="mb-0 w-screen lg:w-[500px] card shadow-lg border-none shadow-slate-100 relative">
-                    <div className="!px-10 !py-12 card-body">
-                        <Link to="/">
-                            <img src={logoLight} alt="" className="hidden h-6 mx-auto dark:block" />
-                            <img src={logoDark} alt="" className="block h-6 mx-auto dark:hidden" />
-                        </Link>
-
-                        <div className="mt-8 text-center">
-                            <h4 className="mb-1 text-fecustom-500 dark:text-fecustom-500">Create your free account</h4>
-                            <p className="text-slate-500 dark:text-zinc-200">Get your free Tailwick account now</p>
-                        </div>
-
-                        <form action="/" className="mt-10" id="registerForm"
-                            onSubmit={(event: any) => {
-                                event.preventDefault();
-                                validation.handleSubmit();
-                                return false;
-                            }}>
-                            <div className="mb-3">
-                                <label htmlFor="email-field" className="inline-block mb-2 text-base font-medium">Email</label>
-                                <input
-                                    type="text"
-                                    id="email-field"
-                                    name="email"
-                                    className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200"
-                                    placeholder="Enter email"
-                                    onChange={validation.handleChange}
-                                    onBlur={validation.handleBlur}
-                                    value={validation.values.email || ""} />
-                                {validation.touched.email && validation.errors.email ? (
-                                    <div id="email-error" className="mt-1 text-sm text-red-500">{validation.errors.email}</div>
-                                ) : null}
-                            </div>
-                            <div className="mb-3">
-                                <label htmlFor="username-field" className="inline-block mb-2 text-base font-medium">UserName</label>
-                                <input
-                                    type="text"
-                                    id="username-field"
-                                    name="username"
-                                    className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200"
-                                    placeholder="Enter username"
-                                    onChange={validation.handleChange}
-                                    onBlur={validation.handleBlur}
-                                    value={validation.values.username || ""} />
-                                {validation.touched.username && validation.errors.username ? (
-                                    <div id="username-error" className="mt-1 text-sm text-red-500">{validation.errors.username}</div>
-                                ) : null}
-                            </div>
-                            <div className="mb-3">
-                                <label htmlFor="password" className="inline-block mb-2 text-base font-medium">Password</label>
-                                <input
-                                    type="password"
-                                    id="password"
-                                    name="password"
-                                    className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200"
-                                    placeholder="Enter password"
-                                    onChange={validation.handleChange}
-                                    onBlur={validation.handleBlur}
-                                    value={validation.values.password || ""} />
-                                {validation.touched.password && validation.errors.password ? (
-                                    <div id="password-error" className="mt-1 text-sm text-red-500">{validation.errors.password}</div>
-                                ) : null}
-                            </div>
-                            <p className="italic text-15 text-slate-500 dark:text-zinc-200">By registering you agree to the Tailwick <a href="#!" className="underline">Terms of Use</a></p>
-                            <div className="mt-10">
-                                <button type="submit" className="w-full text-white transition-all duration-200 ease-linear btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20">Sign In</button>
-                            </div>
-
-                            <div className="relative text-center my-9 before:absolute before:top-3 before:left-0 before:right-0 before:border-t before:border-t-slate-200 dark:before:border-t-zinc-500">
-                                <h5 className="inline-block px-2 py-0.5 text-sm bg-white text-slate-500 dark:bg-zinc-600 dark:text-zinc-200 rounded relative">Create account with</h5>
-                            </div>
-
-                            <div className="flex flex-wrap justify-center gap-2">
-                                <button type="button" className="flex items-center justify-center size-[37.5px] transition-all duration-200 ease-linear p-0 text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 active:text-white active:bg-fecustom-600 active:border-fecustom-600">
-                                    <Facebook className="size-4"></Facebook>
-                                </button>
-                                <button type="button" className="flex items-center justify-center size-[37.5px] transition-all duration-200 ease-linear p-0 text-white btn bg-orange-500 border-orange-500 hover:text-white hover:bg-orange-600 hover:border-orange-600 focus:text-white focus:bg-orange-600 focus:border-orange-600 active:text-white active:bg-orange-600 active:border-orange-600">
-                                    <Mail className="size-4"></Mail>
-                                </button>
-                                <button type="button" className="flex items-center justify-center size-[37.5px] transition-all duration-200 ease-linear p-0 text-white btn bg-sky-500 border-sky-500 hover:text-white hover:bg-sky-600 hover:border-sky-600 focus:text-white focus:bg-sky-600 focus:border-sky-600 active:text-white active:bg-sky-600 active:border-sky-600">
-                                    <Twitter className="size-4"></Twitter>
-                                </button>
-                                <button type="button" className="flex items-center justify-center size-[37.5px] transition-all duration-200 ease-linear p-0 text-white btn bg-slate-500 border-slate-500 hover:text-white hover:bg-slate-600 hover:border-slate-600 focus:text-white focus:bg-slate-600 focus:border-slate-600 active:text-white active:bg-slate-600 active:border-slate-600">
-                                    <Github className="size-4"></Github>
-                                </button>
-                            </div>
-
-                            <div className="mt-10 text-center">
-                                <p className="mb-0 text-slate-500 dark:text-zinc-200">Already have an account ? <Link to="/login" className="font-semibold underline transition-all duration-150 ease-linear text-slate-500 dark:text-zinc-200 hover:text-fecustom-500 dark:hover:text-fecustom-500">Login</Link> </p>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </React.Fragment>
+    bodyElement.classList.add(
+      "flex",
+      "items-center",
+      "justify-center",
+      "min-h-screen",
+      "py-16",
+      "lg:py-10",
+      "bg-slate-50",
+      "dark:bg-zinc-800",
+      "dark:text-zinc-100",
+      "font-public"
     );
-}
+
+    return () => {
+      bodyElement.classList.remove(
+        "flex",
+        "items-center",
+        "justify-center",
+        "min-h-screen",
+        "py-16",
+        "lg:py-10",
+        "bg-slate-50",
+        "dark:bg-zinc-800",
+        "dark:text-zinc-100",
+        "font-public"
+      );
+    };
+  }, []);
+
+  return (
+    <React.Fragment>
+      <div className="relative">
+        <AuthIcon />
+
+        <div className="mb-0 w-screen lg:w-[500px] card shadow-lg border-none shadow-slate-100 relative">
+          <div className="!px-10 !py-12 card-body">
+            <Link to="/">
+              <img src={logoLight} alt="" className="hidden h-6 mx-auto dark:block" />
+              <img src={logoDark} alt="" className="block h-18 mx-auto dark:hidden" />
+            </Link>
+
+            <div className="mt-8 text-center">
+              <h4 className="mb-1 text-fecustom-500">Create your account</h4>
+              <p className="text-slate-500">
+                Register to create your new account now
+              </p>
+            </div>
+
+            <form
+              className="mt-10"
+              onSubmit={(e) => {
+                e.preventDefault();
+                validation.handleSubmit();
+              }}
+            >
+              <div className="mb-3">
+                <label className="inline-block mb-2 text-base font-medium">
+                  Email
+                </label>
+                <input
+                  type="text"
+                  name="email"
+                  className="form-input"
+                  onChange={validation.handleChange}
+                  onBlur={validation.handleBlur}
+                  value={validation.values.email}
+                />
+                {validation.touched.email && validation.errors.email && (
+                  <div className="mt-1 text-sm text-red-500">
+                    {validation.errors.email}
+                  </div>
+                )}
+              </div>
+
+              <div className="mb-3">
+                <label className="inline-block mb-2 text-base font-medium">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  className="form-input"
+                  onChange={validation.handleChange}
+                  onBlur={validation.handleBlur}
+                  value={validation.values.name}
+                />
+                {validation.touched.name && validation.errors.name && (
+                  <div className="mt-1 text-sm text-red-500">
+                    {validation.errors.name}
+                  </div>
+                )}
+              </div>
+
+              <div className="mb-3">
+                <label className="inline-block mb-2 text-base font-medium">
+                  Password
+                </label>
+                <input
+                  type="password"
+                  name="password"
+                  className="form-input"
+                  onChange={validation.handleChange}
+                  onBlur={validation.handleBlur}
+                  value={validation.values.password}
+                />
+                {validation.touched.password &&
+                  validation.errors.password && (
+                    <div className="mt-1 text-sm text-red-500">
+                      {validation.errors.password}
+                    </div>
+                  )}
+              </div>
+
+              <button type="submit" className="w-full btn bg-fecustom-500 text-white">
+                Register
+              </button>
+
+              <div className="mt-6 text-center">
+                <p className="text-slate-500">
+                  Already have an account?{" "}
+                  <Link to="/login" className="underline">
+                    Login
+                  </Link>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </React.Fragment>
+  );
+};
 
 export default Register;

@@ -13,7 +13,7 @@ import { Network } from 'lucide-react';
 const HorizontalLayout = (props: any) => {
     const path = props.router.location.pathname;
 
-    const [menuItems, setMenuItems] = React.useState<any>(menuData);
+    const [menuItems, setMenuItems] = React.useState<any>();
 
     React.useEffect(() => {
         const handleResize = () => {

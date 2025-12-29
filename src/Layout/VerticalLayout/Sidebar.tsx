@@ -22,7 +22,7 @@ const Sidebar = ({ layoutType, layoutSidebarSizeType }: any) => {
                             <img src={logoSm} alt="" className="h-6 mx-auto" />
                         </span>
                         <span className="group-data-[sidebar-size=sm]:hidden">
-                            <img src={logoDark} alt="" className="h-6 mx-auto" />
+                            <img src={logoDark} alt="" className="h-18 mx-auto" />
                         </span>
                     </Link>
                     <Link to="#" className="hidden group-data-[sidebar=dark]:block group-data-[sidebar=brand]:block group-data-[sidebar=modern]:block">

@@ -31,6 +31,7 @@ import {
 } from 'slices/thunk';
 import { ToastContainer } from 'react-toastify';
 import filterDataBySearch from 'Common/filterDataBySearch';
+import { UserListViewData } from 'Common/data/users';
 
 const ListView = () => {
     const dispatch = useDispatch<any>();
@@ -42,7 +43,7 @@ const ListView = () => {
         })
     );
 
-    const { userList } = useSelector(selectDataList);
+    const userList = UserListViewData 
     const [user, setUser] = useState<any>([]);
     const [eventData, setEventData] = useState<any>();
 

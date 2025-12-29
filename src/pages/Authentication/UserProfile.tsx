@@ -36,18 +36,6 @@ const UserProfile = () => {
 
   const { error, success, user } = useSelector(selectProperties);
 
-  useEffect(() => {
-    if (process.env.VITE_DEFAULTAUTH === "fake") {
-      setEmail(user.email)
-      setName(user.username);
-      setIdx(user.uid)
-    } else if (process.env.VITE_DEFAULTAUTH === "firebase") {
-      setEmail(user.email)
-      setName(user.username);
-      setIdx(user.uid)
-    }
-  }, [user]);
-
   const validation = useFormic({
     // enableReinitialize : use this flag when initial values needs to be changed
     enableReinitialize: true,

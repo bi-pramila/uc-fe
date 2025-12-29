@@ -56,9 +56,9 @@ const Login = (props: any) => {
     useEffect(() => {
         console.log("Login effect triggered:");
         console.log("success:", success);
-        console.log("user:", user);
+        console.log("user:", user, loginAttempted);
 
-        if (success && user && loginAttempted && !hasNavigated) {
+        if (success && user) {
             console.log("Navigating to /dashboard");
             navigate("/dashboard");
             setHasNavigated(true);
@@ -102,7 +102,7 @@ const Login = (props: any) => {
                     <div className="!px-10 !py-12 card-body">
                         <Link to="/">
                             <img src={logoLight} alt="" className="hidden h-6 mx-auto dark:block" />
-                            <img src={logoDark} alt="" className="block h-6 mx-auto dark:hidden" />
+                            <img src={logoDark} alt="" className="block h-18 mx-auto dark:hidden" />
                         </Link>
 
                         <div className="mt-8 text-center">
