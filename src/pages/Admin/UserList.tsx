@@ -27,7 +27,8 @@ import {
     addEmployee as onAddEmployee,
     updateEmployee as onUpdateEmployee,
     deleteEmployee as onDeleteEmployee,
-    fetchRoleGroups
+    fetchRoleGroups,
+    fetchUserRoles
 } from 'slices/thunk';
 import { ToastContainer } from 'react-toastify';
 import { fetchUserList, onAddUser, onDeleteUser, onUpdateUser } from 'slices/userList/thunk';
@@ -36,18 +37,17 @@ const UserList = () => {
 
     const dispatch = useDispatch<any>();
 
-     const selectRoleGroupData = createSelector(
-                (state: any) => state.RoleGroup,
-                (roleGroup) => ({
-                    groups: roleGroup.groups,
-                    meta: roleGroup.meta,
-                    loading: roleGroup.loading
-                })
-            );
+     const selectUserRoleData = createSelector(
+                 (state: any) => state.UserRoles,
+                 (userRoles) => ({
+                     roles: userRoles.roles,
+                     meta: userRoles.meta,
+                     loading: userRoles.loading
+                 })
+         );
         
             
-        
-        const { groups } = useSelector(selectRoleGroupData);
+    const { roles } = useSelector(selectUserRoleData);
 
    // ⭐ UPDATED SELECTOR FOR USER LIST
        const selectUserData = createSelector(
@@ -63,8 +63,8 @@ const UserList = () => {
     const { users, meta, loading } = useSelector(selectUserData);
 
     useEffect(() => {
-        if(groups.length === 0) {
-                    dispatch(fetchRoleGroups({ page: 1, limit: 10 })); // calling backend with limit=10
+        if(roles.length === 0) {
+                    dispatch(fetchUserRoles({ page: 1, limit: 10 })); // calling backend with limit=10
                 }
             dispatch(fetchUserList({ page: 1, limit: 10 })); // calling backend with limit=10
         }, [dispatch]);
@@ -190,7 +190,7 @@ const UserList = () => {
             enableColumnFilter: false,
             cell: (cell: any) => (
                 <span className="inline-block text-xs px-2 py-1 rounded-md bg-slate-100 dark:bg-zinc-700">
-                    {groups.find((group: any) => group.id === cell.getValue())?.group_name ?? "—"}
+                    {roles.find((role: any) => role.id === cell.getValue())?.role_name ?? "—"}
                 </span>
             ),
         },
@@ -274,7 +274,7 @@ const UserList = () => {
                 </div>
             ),
         }
-    ], [groups, users]);
+    ], [roles, users]);
 
     return (
         <React.Fragment>
@@ -338,8 +338,8 @@ const UserList = () => {
                             <div className="xl:col-span-6">
                                 <label htmlFor="roleSelect" className="inline-block mb-2 text-base font-medium">Role Group</label>
                                 <select id="roleSelect" name="role_id" onChange={validation.handleChange} value={validation.values.role_id || ""} className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500">
-                                    {groups.map((group: any) => (
-                                        <option key={group.group_key} value={group.id}>{group.group_name}</option>
+                                    {roles.map((role: any) => (
+                                        <option key={role.role_key} value={role.id}>{role.role_name}</option>
                                     ))}
                                 </select>
                                 {validation.touched.role_id && validation.errors.role_id ? (

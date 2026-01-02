@@ -4,13 +4,16 @@ import {
   fetchUserRoles,
   addUserRole,
   updateUserRole,
-  deleteUserRole
+  deleteUserRole,
+  fetchPermissionsGrouped,
+  bulkAssignPermissions
 } from "../thunk"; // same import style as RoleGroup
 
 const userRolesSlice = createSlice({
   name: "UserRoles", // 👈 matches store key
   initialState: {
     roles: [],   // 👈 same as groups in RoleGroup
+    permissions: [],
     meta: {},
     loading: false,
     error: null,
@@ -49,6 +52,33 @@ const userRolesSlice = createSlice({
       .addCase(deleteUserRole.fulfilled, (state, action) => {
         const removedId = action.meta.arg;
         state.roles = state.roles.filter((r) => r.id !== removedId);
+      })
+
+      // 📌 FETCH PERMISSIONS GROUPED
+      .addCase(fetchPermissionsGrouped.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(fetchPermissionsGrouped.fulfilled, (state, action) => {
+        state.loading = false;
+        state.permissions = action.payload || [];
+        state.error = null;
+      })
+      .addCase(fetchPermissionsGrouped.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+      })
+
+      // 📌 BULK ASSIGN PERMISSIONS
+      .addCase(bulkAssignPermissions.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(bulkAssignPermissions.fulfilled, (state, action) => {
+        state.loading = false;
+        state.error = null;
+      })
+      .addCase(bulkAssignPermissions.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
       });
   },
 });

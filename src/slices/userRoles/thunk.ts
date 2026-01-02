@@ -55,3 +55,31 @@ export const deleteUserRole = createAsyncThunk(
     }
   }
 );
+
+
+export const fetchPermissionsGrouped = createAsyncThunk(
+    "permissions/fetchGrouped",
+    async (_, { rejectWithValue }) => {
+        try {
+            const response = await axios.get(`${API_BASE}/permissions/grouped`);
+            return response.data || [];
+        } catch (error: any) {
+            return rejectWithValue(error.response?.data?.message || "Failed to fetch permissions");
+        }
+    }
+);
+
+export const bulkAssignPermissions = createAsyncThunk(
+  "UserRoles/bulkAssignPermissions",
+  async ({ roleId, permissionIds }, { rejectWithValue }) => {
+    try {
+      const res = await axios.post(`${API_BASE}/role-permissions/bulk-assign`, {
+        roleId,
+        permissionIds,
+      });
+      return res.data;
+    } catch (err) {
+      return rejectWithValue(err.response?.data?.message);
+    }
+  }
+);

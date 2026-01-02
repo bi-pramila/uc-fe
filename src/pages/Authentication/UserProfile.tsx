@@ -13,6 +13,7 @@ import { createSelector } from 'reselect';
 import BreadCrumb from "Common/BreadCrumb";
 import withRouter from "Common/withRouter";
 import { editProfile } from "slices/thunk";
+import ChangePassword from "./ChangePassword";
 
 const UserProfile = () => {
 
@@ -89,7 +90,7 @@ const UserProfile = () => {
           </div>
         </div>
 
-        <h5 className="mb-4">Change User Name</h5>
+        {/* <h5 className="mb-4">Change User Name</h5>
 
         <div className="card">
           <div className="card-body">
@@ -121,7 +122,11 @@ const UserProfile = () => {
               </div>
             </form>
           </div>
-        </div>
+        </div> */}
+
+        <h5 className="mb-4">Change Password</h5>
+
+        <ChangePassword/>
       </div>
     </React.Fragment >
   );
