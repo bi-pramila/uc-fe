@@ -6,7 +6,6 @@ import {
   updateUserRole,
   deleteUserRole,
   fetchPermissionsGrouped,
-  bulkAssignPermissions
 } from "../thunk"; // same import style as RoleGroup
 
 const userRolesSlice = createSlice({
@@ -42,7 +41,7 @@ const userRolesSlice = createSlice({
 
       // 📌 UPDATE (same as updateRoleGroup)
       .addCase(updateUserRole.fulfilled, (state, action) => {
-        const updated = action.payload?.data;
+        const updated = action.payload;
         state.roles = state.roles.map((r) =>
           r.id === updated.id ? updated : r
         );
@@ -64,19 +63,6 @@ const userRolesSlice = createSlice({
         state.error = null;
       })
       .addCase(fetchPermissionsGrouped.rejected, (state, action) => {
-        state.loading = false;
-        state.error = action.payload;
-      })
-
-      // 📌 BULK ASSIGN PERMISSIONS
-      .addCase(bulkAssignPermissions.pending, (state) => {
-        state.loading = true;
-      })
-      .addCase(bulkAssignPermissions.fulfilled, (state, action) => {
-        state.loading = false;
-        state.error = null;
-      })
-      .addCase(bulkAssignPermissions.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
       });

@@ -68,18 +68,3 @@ export const fetchPermissionsGrouped = createAsyncThunk(
         }
     }
 );
-
-export const bulkAssignPermissions = createAsyncThunk(
-  "UserRoles/bulkAssignPermissions",
-  async ({ roleId, permissionIds }, { rejectWithValue }) => {
-    try {
-      const res = await axios.post(`${API_BASE}/role-permissions/bulk-assign`, {
-        roleId,
-        permissionIds,
-      });
-      return res.data;
-    } catch (err) {
-      return rejectWithValue(err.response?.data?.message);
-    }
-  }
-);

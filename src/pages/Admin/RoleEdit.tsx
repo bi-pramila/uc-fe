@@ -20,14 +20,15 @@ import {
     updateUserRole,
     addUserRole,
     fetchPermissionsGrouped,
-    bulkAssignPermissions
 } from 'slices/thunk';
+import { useRolePermissions } from 'hooks/useRolePermissions';
 import { ToastContainer } from 'react-toastify';
 
 const RoleEdit = () => {
     const dispatch = useDispatch<any>();
     const navigate = useNavigate();
     const { id } = useParams<{ id: string }>();
+    const { fetchRolePermissions, bulkAssignPermissions, loading: permissionsLoading } = useRolePermissions();
 
     const selectRoleGroupData = createSelector(
         (state: any) => state.RoleGroup,
@@ -57,6 +58,7 @@ const RoleEdit = () => {
     const [selectedPermissions, setSelectedPermissions] = useState<any[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [isEditMode, setIsEditMode] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     useEffect(() => {
         if (groups.length === 0) {
@@ -74,23 +76,35 @@ const RoleEdit = () => {
 
     // Determine mode and fetch role data from Redux
     useEffect(() => {
-        if (id === "new") {
+        if (id && roles && roles.length > 0) {
+            const foundRole = roles.find((r: any) => r.id === parseInt(id));
+            if (foundRole) {
+                setRoleData(foundRole);
+                setIsEditMode(true);
+                loadRolePermissions(id);
+            } else {
+                setIsLoading(false);
+            }
+        } else if (id === "new") {
             setRoleData({});
             setSelectedPermissions([]);
             setIsEditMode(false);
             setIsLoading(false);
-        } else if (id && roles && roles.length > 0) {
-            const foundRole = roles.find((r: any) => r.id === parseInt(id));
-            if (foundRole) {
-                setRoleData(foundRole);
-                setSelectedPermissions(foundRole.permissions || []);
-                setIsEditMode(true);
-                setIsLoading(false);
-            } else {
-                setIsLoading(false);
-            }
         }
     }, [id, roles]);
+
+    const loadRolePermissions = (roleId: string) => {
+        setIsLoading(true);
+        fetchRolePermissions(roleId)
+            .then((permissionIds: any[]) => {
+                setSelectedPermissions(permissionIds);
+                setIsLoading(false);
+            })
+            .catch((error: any) => {
+                console.error("Error fetching role permissions:", error);
+                setIsLoading(false);
+            });
+    };
 
     const validation = useFormik({
         enableReinitialize: true,
@@ -110,8 +124,9 @@ const RoleEdit = () => {
         }),
 
         onSubmit: (values) => {
-            if (isEditMode) {
-                // For edit mode: update role details first
+            setIsSubmitting(true);
+            
+                // For edit mode: update role details first, then bulk assign permissions
                 const body = {
                     role_name: values.role_name,
                     role_description: values.role_description,
@@ -122,38 +137,21 @@ const RoleEdit = () => {
                 dispatch(updateUserRole({ id: values.id, body }))
                     .then(() => {
                         // Then bulk assign permissions
-                        dispatch(bulkAssignPermissions({ 
-                            roleId: values.id, 
-                            permissionIds: selectedPermissions 
-                        }))
-                        .then(() => {
-                            dispatch(fetchUserRoles({ page: 1, limit: 10 }));
-                            navigate('/admin/roles');
-                        });
+                        return bulkAssignPermissions(values.id, selectedPermissions);
+                    })
+                    .then(() => {
+                        // Fetch updated permissions
+                        return loadRolePermissions(values.id);
+                    })
+                    .then(() => {
+                        dispatch(fetchUserRoles({ page: 1, limit: 10 }));
+                        setIsSubmitting(false);
+                    })
+                    .catch((error) => {
+                        console.error("Error updating role or assigning permissions:", error);
+                        setIsSubmitting(false);
                     });
-            } else {
-                // For add mode: create role first
-                const body = {
-                    role_name: values.role_name,
-                    role_description: values.role_description,
-                    role_group_id: values.role_group_id,
-                    role_key: values.role_key,
-                };
-
-                dispatch(addUserRole(body))
-                    .then((response: any) => {
-                        // Then bulk assign permissions to the newly created role
-                        const newRoleId = response.payload?.data?.id;
-                        dispatch(bulkAssignPermissions({ 
-                            roleId: newRoleId, 
-                            permissionIds: selectedPermissions 
-                        }))
-                        .then(() => {
-                            dispatch(fetchUserRoles({ page: 1, limit: 10 }));
-                            navigate('/admin/roles');
-                        });
-                    });
-            }
+            
         },
     });
 
@@ -165,7 +163,10 @@ const RoleEdit = () => {
         );
     };
 
-    if (isLoading) {
+    const isLoadingData = isLoading || permissionsLoading;
+    const isDisabledSubmit = isSubmitting || isLoadingData;
+
+    if (isLoadingData) {
         return (
             <React.Fragment>
                 <BreadCrumb title={isEditMode ? 'Edit Role' : 'Add Role'} pageTitle='HR Management' />
@@ -187,11 +188,13 @@ const RoleEdit = () => {
                         <button
                             type="button"
                             onClick={() => navigate('/admin/roles')}
-                            className="flex items-center justify-center size-8 transition-all duration-200 ease-linear rounded-md bg-slate-100 text-slate-500 hover:text-fecustom-500 hover:bg-fecustom-100 dark:bg-zinc-600 dark:text-zinc-200 dark:hover:bg-fecustom-500/20 dark:hover:text-fecustom-500"
+                            disabled={isDisabledSubmit}
+                            className="flex items-center justify-center size-8 transition-all duration-200 ease-linear rounded-md bg-slate-100 text-slate-500 hover:text-fecustom-500 hover:bg-fecustom-100 dark:bg-zinc-600 dark:text-zinc-200 dark:hover:bg-fecustom-500/20 dark:hover:text-fecustom-500 disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                             <ChevronLeft className="size-4" />
                         </button>
                         <h6 className="text-16">{isEditMode ? 'Edit Role' : 'Add Role'}</h6>
+                        {isSubmitting && <span className="text-sm text-slate-500">Saving...</span>}
                     </div>
 
                     <form
@@ -211,12 +214,13 @@ const RoleEdit = () => {
                                 <input
                                     type="text"
                                     id="roleNameInput"
-                                    className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500"
+                                    className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:opacity-50"
                                     name="role_name"
                                     onChange={validation.handleChange}
                                     onBlur={validation.handleBlur}
                                     value={validation.values.role_name || ""}
                                     placeholder="Role name"
+                                    disabled={isDisabledSubmit}
                                 />
                                 {validation.touched.role_name && validation.errors.role_name ? (
                                     <p className="text-red-400 text-sm mt-1">{validation.errors.role_name}</p>
@@ -229,12 +233,13 @@ const RoleEdit = () => {
                                 <input
                                     type="text"
                                     id="roleKeyInput"
-                                    className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500"
+                                    className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:opacity-50"
                                     name="role_key"
                                     onChange={validation.handleChange}
                                     onBlur={validation.handleBlur}
                                     value={validation.values.role_key || ""}
                                     placeholder="Role key"
+                                    disabled={isDisabledSubmit}
                                 />
                                 {validation.touched.role_key && validation.errors.role_key ? (
                                     <p className="text-red-400 text-sm mt-1">{validation.errors.role_key}</p>
@@ -250,7 +255,8 @@ const RoleEdit = () => {
                                     onChange={validation.handleChange}
                                     onBlur={validation.handleBlur}
                                     value={validation.values.role_group_id || ""}
-                                    className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500"
+                                    className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:opacity-50"
+                                    disabled={isDisabledSubmit}
                                 >
                                     <option value="">Select a group</option>
                                     {groupData.map((group: any) => (
@@ -267,13 +273,14 @@ const RoleEdit = () => {
                                 <label htmlFor="roleDescInput" className="inline-block mb-2 text-base font-medium">Role Description</label>
                                 <textarea
                                     id="roleDescInput"
-                                    className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500"
+                                    className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:opacity-50"
                                     name="role_description"
                                     onChange={validation.handleChange}
                                     onBlur={validation.handleBlur}
                                     value={validation.values.role_description || ""}
                                     placeholder="Role Description"
                                     rows={3}
+                                    disabled={isDisabledSubmit}
                                 />
                                 {validation.touched.role_description && validation.errors.role_description ? (
                                     <p className="text-red-400 text-sm mt-1">{validation.errors.role_description}</p>
@@ -283,6 +290,7 @@ const RoleEdit = () => {
                             {/* Permissions Grouped by Resource */}
                             <div className="xl:col-span-12">
                                 <h6 className="text-16 font-semibold mb-4">Permissions</h6>
+                                {permissionsLoading && <p className="text-sm text-slate-500 mb-3">Loading permissions...</p>}
                                 <div className="space-y-6">
                                     {permissions.map((resource: any) => (
                                         <div key={resource.id} className="border border-slate-200 dark:border-zinc-500 rounded-lg p-4">
@@ -294,11 +302,12 @@ const RoleEdit = () => {
                                                     <div key={`${resource.id}-${action.permission_id}`} className="flex items-center gap-2">
                                                         <input
                                                             id={`permission-${action.permission_id}`}
-                                                            className="size-4 border rounded-sm appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zinc-600 dark:border-zinc-500 checked:bg-fecustom-500 checked:border-fecustom-500 dark:checked:bg-fecustom-500 dark:checked:border-fecustom-500"
+                                                            className="size-4 border rounded-sm appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zinc-600 dark:border-zinc-500 checked:bg-fecustom-500 checked:border-fecustom-500 dark:checked:bg-fecustom-500 dark:checked:border-fecustom-500 disabled:opacity-50 disabled:cursor-not-allowed"
                                                             type="checkbox"
                                                             value={action.permission_id}
                                                             checked={selectedPermissions.includes(action.permission_id)}
                                                             onChange={() => handlePermissionChange(action.permission_id)}
+                                                            disabled={isDisabledSubmit}
                                                         />
                                                         <label htmlFor={`permission-${action.permission_id}`} className="cursor-pointer text-sm">
                                                             {action.action_name}
@@ -326,15 +335,17 @@ const RoleEdit = () => {
                             <button
                                 type="button"
                                 onClick={() => navigate('/admin/roles')}
-                                className="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100"
+                                disabled={isDisabledSubmit}
+                                className="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100 disabled:opacity-50 disabled:cursor-not-allowed"
                             >
                                 Cancel
                             </button>
                             <button
                                 type="submit"
-                                className="text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600"
+                                disabled={isDisabledSubmit}
+                                className="text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 disabled:opacity-50 disabled:cursor-not-allowed"
                             >
-                                {isEditMode ? 'Update Role' : 'Add Role'}
+                                {isSubmitting ? 'Updating...' : 'Update Role'}
                             </button>
                         </div>
                     </form>
