@@ -1,4 +1,6 @@
-# Stage 1: Build stage (optional if building locally)
+# ===============================
+# Stage 1: Build
+# ===============================
 FROM node:24.0.0-alpine as build
 
 WORKDIR /app
