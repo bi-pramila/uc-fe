@@ -1,15 +1,12 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import BreadCrumb from 'Common/BreadCrumb';
-import Flatpickr from "react-flatpickr";
 import moment from "moment";
 
-import dummyImg from "assets/images/users/user-dummy-img.jpg";
-
 // Icons
-import { Search, Plus, Trash2, Eye, Pencil, ImagePlus } from 'lucide-react';
+import { Search, Plus, Trash2, Eye, Pencil } from 'lucide-react';
 
 import TableContainer from 'Common/TableContainer';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import DeleteModal from 'Common/DeleteModal';
 import Modal from 'Common/Components/Modal';
@@ -27,7 +24,6 @@ import {
     fetchRoleGroups,
     addUserRole,
     deleteUserRole,
-    updateUserRole
 } from 'slices/thunk';
 import { ToastContainer } from 'react-toastify';
 import { fetchActions } from 'slices/actions/thunk';
@@ -35,6 +31,7 @@ import { fetchActions } from 'slices/actions/thunk';
 const RoleList = () => {
 
     const dispatch = useDispatch<any>();
+    const navigate = useNavigate();
 
     const selectRoleGroupData = createSelector(
             (state: any) => state.RoleGroup,
@@ -44,8 +41,6 @@ const RoleList = () => {
                 loading: roleGroup.loading
             })
         );
-    
-        
     
     const { groups } = useSelector(selectRoleGroupData);
 
@@ -69,17 +64,13 @@ const RoleList = () => {
     );
 
     const { actions } = useSelector(selectActionsData);
-
-
     const { roles, meta, loading } = useSelector(selectUserRoleData);
 
     useEffect(() => {
         if(groups.length === 0) {
             dispatch(fetchRoleGroups({ page: 1, limit: 10 })); // calling backend with limit=10
         }
-        console.log("Actions length:", actions.length);
         if(actions.length === 0) {
-            console.log("Actions length:", actions.length);
             dispatch(fetchActions()); // calling backend with limit=10
         }
         dispatch(fetchUserRoles({ page: 1, limit: 10 })); // calling backend with limit=10
@@ -87,17 +78,15 @@ const RoleList = () => {
 
     const [data, setData] = useState<any>([]);
     const [eventData, setEventData] = useState<any>();
+    const [groupData, setGroupData] = useState<any>([]);
 
     const [show, setShow] = useState<boolean>(false);
-    const [isEdit, setIsEdit] = useState<boolean>(false);
-
-    const [groupData, setGroupData] = useState<any>([]);
 
     useEffect(() => {
         setData(roles || []);
     }, [roles]);
 
-     useEffect(() => {
+    useEffect(() => {
         setGroupData(groups || []);
     }, [groups]);
 
@@ -118,15 +107,14 @@ const RoleList = () => {
         setDeleteModal(false);
     };
 
-    // 🟢 FORM HANDLING (UPDATED)
+    // 🟢 FORM HANDLING (ADD NEW ROLE)
     const validation = useFormik({
         enableReinitialize: true,
         initialValues: {
-            id: eventData?.id || "",
-            role_name: eventData?.role_name || "",
-            role_description: eventData?.role_description || "",
-            role_group_id: eventData?.role_group_id || "",
-            role_key: eventData?.role_key || "",
+            role_name: "",
+            role_description: "",
+            role_group_id: "",
+            role_key: "",
         },
 
         validationSchema: Yup.object({
@@ -144,15 +132,8 @@ const RoleList = () => {
                 role_key: values.role_key,
             };
 
-            console.log("Submitted values:", values, "Body:", body);
-
-            if (isEdit) {
-                dispatch(updateUserRole({ id: values.id, body }))
-                    .then(() => dispatch(fetchUserRoles({ page: 1, limit: 10 })));
-            } else {
-                dispatch(addUserRole(body))
-                    .then(() => dispatch(fetchUserRoles({ page: 1, limit: 10 })));
-            }
+            dispatch(addUserRole(body))
+                .then(() => dispatch(fetchUserRoles({ page: 1, limit: 10 })));
 
             toggle();
         },
@@ -161,19 +142,11 @@ const RoleList = () => {
     const toggle = useCallback(() => {
         if (show) {
             setShow(false);
-            setEventData(null);
-            setIsEdit(false);
+            validation.resetForm();
         } else {
             setShow(true);
-            validation.resetForm();
         }
     }, [show, validation]);
-
-    const handleUpdateDataClick = (ele: any) => {
-        setEventData(ele);
-        setIsEdit(true);
-        setShow(true);
-    };
 
     // columns
     const columns = useMemo(() => [
@@ -227,7 +200,7 @@ const RoleList = () => {
                         className="flex items-center justify-center size-8 transition-all duration-200 ease-linear rounded-md edit-item-btn bg-slate-100 text-slate-500 hover:text-fecustom-500 hover:bg-fecustom-100 dark:bg-zinc-600 dark:text-zinc-200 dark:hover:bg-fecustom-500/20 dark:hover:text-fecustom-500"
                         onClick={() => {
                             const data = cell.row.original;
-                            handleUpdateDataClick(data);
+                            navigate(`/admin/role-edit/${data.id}`);
                         }}
                     >
                         <Pencil className="size-4" />
@@ -246,7 +219,7 @@ const RoleList = () => {
                 </div>
             ),
         }
-    ], []);
+    ], [navigate]);
 
     return (
         <React.Fragment>
@@ -258,9 +231,9 @@ const RoleList = () => {
                     <div className="flex items-center gap-3 mb-4">
                         <h6 className="text-15 grow">Roles(<b className="total-Users">{data.length}</b>)</h6>
                         <div className="shrink-0">
-                            <Link to="#!" data-modal-target="addUserModal" type="button" className="text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20 add-user" onClick={toggle}>
+                            <button type="button" className="text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20 add-user" onClick={toggle}>
                                 <Plus className="inline-block size-4" /> <span className="align-middle">Add Role</span>
-                            </Link>
+                            </button>
                         </div>
                     </div>
                     {data && data.length > 0 ?
@@ -287,28 +260,23 @@ const RoleList = () => {
                 </div>
             </div>
 
-            {/* User Modal */}
+            {/* Add Role Modal */}
             <Modal show={show} onHide={toggle} modal-center="true"
                 className="fixed flex flex-col transition-all duration-300 ease-in-out left-2/4 z-drawer -translate-x-2/4 -translate-y-4/4"
                 dialogClassName="w-screen md:w-[75rem] bg-white shadow rounded-md dark:bg-zinc-600">
                 <Modal.Header className="flex items-center justify-between p-4 border-b dark:border-zinc-500"
                     closeButtonClass="transition-all duration-200 ease-linear text-slate-400 hover:text-red-500">
-                    <Modal.Title className="text-16">{!!isEdit ? "Edit Role" : "Add Role"}</Modal.Title>
+                    <Modal.Title className="text-16">Add Role</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="max-h-[calc(theme('height.screen'))] p-4 overflow-y-auto">
                     <form className="create-form" id="create-form"
                         onSubmit={(e) => {
-                            console.log("Form submit event:", e);
                             e.preventDefault();
                             validation.handleSubmit();
                             return false;
                         }}
                     >
-                        <input type="hidden" name="id" id="id" value={validation.values.id || ""} />
-                        <div id="alert-error-msg" className="hidden px-4 py-3 text-sm text-red-500 border border-transparent rounded-md bg-red-50 dark:bg-red-500/20"></div>
                         <div className="grid grid-cols-1 gap-4 xl:grid-cols-12">
-                           
-
                             <div className="xl:col-span-7">
                                 <label htmlFor="nameInput" className="inline-block mb-2 text-base font-medium">Name</label>
                                 <input type="text" id="nameInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500"
@@ -323,8 +291,8 @@ const RoleList = () => {
                             </div>
 
                             <div className="xl:col-span-7">
-                                <label htmlFor="nameInput" className="inline-block mb-2 text-base font-medium">Role Key</label>
-                                <input type="text" id="nameInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500"
+                                <label htmlFor="roleKeyInput" className="inline-block mb-2 text-base font-medium">Role Key</label>
+                                <input type="text" id="roleKeyInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500"
                                     name="role_key"
                                     onChange={validation.handleChange}
                                     value={validation.values.role_key || ""}
@@ -338,6 +306,7 @@ const RoleList = () => {
                             <div className="xl:col-span-6">
                                 <label htmlFor="roleSelect" className="inline-block mb-2 text-base font-medium">Role Group</label>
                                 <select id="roleSelect" name="role_group_id" onChange={validation.handleChange} value={validation.values.role_group_id || ""} className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500">
+                                    <option value="">Select a group</option>
                                     {groupData.map((group: any) => (
                                         <option key={group.group_key} value={group.id}>{group.group_name}</option>
                                     ))}
@@ -348,8 +317,8 @@ const RoleList = () => {
                             </div>
 
                             <div className="xl:col-span-12">
-                                <label htmlFor="nameInput" className="inline-block mb-2 text-base font-medium">Role Description</label>
-                                <input type="text" id="nameInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500"
+                                <label htmlFor="descInput" className="inline-block mb-2 text-base font-medium">Role Description</label>
+                                <input type="text" id="descInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500"
                                     name="role_description"
                                     onChange={validation.handleChange}
                                     value={validation.values.role_description || ""}
@@ -359,31 +328,12 @@ const RoleList = () => {
                                     <p className="text-red-400">{validation.errors.role_description}</p>
                                 ) : null}
                             </div>
-
-                        {isEdit && <>
-                        <h6 className="mt-4 mb-1 text-16">Permissions</h6>
-
-                        <div className="flex xl:col-span-12 flex-wrap gap-2">
-                            {actions.map((action: any) => (
-                                <div key={action.id} className="flex items-center gap-2">
-                                    <input id={`checkboxDefault${action.id}`} className="size-4 border rounded-sm appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zinc-600 dark:border-zinc-500 checked:bg-fecustom-500 checked:border-fecustom-500 dark:checked:bg-fecustom-500 dark:checked:border-fecustom-500 checked:disabled:bg-fecustom-400 checked:disabled:border-fecustom-400" type="checkbox" value={action.id} defaultChecked={isEdit && eventData?.permissions?.includes(action.id)} />
-                                    <label htmlFor={`checkboxDefault${action.id}`} className="align-middle">
-                                        {action.action_name}
-                                    </label>
-                                </div>
-                            ))}
-
-                            
-                        </div>
-                        </>}
-                            
-
                         </div>
 
                         <div className="flex justify-end gap-2 mt-4">
-                            <button type="button" id="close-modal" data-modal-close="addUserModal" className="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100" onClick={toggle}>Cancel</button>
-                            <button type="submit" id="addNew" className="text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600">
-                                {!!isEdit ? "Update Role" : "Add Role"}
+                            <button type="button" className="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100" onClick={toggle}>Cancel</button>
+                            <button type="submit" className="text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600">
+                                Add Role
                             </button>
                         </div>
                     </form>

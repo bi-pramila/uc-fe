@@ -225,7 +225,7 @@ const Header = ({ handleToggleDrawer, handleDrawer }: any) => {
                                         </a>
                                         <ul>
                                             <li>
-                                                <a className="block ltr:pr-4 rtl:pl-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:text-fecustom-500 focus:text-fecustom-500 dark:text-zinc-200 dark:hover:text-fecustom-500 dark:focus:text-fecustom-500" href={process.env.PUBLIC_URL + "/user-profile"}><User2 className="inline-block size-4 ltr:mr-2 rtl:ml-2"></User2> Profile</a>
+                                                <Link className="block ltr:pr-4 rtl:pl-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:text-fecustom-500 focus:text-fecustom-500 dark:text-zinc-200 dark:hover:text-fecustom-500 dark:focus:text-fecustom-500" to={"/user-profile"}><User2 className="inline-block size-4 ltr:mr-2 rtl:ml-2"></User2> Profile</Link>
                                             </li>
                                             {/* <li>
                                                 <a className="block ltr:pr-4 rtl:pl-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:text-fecustom-500 focus:text-fecustom-500 dark:text-zinc-200 dark:hover:text-fecustom-500 dark:focus:text-fecustom-500" href={process.env.PUBLIC_URL + "/apps-mailbox"}><Mail className="inline-block size-4 ltr:mr-2 rtl:ml-2"></Mail> Inbox <span className="inline-flex items-center justify-center size-5 ltr:ml-2 rtl:mr-2 text-[11px] font-medium border rounded-full text-white bg-red-500 border-red-500">15</span></a>

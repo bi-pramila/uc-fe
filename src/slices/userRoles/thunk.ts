@@ -55,3 +55,16 @@ export const deleteUserRole = createAsyncThunk(
     }
   }
 );
+
+
+export const fetchPermissionsGrouped = createAsyncThunk(
+    "permissions/fetchGrouped",
+    async (_, { rejectWithValue }) => {
+        try {
+            const response = await axios.get(`${API_BASE}/permissions/grouped`);
+            return response.data || [];
+        } catch (error: any) {
+            return rejectWithValue(error.response?.data?.message || "Failed to fetch permissions");
+        }
+    }
+);

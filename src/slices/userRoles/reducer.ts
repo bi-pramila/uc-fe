@@ -4,13 +4,15 @@ import {
   fetchUserRoles,
   addUserRole,
   updateUserRole,
-  deleteUserRole
+  deleteUserRole,
+  fetchPermissionsGrouped,
 } from "../thunk"; // same import style as RoleGroup
 
 const userRolesSlice = createSlice({
   name: "UserRoles", // 👈 matches store key
   initialState: {
     roles: [],   // 👈 same as groups in RoleGroup
+    permissions: [],
     meta: {},
     loading: false,
     error: null,
@@ -39,7 +41,7 @@ const userRolesSlice = createSlice({
 
       // 📌 UPDATE (same as updateRoleGroup)
       .addCase(updateUserRole.fulfilled, (state, action) => {
-        const updated = action.payload?.data;
+        const updated = action.payload;
         state.roles = state.roles.map((r) =>
           r.id === updated.id ? updated : r
         );
@@ -49,6 +51,20 @@ const userRolesSlice = createSlice({
       .addCase(deleteUserRole.fulfilled, (state, action) => {
         const removedId = action.meta.arg;
         state.roles = state.roles.filter((r) => r.id !== removedId);
+      })
+
+      // 📌 FETCH PERMISSIONS GROUPED
+      .addCase(fetchPermissionsGrouped.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(fetchPermissionsGrouped.fulfilled, (state, action) => {
+        state.loading = false;
+        state.permissions = action.payload || [];
+        state.error = null;
+      })
+      .addCase(fetchPermissionsGrouped.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
       });
   },
 });

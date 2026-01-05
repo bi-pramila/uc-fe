@@ -203,6 +203,9 @@ import RoleList from "pages/Admin/RoleList";
 import RoleGroup from "pages/Admin/RoleGroup";
 import Permissions from "pages/Admin/Permissions";
 import Resources from "pages/Admin/Resources";
+import ChangePassword from "pages/Authentication/ChangePassword";
+import RoleEdit from "pages/Admin/RoleEdit";
+import ChangePasswordWrapper from "pages/Authentication/ChangePasswordWrapper";
 
 interface RouteObject {
   path: string;
@@ -223,14 +226,12 @@ const authProtectedRoutes: Array<RouteObject> = [
   //Admin
   { path: "/admin/user-list", component: UserList },
   { path: "/admin/roles", component: RoleList },
+  { path: "/admin/role-edit/:id", component: RoleEdit },
   { path: "/admin/role-group", component: RoleGroup },
   { path: "/admin/permissions", component: Permissions },
   { path: "/admin/resources", component: Resources },
 
-
-
-
-
+  
 
   // Ui Element
   { path: "/ui-alerts", component: UiAlert },
@@ -452,7 +453,7 @@ const publicRoutes = [
   { path: "/register", component: Register },
   { path: "/user/verify", component: BasicEmailVerify },
   { path: "/reset-password", component: BasicCreatePassword },
-
+  { path: "/change-password", component: ChangePasswordWrapper },
 ]
 
 export { authProtectedRoutes, publicRoutes };
