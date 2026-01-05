@@ -6,6 +6,7 @@ import OverviewTabs from "./OverviewTabs";
 import Documents from "./Documents";
 import ProjectsTabs from "./ProjectsTabs";
 import Followers from "./Followers";
+import Devices from "./Devices";
 
 const Account = () => {
 
@@ -24,10 +25,10 @@ const Account = () => {
                             <Nav.Item eventKey="documentsTabs" className="group">
                                 <a href="#!" data-tab-toggle data-target="documentsTabs" className="inline-block px-4 py-2 text-base transition-all duration-300 ease-linear rounded-t-md text-slate-500 dark:text-zinc-200 border-b border-transparent group-[.active]:text-fecustom-500 dark:group-[.active]:text-fecustom-500 group-[.active]:border-b-fecustom-500 dark:group-[.active]:border-b-fecustom-500 hover:text-fecustom-500 dark:hover:text-fecustom-500 active:text-fecustom-500 dark:active:text-fecustom-500 -mb-[1px]">Sessions</a>
                             </Nav.Item>
-                            {/* <Nav.Item eventKey="projectsTabs" className="group">
-                                <a href="#!" data-tab-toggle data-target="projectsTabs" className="inline-block px-4 py-2 text-base transition-all duration-300 ease-linear rounded-t-md text-slate-500 dark:text-zinc-200 border-b border-transparent group-[.active]:text-fecustom-500 dark:group-[.active]:text-fecustom-500 group-[.active]:border-b-fecustom-500 dark:group-[.active]:border-b-fecustom-500 hover:text-fecustom-500 dark:hover:text-fecustom-500 active:text-fecustom-500 dark:active:text-fecustom-500 -mb-[1px]">Projects</a>
+                            <Nav.Item eventKey="projectsTabs" className="group">
+                                <a href="#!" data-tab-toggle data-target="projectsTabs" className="inline-block px-4 py-2 text-base transition-all duration-300 ease-linear rounded-t-md text-slate-500 dark:text-zinc-200 border-b border-transparent group-[.active]:text-fecustom-500 dark:group-[.active]:text-fecustom-500 group-[.active]:border-b-fecustom-500 dark:group-[.active]:border-b-fecustom-500 hover:text-fecustom-500 dark:hover:text-fecustom-500 active:text-fecustom-500 dark:active:text-fecustom-500 -mb-[1px]">Devices</a>
                             </Nav.Item>
-                            <Nav.Item eventKey="followersTabs" className="group">
+                            {/* <Nav.Item eventKey="followersTabs" className="group">
                                 <a href="#!" data-tab-toggle data-target="followersTabs" className="inline-block px-4 py-2 text-base transition-all duration-300 ease-linear rounded-t-md text-slate-500 dark:text-zinc-200 border-b border-transparent group-[.active]:text-fecustom-500 dark:group-[.active]:text-fecustom-500 group-[.active]:border-b-fecustom-500 dark:group-[.active]:border-b-fecustom-500 hover:text-fecustom-500 dark:hover:text-fecustom-500 active:text-fecustom-500 dark:active:text-fecustom-500 -mb-[1px]">Followers</a>
                             </Nav.Item> */}
                         </Nav>
@@ -40,10 +41,13 @@ const Account = () => {
                     <Tab.Pane eventKey="documentsTabs" id="documentsTabs">
                         <Documents />
                     </Tab.Pane>
-                    {/* <Tab.Pane eventKey="projectsTabs" id="projectsTabs">
-                        <ProjectsTabs />
+                    <Tab.Pane eventKey="projectsTabs" id="projectsTabs">
+                        <Devices />
                     </Tab.Pane>
-                    <Tab.Pane eventKey="followersTabs" id="followersTabs">
+                    {/* <Tab.Pane eventKey="followersTabs" id="followersTabs">
+                        <ProjectTabs />
+                    </Tab.Pane> */}
+                    {/* <Tab.Pane eventKey="followersTabs" id="followersTabs">
                         <Followers />
                     </Tab.Pane> */}
                 </Tab.Content>
