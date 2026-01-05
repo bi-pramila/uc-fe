@@ -126,7 +126,7 @@ const OverviewTabs = () => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-x-5 lg:grid-cols-2 2xl:grid-cols-3">
+            {/* <div className="grid grid-cols-1 gap-x-5 lg:grid-cols-2 2xl:grid-cols-3">
                 <div className="card">
                     <div className="card-body">
                         <h6 className="mb-3 text-15">Payment History</h6>
@@ -218,7 +218,7 @@ const OverviewTabs = () => {
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </React.Fragment>
     );
 }
