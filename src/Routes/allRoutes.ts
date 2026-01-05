@@ -203,7 +203,6 @@ import RoleList from "pages/Admin/RoleList";
 import RoleGroup from "pages/Admin/RoleGroup";
 import Permissions from "pages/Admin/Permissions";
 import Resources from "pages/Admin/Resources";
-import ChangePassword from "pages/Authentication/ChangePassword";
 import RoleEdit from "pages/Admin/RoleEdit";
 import ChangePasswordWrapper from "pages/Authentication/ChangePasswordWrapper";
 
@@ -374,7 +373,7 @@ const authProtectedRoutes: Array<RouteObject> = [
   { path: "/apps-users-grid", component: UserGridView },
 
   // pages
-  { path: "/pages-account", component: Account },
+  { path: "/pages-account/:id", component: Account },
   { path: "/pages-account-settings", component: Settings },
   { path: "/pages-pricing", component: Pricing },
   { path: "/pages-faqs", component: Faqs },
