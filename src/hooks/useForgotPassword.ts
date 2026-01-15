@@ -44,5 +44,18 @@ export const useForgotPassword = () => {
     }
   };
 
-  return { changePassword, loading, error, message, setError, setMessage };
+  const sendResetLink = async (email: string): Promise<ForgotPasswordResponse> => {
+    try {
+      const data: ForgotPasswordResponse = await forgotPasswordService(email);
+      setMessage(data.message || "Password reset link sent! Check your email.");
+      return data;
+      } catch (err: any) {
+      setError(err.message || "Failed to send reset link");
+      throw err;
+    } finally {
+      setLoading(false);
+       }
+  };
+
+  return { sendResetLink, changePassword, loading, error, message, setError, setMessage };
 };
