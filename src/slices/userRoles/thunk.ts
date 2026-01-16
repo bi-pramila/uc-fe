@@ -2,7 +2,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const API_BASE = process.env.PUBLIC_API_BASE_URL;
+const API_BASE = import.meta.env.PUBLIC_API_BASE_URL;
 
 // GET LIST
 export const fetchUserRoles = createAsyncThunk(

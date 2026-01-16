@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { forgotPassword as forgotPasswordService } from "../services/authService";
 
-const API_BASE = process.env.PUBLIC_API_BASE_URL || "";
+const API_BASE = import.meta.env.PUBLIC_API_BASE_URL || "";
 interface ForgotPasswordResponse {
   message?: string;
   // Add more fields if your API returns them

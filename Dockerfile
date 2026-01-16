@@ -8,13 +8,15 @@ WORKDIR /app
 # Install Yarn latest using Corepack
 RUN corepack enable
 RUN corepack prepare yarn@latest --activate
-RUN yarn config set nodeLinker node-modules
+
 
 # Copy only dependency manifests first (for build cache efficiency)
-COPY . ./
+COPY package.json yarn.lock ./
+
+RUN yarn config set nodeLinker node-modules
 
 # ---- Docker-safe clean (NO lockfile deletion) ----
-RUN yarn clean-docker
+# RUN yarn clean-docker
 
 # Install deps, fail if lockfile and manifest are out of sync
 RUN yarn install
