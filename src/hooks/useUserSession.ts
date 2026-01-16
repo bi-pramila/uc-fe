@@ -44,10 +44,10 @@ export const useUserSession = () => {
 
             console.log("User session started:", response.data);
 
-            if (response.data?.data?.session_token) {
-                sessionStorage.setItem("session_token", response.data.data.session_token);
+            if (response.data?.session_token) {
+                sessionStorage.setItem("session_token", response.data.session_token);
                 console.log("Session token stored in sessionStorage");
-                return response.data.data.session_token;
+                return response.data.session_token;
             }
         } catch (error) {
             console.error("Error starting user session:", error);

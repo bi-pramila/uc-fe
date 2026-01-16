@@ -15,8 +15,6 @@ import logoLight from "assets/images/logo-light.png";
 import logoDark from "assets/images/logo-dark.png"; 
 
 import withRouter from "Common/withRouter";
-import { createSelector } from 'reselect';
-import { useUserSession } from "hooks/useUserSession";
 
 
 const Login = (props: any) => {
@@ -27,7 +25,6 @@ const Login = (props: any) => {
    
     const dispatch = useDispatch<AppDispatch>();
     const navigate = useNavigate();
-    const { startSession } = useUserSession();
 
 
     // Select login state from Redux store
@@ -63,7 +60,6 @@ const Login = (props: any) => {
             console.log("Navigating to /dashboard");
             navigate("/dashboard");
             setHasNavigated(true);
-            startSession(); 
         }
     }, [success, user, loginAttempted, navigate, hasNavigated]);
 
