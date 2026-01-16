@@ -1,3 +1,4 @@
+# docker-compose.yml
 version: "3.9"
 
 services:
@@ -6,6 +7,13 @@ services:
     image: uchm/fe:uat
     expose:
       - "80"
+    restart: unless-stopped
+
+  backend:
+    container_name: hosting-manager-api
+    image: uchm/api:uat
+    expose:
+      - "4000"
     restart: unless-stopped
 
   caddy:
@@ -43,8 +51,6 @@ services:
     ports:
       - "8080:80"
     restart: unless-stopped
-
- 
 
 volumes:
   mysql_data:

@@ -1,4 +1,5 @@
 hm-uat.ucartz.com {
   encode zstd gzip
   reverse_proxy frontend:80
+  reverse_proxy /api/* hosting-manager-api:4000
 }

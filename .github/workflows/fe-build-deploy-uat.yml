@@ -39,6 +39,16 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/api:uat
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
       - name: Copy docker-compose to remote
         uses: appleboy/scp-action@v0.1.5
         with:
@@ -61,4 +71,4 @@ jobs:
             cd /root/Hosting-Manager
             docker-compose down || true
             docker-compose pull
-            docker-compose up -d
+            docker-compose --env-file /root/Hosting-Manager/.env.fe up -d

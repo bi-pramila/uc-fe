@@ -6,12 +6,15 @@ FROM node:24.0.0-alpine as build
 WORKDIR /app
 
 # Install Yarn latest using Corepack
-RUN yarn config set nodeLinker node-modules
 RUN corepack enable
 RUN corepack prepare yarn@latest --activate
+RUN yarn config set nodeLinker node-modules
 
 # Copy only dependency manifests first (for build cache efficiency)
 COPY . ./
+
+# ---- Docker-safe clean (NO lockfile deletion) ----
+RUN yarn clean-docker
 
 # Install deps, fail if lockfile and manifest are out of sync
 RUN yarn install
@@ -23,13 +26,15 @@ COPY . ./
 RUN yarn build:uat
 
 
-
+# ===============================
 # Stage 2: Production stage with nginx
+# ===============================
 FROM nginx:alpine
 
 # Copy built React static files from build stage to nginx html folder
 # COPY --from=build /app/build /usr/share/nginx/html
 COPY --from=build /app/dist /usr/share/nginx/html
+COPY ngnix.conf /etc/nginx/conf.d/default.conf
 
 # Expose default nginx port
 EXPOSE 80

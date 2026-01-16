@@ -2,7 +2,7 @@
   "name": "uc-fe",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "yarn@4.10.3",
+  "packageManager": "yarn@4.12.0",
   "type": "module",
   "scripts": {
     "dev": "rsbuild dev --env-mode development --open",
@@ -14,7 +14,8 @@
     "check": "biome check --write",
     "format": "prettier --write .",
     "lint": "eslint .",
-    "clean-all": "rm -rf node_modules yarn.lock .pnp.cjs .pnp.loader.mjs .yarn/cache .yarn/unplugged .rsbuild .cache node_modules/.cache && yarn cache clean"
+    "clean-all": "rm -rf node_modules yarn.lock .pnp.cjs .pnp.loader.mjs .yarn/cache .yarn/unplugged .rsbuild .cache node_modules/.cache && yarn cache clean",
+    "clean-docker": "rm -rf node_modules .pnp.cjs .pnp.loader.mjs .yarn/cache .yarn/unplugged .rsbuild .cache node_modules/.cache && yarn cache clean" 
   },
   "dependencies": {
     "@ckeditor/ckeditor5-react": "^11.0.0",
