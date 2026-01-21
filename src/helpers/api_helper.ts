@@ -1,15 +1,25 @@
 import axios from "axios";
-// import { api } from "../config";
 
 axios.defaults.baseURL = "";
-// content type
 axios.defaults.headers.post["Content-Type"] = "application/json";
+axios.defaults.withCredentials = true;
 
-// content type
-const authUser: any = localStorage.getItem("authUser")
-const token = JSON.parse(authUser) ? JSON.parse(authUser).token : null;
-if (token)
-  axios.defaults.headers.common["Authorization"] = "Bearer " + token;
+const API_BASE = process.env.PUBLIC_API_BASE_URL;
+
+
+let isRefreshing = false;
+let failedQueue: any[] = [];
+
+const processQueue = (error: any, token: string | null = null) => {
+  failedQueue.forEach(prom => {
+    if (error) {
+      prom.reject(error);
+    } else {
+      prom.resolve(token);
+    }
+  });
+  failedQueue = [];
+};
 
 // intercepting to capture errors
 axios.interceptors.response.use(
@@ -17,9 +27,34 @@ axios.interceptors.response.use(
     return response.data ? response.data : response;
   },
   function (error) {
-    // Any status codes that falls outside the range of 2xx cause this function to trigger
+    const originalRequest = error.config;
+    
+    if (error.response?.status === 401 && !originalRequest._retry) {
+      if (isRefreshing) {
+        return new Promise(function (resolve, reject) {
+          failedQueue.push({ resolve, reject });
+        }).then(token => {
+          originalRequest.headers["Authorization"] = "Bearer " + token;
+          return axios(originalRequest);
+        });
+      }
+
+      originalRequest._retry = true;
+      isRefreshing = true;
+
+      return axios.post(`${API_BASE}/user/refresh-token`).then(res => {
+        isRefreshing = false;
+        processQueue(null, res.token);
+        return axios(originalRequest);
+      }).catch(err => {
+        isRefreshing = false;
+        processQueue(err, null);
+        return Promise.reject(err);
+      });
+    }
+
     let message;
-    switch (error.status) {
+    switch (error.response?.status) {
       case 500:
         message = "Internal Server Error";
         break;
@@ -35,13 +70,7 @@ axios.interceptors.response.use(
     return Promise.reject(message);
   }
 );
-/**
- * Sets the default authorization
- * @param {*} token
- */
-const setAuthorization = (token: any) => {
-  axios.defaults.headers.common["Authorization"] = "Bearer " + token;
-};
+
 
 class APIClient {
   /**
@@ -101,6 +130,10 @@ const getLoggedUser = () => {
   } else {
     return JSON.parse(user);
   }
+};
+
+const setAuthorization = (token: any) => {
+  axios.defaults.headers.common["Authorization"] = "Bearer " + token;
 };
 
 export { APIClient, setAuthorization, getLoggedUser };
