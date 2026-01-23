@@ -14,7 +14,7 @@ const center = {
   lng: 77.2090
 };
 
-const apiKey = process.env.PUBLIC_GOOGLE_MAPS_API_KEY;
+const apiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 
 
 const MapsGoogle: React.FC = () => {

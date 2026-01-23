@@ -32,6 +32,6 @@
     }
   },
   "include": [
-    "src"
-, "env.d.ts"  ]
+    "src", "env.d.ts"  
+  ]
 }

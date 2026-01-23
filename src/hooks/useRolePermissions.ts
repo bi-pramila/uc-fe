@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-const API_BASE = process.env.PUBLIC_API_BASE_URL;
+const API_BASE = import.meta.env.PUBLIC_API_BASE_URL;
 
 export const useRolePermissions = () => {
     const [loading, setLoading] = useState(false);

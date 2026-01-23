@@ -77,7 +77,7 @@ const Documents = () => {
   const itemsPerPage = 6;
 
   const userId = useSelector((state: any) => state.Login?.user?.id) || 8;
-  const API_BASE = process.env.PUBLIC_API_BASE_URL || "";
+  const API_BASE = import.meta.env.PUBLIC_API_BASE_URL || "";
 
   useEffect(() => {
     let mounted = true;
