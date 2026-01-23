@@ -117,7 +117,7 @@ const UserList = () => {
             id: eventData?.id || '',
             name: eventData?.name || '',
             email: eventData?.email || '',
-            role_id: eventData?.role_id || '',
+            role_id: eventData?.role_id ?? roles?.[0]?.id ?? '',
         },
         validationSchema: Yup.object({
             name: Yup.string().required("Please Enter Name"),
@@ -218,10 +218,9 @@ const UserList = () => {
             enableColumnFilter: false,
             cell: (cell: any) => {
                 const val = cell.getValue();
-                const active = val === true || val === "true";
                 return (
-                    <span className={`text-xs px-2 py-1 rounded-full ${active ? "bg-emerald-100 text-emerald-700" : "bg-red-100 text-red-700"}`}>
-                        {active ? "Active" : "Inactive"}
+                    <span className={`text-xs px-2 py-1 rounded-full ${val ? "bg-emerald-100 text-emerald-700" : "bg-red-100 text-red-700"}`}>
+                        {val ? "Active" : "Inactive"}
                     </span>
                 );
             },
@@ -232,10 +231,10 @@ const UserList = () => {
             enableColumnFilter: false,
             cell: (cell: any) => {
                 const val = cell.getValue();
-                const verified = val === true || val === "true";
+               
                 return (
-                    <span className={`text-xs px-2 py-1 rounded-full ${verified ? "bg-emerald-100 text-emerald-700" : "bg-amber-100 text-amber-700"}`}>
-                        {verified ? "Verified" : "Unverified"}
+                    <span className={`text-xs px-2 py-1 rounded-full ${val ? "bg-emerald-100 text-emerald-700" : "bg-amber-100 text-amber-700"}`}>
+                        {val ? "Verified" : "Unverified"}
                     </span>
                 );
             },
