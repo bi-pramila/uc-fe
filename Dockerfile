@@ -5,6 +5,27 @@ FROM node:24.0.0-alpine as build
 
 WORKDIR /app
 
+# Accept build arguments from GitHub Actions
+ARG PUBLIC_NODE_ENV=development
+ARG PUBLIC_APP_NAME=Ucartz
+ARG PUBLIC_APP_VERSION=1.0.0
+ARG PUBLIC_API_BASE_URL=https://hm-uat.ucartz.com/api/
+ARG PUBLIC_WS_URL=wss://ws.example.com
+ARG PUBLIC_URL=/
+ARG PUBLIC_ENABLE_LOGS=true
+ARG PUBLIC_GOOGLE_MAPS_API_KEY=
+
+# Set as environment variables for Rsbuild to use during build
+ENV PUBLIC_NODE_ENV=$PUBLIC_NODE_ENV
+ENV PUBLIC_APP_NAME=$PUBLIC_APP_NAME
+ENV PUBLIC_APP_VERSION=$PUBLIC_APP_VERSION
+ENV PUBLIC_API_BASE_URL=$PUBLIC_API_BASE_URL
+ENV PUBLIC_WS_URL=$PUBLIC_WS_URL
+ENV PUBLIC_URL=$PUBLIC_URL
+ENV PUBLIC_ENABLE_LOGS=$PUBLIC_ENABLE_LOGS
+ENV PUBLIC_GOOGLE_MAPS_API_KEY=$PUBLIC_GOOGLE_MAPS_API_KEY
+
+
 # Install Yarn latest using Corepack
 RUN corepack enable
 RUN corepack prepare yarn@latest --activate
