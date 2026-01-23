@@ -109,7 +109,7 @@ const Dropdown = ({ as: Component = 'div', children, className, id, subitemId }:
 
   const currentPath = useLocation();
   const initActiveMenu = useCallback(() => {
-    const pathName = process.env.PUBLIC_URL + currentPath.pathname;
+    const pathName = import.meta.env.PUBLIC_URL + currentPath.pathname;
     const ul: any = document.getElementById("navbar-nav");
     const items = ul.getElementsByTagName("a");
     let itemsArray = [...items]; // converts NodeList to Array

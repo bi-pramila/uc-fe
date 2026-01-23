@@ -1,7 +1,7 @@
 // authService
 import axios from "axios";
 
-const API_BASE = process.env.PUBLIC_API_BASE_URL;
+const API_BASE = import.meta.env.PUBLIC_API_BASE_URL;
 
 // Types
 import { User, AuthResponse, ResetPasswordResponse, ForgotPasswordResponse, LogoutResponse } from "../slices/auth/login/types";
@@ -99,6 +99,7 @@ export const forgotPassword = async (email: string): Promise<ForgotPasswordRespo
 
 export const logout = async (): Promise<LogoutResponse> => {
   try {
+    console.log("Calling logout API...");
     const res = await axios.post<LogoutResponse>(
       `${API_BASE}/user/logout`,
       {},
@@ -109,8 +110,10 @@ export const logout = async (): Promise<LogoutResponse> => {
         },
       }
     );
+    console.log("Logout API done:", res.data);
     return res.data;
   } catch (err: any) {
+    console.error("Logout error:", err.response?.data);
     throw err.response?.data || { message: "Logout failed" };
   }
 };
