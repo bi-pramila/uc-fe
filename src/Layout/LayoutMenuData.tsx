@@ -29,18 +29,18 @@ const menuData: any = [
                 link: '/admin/role-group',
                 parentId: "admin"
             },
-            {
-                id: 'resources',
-                label: 'Resources',
-                link: '/admin/resources',
-                parentId: "admin"
-            },
-            {
-                id: 'permissions',
-                label: 'Permissions',
-                link: '/admin/permissions',
-                parentId: "admin"
-            },
+            // {
+            //     id: 'resources',
+            //     label: 'Resources',
+            //     link: '/admin/resources',
+            //     parentId: "admin"
+            // },
+            // {
+            //     id: 'permissions',
+            //     label: 'Permissions',
+            //     link: '/admin/permissions',
+            //     parentId: "admin"
+            // },
         ]
     },
     {
