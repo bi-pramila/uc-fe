@@ -22,7 +22,6 @@ const AuthProtected: React.FC<AuthProtectedProps> = ({ children }) => {
       if (isAuthenticated && !hasInitialized.current) {
         hasInitialized.current = true;
         try {
-          console.log("Starting user session...");
           await startSession();
         } catch (error) {
           console.error("Failed to start session:", error);

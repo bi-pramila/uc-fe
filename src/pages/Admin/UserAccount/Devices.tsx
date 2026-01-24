@@ -13,6 +13,7 @@ interface DeviceItem {
   device_token: string | null;
   device_fingerprint: string;
   last_ip_address: string;
+  name: string;
   first_used: string;
   last_used: string;
   is_verified: number;
@@ -60,6 +61,8 @@ const Devices = () => {
     }
   };
 
+  console.log("Rendering Devices component with devices:", paginatedDevices);
+
   return (
     <React.Fragment>
       <div className="flex items-center gap-3 mb-4">
@@ -88,7 +91,7 @@ const Devices = () => {
                 <th className="px-3.5 py-2.5 font-semibold border-b border-transparent">Device Name</th>
                 <th className="px-3.5 py-2.5 font-semibold border-b border-transparent">Browser</th>
                 <th className="px-3.5 py-2.5 font-semibold border-b border-transparent">OS</th>
-                <th className="px-3.5 py-2.5 font-semibold border-b border-transparent">Device Fingerprint</th>
+                <th className="px-3.5 py-2.5 font-semibold border-b border-transparent">User</th>
                 <th className="px-3.5 py-2.5 font-semibold border-b border-transparent">IP Address</th>
                 <th className="px-3.5 py-2.5 font-semibold border-b border-transparent">First Used</th>
                 <th className="px-3.5 py-2.5 font-semibold border-b border-transparent">Last Used</th>
@@ -113,7 +116,7 @@ const Devices = () => {
                   <td className="px-3.5 py-2.5 border-y border-transparent">{device.os}</td>
                   <td className="px-3.5 py-2.5 border-y border-transparent">
                     <code className="text-xs break-all text-slate-600 dark:text-slate-400">
-                      {device.device_fingerprint.substring(0, 20)}...
+                      {device.name}
                     </code>
                   </td>
                   <td className="px-3.5 py-2.5 border-y border-transparent">{device.last_ip_address}</td>

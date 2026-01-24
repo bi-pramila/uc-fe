@@ -8,6 +8,7 @@ export const fetchUserList = createAsyncThunk(
   "UserList/fetch", // 👈 matches slice
   async ({ page = 1, limit = 10 }, { rejectWithValue }) => {
     try {
+      console.log(`Fetching User List from API: page=${page}, limit=${limit}`);
       const res = await axios.get(`${API_BASE}/user/all?page=${page}&limit=${limit}`);
       return res.data;
     } catch (err) {

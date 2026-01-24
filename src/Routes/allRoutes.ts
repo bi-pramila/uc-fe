@@ -189,7 +189,7 @@ import Logout from "pages/Authentication/LogOut";
 import Pages404 from "pages/AuthenticationInner/Pages404";
 import Register from "pages/Authentication/Register";
 import UserProfile from "pages/Authentication/UserProfile";
-import Account from "pages/Pages/Account";
+import Account from "pages/Admin/UserAccount";
 import ComingSoon from "pages/AuthenticationInner/ComingSoon";
 import Offline from "pages/AuthenticationInner/Offline";
 import Maintenance from "pages/AuthenticationInner/Maintenance";

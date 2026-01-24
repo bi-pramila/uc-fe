@@ -29,7 +29,6 @@ export const useUserSession = () => {
 
             const { browserName, osName } = getBrowserInfo();
 
-            console.log("Device Info:", { browserName, osName });
 
             const response = await axios.post(
                 `${API_BASE}/user-sessions/start`,
