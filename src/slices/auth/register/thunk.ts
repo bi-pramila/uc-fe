@@ -29,7 +29,7 @@ export const verifyEmail = createAsyncThunk(
   async (token: string, { rejectWithValue }) => {
     try {
       const response = await axios.get(`${API_BASE}/user/verify/${token}`);
-      return response.data;
+      return response;
     } catch (error: any) {
       return rejectWithValue(error.response?.data?.message || "Verification failed");
     }
