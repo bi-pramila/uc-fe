@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import axios from "axios";
 import moment from "moment";
 import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
 
 interface DeviceItem {
   id: number;
@@ -25,7 +26,7 @@ const Devices = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
 
-  const userId = useSelector((state: any) => state.Login?.user?.id) || 8;
+  const { id: userId } = useParams<{ id: string }>();
   const API_BASE = import.meta.env.PUBLIC_API_BASE_URL || "";
 
   useEffect(() => {
