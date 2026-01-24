@@ -1,18 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { registerUser, resetRegisterFlag } from "./thunk";
+import { registerUser, resetRegisterFlag, verifyEmail } from "./thunk";
 
-interface RegisterState {
-  success: boolean;
-  error: string | null;
-}
-
-const initialState: RegisterState = {
+export const initialState = {
+  registrationError: null,
+  message: null,
+  loading: false,
+  user: null,
   success: false,
-  error: null,
+  error: false,
+  verifying: false,
+  verificationSuccess: false,
+  verificationError: null,
 };
 
 const registerSlice = createSlice({
-  name: "Register",
+  name: "register",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
@@ -28,6 +30,21 @@ const registerSlice = createSlice({
       .addCase(resetRegisterFlag.fulfilled, (state) => {
         state.success = false;
         state.error = null;
+      })
+      // Verify Email
+      .addCase(verifyEmail.pending, (state) => {
+        state.verifying = true;
+        state.verificationError = null;
+        state.verificationSuccess = false;
+      })
+      .addCase(verifyEmail.fulfilled, (state, action) => {
+        state.verifying = false;
+        state.verificationSuccess = true;
+        state.message = action.payload.message || "Email verified successfully";
+      })
+      .addCase(verifyEmail.rejected, (state, action: any) => {
+        state.verifying = false;
+        state.verificationError = action.payload || "Verification failed";
       });
   },
 });
