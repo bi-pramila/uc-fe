@@ -49,6 +49,7 @@ const UserList = () => {
             
     const { roles } = useSelector(selectUserRoleData);
 
+
    // ⭐ UPDATED SELECTOR FOR USER LIST
        const selectUserData = createSelector(
            (state: any) => state.UserList,
@@ -64,25 +65,16 @@ const UserList = () => {
 
     useEffect(() => {
         if(roles.length === 0) {
-                    dispatch(fetchUserRoles({ page: 1, limit: 10 })); // calling backend with limit=10
-                }
-            dispatch(fetchUserList({ page: 1, limit: 10 })); // calling backend with limit=10
-        }, [dispatch]);
+            dispatch(fetchUserRoles({ page: 1, limit: 10 }));
+        }
+        // ✅ Only dispatch fetchUserList once here
+        dispatch(fetchUserList({ page: 1, limit: 10 }));
+    }, []); // ✅ Add dispatch to dependency array
 
-    const [data, setData] = useState<any>([]);
     const [eventData, setEventData] = useState<any>();
 
     const [show, setShow] = useState<boolean>(false);
     const [isEdit, setIsEdit] = useState<boolean>(false);
-
-    // // Get Data
-    // useEffect(() => {
-    //     dispatch(onGetEmployee());
-    // }, [dispatch]);
-
-    useEffect(() => {
-        setData(users || []);
-    }, [users]);
 
     // Delete Modal
     const [deleteModal, setDeleteModal] = useState<boolean>(false);
@@ -283,18 +275,18 @@ const UserList = () => {
             <div className="card" id="userTable">
                 <div className="card-body">
                     <div className="flex items-center gap-3 mb-4">
-                        <h6 className="text-15 grow">Users (<b className="total-Users">{data.length}</b>)</h6>
+                        <h6 className="text-15 grow">Users (<b className="total-Users">{users.length}</b>)</h6>
                         <div className="shrink-0">
                             <Link to="#!" data-modal-target="addUserModal" type="button" className="text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20 add-user" onClick={toggle}>
                                 <Plus className="inline-block size-4" /> <span className="align-middle">Add User</span>
                             </Link>
                         </div>
                     </div>
-                    {data && data.length > 0 ?
+                    {users && users.length > 0 ?
                         <TableContainer
                             isPagination={true}
                             columns={(columns || [])}
-                            data={(data || [])}
+                            data={(users || [])}
                             customPageSize={7}
                             divclassName="-mx-5 overflow-x-auto"
                             tableclassName="w-full whitespace-nowrap"

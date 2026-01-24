@@ -8,7 +8,7 @@ interface FileItem { id: number; type: string; name: string; size: string; date:
 interface SessionItem {
   id: number;
   user_id: number;
-  session_token: string;
+  name: string;
   ip_address: string;
   user_agent: string;
   device_info: string;
@@ -85,7 +85,7 @@ const Sessions = () => {
                                     </div>
                                 </th>
                                 <th className="px-3.5 py-2.5 font-semibold border-b border-transparent">Device</th>
-                                <th className="px-3.5 py-2.5 font-semibold border-b border-transparent">Session Token</th>
+                                <th className="px-3.5 py-2.5 font-semibold border-b border-transparent">User Name</th>
                                 <th className="px-3.5 py-2.5 font-semibold border-b border-transparent">IP Address</th>
                                 <th className="px-3.5 py-2.5 font-semibold border-b border-transparent">Login Time</th>
                                 <th className="px-3.5 py-2.5 font-semibold border-b border-transparent">Logout Time</th>
@@ -112,7 +112,7 @@ const Sessions = () => {
                               </td>
                               <td className="px-3.5 py-2.5 border-y border-transparent">
                                 <code className="text-xs break-all text-slate-600 dark:text-slate-400">
-                                  {session.session_token.substring(0, 20)}...
+                                  {session.name}
                                 </code>
                               </td>
                               <td className="px-3.5 py-2.5 border-y border-transparent">{session.ip_address}</td>

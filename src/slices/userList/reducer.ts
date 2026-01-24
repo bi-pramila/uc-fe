@@ -21,6 +21,7 @@ const userListSlice = createSlice({
     builder
       .addCase(fetchUserList.pending, (state) => { state.loading = true })
       .addCase(fetchUserList.fulfilled, (state, action) => {
+        console.log("Fetched User List:", action.payload);
         state.loading = false;
         state.users = action.payload;
         state.meta = action.payload.meta;
@@ -32,6 +33,7 @@ const userListSlice = createSlice({
 
       // ADD USER
       .addCase(onAddUser.fulfilled, (state, action) => {
+        
         if (action.payload?.data) {
           state.users.unshift(action.payload?.data);
         }
