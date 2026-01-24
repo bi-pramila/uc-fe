@@ -284,7 +284,7 @@ const RoleGroup = () => {
 
             {/* Modal (only field names changed) */}
             <Modal show={show} onHide={toggle} modal-center="true"
-                className="fixed flex flex-col transition-all duration-300 ease-in-out left-2/4 z-drawer -translate-x-2/4 -translate-y-4/4"
+                className="fixed flex flex-col transition-all duration-300 ease-in-out left-2/4 z-drawer -translate-x-2/4 -translate-y-2/4"
                 dialogClassName="w-screen md:w-[45rem] bg-white shadow rounded-md dark:bg-zinc-600">
                 <Modal.Header className="flex items-center justify-between p-4 border-b dark:border-zinc-500">
                     <Modal.Title className="text-16">{!!isEdit ? "Edit Role Group" : "Add Role Group"}</Modal.Title>
