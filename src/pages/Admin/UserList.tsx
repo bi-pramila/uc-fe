@@ -356,6 +356,7 @@ const UserList = () => {
                                 <label htmlFor="emailInput" className="inline-block mb-2 text-base font-medium">Email</label>
                                 <input type="email" id="emailInput" className="form-input border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500"
                                     name="email"
+                                    disabled={isEdit}
                                     onChange={validation.handleChange}
                                     value={validation.values.email || ""}
                                     placeholder="example@domain.com"

@@ -3,6 +3,7 @@ import { ArrowDownToLine, ChevronLeft, ChevronRight, Eye, FileEdit, Trash2 } fro
 import axios from "axios";
 import moment from "moment";
 import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
 
 interface FileItem { id: number; type: string; name: string; size: string; date: string; uploadedBy: string; status: string; text: string }
 interface SessionItem {
@@ -23,7 +24,7 @@ const Sessions = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
 
-  const userId = useSelector((state: any) => state.Login?.user?.id) || 8;
+  const { id: userId } = useParams<{ id: string }>();
   const API_BASE = import.meta.env.PUBLIC_API_BASE_URL || "";
 
   useEffect(() => {

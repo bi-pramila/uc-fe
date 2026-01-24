@@ -213,9 +213,9 @@ const RoleGroup = () => {
             enableSorting: false,
             cell: (cell: any) => (
                 <div className="flex gap-3">
-                    <Link className="flex items-center justify-center size-8 transition-all duration-200 ease-linear rounded-md bg-slate-100 text-slate-500 hover:text-fecustom-500 hover:bg-fecustom-100 dark:bg-zinc-600 dark:text-zinc-200 dark:hover:bg-fecustom-500/20 dark:hover:text-fecustom-500" to="/pages-account">
+                    {/* <Link className="flex items-center justify-center size-8 transition-all duration-200 ease-linear rounded-md bg-slate-100 text-slate-500 hover:text-fecustom-500 hover:bg-fecustom-100 dark:bg-zinc-600 dark:text-zinc-200 dark:hover:bg-fecustom-500/20 dark:hover:text-fecustom-500" to="/pages-account">
                         <Eye className="inline-block size-3" />
-                    </Link>
+                    </Link> */}
 
                     <button
                         type="button"
@@ -284,7 +284,7 @@ const RoleGroup = () => {
 
             {/* Modal (only field names changed) */}
             <Modal show={show} onHide={toggle} modal-center="true"
-                className="fixed flex flex-col transition-all duration-300 ease-in-out left-2/4 z-drawer -translate-x-2/4 -translate-y-4/4"
+                className="fixed flex flex-col transition-all duration-300 ease-in-out left-2/4 z-drawer -translate-x-2/4 -translate-y-2/4"
                 dialogClassName="w-screen md:w-[45rem] bg-white shadow rounded-md dark:bg-zinc-600">
                 <Modal.Header className="flex items-center justify-between p-4 border-b dark:border-zinc-500">
                     <Modal.Title className="text-16">{!!isEdit ? "Edit Role Group" : "Add Role Group"}</Modal.Title>
