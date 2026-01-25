@@ -9,7 +9,7 @@ WORKDIR /app
 ARG PUBLIC_NODE_ENV=development
 ARG PUBLIC_APP_NAME=Ucartz
 ARG PUBLIC_APP_VERSION=1.0.0
-ARG PUBLIC_API_BASE_URL=https://hm-uat.ucartz.com/api/
+ARG PUBLIC_API_BASE_URL=https://hm-uat.ucartz.com/api
 ARG PUBLIC_WS_URL=wss://ws.example.com
 ARG PUBLIC_URL=/
 ARG PUBLIC_ENABLE_LOGS=true
