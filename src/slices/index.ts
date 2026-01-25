@@ -42,6 +42,7 @@ import RoleGroupReducer from "./roleGroups/reducer";
 import UserRolesReducer from "./userRoles/reducer";
 import UserListReducer from "./userList/reducer";
 import ActionsReducer from "./actions/reducer"; 
+import SupportTicketsReducer from "./supportTickets/reducer";
 
 const rootReducer = combineReducers({
     Layout: LayoutReducer,
@@ -60,7 +61,8 @@ const rootReducer = combineReducers({
     RoleGroup: RoleGroupReducer,
     UserRoles: UserRolesReducer,
     UserList: UserListReducer,
-    Actions: ActionsReducer
+    Actions: ActionsReducer,
+    SupportTickets: SupportTicketsReducer
 });
 
 
