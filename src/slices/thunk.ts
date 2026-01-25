@@ -43,5 +43,7 @@ export * from "./userList/thunk";
 
 export * from "./actions/thunk";
 
+export * from "./supportTickets/thunk";
+
 import axios from 'axios';
 

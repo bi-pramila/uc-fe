@@ -344,7 +344,8 @@ export const getMainAttendance = createAsyncThunk("hrManagement/getMainAttendanc
 
 export const getLeaveManageEmployee = createAsyncThunk("hrManagement/getLeaveManageEmployee", async () => {
     try {
-        const response = getLeaveManageEmployeeApi();
+        const response = await getLeaveManageEmployeeApi();
+        console.log("Leave Manage Employee Response:", response);
         return response;
     } catch (error) {
         return error;

@@ -29,6 +29,15 @@ import {
 } from 'slices/thunk';
 import { ToastContainer } from 'react-toastify';
 
+const EstimatesData = [
+    { id: 1, estimateNumber: "#TWE20015420", clientName: "Infra Teach", estimateBy: "HR", estimateDate: "02 July, 2023", expiryDate: "05 July, 2023", amount: "$2,403", status: "Accepted" },
+    { id: 2, estimateNumber: "#TWE20015421", clientName: "Themesdesign", estimateBy: "Admin", estimateDate: "08 Nov, 2023", expiryDate: "08 Nov, 2023", amount: "$1,749", status: "Declined" },
+    { id: 3, estimateNumber: "#TWE20015422", clientName: "Judil Fashion", estimateBy: "Admin", estimateDate: "11 Aug, 2023", expiryDate: "03 Aug, 2023", amount: "$816", status: "Expired" },
+    { id: 4, estimateNumber: "#TWE20015423", clientName: "4xM Infotech", estimateBy: "HR", estimateDate: "20 Sep, 2023", expiryDate: "21 Sep, 2023", amount: "$1,184", status: "Accepted" },
+    { id: 5, estimateNumber: "#TWE20015424", clientName: "Digitech Galaxy", estimateBy: "HR", estimateDate: "07 Oct, 2023", expiryDate: "09 Oct, 2023", amount: "$5,463", status: "Accepted" },
+    { id: 6, estimateNumber: "#TWE20015425", clientName: "Zoetic Fashion", estimateBy: "HR", estimateDate: "18 Dec, 2023", expiryDate: "20 Dec, 2023", amount: "$3,463", status: "Declined" }
+];
+
 const Estimates = () => {
 
     const dispatch = useDispatch<any>();
@@ -40,7 +49,8 @@ const Estimates = () => {
         })
     );
 
-    const { dataList } = useSelector(selectDataList);
+    // const { dataList } = useSelector(selectDataList);
+    const dataList = EstimatesData
 
     const [data, setData] = useState<any>([]);
     const [eventData, setEventData] = useState<any>();
