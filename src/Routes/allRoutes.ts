@@ -207,6 +207,7 @@ import RoleEdit from "pages/Admin/RoleEdit";
 import ChangePasswordWrapper from "pages/Authentication/ChangePasswordWrapper";
 import SupportTickets from "pages/SupportTickets/SupportTickets";
 import AddTickets from "pages/SupportTickets/AddTickets";
+import SupportTicketView from "pages/SupportTickets/SupportTicketView";
 
 interface RouteObject {
   path: string;
@@ -234,6 +235,8 @@ const authProtectedRoutes: Array<RouteObject> = [
 
   { path: "support/support-ticket-list", component: SupportTickets },
   { path: "support/add-support-ticket", component: AddTickets },
+  { path: "support/support-ticket", component: SupportTicketView },
+
 
   
 
