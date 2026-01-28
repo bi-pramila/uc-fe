@@ -181,7 +181,7 @@ const SupportTickets = () => {
             accessorKey: "ticketId",
             enableColumnFilter: false,
             cell: (cell: any) => (
-                <Link to="#!" className="font-semibold text-fecustom-500">#{cell.getValue()}</Link>
+                <Link to="/support/support-ticket" className="font-semibold text-fecustom-500">#{cell.getValue()}</Link>
             ),
         },
         {
