@@ -235,7 +235,7 @@ const authProtectedRoutes: Array<RouteObject> = [
 
   { path: "support/support-ticket-list", component: SupportTickets },
   { path: "support/add-support-ticket", component: AddTickets },
-  { path: "support/support-ticket", component: SupportTicketView },
+  { path: "support/support-ticket/:id", component: SupportTicketView },
 
 
   

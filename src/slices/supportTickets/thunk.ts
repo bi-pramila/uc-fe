@@ -41,3 +41,29 @@ export const fetchSupportStatuses = createAsyncThunk(
     }
   }
 );
+
+export const getClients = createAsyncThunk(
+  "supportTickets/getClients",
+  async (_, { rejectWithValue }) => {
+    try {
+      console.log("Fetching clients");
+      const res = await axios.get(`${API_BASE}/tickets/clients`);
+      return res.data;
+    } catch (err) {
+      return rejectWithValue(err.response?.data?.message || "Error fetching clients");
+    }
+  }
+);
+
+export const getClientsProducts = createAsyncThunk(
+  "supportTickets/getClientsProducts",
+  async (clientId: string | number, { rejectWithValue }) => {
+    try {
+      console.log(`Fetching products for client ID: ${clientId}`);
+      const res = await axios.get(`${API_BASE}/tickets/clients/${clientId}/products`);
+      return res.data;
+    } catch (err) {
+      return rejectWithValue(err.response?.data?.message || "Error fetching client products");
+    }
+  }
+);

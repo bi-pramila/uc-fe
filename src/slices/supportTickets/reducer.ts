@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchSupportTickets, getTicket, fetchSupportStatuses } from "./thunk";
+import { fetchSupportTickets, getTicket, fetchSupportStatuses, getClients, getClientsProducts } from "./thunk";
 
 const supportTicketsSlice = createSlice({
   name: "SupportTickets",
@@ -7,6 +7,8 @@ const supportTicketsSlice = createSlice({
     tickets: [],
     ticketDetails: null,
     statuses: [],
+    clients: [],
+    clientProducts: [],
     totalResults: 0,
     numReturned: 0,
     loading: false,
@@ -68,6 +70,34 @@ const supportTicketsSlice = createSlice({
       .addCase(fetchSupportStatuses.rejected, (state, action: any) => {
         state.loading = false;
         state.error = action.payload || "Failed to fetch support statuses";
+      })
+
+      // Get Clients
+      .addCase(getClients.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(getClients.fulfilled, (state, action) => {
+        state.loading = false;
+        state.clients = action.payload;
+      })
+      .addCase(getClients.rejected, (state, action: any) => {
+        state.loading = false;
+        state.error = action.payload || "Failed to fetch clients";
+      })
+
+      // Get Clients Products
+      .addCase(getClientsProducts.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(getClientsProducts.fulfilled, (state, action) => {
+        state.loading = false;
+        state.clientProducts = action.payload;
+      })
+      .addCase(getClientsProducts.rejected, (state, action: any) => {
+        state.loading = false;
+        state.error = action.payload || "Failed to fetch client products";
       });
   },
 });

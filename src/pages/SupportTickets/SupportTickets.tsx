@@ -100,12 +100,13 @@ const SupportTickets = () => {
         (supportTickets) => ({
             tickets: supportTickets.tickets,
             totalResults: supportTickets.totalResults,
+            statuses: supportTickets.statuses,
             loading: supportTickets.loading,
             error: supportTickets.error
         })
     );
 
-    const { tickets, totalResults, loading, error } = useSelector(selectSupportTicketsData);
+    const { tickets, statuses, totalResults, loading, error } = useSelector(selectSupportTicketsData);
 
     const [data, setData] = useState<any>(LeaveManageEmployeeData);
 
@@ -113,6 +114,7 @@ const SupportTickets = () => {
     useEffect(() => {
         console.log("Fetching Support Tickets from WHMCS");
         dispatch(fetchSupportTickets({ limitstart: 0, limitnum: 25 }));
+        dispatch(fetchSupportStatuses());
     }, [dispatch]);
 
     // Update local state when tickets change
@@ -181,7 +183,7 @@ const SupportTickets = () => {
             accessorKey: "ticketId",
             enableColumnFilter: false,
             cell: (cell: any) => (
-                <Link to="/support/support-ticket" className="font-semibold text-fecustom-500">#{cell.getValue()}</Link>
+                <Link to={`/support/support-ticket/${cell.getValue()}`} className="font-semibold text-fecustom-500">#{cell.getValue()}</Link>
             ),
         },
         {
@@ -356,3 +358,7 @@ const SupportTickets = () => {
 };
 
 export default SupportTickets;
+function fetchSupportStatuses(): any {
+    throw new Error('Function not implemented.');
+}
+
