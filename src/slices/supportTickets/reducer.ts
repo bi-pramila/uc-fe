@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchSupportTickets } from "./thunk";
+import { fetchSupportTickets, getTicket, fetchSupportStatuses } from "./thunk";
 
 const supportTicketsSlice = createSlice({
   name: "SupportTickets",
@@ -43,43 +43,32 @@ const supportTicketsSlice = createSlice({
       })
 
       // Get Ticket Details
-      // .addCase(getTicketDetails.pending, (state) => {
-      //   state.loading = true;
-      //   state.error = null;
-      // })
-      // .addCase(getTicketDetails.fulfilled, (state, action) => {
-      //   state.loading = false;
-      //   if (action.payload.result === "success") {
-      //     state.ticketDetails = action.payload;
-      //   } else {
-      //     state.error = action.payload.message || "Failed to fetch ticket details";
-      //   }
-      // })
-      // .addCase(getTicketDetails.rejected, (state, action: any) => {
-      //   state.loading = false;
-      //   state.error = action.payload || "Failed to fetch ticket details";
-      // })
+      .addCase(getTicket.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(getTicket.fulfilled, (state, action) => {
+        state.loading = false;
+        state.ticketDetails = action.payload;
+      })
+      .addCase(getTicket.rejected, (state, action: any) => {
+        state.loading = false;
+        state.error = action.payload || "Failed to fetch ticket details";
+      })
 
-      // // Fetch Support Statuses
-      // .addCase(fetchSupportStatuses.pending, (state) => {
-      //   state.loading = true;
-      //   state.error = null;
-      // })
-      // .addCase(fetchSupportStatuses.fulfilled, (state, action) => {
-      //   state.loading = false;
-      //   const payload = action.payload;
-        
-      //   if (payload.result === "success") {
-      //     // WHMCS returns statuses in payload.statuses.status array
-      //     state.statuses = payload.statuses?.status || [];
-      //   } else {
-      //     state.error = payload.message || "Failed to fetch statuses";
-      //   }
-      // })
-      // .addCase(fetchSupportStatuses.rejected, (state, action: any) => {
-      //   state.loading = false;
-      //   state.error = action.payload || "Failed to fetch support statuses";
-      // });
+      // Fetch Support Statuses
+      .addCase(fetchSupportStatuses.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchSupportStatuses.fulfilled, (state, action) => {
+        state.loading = false;
+        state.statuses = action.payload;
+      })
+      .addCase(fetchSupportStatuses.rejected, (state, action: any) => {
+        state.loading = false;
+        state.error = action.payload || "Failed to fetch support statuses";
+      });
   },
 });
 
