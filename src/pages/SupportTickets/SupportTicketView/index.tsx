@@ -3,13 +3,14 @@ import BreadCrumb from 'Common/BreadCrumb';
 import { Nav } from "Common/Components/Tab/Nav";
 import Tab from "Common/Components/Tab/Tab";
 import React, { useEffect, useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 // Icons
 import { Info, Pencil, Ticket } from 'lucide-react';
 
-// react-blueux
+// react-redux
 import { useDispatch, useSelector } from 'react-redux';
 import { createSelector } from 'reselect';
+import { getTicket, fetchSupportStatuses } from 'slices/supportTickets/thunk';
 
 import AddReply from './AddReply';
 import OtherTickets from './OtherTickets';
@@ -94,27 +95,32 @@ const LeaveManageEmployeeData = [
 const SupportTicketView = () => {
 
     const dispatch = useDispatch<any>();
+    const { id } = useParams<{ id: string }>();
 
     const selectSupportTicketsData = createSelector(
         (state: any) => state.SupportTickets,
         (supportTickets) => ({
             tickets: supportTickets.tickets,
+            ticketDetails: supportTickets.ticketDetails,
             totalResults: supportTickets.totalResults,
             loading: supportTickets.loading,
             error: supportTickets.error
         })
     );
 
-    const { tickets, totalResults, loading, error } = useSelector(selectSupportTicketsData);
+    const { tickets, ticketDetails, totalResults, loading, error } = useSelector(selectSupportTicketsData);
 
     const [data, setData] = useState<any>(LeaveManageEmployeeData);
     const [value, setValue] = useState('');
 
-    // Get Data from WHMCS API
+    // Fetch ticket details and statuses
     useEffect(() => {
-        console.log("Fetching Support Tickets from WHMCS");
-        // dispatch(fetchSupportTickets({ limitstart: 0, limitnum: 25 }));
-    }, [dispatch]);
+        if (id) {
+            console.log(`Fetching ticket details for ID: ${id}`);
+            dispatch(getTicket(id));
+        }
+        dispatch(fetchSupportStatuses());
+    }, [dispatch, id]);
 
     // Update local state when tickets change
     useEffect(() => {
