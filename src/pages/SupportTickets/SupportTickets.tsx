@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Select from 'react-select';
 
 // Icons
-import { Search, Plus, Pencil, Info, FileBarChart2, CalendarDays, Stethoscope, Anchor } from 'lucide-react';
+import { Search, Plus, Pencil, Info, FileBarChart2, CalendarDays, Stethoscope, Anchor, BookOpenIcon } from 'lucide-react';
 
 // react-redux
 import { useDispatch, useSelector } from 'react-redux';
@@ -14,82 +14,10 @@ import { createSelector } from 'reselect';
 
 import {
     getLeaveManageEmployee as onGetLeaveManageEmployee,
-    fetchSupportTickets
+    fetchSupportTickets,
+    fetchSupportStatuses
 } from 'slices/thunk';
 import filterDataBySearch from 'Common/filterDataBySearch';
-
-const LeaveManageEmployeeData = [
-    {
-      "id": 1,
-      "ticketId": 504197,
-      "department": "Technical Support (Pramila S)",
-      "subject": "test from external",
-      "requestor": "Pramila (AUTHORIZED USER)",
-      "owner": "Paul Webber",
-      "status": "Open",
-      "lastReply": "149d 0h 46m"
-    },
-    {
-      "id": 2,
-      "ticketId": 330850,
-      "department": "Technical Support",
-      "subject": "Server slow",
-      "requestor": "Pramila (AUTHORIZED USER)",
-      "owner": "Paul Webber",
-      "status": "Open",
-      "lastReply": "183d 4h 2m"
-    },
-    {
-      "id": 3,
-      "ticketId": 786367,
-      "department": "Technical Support",
-      "subject": "Testing",
-      "requestor": "Pramila (AUTHORIZED USER)",
-      "owner": "Paul Webber",
-      "status": "Open",
-      "lastReply": "188d 6h 50m"
-    },
-    {
-      "id": 4,
-      "ticketId": 926687,
-      "department": "Technical Support",
-      "subject": "website",
-      "requestor": "Pramila (AUTHORIZED USER)",
-      "owner": "Paul Webber",
-      "status": "Customer-Reply",
-      "lastReply": "188d 21h 29m"
-    },
-    {
-      "id": 5,
-      "ticketId": 225617,
-      "department": "Technical Support (Pramila S)",
-      "subject": "Server slow",
-      "requestor": "Tinu S (OPERATOR)",
-      "owner": "Paul Webber",
-      "status": "Open",
-      "lastReply": "198d 20h 22m"
-    },
-    {
-      "id": 6,
-      "ticketId": 427019,
-      "department": "Sales Department",
-      "subject": "Your Account Login Info",
-      "requestor": "Eric J (OPERATOR)",
-      "owner": "Paul Webber",
-      "status": "Answered",
-      "lastReply": "199d 18h 19m"
-    },
-    {
-      "id": 7,
-      "ticketId": 427536,
-      "department": "Technical Support",
-      "subject": "test",
-      "requestor": "Asma D (AUTHORIZED USER)",
-      "owner": "Paul Webber",
-      "status": "Answered",
-      "lastReply": "236d 18h 36m"
-    }
-  ]
 
 const SupportTickets = () => {
 
@@ -108,7 +36,9 @@ const SupportTickets = () => {
 
     const { tickets, statuses, totalResults, loading, error } = useSelector(selectSupportTicketsData);
 
-    const [data, setData] = useState<any>(LeaveManageEmployeeData);
+    console.log("Support Tickets Data:", { statuses });
+
+    const [data, setData] = useState<any>([]);
 
     // Get Data from WHMCS API
     useEffect(() => {
@@ -123,8 +53,8 @@ const SupportTickets = () => {
             // Transform WHMCS data to match our table structure
             const transformedData = tickets.map((ticket: any, index: number) => ({
                 id: index + 1,
-                ticketId: ticket.tid || ticket.id,
-                department: ticket.department || "—",
+                ticketId: ticket.ticketid || ticket.id,
+                department: ticket.deptname || "—",
                 subject: ticket.subject || "—",
                 requestor: `${ticket.name || "Unknown"} (${ticket.email || "—"})`,
                 owner: ticket.lastreply || "—",
@@ -153,14 +83,22 @@ const SupportTickets = () => {
         };
     });
 
-    const options = [
-        { value: 'Open', label: 'Open' },
-        { value: 'Closed', label: 'Closed' },
-        { value: 'Answered', label: 'Answered' },
-        { value: 'onHold', label: 'On Hold' },
-    ];
-
-
+    // Transform statuses into react-select options format
+    const options = useMemo(() => {
+        if (statuses && statuses.length > 0) {
+            return statuses.map((status: any) => ({
+                value: status.title,
+                label: status.title
+            }));
+        }
+        // Fallback options if statuses haven't loaded
+        return [
+            { value: 'Open', label: 'Open' },
+            { value: 'Closed', label: 'Closed' },
+            { value: 'Answered', label: 'Answered' },
+            { value: 'onHold', label: 'On Hold' },
+        ];
+    }, [statuses]);
 
     const Status = ({ item }: any) => {
         switch (item) {
@@ -233,62 +171,44 @@ const SupportTickets = () => {
     ], []
     );
 
+    const colours = [
+        "red",
+        "green",
+        "blue",
+        "sky",
+        "purple",
+        "pink",
+        "yellow",
+        "orange",
+        "teal",
+        "cyan",
+        "indigo",
+        "violet"      
+    ]
+
     return (
         <React.Fragment>
             <BreadCrumb title='Support Tickets' pageTitle='Support' />
             <div className="grid grid-cols-1 gap-x-5 md:grid-cols-2 xl:grid-cols-12">
-                <div className="xl:col-span-3">
-                    <div className="card">
-                        <div className="flex items-center gap-3 card-body">
-                            <div className="flex items-center justify-center size-12 text-red-500 bg-red-100 rounded-md text-15 dark:bg-red-500/20 shrink-0"><FileBarChart2 /></div>
-                            <div className="grow">
-                                <h5 className="mb-1 text-16">
-                                    <CountUp end={totalResults || 0} className="counter-value" />
-                                </h5>
-                                <p className="text-slate-500 dark:text-zinc-200">Total Tickets</p>
+                
+
+                {statuses.map((status: any, index: number) => {
+                    const color = colours[index % colours.length];
+                    return (
+                        <div className="xl:col-span-2" key={index}>
+                            <div className={`card bg-${color}-100 dark:bg-${color}-500/20`}>
+                                <div className="flex items-center gap-3 card-body">
+                                    <div className="grow">
+                                        <h5 className={`mb-1 text-16 text-${color}-500`}>
+                                            <CountUp end={status.count || 0} className="counter-value" />
+                                        </h5>
+                                        <p className="text-slate-500 dark:text-zinc-200">{status.title}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div className="xl:col-span-3">
-                    <div className="card">
-                        <div className="flex items-center gap-3 card-body">
-                            <div className="flex items-center justify-center size-12 text-green-500 bg-green-100 rounded-md text-15 dark:bg-green-500/20 shrink-0"><CalendarDays /></div>
-                            <div className="grow">
-                                <h5 className="mb-1 text-16">
-                                    <CountUp end={12} className="counter-value" />
-                                </h5>
-                                <p className="text-slate-500 dark:text-zinc-200">Annual Leave</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="xl:col-span-3">
-                    <div className="card">
-                        <div className="flex items-center gap-3 card-body">
-                            <div className="flex items-center justify-center size-12 text-purple-500 bg-purple-100 rounded-md text-15 dark:bg-purple-500/20 shrink-0"><Stethoscope /></div>
-                            <div className="grow">
-                                <h5 className="mb-1 text-16">
-                                    <CountUp end={4} className="counter-value" />
-                                </h5>
-                                <p className="text-slate-500 dark:text-zinc-200">Medical Leave</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="xl:col-span-3">
-                    <div className="card">
-                        <div className="flex items-center gap-3 card-body">
-                            <div className="flex items-center justify-center size-12 rounded-md text-sky-500 bg-sky-100 text-15 dark:bg-sky-500/20 shrink-0"><Anchor /></div>
-                            <div className="grow">
-                                <h5 className="mb-1 text-16">
-                                    <CountUp end={11} className="counter-value" />
-                                </h5>
-                                <p className="text-slate-500 dark:text-zinc-200">Remaining Leave</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    );
+                })}
             </div>
 
             <div className="card" id="ordersTable">
@@ -358,7 +278,4 @@ const SupportTickets = () => {
 };
 
 export default SupportTickets;
-function fetchSupportStatuses(): any {
-    throw new Error('Function not implemented.');
-}
 

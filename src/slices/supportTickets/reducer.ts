@@ -65,7 +65,7 @@ const supportTicketsSlice = createSlice({
       })
       .addCase(fetchSupportStatuses.fulfilled, (state, action) => {
         state.loading = false;
-        state.statuses = action.payload;
+        state.statuses = action.payload.statuses.status || [];
       })
       .addCase(fetchSupportStatuses.rejected, (state, action: any) => {
         state.loading = false;

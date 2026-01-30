@@ -119,7 +119,6 @@ const SupportTicketView = () => {
             console.log(`Fetching ticket details for ID: ${id}`);
             dispatch(getTicket(id));
         }
-        dispatch(fetchSupportStatuses());
     }, [dispatch, id]);
 
     // Update local state when tickets change
