@@ -1,5 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchSupportTickets, getTicket, fetchSupportStatuses, getClients, getClientsProducts } from "./thunk";
+import { 
+  fetchSupportTickets, 
+  getTicket, 
+  fetchSupportStatuses, 
+  getClients, 
+  getClientsProducts,
+  createTicket,
+  updateTicket,
+  addTicketReply,
+  deleteTicketReply,
+  updateTicketReply,
+  addTicketNote
+} from "./thunk";
 
 const supportTicketsSlice = createSlice({
   name: "SupportTickets",
@@ -12,6 +24,7 @@ const supportTicketsSlice = createSlice({
     totalResults: 0,
     numReturned: 0,
     loading: false,
+    submitting: false,
     error: null,
   },
   reducers: {
@@ -98,6 +111,84 @@ const supportTicketsSlice = createSlice({
       .addCase(getClientsProducts.rejected, (state, action: any) => {
         state.loading = false;
         state.error = action.payload || "Failed to fetch client products";
+      })
+
+      // Create Ticket
+      .addCase(createTicket.pending, (state) => {
+        state.submitting = true;
+        state.error = null;
+      })
+      .addCase(createTicket.fulfilled, (state) => {
+        state.submitting = false;
+      })
+      .addCase(createTicket.rejected, (state, action: any) => {
+        state.submitting = false;
+        state.error = action.payload || "Failed to create ticket";
+      })
+
+      // Update Ticket
+      .addCase(updateTicket.pending, (state) => {
+        state.submitting = true;
+        state.error = null;
+      })
+      .addCase(updateTicket.fulfilled, (state) => {
+        state.submitting = false;
+      })
+      .addCase(updateTicket.rejected, (state, action: any) => {
+        state.submitting = false;
+        state.error = action.payload || "Failed to update ticket";
+      })
+
+      // Add Ticket Reply
+      .addCase(addTicketReply.pending, (state) => {
+        state.submitting = true;
+        state.error = null;
+      })
+      .addCase(addTicketReply.fulfilled, (state) => {
+        state.submitting = false;
+      })
+      .addCase(addTicketReply.rejected, (state, action: any) => {
+        state.submitting = false;
+        state.error = action.payload || "Failed to add reply";
+      })
+
+      // Delete Ticket Reply
+      .addCase(deleteTicketReply.pending, (state) => {
+        state.submitting = true;
+        state.error = null;
+      })
+      .addCase(deleteTicketReply.fulfilled, (state) => {
+        state.submitting = false;
+      })
+      .addCase(deleteTicketReply.rejected, (state, action: any) => {
+        state.submitting = false;
+        state.error = action.payload || "Failed to delete reply";
+      })
+
+      // Update Ticket Reply
+      .addCase(updateTicketReply.pending, (state) => {
+        state.submitting = true;
+        state.error = null;
+      })
+      .addCase(updateTicketReply.fulfilled, (state) => {
+        state.submitting = false;
+      })
+      .addCase(updateTicketReply.rejected, (state, action: any) => {
+        state.submitting = false;
+        state.error = action.payload || "Failed to update reply";
+      })
+
+      // Add Ticket Note
+      .addCase(addTicketNote.pending, (state) => {
+        state.submitting = true;
+        state.error = null;
+      })
+      .addCase(addTicketNote.fulfilled, (state) => {
+        state.submitting = false;
+      })
+      .addCase(addTicketNote.rejected, (state, action: any) => {
+        state.submitting = false;
+        state.error = action.payload || "Failed to add note";
       });
   },
 });
