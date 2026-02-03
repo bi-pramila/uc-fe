@@ -91,10 +91,10 @@ const SupportTicketView = () => {
                         </Nav>
                         <Tab.Content className="mt-5 tab-content">
                             <Tab.Pane eventKey="addReplyTab" id="addReplyTab">
-                                <AddReply/>
+                                {id && <AddReply ticketId={id} />}
                             </Tab.Pane>
                             <Tab.Pane eventKey="addNoteTab" id="addNoteTab">
-                                <AddNote/> 
+                                {id && <AddNote ticketId={id} />}
                             </Tab.Pane>
                             <Tab.Pane eventKey="customFieldsTab" id="customFieldsTab">
                                 Setting  

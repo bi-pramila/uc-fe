@@ -1,25 +1,26 @@
 
 // Icons
 import Select from 'react-select';
-
 import { Editor } from '@tinymce/tinymce-react';
-import React from 'react';
+import React, { useState } from 'react';
 import Dropzone from "react-dropzone"
 import { UploadCloud } from "lucide-react";
+import { useDispatch, useSelector } from 'react-redux';
+import { addTicketNote } from 'slices/supportTickets/thunk';
 
+interface AddNoteProps {
+    ticketId: string | number;
+}
 
-const AddNote = () => {
-    const options = [
-        { value: 'Open', label: 'Open' },
-        { value: 'Closed', label: 'Closed' },
-        { value: 'Answered', label: 'Answered' },
-        { value: 'onHold', label: 'On Hold' },
-    ];
+const AddNote: React.FC<AddNoteProps> = ({ ticketId }) => {
+    const dispatch = useDispatch<any>();
+    const { submitting, error } = useSelector((state: any) => state.SupportTickets);
 
-        const [selectedFiles, setSelectedFiles] = React.useState<any>([])
-    
+    const [message, setMessage] = useState('');
+    const [returnToList, setReturnToList] = useState(false);
+    const [selectedFiles, setSelectedFiles] = useState<any>([]);
 
-const handleAcceptedFiles = (files: any) => {
+    const handleAcceptedFiles = (files: any) => {
         files.map((file: any) =>
             Object.assign(file, {
                 preview: URL.createObjectURL(file),
@@ -28,6 +29,7 @@ const handleAcceptedFiles = (files: any) => {
         )
         setSelectedFiles(files)
     }
+    
     const formatBytes = (bytes: any, decimals = 2) => {
         if (bytes === 0) return "0 Bytes"
         const k = 1024
@@ -38,28 +40,79 @@ const handleAcceptedFiles = (files: any) => {
         return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + " " + sizes[i]
     }
 
-    const Status = ({ item }: any) => {
-        switch (item) {
-            case "Open":
-                return (<span className="px-2.5 py-0.5 inline-block text-xs font-medium rounded border bg-yellow-100 border-transparent text-yellow-500 dark:bg-yellow-500/20 dark:border-transparent">{item}</span>);
-            case "Answered":
-                return (<span className="px-2.5 py-0.5 inline-block text-xs font-medium rounded border bg-green-100 border-transparent text-green-500 dark:bg-green-500/20 dark:border-transparent">{item}</span>);
-            case "Customer-Reply":
-                return (<span className="px-2.5 py-0.5 inline-block text-xs font-medium rounded border bg-blue-100 border-transparent text-blue-500 dark:bg-blue-500/20 dark:border-transparent">{item}</span>);
-            case "Closed":
-                return (<span className="px-2.5 py-0.5 inline-block text-xs font-medium rounded border bg-blue-100 border-transparent text-blue-500 dark:bg-blue-500/20 dark:border-transparent">{item}</span>);
-            default:
-                return (<span className="px-2.5 py-0.5 inline-block text-xs font-medium rounded border bg-slate-100 border-transparent text-slate-500 dark:bg-slate-500/20 dark:border-transparent">{item}</span>);
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        
+        if (!message.trim()) {
+            return;
         }
+
+        try {
+            const noteData: any = {
+                ticketId,
+                noteData: {
+                    message: message.trim()
+                }
+            };
+
+            // If there are attachments, convert them to base64
+            if (selectedFiles.length > 0) {
+                const attachments = await Promise.all(
+                    selectedFiles.map((file: File) => {
+                        return new Promise((resolve) => {
+                            const reader = new FileReader();
+                            reader.onload = () => {
+                                const base64 = reader.result?.toString().split(',')[1];
+                                resolve({
+                                    filename: file.name,
+                                    data: base64
+                                });
+                            };
+                            reader.readAsDataURL(file);
+                        });
+                    })
+                );
+                noteData.noteData.attachments = JSON.stringify(attachments);
+            }
+
+            const result = await dispatch(addTicketNote(noteData)).unwrap();
+
+            if (result.result === 'success') {
+                // Reset form
+                setMessage('');
+                setSelectedFiles([]);
+                
+                // Optionally redirect or show success message
+                if (returnToList) {
+                    window.location.href = '/support-tickets';
+                }
+            }
+        } catch (err) {
+            console.error('Error adding note:', err);
+        }
+    };
+
+    const handleReset = () => {
+        setMessage('');
+        setSelectedFiles([]);
+        setReturnToList(false);
     };
 
     return (
        <div>
-        <form action="#!">
+        {error && (
+            <div className="px-4 py-3 mb-4 text-sm text-red-500 border border-red-200 rounded-md bg-red-50 dark:bg-red-400/20 dark:border-red-500/50">
+                {error}
+            </div>
+        )}
+        <form onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 gap-5 md:grid-cols-6 xl:grid-cols-12">
         <div className="col-span-1 md:col-span-6 xl:col-span-12">
+        <label className="inline-block mb-2 text-base font-medium">Note Message <span className="text-red-500">*</span></label>
         <Editor
           apiKey="fa6066jy8lf383vm46h917goj6s5vijgvfkopig8uzjym6y1"
+          value={message}
+          onEditorChange={(content) => setMessage(content)}
           init={{
               height: 300,
               menubar: false,
@@ -73,52 +126,11 @@ const handleAcceptedFiles = (files: any) => {
               "undo redo | formatselect | bold italic backcolor | \
               alignleft aligncenter alignright alignjustify | \
               bullist numlist outdent indent | image | removeformat | help",
-              // automatic_uploads: true,
-              // images_upload_handler: (blobInfo) =>
-              // new Promise((resolve) => {
-              //     const base64 = blobInfo.base64()
-              //     resolve(`data:${blobInfo.blob().type};base64,${base64}`)
-              // })
           }}
           />
           </div>
-          <div className="col-span-1 md:col-span-3 xl:col-span-3">
-            <Select
-                className="border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200"
-                options={options}
-                isSearchable={false} // If you want to disable search
-                name="employeeName"
-                id="employeeName"
-            />
-          </div>
-          <div className="col-span-1 md:col-span-3 xl:col-span-3">
-            <Select
-                className="border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200"
-                options={options}
-                isSearchable={false} // If you want to disable search
-                name="employeeName"
-                id="employeeName"
-            />
-          </div>
-          <div className="col-span-1 md:col-span-3 xl:col-span-3">
-            <Select
-                className="border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200"
-                options={options}
-                isSearchable={false} // If you want to disable search
-                name="employeeName"
-                id="employeeName"
-            />
-          </div>
-          <div className="col-span-1 md:col-span-3 xl:col-span-3">
-            <Select
-                className="border-slate-200 dark:border-zinc-500 focus:outline-none focus:border-fecustom-500 disabled:bg-slate-100 dark:disabled:bg-zinc-600 disabled:border-slate-300 dark:disabled:border-zinc-500 dark:disabled:text-zinc-200 disabled:text-slate-500 dark:text-zinc-100 dark:bg-zinc-700 dark:focus:border-fecustom-800 placeholder:text-slate-400 dark:placeholder:text-zinc-200"
-                options={options}
-                isSearchable={false} // If you want to disable search
-                name="employeeName"
-                id="employeeName"
-            />
-          </div>
           <div className="col-span-1 md:col-span-6 xl:col-span-12">
+            <label className="inline-block mb-2 text-base font-medium">Attachments (Optional)</label>
             <div>
                     <div className="flex items-center justify-center bg-white border border-dashed rounded-md cursor-pointer dropzone border-slate-300 dropzone2 dark:bg-zinc-700 dark:border-zinc-500 md:min-h-[50px]">
                     <Dropzone
@@ -161,7 +173,9 @@ const handleAcceptedFiles = (files: any) => {
                                                 </div>
                                             </div>
                                             <div className="shrink-0 ms-3">
-                                                <button data-dz-remove
+                                                <button 
+                                                    type="button"
+                                                    data-dz-remove
                                                     className="px-2 py-1.5 text-xs text-white bg-red-500 border-red-500 btn hover:text-white hover:bg-red-600 hover:border-red-600 focus:text-white focus:bg-red-600 focus:border-red-600 focus:ring focus:ring-red-100 active:text-white active:bg-red-600 active:border-red-600 active:ring active:ring-red-100 dark:ring-fecustom-400/20"
                                                     onClick={() => {
                                                         const newImages = [...selectedFiles];
@@ -186,13 +200,28 @@ const handleAcceptedFiles = (files: any) => {
                     id={`return`}
                     className="size-4 border rounded-sm appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zinc-600 dark:border-zinc-500 checked:bg-fecustom-500 checked:border-fecustom-500 dark:checked:bg-fecustom-500 dark:checked:border-fecustom-500 disabled:opacity-50 disabled:cursor-not-allowed"
                     type="checkbox"
-                    onChange={() => {}}
+                    checked={returnToList}
+                    onChange={(e) => setReturnToList(e.target.checked)}
                 />
                 <label className="cursor-pointer text-sm">
                     Return to ticket list
                 </label>
             </div>
-            <button type="submit" className="text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20">Add Note</button>
+            <button 
+                type="button" 
+                onClick={handleReset}
+                className="text-slate-500 btn bg-slate-200 border-slate-200 hover:text-slate-600 hover:bg-slate-300 hover:border-slate-300 focus:text-slate-600 focus:bg-slate-300 focus:border-slate-300 focus:ring focus:ring-slate-100 active:text-slate-600 active:bg-slate-300 active:border-slate-300 active:ring active:ring-slate-100 dark:bg-zinc-600 dark:hover:bg-zinc-500 dark:border-zinc-600 dark:hover:border-zinc-500 dark:text-zinc-200 dark:ring-zinc-400/50"
+                disabled={submitting}
+            >
+                Clear
+            </button>
+            <button 
+                type="submit" 
+                className="text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20"
+                disabled={submitting || !message.trim()}
+            >
+                {submitting ? 'Adding Note...' : 'Add Note'}
+            </button>
           </div>
           </form>
        </div>    

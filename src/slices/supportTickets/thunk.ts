@@ -42,6 +42,19 @@ export const fetchSupportStatuses = createAsyncThunk(
   }
 );
 
+export const fetchSupportDepartments = createAsyncThunk(
+  "supportTickets/fetchDepartments",
+  async (_, { rejectWithValue }) => {
+    try {
+      console.log("Fetching support ticket departments");
+      const res = await axios.get(`${API_BASE}/tickets/departments`);
+      return res.data;
+    } catch (err) {
+      return rejectWithValue(err.response?.data?.message || "Error fetching support departments");
+    }
+  }
+);
+
 export const getClients = createAsyncThunk(
   "supportTickets/getClients",
   async (_, { rejectWithValue }) => {
