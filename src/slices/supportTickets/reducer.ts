@@ -2,7 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 import { 
   fetchSupportTickets, 
   getTicket, 
-  fetchSupportStatuses, 
+  fetchSupportStatuses,
+  fetchSupportDepartments,
   getClients, 
   getClientsProducts,
   createTicket,
@@ -19,6 +20,7 @@ const supportTicketsSlice = createSlice({
     tickets: [],
     ticketDetails: null,
     statuses: [],
+    departments: [],
     clients: [],
     clientProducts: [],
     totalResults: 0,
@@ -83,6 +85,20 @@ const supportTicketsSlice = createSlice({
       .addCase(fetchSupportStatuses.rejected, (state, action: any) => {
         state.loading = false;
         state.error = action.payload || "Failed to fetch support statuses";
+      })
+
+      // Fetch Support Departments
+      .addCase(fetchSupportDepartments.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchSupportDepartments.fulfilled, (state, action) => {
+        state.loading = false;
+        state.departments = action.payload.departments?.department || [];
+      })
+      .addCase(fetchSupportDepartments.rejected, (state, action: any) => {
+        state.loading = false;
+        state.error = action.payload || "Failed to fetch support departments";
       })
 
       // Get Clients
