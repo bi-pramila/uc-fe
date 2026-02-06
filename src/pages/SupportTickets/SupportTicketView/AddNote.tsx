@@ -49,10 +49,9 @@ const AddNote: React.FC<AddNoteProps> = ({ ticketId }) => {
 
         try {
             const noteData: any = {
-                ticketId,
-                noteData: {
-                    message: message.trim()
-                }
+                action: 'AddTicketNote',
+                ticketid: parseInt(ticketId.toString()),
+                message: message.trim()
             };
 
             // If there are attachments, convert them to base64
@@ -72,7 +71,7 @@ const AddNote: React.FC<AddNoteProps> = ({ ticketId }) => {
                         });
                     })
                 );
-                noteData.noteData.attachments = JSON.stringify(attachments);
+                noteData.attachments = attachments;
             }
 
             const result = await dispatch(addTicketNote(noteData)).unwrap();

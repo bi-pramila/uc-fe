@@ -29,6 +29,9 @@ import {
 import { ToastContainer } from 'react-toastify';
 import filterDataBySearch from 'Common/filterDataBySearch';
 import Pagination from 'Common/Pagination';
+import { NotesData } from 'Common/data';
+
+
 
 const Index = () => {
 
@@ -41,7 +44,9 @@ const Index = () => {
         })
     );
 
-    const { dataList } = useSelector(selectDataList);
+    // const { dataList } = useSelector(selectDataList);
+
+    const dataList = NotesData
     const [eventData, setEventData] = useState<any>();
 
 
@@ -192,7 +197,7 @@ const Index = () => {
     const currentdata = useMemo(() => dataList?.slice(indexOfFirst, indexOfLast), [dataList, indexOfFirst, indexOfLast]);
 
     useEffect(() => {
-        setData(currentdata);
+        setData(NotesData);
     }, [currentdata]);
 
 
