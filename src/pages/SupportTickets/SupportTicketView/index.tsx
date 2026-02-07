@@ -16,6 +16,8 @@ import AddReply from './AddReply';
 import ActivityLogs from './Logs';
 import OtherTickets from './OtherTickets';
 import TicketOptions from './TicketOptions';
+import ReplyBlock from './ReplyBlock';
+import { Pencil, Trash2, Truck } from 'lucide-react';
 
 const SupportTicketView = () => {
 
@@ -92,9 +94,15 @@ const SupportTicketView = () => {
                         <Tab.Content className="mt-5 tab-content">
                             <Tab.Pane eventKey="addReplyTab" id="addReplyTab">
                                 {id && <AddReply ticketId={id} />}
+                                
+                                {/* Display Replies */}
+                                
                             </Tab.Pane>
                             <Tab.Pane eventKey="addNoteTab" id="addNoteTab">
                                 {id && <AddNote ticketId={id} />}
+                                
+                                {/* Display Notes */}
+                                
                             </Tab.Pane>
                             <Tab.Pane eventKey="customFieldsTab" id="customFieldsTab">
                                 Setting  
@@ -115,8 +123,44 @@ const SupportTicketView = () => {
 
                     </Tab.Container>
                 </div>
+               
 
             </div>
+            {ticketDetails?.replies?.reply && Array.isArray(ticketDetails.replies.reply) && (
+                                    <div className="mt-5">
+                                        <h5 className="mb-3 text-16">Replies</h5>
+                                        {ticketDetails.replies.reply.map((reply: any, index: number) => (
+                                            <ReplyBlock
+                                                key={reply.replyid || index}
+                                                name={reply.name}
+                                                email={reply.email}
+                                                requestor_type={reply.requestor_type}
+                                                date={reply.date}
+                                                message={reply.message}
+                                                admin={reply.admin}
+                                            />
+                                        ))}
+                                    </div>
+                                )}
+
+                                {ticketDetails?.notes?.note && Array.isArray(ticketDetails.notes.note) && (
+                                    <div className="mt-5">
+                                        <h5 className="mb-3 text-16">Notes</h5>
+                                        {ticketDetails.notes.note.map((note: any, index: number) => (
+                                            <ReplyBlock
+                                                key={note.noteid || index}
+                                                name={note.admin || 'Admin'}
+                                                email=""
+                                                requestor_type="Note"
+                                                date={note.date}
+                                                message={note.message}
+                                                admin={note.admin}
+                                            />
+                                        ))}
+                                    </div>
+                                )}
+            
+
             
         </React.Fragment>
     );

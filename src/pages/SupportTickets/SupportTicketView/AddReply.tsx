@@ -61,12 +61,11 @@ const AddReply: React.FC<AddReplyProps> = ({ ticketId }) => {
 
         try {
             const replyData: any = {
-                ticketId,
-                replyData: {
-                    message: message.trim(),
-                    ...(status && { status }),
-                    ...(noEmail && { noemail: true })
-                }
+                action: 'AddTicketReply',
+                ticketid: parseInt(ticketId.toString()),
+                message: message.trim(),
+                ...(status && { status }),
+                ...(noEmail && { noemail: true })
             };
 
             // If there are attachments, convert them to base64
@@ -86,7 +85,7 @@ const AddReply: React.FC<AddReplyProps> = ({ ticketId }) => {
                         });
                     })
                 );
-                replyData.replyData.attachments = JSON.stringify(attachments);
+                replyData.attachments = attachments;
             }
 
             const result = await dispatch(addTicketReply(replyData)).unwrap();

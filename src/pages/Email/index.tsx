@@ -27,6 +27,7 @@ import {
 import { ToastContainer, toast } from 'react-toastify';
 import DeleteModal from "Common/DeleteModal";
 import Modal from "Common/Components/Modal";
+import { MailList } from "Common/data";
 
 const Mailbox = () => {
     const dispatch = useDispatch<any>();
@@ -39,7 +40,11 @@ const Mailbox = () => {
         })
     );
 
-    const { dataList, isLoader } = useSelector(selectDataList);
+    
+
+    // const { dataList, isLoader } = useSelector(selectDataList);
+
+
 
     useEffect(() => {
         dispatch(onGetMail());
@@ -55,8 +60,8 @@ const Mailbox = () => {
 
 
     useEffect(() => {
-        setData(dataList);
-    }, [dataList]);
+        setData(MailList);
+    }, []);
 
     const filterMails = ({ category, label }: any) => {
         if (displayCategory === "all" && category === "trash") {
@@ -354,7 +359,7 @@ const Mailbox = () => {
                         <SimpleBar className="xl:max-h-[calc(100vh_-_300px)]">
                             <div className="!pt-0 card-body">
                                 <div className="overflow-x-auto">
-                                    {isLoader || refreshLoader ? <h1>Loading....</h1> : (<table className="w-full whitespace-nowrap">
+                                    { refreshLoader ? <h1>Loading....</h1> : (<table className="w-full whitespace-nowrap">
                                         <tbody className="elmLoader" id="mail-list">
                                             {/* <tr>
                                                 <td colSpan={3}>

@@ -92,7 +92,7 @@ const AddTickets = () => {
             
             if (result.result === 'success') {
                 // Redirect to tickets list or show success message
-                navigate('/support-tickets');
+                navigate('/support/support-ticket-list');
             }
         } catch (err) {
             console.error('Error creating ticket:', err);
