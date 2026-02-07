@@ -109,10 +109,10 @@ export const updateTicket = createAsyncThunk(
 
 export const addTicketReply = createAsyncThunk(
   "supportTickets/addReply",
-  async ({ ticketId, replyData }: { ticketId: string | number; replyData: any }, { rejectWithValue }) => {
+  async (replyData: any, { rejectWithValue }) => {
     try {
-      console.log(`Adding reply to ticket ID: ${ticketId}`, replyData);
-      const res = await axios.post(`${API_BASE}/tickets/${ticketId}/replies`, replyData);
+      console.log(`Adding reply to ticket ID: ${replyData.ticketid}`, replyData);
+      const res = await axios.post(`${API_BASE}/tickets/${replyData.ticketid}/replies`, replyData);
       return res.data;
     } catch (err) {
       return rejectWithValue(err.response?.data?.message || "Error adding reply");
@@ -122,11 +122,14 @@ export const addTicketReply = createAsyncThunk(
 
 export const deleteTicketReply = createAsyncThunk(
   "supportTickets/deleteReply",
-  async ({ ticketId, replyId }: { ticketId: string | number; replyId: string | number }, { rejectWithValue }) => {
+  async ({ replyid }: { replyid: string | number }, { rejectWithValue }) => {
     try {
-      console.log(`Deleting reply ID: ${replyId} from ticket ID: ${ticketId}`);
-      const res = await axios.delete(`${API_BASE}/tickets/${ticketId}/replies/${replyId}`);
-      return { replyId, data: res.data };
+      console.log(`Deleting reply ID: ${replyid}`);
+      const res = await axios.post(`${API_BASE}/tickets/replies/delete`, {
+        action: 'DeleteTicketReply',
+        replyid: parseInt(replyid.toString())
+      });
+      return { replyid, data: res.data };
     } catch (err) {
       return rejectWithValue(err.response?.data?.message || "Error deleting reply");
     }
@@ -135,10 +138,13 @@ export const deleteTicketReply = createAsyncThunk(
 
 export const updateTicketReply = createAsyncThunk(
   "supportTickets/updateReply",
-  async ({ replyId, data }: { replyId: string | number; data: any }, { rejectWithValue }) => {
+  async (updateData: any, { rejectWithValue }) => {
     try {
-      console.log(`Updating reply ID: ${replyId}`, data);
-      const res = await axios.put(`${API_BASE}/tickets/replies/${replyId}`, data);
+      console.log(`Updating reply ID: ${updateData.replyid}`, updateData);
+      const res = await axios.post(`${API_BASE}/tickets/replies/update`, {
+        action: 'UpdateTicketReply',
+        ...updateData
+      });
       return res.data;
     } catch (err) {
       return rejectWithValue(err.response?.data?.message || "Error updating reply");
@@ -148,13 +154,29 @@ export const updateTicketReply = createAsyncThunk(
 
 export const addTicketNote = createAsyncThunk(
   "supportTickets/addNote",
-  async ({ ticketId, noteData }: { ticketId: string | number; noteData: any }, { rejectWithValue }) => {
+  async (noteData: any, { rejectWithValue }) => {
     try {
-      console.log(`Adding note to ticket ID: ${ticketId}`, noteData);
-      const res = await axios.post(`${API_BASE}/tickets/${ticketId}/notes`, noteData);
+      console.log(`Adding note to ticket ID: ${noteData.ticketid}`, noteData);
+      const res = await axios.post(`${API_BASE}/tickets/${noteData.ticketid}/notes`, noteData);
       return res.data;
     } catch (err) {
       return rejectWithValue(err.response?.data?.message || "Error adding note");
+    }
+  }
+);
+
+export const deleteTicketNote = createAsyncThunk(
+  "supportTickets/deleteNote",
+  async ({ noteid }: { noteid: string | number }, { rejectWithValue }) => {
+    try {
+      console.log(`Deleting note ID: ${noteid}`);
+      const res = await axios.post(`${API_BASE}/tickets/notes/delete`, {
+        action: 'DeleteTicketNote',
+        noteid: parseInt(noteid.toString())
+      });
+      return { noteid, data: res.data };
+    } catch (err) {
+      return rejectWithValue(err.response?.data?.message || "Error deleting note");
     }
   }
 );
