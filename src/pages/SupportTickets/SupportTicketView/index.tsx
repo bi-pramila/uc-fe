@@ -8,7 +8,7 @@ import { useParams } from 'react-router-dom';
 // react-redux
 import { useDispatch, useSelector } from 'react-redux';
 import { createSelector } from 'reselect';
-import { getTicket } from 'slices/supportTickets/thunk';
+import { getTicket, updateTicketReply, deleteTicketReply, deleteTicketNote } from 'slices/supportTickets/thunk';
 
 import ClientLogs from 'pages/SupportTickets/SupportTicketView/ClientLogs';
 import AddNote from './AddNote';
@@ -49,6 +49,60 @@ const SupportTicketView = () => {
             dispatch(getTicket(id));
         }
     }, [dispatch, id]);
+
+    // Handle reply update
+    const handleUpdateReply = async (replyid: string | number, message: string) => {
+        try {
+            const result = await dispatch(updateTicketReply({
+                replyid: parseInt(replyid.toString()),
+                message: message.trim()
+            })).unwrap();
+
+            if (result.result === 'success') {
+                // Refresh ticket details
+                if (id) {
+                    dispatch(getTicket(id));
+                }
+            }
+        } catch (error) {
+            console.error('Error updating reply:', error);
+            alert('Failed to update reply');
+        }
+    };
+
+    // Handle reply delete
+    const handleDeleteReply = async (replyid: string | number) => {
+        try {
+            const result = await dispatch(deleteTicketReply({ replyid })).unwrap();
+
+            if (result.data.result === 'success') {
+                // Refresh ticket details
+                if (id) {
+                    dispatch(getTicket(id));
+                }
+            }
+        } catch (error) {
+            console.error('Error deleting reply:', error);
+            alert('Failed to delete reply');
+        }
+    };
+
+    // Handle note delete
+    const handleDeleteNote = async (noteid: string | number) => {
+        try {
+            const result = await dispatch(deleteTicketNote({ noteid })).unwrap();
+
+            if (result.data.result === 'success') {
+                // Refresh ticket details
+                if (id) {
+                    dispatch(getTicket(id));
+                }
+            }
+        } catch (error) {
+            console.error('Error deleting note:', error);
+            alert('Failed to delete note');
+        }
+    };
 
     // Table Head Action On Right
     useEffect(() => {
@@ -96,13 +150,50 @@ const SupportTicketView = () => {
                                 {id && <AddReply ticketId={id} />}
                                 
                                 {/* Display Replies */}
-                                
+                                {ticketDetails?.replies?.reply && Array.isArray(ticketDetails.replies.reply) && (
+                                    <div className="mt-5">
+                                        <h5 className="mb-3 text-16">Replies</h5>
+                                        {ticketDetails.replies.reply.map((reply: any, index: number) => (
+                                            <ReplyBlock
+                                                key={reply.replyid || index}
+                                                replyid={reply.replyid}
+                                                name={reply.name}
+                                                email={reply.email}
+                                                requestor_type={reply.requestor_type}
+                                                date={reply.date}
+                                                message={reply.message}
+                                                admin={reply.admin}
+                                                isNote={false}
+                                                onUpdate={handleUpdateReply}
+                                                onDelete={handleDeleteReply}
+                                            />
+                                        ))}
+                                    </div>
+                                )}
                             </Tab.Pane>
                             <Tab.Pane eventKey="addNoteTab" id="addNoteTab">
                                 {id && <AddNote ticketId={id} />}
                                 
                                 {/* Display Notes */}
-                                
+                                {ticketDetails?.notes?.note && Array.isArray(ticketDetails.notes.note) && (
+                                    <div className="mt-5">
+                                        <h5 className="mb-3 text-16">Notes</h5>
+                                        {ticketDetails.notes.note.map((note: any, index: number) => (
+                                            <ReplyBlock
+                                                key={note.noteid || index}
+                                                noteid={note.noteid}
+                                                name={note.admin || 'Admin'}
+                                                email=""
+                                                requestor_type="Note"
+                                                date={note.date}
+                                                message={note.message}
+                                                admin={note.admin}
+                                                isNote={true}
+                                                onDelete={handleDeleteNote}
+                                            />
+                                        ))}
+                                    </div>
+                                )}
                             </Tab.Pane>
                             <Tab.Pane eventKey="customFieldsTab" id="customFieldsTab">
                                 Setting  
@@ -126,40 +217,6 @@ const SupportTicketView = () => {
                
 
             </div>
-            {ticketDetails?.replies?.reply && Array.isArray(ticketDetails.replies.reply) && (
-                                    <div className="mt-5">
-                                        <h5 className="mb-3 text-16">Replies</h5>
-                                        {ticketDetails.replies.reply.map((reply: any, index: number) => (
-                                            <ReplyBlock
-                                                key={reply.replyid || index}
-                                                name={reply.name}
-                                                email={reply.email}
-                                                requestor_type={reply.requestor_type}
-                                                date={reply.date}
-                                                message={reply.message}
-                                                admin={reply.admin}
-                                            />
-                                        ))}
-                                    </div>
-                                )}
-
-                                {ticketDetails?.notes?.note && Array.isArray(ticketDetails.notes.note) && (
-                                    <div className="mt-5">
-                                        <h5 className="mb-3 text-16">Notes</h5>
-                                        {ticketDetails.notes.note.map((note: any, index: number) => (
-                                            <ReplyBlock
-                                                key={note.noteid || index}
-                                                name={note.admin || 'Admin'}
-                                                email=""
-                                                requestor_type="Note"
-                                                date={note.date}
-                                                message={note.message}
-                                                admin={note.admin}
-                                            />
-                                        ))}
-                                    </div>
-                                )}
-            
 
             
         </React.Fragment>
