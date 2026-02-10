@@ -11,7 +11,9 @@ import {
   addTicketReply,
   deleteTicketReply,
   updateTicketReply,
-  addTicketNote
+  addTicketNote,
+  fetchActivityLogs,
+  fetchTicketLogs
 } from "./thunk";
 
 const supportTicketsSlice = createSlice({
@@ -23,10 +25,15 @@ const supportTicketsSlice = createSlice({
     departments: [],
     clients: [],
     clientProducts: [],
+    activityLogs: [],
+    ticketLogs: [],
+    ticketLogsPagination: null,
+    ticketLogsLoading: false,
     totalResults: 0,
     numReturned: 0,
     loading: false,
     submitting: false,
+    logsLoading: false,
     error: null,
   },
   reducers: {
@@ -205,6 +212,52 @@ const supportTicketsSlice = createSlice({
       .addCase(addTicketNote.rejected, (state, action: any) => {
         state.submitting = false;
         state.error = action.payload || "Failed to add note";
+      })
+
+      // Fetch Activity Logs
+      .addCase(fetchActivityLogs.pending, (state) => {
+        state.logsLoading = true;
+        state.error = null;
+      })
+      .addCase(fetchActivityLogs.fulfilled, (state, action) => {
+        state.logsLoading = false;
+        const payload = action.payload;
+        
+        // WHMCS API response structure
+        if (payload.result === "success") {
+          state.activityLogs = payload.activity || [];
+        } else {
+          state.error = payload.message || "Failed to fetch activity logs";
+          state.activityLogs = [];
+        }
+      })
+      .addCase(fetchActivityLogs.rejected, (state, action: any) => {
+        state.logsLoading = false;
+        state.error = action.payload || "Failed to fetch activity logs";
+        state.activityLogs = [];
+      })
+
+      // Fetch Ticket Logs
+      .addCase(fetchTicketLogs.pending, (state) => {
+        state.ticketLogsLoading = true;
+        state.error = null;
+      })
+      .addCase(fetchTicketLogs.fulfilled, (state, action) => {
+        state.ticketLogsLoading = false;
+        const payload = action.payload;
+        
+        if (payload.success) {
+          state.ticketLogs = payload.data?.logs || [];
+          state.ticketLogsPagination = payload.data?.pagination || null;
+        } else {
+          state.error = payload.message || "Failed to fetch ticket logs";
+          state.ticketLogs = [];
+        }
+      })
+      .addCase(fetchTicketLogs.rejected, (state, action: any) => {
+        state.ticketLogsLoading = false;
+        state.error = action.payload || "Failed to fetch ticket logs";
+        state.ticketLogs = [];
       });
   },
 });
