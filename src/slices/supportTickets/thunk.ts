@@ -180,3 +180,50 @@ export const deleteTicketNote = createAsyncThunk(
     }
   }
 );
+
+export const fetchActivityLogs = createAsyncThunk(
+  "supportTickets/fetchActivityLogs",
+  async ({ userid, limitnum = 50 }: { userid: string | number; limitnum?: number }, { rejectWithValue }) => {
+    try {
+      console.log(`Fetching activity logs for user ID: ${userid}`);
+      const res = await axios.get(`${API_BASE}/tickets/activity-log`, {
+        params: {
+          limitnum,
+          userid
+        }
+      });
+      return res.data;
+    } catch (err) {
+      return rejectWithValue(err.response?.data?.message || "Error fetching activity logs");
+    }
+  }
+);
+
+export const fetchTicketLogs = createAsyncThunk(
+  "supportTickets/fetchTicketLogs",
+  async ({ 
+    ticketId, 
+    limit = 50, 
+    offset = 0, 
+    sortOrder = 'DESC' 
+  }: { 
+    ticketId: string | number; 
+    limit?: number; 
+    offset?: number; 
+    sortOrder?: 'ASC' | 'DESC';
+  }, { rejectWithValue }) => {
+    try {
+      console.log(`Fetching logs for ticket ID: ${ticketId}`);
+      const res = await axios.get(`${API_BASE}/tickets/${ticketId}/logs`, {
+        params: {
+          limit,
+          offset,
+          sortOrder
+        }
+      });
+      return res.data;
+    } catch (err) {
+      return rejectWithValue(err.response?.data?.message || "Error fetching ticket logs");
+    }
+  }
+);
