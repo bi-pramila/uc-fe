@@ -120,11 +120,11 @@ const AddReply: React.FC<AddReplyProps> = ({ ticketId }) => {
 
     return (
        <div>
-        {error && (
+        {/* {error && (
             <div className="px-4 py-3 mb-4 text-sm text-red-500 border border-red-200 rounded-md bg-red-50 dark:bg-red-400/20 dark:border-red-500/50">
                 {error}
             </div>
-        )}
+        )} */}
         <form onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 gap-5 md:grid-cols-6 xl:grid-cols-12">
         <div className="col-span-1 md:col-span-6 xl:col-span-12">
