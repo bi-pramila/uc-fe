@@ -14,78 +14,6 @@ import {
   fetchSupportTickets
 } from 'slices/thunk';
 
-const LeaveManageEmployeeData = [
-    {
-      "id": 1,
-      "ticketId": 504197,
-      "department": "Technical Support (Pramila S)",
-      "subject": "test from external",
-      "requestor": "Pramila (AUTHORIZED USER)",
-      "owner": "Paul Webber",
-      "status": "Open",
-      "lastReply": "149d 0h 46m"
-    },
-    {
-      "id": 2,
-      "ticketId": 330850,
-      "department": "Technical Support",
-      "subject": "Server slow",
-      "requestor": "Pramila (AUTHORIZED USER)",
-      "owner": "Paul Webber",
-      "status": "Open",
-      "lastReply": "183d 4h 2m"
-    },
-    {
-      "id": 3,
-      "ticketId": 786367,
-      "department": "Technical Support",
-      "subject": "Testing",
-      "requestor": "Pramila (AUTHORIZED USER)",
-      "owner": "Paul Webber",
-      "status": "Open",
-      "lastReply": "188d 6h 50m"
-    },
-    {
-      "id": 4,
-      "ticketId": 926687,
-      "department": "Technical Support",
-      "subject": "website",
-      "requestor": "Pramila (AUTHORIZED USER)",
-      "owner": "Paul Webber",
-      "status": "Customer-Reply",
-      "lastReply": "188d 21h 29m"
-    },
-    {
-      "id": 5,
-      "ticketId": 225617,
-      "department": "Technical Support (Pramila S)",
-      "subject": "Server slow",
-      "requestor": "Tinu S (OPERATOR)",
-      "owner": "Paul Webber",
-      "status": "Open",
-      "lastReply": "198d 20h 22m"
-    },
-    {
-      "id": 6,
-      "ticketId": 427019,
-      "department": "Sales Department",
-      "subject": "Your Account Login Info",
-      "requestor": "Eric J (OPERATOR)",
-      "owner": "Paul Webber",
-      "status": "Answered",
-      "lastReply": "199d 18h 19m"
-    },
-    {
-      "id": 7,
-      "ticketId": 427536,
-      "department": "Technical Support",
-      "subject": "test",
-      "requestor": "Asma D (AUTHORIZED USER)",
-      "owner": "Paul Webber",
-      "status": "Answered",
-      "lastReply": "236d 18h 36m"
-    }
-  ]
 
 const OtherTickets = () => {
 
@@ -147,12 +75,6 @@ const OtherTickets = () => {
         };
     });
 
-    const options = [
-        { value: 'Open', label: 'Open' },
-        { value: 'Closed', label: 'Closed' },
-        { value: 'Answered', label: 'Answered' },
-        { value: 'onHold', label: 'On Hold' },
-    ];
 
 
 

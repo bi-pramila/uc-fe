@@ -221,7 +221,7 @@ export const fetchTicketLogs = createAsyncThunk(
           sortOrder
         }
       });
-      return res.data;
+      return res;
     } catch (err) {
       return rejectWithValue(err.response?.data?.message || "Error fetching ticket logs");
     }

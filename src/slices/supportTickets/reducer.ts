@@ -225,7 +225,7 @@ const supportTicketsSlice = createSlice({
         
         // WHMCS API response structure
         if (payload.result === "success") {
-          state.activityLogs = payload.activity || [];
+          state.activityLogs = payload.activity.entry || [];
         } else {
           state.error = payload.message || "Failed to fetch activity logs";
           state.activityLogs = [];
@@ -245,6 +245,8 @@ const supportTicketsSlice = createSlice({
       .addCase(fetchTicketLogs.fulfilled, (state, action) => {
         state.ticketLogsLoading = false;
         const payload = action.payload;
+
+        console.log("Fetch Ticket Logs Payload:", payload);
         
         if (payload.success) {
           state.ticketLogs = payload.data?.logs || [];
