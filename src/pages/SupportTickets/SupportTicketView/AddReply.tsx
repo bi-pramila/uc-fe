@@ -1,12 +1,12 @@
-
 // Icons
 import Select from 'react-select';
 import { Editor } from '@tinymce/tinymce-react';
-import React, { useState, useEffect } from 'react';
-import Dropzone from "react-dropzone"
+import React, { useState, useEffect, useMemo } from 'react';
+import Dropzone from "react-dropzone";
 import { UploadCloud } from "lucide-react";
 import { useDispatch, useSelector } from 'react-redux';
 import { addTicketReply, fetchSupportStatuses } from 'slices/supportTickets/thunk';
+import { useSearchParams } from 'react-router-dom';
 
 interface AddReplyProps {
     ticketId: string | number;
@@ -14,7 +14,31 @@ interface AddReplyProps {
 
 const AddReply: React.FC<AddReplyProps> = ({ ticketId }) => {
     const dispatch = useDispatch<any>();
+    const [searchParams] = useSearchParams();
+
     const { submitting, error, statuses } = useSelector((state: any) => state.SupportTickets);
+
+    const clientIdFromStore = useSelector((state: any) =>
+        state?.SupportTickets?.ticket?.clientid ??
+        state?.SupportTickets?.ticket?.clientId ??
+        state?.SupportTickets?.selectedTicket?.clientid ??
+        state?.SupportTickets?.selectedTicket?.clientId ??
+        state?.Auth?.user?.clientId ??
+        state?.auth?.user?.clientId ??
+        state?.Profile?.user?.clientId ??
+        state?.profile?.user?.clientId ??
+        undefined
+    );
+
+    const clientId = useMemo(() => {
+        const fromQuery = searchParams.get("clientId") || searchParams.get("clientid");
+        return fromQuery || clientIdFromStore;
+    }, [searchParams, clientIdFromStore]);
+
+    const attachClientId = (payload: any) => {
+        const base = { ...(payload || {}) };
+        return clientId ? { ...base, clientid: clientId, clientId } : base;
+    };
 
     const [message, setMessage] = useState('');
     const [status, setStatus] = useState('');
@@ -54,19 +78,17 @@ const AddReply: React.FC<AddReplyProps> = ({ ticketId }) => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        
-        if (!message.trim()) {
-            return;
-        }
+
+        if (!message.trim()) return;
 
         try {
-            const replyData: any = {
+            const replyData: any = attachClientId({
                 action: 'AddTicketReply',
                 ticketid: parseInt(ticketId.toString()),
                 message: message.trim(),
                 ...(status && { status }),
                 ...(noEmail && { noemail: true })
-            };
+            });
 
             // If there are attachments, convert them to base64
             if (selectedFiles.length > 0) {

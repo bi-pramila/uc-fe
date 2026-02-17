@@ -1,12 +1,12 @@
-
 // Icons
 import Select from 'react-select';
 import { Editor } from '@tinymce/tinymce-react';
-import React, { useState } from 'react';
-import Dropzone from "react-dropzone"
+import React, { useState, useMemo } from 'react';
+import Dropzone from "react-dropzone";
 import { UploadCloud } from "lucide-react";
 import { useDispatch, useSelector } from 'react-redux';
 import { addTicketNote } from 'slices/supportTickets/thunk';
+import { useSearchParams } from 'react-router-dom';
 
 interface AddNoteProps {
     ticketId: string | number;
@@ -14,7 +14,31 @@ interface AddNoteProps {
 
 const AddNote: React.FC<AddNoteProps> = ({ ticketId }) => {
     const dispatch = useDispatch<any>();
+    const [searchParams] = useSearchParams();
+
     const { submitting, error } = useSelector((state: any) => state.SupportTickets);
+
+    const clientIdFromStore = useSelector((state: any) =>
+        state?.SupportTickets?.ticket?.clientid ??
+        state?.SupportTickets?.ticket?.clientId ??
+        state?.SupportTickets?.selectedTicket?.clientid ??
+        state?.SupportTickets?.selectedTicket?.clientId ??
+        state?.Auth?.user?.clientId ??
+        state?.auth?.user?.clientId ??
+        state?.Profile?.user?.clientId ??
+        state?.profile?.user?.clientId ??
+        undefined
+    );
+
+    const clientId = useMemo(() => {
+        const fromQuery = searchParams.get("clientId") || searchParams.get("clientid");
+        return fromQuery || clientIdFromStore;
+    }, [searchParams, clientIdFromStore]);
+
+    const attachClientId = (payload: any) => {
+        const base = { ...(payload || {}) };
+        return clientId ? { ...base, clientid: clientId, clientId } : base;
+    };
 
     const [message, setMessage] = useState('');
     const [returnToList, setReturnToList] = useState(false);
@@ -42,17 +66,15 @@ const AddNote: React.FC<AddNoteProps> = ({ ticketId }) => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        
-        if (!message.trim()) {
-            return;
-        }
+
+        if (!message.trim()) return;
 
         try {
-            const noteData: any = {
+            const noteData: any = attachClientId({
                 action: 'AddTicketNote',
                 ticketid: parseInt(ticketId.toString()),
                 message: message.trim()
-            };
+            });
 
             // If there are attachments, convert them to base64
             if (selectedFiles.length > 0) {

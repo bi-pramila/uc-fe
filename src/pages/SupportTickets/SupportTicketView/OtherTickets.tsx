@@ -1,23 +1,19 @@
 import TableContainer from 'Common/TableContainer';
 import React, { useEffect, useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
-import Select from 'react-select';
+import { Link, useSearchParams } from 'react-router-dom';
 
 // Icons
-import { Info, Pencil, Plus, Search } from 'lucide-react';
+import { Info, Pencil, Search } from 'lucide-react';
 
 // react-redux
 import { useDispatch, useSelector } from 'react-redux';
 import { createSelector } from 'reselect';
 
-import {
-  fetchSupportTickets
-} from 'slices/thunk';
-
+import { fetchSupportTickets } from 'slices/thunk';
 
 const OtherTickets = () => {
-
     const dispatch = useDispatch<any>();
+    const [searchParams] = useSearchParams();
 
     const selectSupportTicketsData = createSelector(
         (state: any) => state.SupportTickets,
@@ -31,29 +27,49 @@ const OtherTickets = () => {
 
     const { tickets, totalResults, loading, error } = useSelector(selectSupportTicketsData);
 
-    const [data, setData] = useState<any>(LeaveManageEmployeeData);
+    const clientIdFromStore = useSelector((state: any) =>
+        state?.SupportTickets?.ticket?.clientid ??
+        state?.SupportTickets?.ticket?.clientId ??
+        state?.SupportTickets?.selectedTicket?.clientid ??
+        state?.SupportTickets?.selectedTicket?.clientId ??
+        state?.Auth?.user?.clientId ??
+        state?.auth?.user?.clientId ??
+        state?.Profile?.user?.clientId ??
+        state?.profile?.user?.clientId ??
+        undefined
+    );
 
-    // Get Data from WHMCS API
+    const clientId = useMemo(() => {
+        const fromQuery = searchParams.get("clientId") || searchParams.get("clientid");
+        return fromQuery || clientIdFromStore;
+    }, [searchParams, clientIdFromStore]);
+
+    const attachClientId = (payload: any) => {
+        const base = { ...(payload || {}) };
+        return clientId ? { ...base, clientid: clientId, clientId } : base;
+    };
+
+    const [data, setData] = useState<any[]>([]);
+
+    // Get Data from tickets API (with client id)
     useEffect(() => {
-        console.log("Fetching Support Tickets from WHMCS");
-        dispatch(fetchSupportTickets({ limitstart: 0, limitnum: 25 }));
-    }, [dispatch]);
+        dispatch(fetchSupportTickets(attachClientId({ limitstart: 0, limitnum: 25 })));
+    }, [dispatch, clientId]);
 
     // Update local state when tickets change
     useEffect(() => {
-        if (tickets && tickets.length > 0) {
-            // Transform WHMCS data to match our table structure
+        if (Array.isArray(tickets)) {
             const transformedData = tickets.map((ticket: any, index: number) => ({
                 id: index + 1,
                 ticketId: ticket.tid || ticket.id,
                 department: ticket.department || "—",
                 subject: ticket.subject || "—",
                 requestor: `${ticket.name || "Unknown"} (${ticket.email || "—"})`,
-                owner: ticket.lastreply || "—",
+                owner: ticket.owner || ticket.assignedto || "—",
                 status: ticket.status || "Open",
                 lastReply: ticket.lastreply || "—"
             }));
-            // setData(transformedData);
+            setData(transformedData);
         }
     }, [tickets]);
 
@@ -69,14 +85,8 @@ const OtherTickets = () => {
         const tableHead = document.querySelectorAll("th");
         const lastTheadElement = tableHead[tableHead.length - 1];
         lastTheadElement?.classList.add("ltr:text-right", "rtl:text-left");
-
-        return () => {
-            lastTheadElement?.classList.remove("ltr:text-right", "rtl:text-left");
-        };
-    });
-
-
-
+        return () => lastTheadElement?.classList.remove("ltr:text-right", "rtl:text-left");
+    }, []);
 
     const Status = ({ item }: any) => {
         switch (item) {
@@ -179,7 +189,7 @@ const OtherTickets = () => {
                     </div> */}
                     
                     <div className="overflow-x-auto">
-                        {/* {loading ? (
+                        {loading ? (
                             <div className="py-6 text-center">
                                 <p>Loading tickets...</p>
                             </div>
@@ -187,32 +197,11 @@ const OtherTickets = () => {
                             <div className="py-6 text-center">
                                 <p className="text-red-500">{error}</p>
                             </div>
-                        ) : LeaveManageEmployeeData && LeaveManageEmployeeData.length > 0 ? (
+                        ) : data && data.length > 0 ? (
                             <TableContainer
                                 isPagination={true}
                                 columns={(columns || [])}
-                                data={(LeaveManageEmployeeData || [])}
-                                customPageSize={10}
-                                divclassName="overflow-x-auto"
-                                tableclassName="w-full whitespace-nowrap"
-                                theadclassName="ltr:text-left rtl:text-right bg-slate-100 text-slate-500 dark:bg-zinc-600 dark:text-zinc-200"
-                                thclassName="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zinc-500"
-                                tdclassName="px-3.5 py-2.5 border-y border-slate-200 dark:border-zinc-500"
-                                PaginationClassName="flex flex-col items-center mt-5 md:flex-row"
-                            />
-                        ) : (
-                            <div className="noresult">
-                                <div className="py-6 text-center">
-                                    <Search className="size-6 mx-auto text-sky-500 fill-sky-100 dark:sky-500/20" />
-                                    <h5 className="mt-2 mb-1">Sorry! No Result Found</h5>
-                                    <p className="mb-0 text-slate-500 dark:text-zinc-200">No support tickets found.</p>
-                                </div>
-                            </div>
-                        )} */}{LeaveManageEmployeeData && LeaveManageEmployeeData.length > 0 ? (
-                            <TableContainer
-                                isPagination={true}
-                                columns={(columns || [])}
-                                data={(LeaveManageEmployeeData || [])}
+                                data={(data || [])}
                                 customPageSize={10}
                                 divclassName="overflow-x-auto"
                                 tableclassName="w-full whitespace-nowrap"
