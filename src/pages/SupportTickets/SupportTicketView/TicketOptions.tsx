@@ -141,7 +141,10 @@ const TicketOptions = () => {
             // Only include fields that have values
             if (formData.deptid) updateData.deptid = parseInt(formData.deptid);
             if (formData.subject) updateData.subject = formData.subject;
-            if (formData.userid) updateData.userid = parseInt(formData.userid);
+            if (formData.userid) {
+                updateData.userid = parseInt(formData.userid);
+                updateData.clientid = parseInt(formData.userid); // Add clientid for update
+            }
             if (formData.status) updateData.status = formData.status;
             if (formData.priority) updateData.priority = formData.priority;
             if (formData.message) updateData.message = formData.message;
