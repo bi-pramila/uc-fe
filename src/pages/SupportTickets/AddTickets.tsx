@@ -1,24 +1,29 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import BreadCrumb from 'Common/BreadCrumb';
 import Select from 'react-select';
 import { Editor } from '@tinymce/tinymce-react';
 import { useDispatch, useSelector } from 'react-redux';
-import { 
-    fetchSupportDepartments, 
-    getClients, 
-    createTicket 
+import {
+    fetchSupportDepartments,
+    getClients,
+    createTicket
 } from 'slices/supportTickets/thunk';
-import { useNavigate } from 'react-router-dom';
-
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 const AddTickets = () => {
     const dispatch = useDispatch<any>();
     const navigate = useNavigate();
+    const [searchParams] = useSearchParams();
 
     const { departments, clients, submitting, error } = useSelector((state: any) => state.SupportTickets);
 
+    const clientIdFromQuery = useMemo(
+        () => searchParams.get("clientId") || searchParams.get("clientid") || "",
+        [searchParams]
+    );
+
     const [formData, setFormData] = useState({
-        clientId: '',
+        clientId: clientIdFromQuery,
         name: '',
         email: '',
         department: '',
@@ -30,10 +35,37 @@ const AddTickets = () => {
 
     const [selectedClient, setSelectedClient] = useState<any>(null);
 
+    const attachClientId = (payload: any) => {
+        const cid = payload?.clientid ?? payload?.clientId ?? formData.clientId;
+        return cid ? { ...(payload || {}), clientid: cid, clientId: cid } : { ...(payload || {}) };
+    };
+
     useEffect(() => {
         dispatch(fetchSupportDepartments());
         dispatch(getClients());
     }, [dispatch]);
+
+    // If opened with ?clientId=, preselect once clients load
+    useEffect(() => {
+        if (!clientIdFromQuery || !clients?.clients?.client?.length || selectedClient) return;
+        const match = clients.clients.client.find((c: any) => String(c.id) === String(clientIdFromQuery));
+        if (match) {
+            const option = {
+                value: match.id,
+                label: `${match.firstname} ${match.lastname}`,
+                email: match.email,
+                firstname: match.firstname,
+                lastname: match.lastname
+            };
+            setSelectedClient(option);
+            setFormData(prev => ({
+                ...prev,
+                clientId: String(match.id),
+                name: `${match.firstname} ${match.lastname}`,
+                email: match.email
+            }));
+        }
+    }, [clientIdFromQuery, clients, selectedClient]);
 
     // Transform departments for react-select
     const departmentOptions = departments?.map((dept: any) => ({
@@ -77,21 +109,19 @@ const AddTickets = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        
+
         try {
-            const ticketData = {
-                clientid: formData.clientId,
+            const ticketData = attachClientId({
                 deptid: formData.department,
                 subject: formData.subject,
                 message: formData.message,
                 priority: formData.priority,
                 ...(formData.ccrecipients && { ccrecipients: formData.ccrecipients })
-            };
+            });
 
             const result = await dispatch(createTicket(ticketData)).unwrap();
-            
+
             if (result.result === 'success') {
-                // Redirect to tickets list or show success message
                 navigate('/support/support-ticket-list');
             }
         } catch (err) {
