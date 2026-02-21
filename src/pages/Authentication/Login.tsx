@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
 
@@ -12,7 +13,7 @@ import type { AppDispatch, RootState } from "app/store";
 // Image
 import AuthIcon from "pages/AuthenticationInner/AuthIcon";
 import logoLight from "assets/images/logo-light.png";
-import logoDark from "assets/images/logo-dark.png"; 
+import logoDark from "assets/images/logo-dark.png";
 
 import withRouter from "Common/withRouter";
 
@@ -22,33 +23,40 @@ const Login = (props: any) => {
     document.title = "Login | Ucartz";
 
     // const dispatch = useDispatch();
-   
+
     const dispatch = useDispatch<AppDispatch>();
     const navigate = useNavigate();
 
 
     // Select login state from Redux store
     const { user, success, error, loading } = useSelector(
-        (state: RootState) => state.Login 
+        (state: RootState) => state.Login
     );
 
     const [loginAttempted, setLoginAttempted] = useState(false);
     const [hasNavigated, setHasNavigated] = useState(false);
- 
+
+
+    const captchaRef = useRef<ReCAPTCHA>(null);
 
     const formik = useFormik({
         enableReinitialize: true,
-        initialValues: { email: "", password: "",},
+        initialValues: { email: "", password: "", captcha: "" },
         validationSchema: Yup.object({
             email: Yup.string().email("Invalid email").required("Please Enter Your email"),
             password: Yup.string().required("Please Enter Your Password"),
+            captcha: Yup.string().required("Please Verify the Captcha"),
         }),
         onSubmit: (values) => {
             console.log("Submitting form: ", values);
             setLoginAttempted(true);
-            dispatch(loginUser({ email: values.email, password: values.password }))
+            dispatch(loginUser({ email: values.email, password: values.password, captcha: values.captcha }))
         },
     });
+
+    const onChange = (value: string | null) => {
+        formik.setFieldValue("captcha", value);
+    };
 
     // Navigate on successful login
     useEffect(() => {
@@ -71,6 +79,15 @@ const Login = (props: any) => {
         }
     }, [success]);
 
+    // Reset captcha on login error
+    useEffect(() => {
+        if (error) {
+            captchaRef.current?.reset();
+            formik.setFieldValue("captcha", "");
+            setLoginAttempted(false);
+        }
+    }, [error]);
+
     // Clear auth state when component unmounts
     // useEffect(() => {
     //     return () => {
@@ -78,8 +95,8 @@ const Login = (props: any) => {
     //     };
     // }, [dispatch]);
 
-    
-    
+
+
 
     React.useEffect(() => {
         const bodyElement = document.body;
@@ -110,13 +127,13 @@ const Login = (props: any) => {
 
                         {success && (
                             <div className="px-4 py-3 mb-3 text-sm text-green-500 border border-green-200 rounded-md bg-green-50 dark:bg-green-400/20 dark:border-green-500/50">
-                            You have <b>successfully</b> signed in.
+                                You have <b>successfully</b> signed in.
                             </div>
                         )}
 
                         {error && (
                             <div className="px-4 py-3 mb-3 text-sm text-red-500 border border-red-200 rounded-md bg-red-50 dark:bg-red-400/20 dark:border-red-500/50">
-                            You have <b>failed</b> to sign in: {error}
+                                You have <b>failed</b> to sign in: {error}
                             </div>
                         )}
 
@@ -141,7 +158,7 @@ const Login = (props: any) => {
                             </div>
                             <div className="mb-3">
                                 <Link className="text-primary font-medium text-sm mb-2 float-end fw-medium text-fecustom-500" to="/auth-reset-password-basic" data-discover="true">Forgot Password ?</Link>
-                                   
+
                                 <label htmlFor="password" className="inline-block mb-2 text-base font-medium">Password</label>
                                 <input
                                     type="password"
@@ -164,6 +181,26 @@ const Login = (props: any) => {
                                 </div>
                                 {/* <div id="remember-error" className="hidden mt-1 text-sm text-red-500">Please check the "Remember me" before submitting the form.</div> */}
                             </div>
+
+                            <div className="mt-4">
+                                {import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY ? (
+                                    <>
+                                        <ReCAPTCHA
+                                            sitekey={import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY}
+                                            onChange={onChange}
+                                            ref={captchaRef}
+                                        />
+                                        {formik.touched.captcha && formik.errors.captcha ? (
+                                            <div className="text-red-500 text-sm mt-1">{formik.errors.captcha}</div>
+                                        ) : null}
+                                    </>
+                                ) : (
+                                    <div className="text-yellow-600 text-sm mt-1 p-2 bg-yellow-50 border border-yellow-200 rounded">
+                                        reCAPTCHA is not configured. Please contact the administrator.
+                                    </div>
+                                )}
+                            </div>
+
                             <div className="mt-10">
                                 <button type="submit" disabled={loading} className="w-full text-white btn bg-fecustom-500 border-fecustom-500 hover:text-white hover:bg-fecustom-600 hover:border-fecustom-600 focus:text-white focus:bg-fecustom-600 focus:border-fecustom-600 focus:ring focus:ring-fecustom-100 active:text-white active:bg-fecustom-600 active:border-fecustom-600 active:ring active:ring-fecustom-100 dark:ring-fecustom-400/20">{loading ? "Signing in..." : "Sign In"}</button>
                             </div>

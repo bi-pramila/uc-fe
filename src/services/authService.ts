@@ -10,24 +10,28 @@ import { User, AuthResponse, ResetPasswordResponse, ForgotPasswordResponse, Logo
 // --------------------
 // API Functions
 // --------------------
-export const login = async (email: string, password: string): 
-Promise<AuthResponse> => {
+export const login = async (email: string, password: string, captcha?: string):
+  Promise<AuthResponse> => {
   try {
     const res = await axios.post<AuthResponse>(
       `${API_BASE}/user/login`,
-      { email, password },
+      { email, password, captcha },
       {
         withCredentials: true,
         headers: { "Content-Type": "application/json" },
       }
     );
     console.log("Full res object", res);
-    console.log("API response:", res.data);
-    if (!res.user) {
-      throw new Error(res.message || "Invalid login");
+
+    // Global axios interceptor might have already unwrapped the response to res.data
+    const data: any = (res as any).data !== undefined ? (res as any).data : res;
+    console.log("API response data:", data);
+
+    if (!data.user) {
+      throw new Error(data.message || "Invalid login");
     }
-    return res;
-    
+    return data as AuthResponse;
+
   } catch (err: any) {
     console.error("Login API error:", err);
     throw err.response?.data || { message: "Login failed" };
@@ -39,7 +43,7 @@ export const checkAuth = async (): Promise<AuthResponse | null> => {
     const res = await axios.get<AuthResponse>(`${API_BASE}/user/me`, {
       withCredentials: true,
     });
-    return res.data;
+    return ((res as any).data !== undefined ? (res as any).data : res) as AuthResponse;
   } catch {
     return null;
   }
@@ -51,7 +55,7 @@ export const getCurrentUser = async (): Promise<{ user: User }> => {
       `${API_BASE}/user/me`,
       { withCredentials: true }
     );
-    return res.data;
+    return ((res as any).data !== undefined ? (res as any).data : res) as { user: User };
   } catch (err: any) {
     throw err.response?.data || { message: "Not authenticated" };
   }
@@ -70,8 +74,8 @@ export const resetPassword = async (
       { headers: { "Content-Type": "application/json" } }
     );
     console.log("Password reset API response:", res);
-    return res;
-    
+    return ((res as any).data !== undefined ? (res as any).data : res) as ResetPasswordResponse;
+
   } catch (err: any) {
     throw err.response?.data || { message: "Password reset failed" };
   }
@@ -89,7 +93,7 @@ export const forgotPassword = async (email: string): Promise<ForgotPasswordRespo
         withCredentials: true,
       }
     );
-    return res.data;
+    return ((res as any).data !== undefined ? (res as any).data : res) as ForgotPasswordResponse;
   } catch (err: any) {
     throw err.response?.data || { message: "Failed to send reset link" };
   }
@@ -110,8 +114,11 @@ export const logout = async (): Promise<LogoutResponse> => {
         },
       }
     );
-    console.log("Logout API done:", res.data);
-    return res.data;
+
+    // Global axios interceptor might have already unwrapped the response to res.data
+    const data = ((res as any).data !== undefined ? (res as any).data : res) as LogoutResponse;
+    console.log("Logout API done:", data);
+    return data;
   } catch (err: any) {
     console.error("Logout error:", err.response?.data);
     throw err.response?.data || { message: "Logout failed" };

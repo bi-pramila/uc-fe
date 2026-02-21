@@ -1,19 +1,20 @@
 // slices/auth/login/types.ts
 
-export interface User { 
-    id?: string; 
-    name?: string; 
-    email?: string; 
-    role?: string;
+export interface User {
+  id?: string;
+  name?: string;
+  email?: string;
+  role?: string;
 }
-export interface AuthResponse { 
-    success: boolean;
-    message: string; 
-    user: User;
+export interface AuthResponse {
+  success: boolean;
+  message: string;
+  user: User;
 }
-export interface LoginCredentials { 
-    email: string; 
-    password: string; 
+export interface LoginCredentials {
+  email: string;
+  password: string;
+  captcha?: string;
 }
 
 export interface ForgotPasswordResponse {
@@ -31,4 +32,4 @@ export interface LogoutResponse {
   message: string;
 }
 
-export interface LoginResponse extends AuthResponse {}
+export interface LoginResponse extends AuthResponse { }

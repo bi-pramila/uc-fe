@@ -9,6 +9,7 @@ interface ImportMetaEnv {
   readonly PUBLIC_URL?: string;
   readonly PUBLIC_ENABLE_LOGS?: string;
   readonly PUBLIC_GOOGLE_MAPS_API_KEY?: string;
+  readonly PUBLIC_RECAPTCHA_SITE_KEY?: string;
 }
 
 interface ImportMeta {
